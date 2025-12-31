@@ -1,0 +1,34 @@
+import Link from 'next/link'
+
+export default function Footer() {
+  return (
+    <footer className="footer">
+      <div className="container">
+        <div className="footer-bottom">
+          <div className="footer-bottom-left">
+            <div className="footer-address">
+              <h4>Global</h4>
+              <p>255 Main Street<br />9th Floor<br />Cambridge, MA 02142</p>
+            </div>
+            <div className="footer-contact">
+              <h4>Contact</h4>
+              <p>contentcreator@student.com</p>
+            </div>
+          </div>
+          <div className="footer-bottom-right">
+            <h4>Connect</h4>
+            <div className="social-icons">
+              <a href="#facebook" aria-label="Facebook"><i className="fab fa-facebook"></i></a>
+              <a href="#instagram" aria-label="Instagram"><i className="fab fa-instagram"></i></a>
+              <a href="#linkedin" aria-label="LinkedIn"><i className="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+        <div className="footer-copyright">
+          <p>&copy; 2025 Student B Press. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+  )
+}
+

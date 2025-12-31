@@ -1,0 +1,14 @@
+{
+  "sectionTitle": "For Kids Only",
+  "viewAllLink": "#all-kids",
+  "books": [
+    {
+      "id": 1,
+      "title": "Kids Book 1",
+      "titleSmall": "KIDS BOOK 1",
+      "author": "Author Name",
+      "coverStyle": "background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);"
+    }
+  ]
+}
+

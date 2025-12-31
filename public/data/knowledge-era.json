@@ -1,0 +1,28 @@
+{
+  "sectionTitle": "Knowledge Era",
+  "viewAllLink": "#all-knowledge",
+  "books": [
+    {
+      "id": 1,
+      "title": "Knowledge Item 1",
+      "titleSmall": "KNOWLEDGE ITEM 1",
+      "author": "Author Name",
+      "coverStyle": "background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"
+    },
+    {
+      "id": 2,
+      "title": "Knowledge Item 2",
+      "titleSmall": "KNOWLEDGE ITEM 2",
+      "author": "Author Name",
+      "coverStyle": "background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"
+    },
+    {
+      "id": 3,
+      "title": "Knowledge Item 3",
+      "titleSmall": "KNOWLEDGE ITEM 3",
+      "author": "Author Name",
+      "coverStyle": "background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"
+    }
+  ]
+}
+

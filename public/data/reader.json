@@ -1,0 +1,25 @@
+{
+  "sectionTitle": "News from the Animal Intelligence Universe",
+  "viewAllLink": "#reader",
+  "articles": [
+    {
+      "id": 1,
+      "title": "How James Garfield's Assassination Gave Birth to the American News Cycle",
+      "description": "For 79 days, the nation devoured every telegraphed bulletin on the president's slow decline, laying the groundwork for the compulsive media habits we have today.",
+      "author": "By Author Name"
+    },
+    {
+      "id": 2,
+      "title": "Susan Sontag: A Critic at the Crossroads of Culture",
+      "description": "The New York avant-gardist deftly navigated two intellectual worlds, somehow evading just about every label along the way.",
+      "author": "By Author Name"
+    },
+    {
+      "id": 3,
+      "title": "Genetic Ancestry Doesn't Tell Your Whole Story",
+      "description": "If you're looking for your genetic origin story, your DNA will only take you so far.",
+      "author": "By Author Name"
+    }
+  ]
+}
+
