@@ -6,21 +6,21 @@
     {
       "id": 1,
       "title": "Knowledge Book Vol.1",
-      "description": "A collection of 20th–21st century human knowledge compiled by cats, dogs, birds, and reptiles spying on the human world\n(Coming Soon)",
+      "description": "A collection of 20th–21st century human knowledge compiled by cats, dogs, birds, and reptiles spying on the human world\n(Scheduled for Summer 2026)",
       "coverImage": "/images/books/Knowledge1.svg",
       "coverStyle": "background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"
     },
     {
       "id": 2,
       "title": "Knowledge Book Vol.2",
-      "description": "A knowledge book that explains modern human engineering—centered on terraforming—from the perspective of animals",
+      "description": "A knowledge book that explains modern human engineering—centered on terraforming—from the perspective of animals\n(Scheduled for Spring 2026)",
       "coverImage": "/images/books/Knowledge2.svg",
       "coverStyle": "background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"
     },
     {
       "id": 3,
       "title": "Knowledge Book Vol.3",
-      "description": "A speculative science and philosophy book told by marsupials who once attempted to escape the Earth",
+      "description": "A speculative science and philosophy book told by marsupials who once attempted to escape the Earth\n(Scheduled for Fall 2026)",
       "coverImage": "/images/books/Knowledge3.svg",
       "coverStyle": "background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"
     }

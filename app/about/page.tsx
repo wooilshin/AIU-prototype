@@ -9,7 +9,7 @@ export default function About() {
       <section className="about-hero">
         <div className="container">
           <h1>About</h1>
-          <p className="hero-subtitle">We create a new way of storytelling for future generations.</p>
+          <p className="hero-subtitle">We create a new way of storytelling</p>
         </div>
       </section>
 
@@ -23,7 +23,7 @@ export default function About() {
           </div>
 
           <div className="about-section">
-            <h2>About the Creators</h2>
+            <h2>About our Creators</h2>
             <p>
               Will Shin works alongside his sister, Alice Shin, as a sibling creative team behind the Animal Intelligence series. Will studied artificial intelligence at the University of Pennsylvania and public policy at Harvard, and his academic background informs the conceptual framing of the project—exploring the intersections of world-building, technology, and myth.
             </p>
@@ -47,14 +47,14 @@ export default function About() {
                   <i className="fas fa-newspaper"></i>
                 </div>
                 <h3>Comics</h3>
-                <p>We publish a collection of light comics, offering social satire and everyday observations from animal perspectives.</p>
+                <p>Student B Press also publishes a collection of light comics, offering social satire and everyday observations from animal perspectives.</p>
               </div>
               <div className="key-area-card">
                 <div className="key-area-icon">
                   <i className="fas fa-unlock"></i>
                 </div>
                 <h3>AI-system</h3>
-                <p>We are also developing an AI engine that will serve as the foundation for future applications. With education in mind, Animal Intelligence is envisioned to expand into edtech platforms and game-based content that bring its world and ideas into interactive form.</p>
+                <p>Student B tech Lab is envisioned to expand into AI-based edutech content that brings the AIU world into an interactive form.</p>
               </div>
             </div>
           </div>
