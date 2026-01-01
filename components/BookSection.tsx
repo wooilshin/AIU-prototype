@@ -5,13 +5,14 @@ import { useState, useEffect } from 'react'
 interface Book {
   id: number
   title: string
-  titleSmall: string
-  author: string
-  coverStyle: string
+  description?: string
+  coverStyle?: string
+  coverImage?: string
 }
 
 interface BookSectionData {
   sectionTitle: string
+  sectionDescription?: string
   viewAllLink: string
   books: Book[]
 }
@@ -37,21 +38,47 @@ export default function BookSection({ dataFile, sectionClass }: BookSectionProps
     <section className={sectionClass}>
       <div className="container">
         <div className="section-header">
-          <h2>{data.sectionTitle}</h2>
+          <div>
+            <h2>{data.sectionTitle}</h2>
+            {data.sectionDescription && (
+              <p className="section-description">{data.sectionDescription}</p>
+            )}
+          </div>
           <a href={data.viewAllLink} className="view-all-link">View all</a>
         </div>
         <div className="books-grid">
           {data.books.map((book) => (
             <div key={book.id} className="book-card">
-              <div
-                className="book-cover"
-                style={{ background: book.coverStyle }}
-              >
-                <div className="book-title-small">{book.titleSmall}</div>
-              </div>
+              {book.coverImage ? (
+                <div className="book-cover">
+                  <img 
+                    src={book.coverImage} 
+                    alt={book.title}
+                    className="book-cover-image"
+                  />
+                </div>
+              ) : (
+                <div
+                  className="book-cover"
+                  style={{ background: book.coverStyle }}
+                >
+                  {book.description && (
+                    <div className="book-title-small">{book.description}</div>
+                  )}
+                </div>
+              )}
               <div className="book-info">
-                <h3>{book.title}</h3>
-                <p className="book-author">{book.author}</p>
+                <h3>
+                  {book.title.split('\n').map((line, index) => (
+                    <span key={index}>
+                      {line}
+                      {index < book.title.split('\n').length - 1 && <br />}
+                    </span>
+                  ))}
+                </h3>
+                {book.description && (
+                  <p className="book-description">{book.description}</p>
+                )}
               </div>
             </div>
           ))}

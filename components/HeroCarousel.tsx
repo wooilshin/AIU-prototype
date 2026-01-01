@@ -5,12 +5,13 @@ import Link from 'next/link'
 
 interface Slide {
   id: number
-  imageLabel: string
+  imageLabel?: string
   title: string
   description: string
   buttonText: string
   buttonLink: string
-  imageStyle: string
+  imageStyle?: string
+  imagePath?: string
 }
 
 interface CarouselData {
@@ -61,19 +62,45 @@ export default function HeroCarousel() {
             <div className="container">
               <div className="hero-content">
                 <div className="hero-image">
-                  <div
-                    className="hero-image-placeholder"
-                    style={{ background: slide.imageStyle }}
-                  >
-                    <span className="image-label">{slide.imageLabel}</span>
-                  </div>
+                  {slide.imagePath ? (
+                    <div className="hero-image-placeholder">
+                      <img
+                        src={slide.imagePath}
+                        alt={slide.title}
+                        className="hero-image-content"
+                      />
+                      {slide.imageLabel && (
+                        <span className="image-label">{slide.imageLabel}</span>
+                      )}
+                    </div>
+                  ) : (
+                    <div
+                      className="hero-image-placeholder"
+                      style={{ background: slide.imageStyle }}
+                    >
+                      {slide.imageLabel && (
+                        <span className="image-label">{slide.imageLabel}</span>
+                      )}
+                    </div>
+                  )}
                 </div>
                 <div className="hero-text">
                   <h1>{slide.title}</h1>
                   <p>{slide.description}</p>
-                  <Link href={slide.buttonLink} className="cta-button">
-                    {slide.buttonText} <i className="fas fa-arrow-right"></i>
-                  </Link>
+                  {slide.buttonLink.startsWith('http') ? (
+                    <a
+                      href={slide.buttonLink}
+                      className="cta-button"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {slide.buttonText}
+                    </a>
+                  ) : (
+                    <Link href={slide.buttonLink} className="cta-button">
+                      {slide.buttonText}
+                    </Link>
+                  )}
                 </div>
               </div>
             </div>

@@ -6,10 +6,6 @@ export default function Footer() {
       <div className="container">
         <div className="footer-bottom">
           <div className="footer-bottom-left">
-            <div className="footer-address">
-              <h4>Global</h4>
-              <p>255 Main Street<br />9th Floor<br />Cambridge, MA 02142</p>
-            </div>
             <div className="footer-contact">
               <h4>Contact</h4>
               <p>contentcreator@student.com</p>

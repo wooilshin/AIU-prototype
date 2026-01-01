@@ -8,21 +8,13 @@ First, install the dependencies:
 
 ```bash
 npm install
-# or
-yarn install
-# or
-pnpm install
-```
+
 
 Then, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
@@ -78,4 +70,9 @@ The `out` folder will contain the static export if you configure Next.js for sta
 - Contact form uses Next.js API routes (see `/app/api/contact/route.ts`)
 - All styling is in `app/globals.css`
 - Font Awesome icons are loaded via CDN in the layout
+
+## Next.js로 코딩하고
+## npm (node.js 설치하고) npm run dev로 확인
+## Git hub에 푸쉬(.git 위치가 문제됨)
+## vercel에서 배포포
 

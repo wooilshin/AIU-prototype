@@ -2,30 +2,23 @@
   "slides": [
     {
       "id": 1,
-      "imageLabel": "Spring 2026",
-      "title": "Presenting Our Spring 2026 Catalog",
-      "description": "Books that answer the most pressing questions of our fraught moment.",
-      "buttonText": "Browse the catalog",
-      "buttonLink": "#catalog",
-      "imageStyle": "background: linear-gradient(135deg, #e0e0e0 0%, #f5f5f5 100%);"
+      "imageLabel": "Kirkus Get It",
+      "title": "Kirkus Get It Pick",
+      "description": "Selected by Kirkus Reviews as a title worth discovering.",
+      "buttonText": "See why Kirkus recommends it",
+      "buttonLink": "https://www.kirkusreviews.com/book-reviews/will-shin/animal-intelligence-2/",
+      "imagePath": "/images/carousel/History.svg",
+      "imageStyle": "background: linear-gradient(135deg, #f0f0f0 0%, #fafafa 100%);"
     },
     {
       "id": 2,
-      "imageLabel": "Best of 2025",
-      "title": "The best of 2025",
-      "description": "The books that everyone was talking about this year.",
-      "buttonText": "Browse the list",
-      "buttonLink": "#best-of-2025",
-      "imageStyle": "background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"
-    },
-    {
-      "id": 3,
-      "imageLabel": "New Releases",
-      "title": "December 2025: New Books",
-      "description": "A clarion call for visions of vibrant, hopeful climate futures.",
-      "buttonText": "Browse the list",
-      "buttonLink": "#new-books",
-      "imageStyle": "background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"
+      "imageLabel": "New Release",
+      "title": "New Release:\nGuidebook to the AI Universe",
+      "description": "Now available on Amazon.",
+      "buttonText": "Buy on Amazon",
+      "buttonLink": "https://www.amazon.com/Guidebook-Animal-Intelligence-Universe-Will-ebook/dp/B0GBQKZHD5/",
+      "imagePath": "/images/carousel/Guide.svg",
+      "imageStyle": "background: linear-gradient(135deg, #f3f3f3 0%, #ffffff 100%);"
     }
   ]
 }

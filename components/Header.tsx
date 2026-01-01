@@ -7,13 +7,7 @@ export default function Header() {
         <div className="header-content">
           <div className="logo">
             <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
-              <div className="logo-lines">
-                <div className="line"></div>
-                <div className="line"></div>
-                <div className="line"></div>
-                <div className="line"></div>
-                <div className="line"></div>
-              </div>
+              <img src="/images/header/Logo.svg" alt="Logo" className="logo-image" />
             </Link>
           </div>
           <nav className="nav-menu">

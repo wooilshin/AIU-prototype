@@ -89,9 +89,7 @@ export default function Contact() {
                     <option value="">Select a subject</option>
                     <option value="general">General Inquiry</option>
                     <option value="author">Author Inquiry</option>
-                    <option value="media">Media Inquiry</option>
-                    <option value="rights">Rights and Permissions</option>
-                    <option value="bookseller">Bookseller Inquiry</option>
+                    <option value="media">Business Inquiry</option>
                     <option value="other">Other</option>
                   </select>
                 </div>

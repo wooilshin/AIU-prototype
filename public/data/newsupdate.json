@@ -1,0 +1,21 @@
+{
+  "sectionTitle": "News & Announcements",
+  "viewAllLink": "#reader",
+  "articles": [
+    {
+      "id": 1,
+      "title": "Kirkus Reviews Praises Animal Intelligence",
+      "description": "Kirkus Reviews praised Animal Intelligence as “a rich and surprising alternative vision of the past” and awarded it the Get It badge, recognizing it as a standout editorial recommendation.",
+      "date": "2025-12-22",
+      "link": "https://www.kirkusreviews.com/book-reviews/will-shin/animal-intelligence-2/"
+    },
+    {
+      "id": 2,
+      "title": "Animal Intelligence Featured in The European",
+      "description": "The European highlighted Animal Intelligence for its imaginative approach to history, blending philosophy, illustration, and animal storytelling into a long-term, knowledge-driven project.",
+      "date": "2025-12-17",
+      "link": "https://the-european.eu/story-54107/book-review-a-history-of-the-world-told-by-animals-and-it-changes-everything.html"
+    }
+  ]
+}
+

@@ -18,7 +18,7 @@ export default function NewsletterSection() {
     <section className="newsletter-section">
       <div className="container">
         <h2>Newsletter</h2>
-        <p>Sign up to receive exclusive information about books, sales, and giveaways.</p>
+        <p>Sign up to receive exclusive information about books, sales, and events.</p>
         <form className="newsletter-form" onSubmit={handleSubmit}>
           <div className="form-row">
             <input type="text" name="firstName" placeholder="First Name" required />

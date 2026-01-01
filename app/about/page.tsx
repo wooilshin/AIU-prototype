@@ -9,7 +9,7 @@ export default function About() {
       <section className="about-hero">
         <div className="container">
           <h1>About</h1>
-          <p className="hero-subtitle">Established in 1962, we are one of the largest and most distinguished university presses in the world.</p>
+          <p className="hero-subtitle">We create a new way of storytelling for future generations.</p>
         </div>
       </section>
 
@@ -18,7 +18,7 @@ export default function About() {
           <div className="about-section">
             <h2>Project Animal Intelligence</h2>
             <p>
-              Animal Intelligence is an original IP project developed and published by Student B Press. The project began as a publishing initiative and has since grown into a multi-volume series, while also expanding into interactive AI system development. It is anchored by the publication Animal Intelligence: Knowledge Era, followed by companion titles and comic-driven works in which animal narrators reimagine human knowledge, history, and the future through non-human perspectives.
+              Animal Intelligence is an original IP project developed and published by Student B Press.The project began as a publishing initiative and has since expanded into a multi-volume series that includes short comic collections, fiction, and nonfiction works. Its flagship title is Animal Intelligence: Knowledge Era, in which animal narrators reimagine human knowledge and the future through non-human perspectives.
             </p>
           </div>
 
@@ -40,29 +40,28 @@ export default function About() {
                   <i className="fas fa-book"></i>
                 </div>
                 <h3>Books</h3>
-                <p>Animal Intelligence is a curated publication that reframes knowledge through non-human perspectives.</p>
-                <p>Our flagship publication, Knowledge Era, organizes and presents future-oriented knowledge across philosophy, social sciences, and science.</p>
+                <p>Animal Intelligence is a curated publication that reframes knowledge through non-human perspectives. Our flagship publication, Knowledge Era, organizes and presents future-oriented knowledge across philosophy, social sciences, and science.</p>
               </div>
               <div className="key-area-card">
                 <div className="key-area-icon">
                   <i className="fas fa-newspaper"></i>
                 </div>
-                <h3>일상툰</h3>
-                <p>We publish over 30 journals in the arts and humanities, social sciences, and science and technology, maintaining the highest standards of peer review and editorial excellence.</p>
+                <h3>Comics</h3>
+                <p>We publish a collection of light comics, offering social satire and everyday observations from animal perspectives.</p>
               </div>
               <div className="key-area-card">
                 <div className="key-area-icon">
                   <i className="fas fa-unlock"></i>
                 </div>
-                <h3>Edutech game</h3>
-                <p>We are a leader in open access publishing, with more than 350 open access books and innovative initiatives like Direct to Open.</p>
+                <h3>AI-system</h3>
+                <p>We are also developing an AI engine that will serve as the foundation for future applications. With education in mind, Animal Intelligence is envisioned to expand into edtech platforms and game-based content that bring its world and ideas into interactive form.</p>
               </div>
             </div>
           </div>
 
           <div className="about-cta">
             <h2>Get in Touch</h2>
-            <p>Interested in learning more about the MIT Press? We'd love to hear from you.</p>
+            <p>Interested in learning more about the Student B Press? We'd love to hear from you.</p>
             <Link href="/contact" className="cta-button">Contact Us <i className="fas fa-arrow-right"></i></Link>
           </div>
         </div>
