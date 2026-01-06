@@ -58,12 +58,6 @@ export default function About() {
               </div>
             </div>
           </div>
-
-          <div className="about-cta">
-            <h2>Get in Touch</h2>
-            <p>Interested in learning more about the Student B Press? We'd love to hear from you.</p>
-            <Link href="/contact" className="cta-button">Contact Us <i className="fas fa-arrow-right"></i></Link>
-          </div>
         </div>
       </section>
       <Footer />
