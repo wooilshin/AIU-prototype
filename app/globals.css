@@ -327,7 +327,7 @@ body {
     background-color: #fff;
 }
 
-/* For Kids Only Section */
+/* For Kids Section */
 .kids-section {
     padding: 40px 0;
     background-color: #fff;
@@ -520,13 +520,14 @@ body {
 .footer-bottom {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    gap: 0px;
+    padding-left: 100px;
 }
 
 .footer-bottom-left {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    gap: 30px;
 }
 
 .footer-address h4,
@@ -651,7 +652,7 @@ body {
 .key-area-icon {
     width: 60px;
     height: 60px;
-    background-color: #4caf50;
+    background-color: #B0C4DE;
     border-radius: 50%;
     display: flex;
     align-items: center;
