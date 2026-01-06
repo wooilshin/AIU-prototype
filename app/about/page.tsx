@@ -25,7 +25,7 @@ export default function About() {
           <div className="about-section">
             <h2>About our Creators</h2>
             <p>
-              Will Shin works alongside his sister, Alice Shin, as a sibling creative team behind the Animal Intelligence series. Will studied artificial intelligence at the University of Pennsylvania and public policy at Harvard, and his academic background informs the conceptual framing of the project—exploring the intersections of world-building, technology, and myth.
+            Will Shin works alongside his sister, Alice Shin, as a sibling creative team behind the Animal Intelligence series. Will studied artificial intelligence at the University of Pennsylvania and public policy at Harvard, and his academic background informs the project’s conceptual framework—exploring the intersections of world-building and future technologies. Alice Shin studied design and art, and later pursued language education at Georgetown University. With a strong interest in myth and a deep affection for animals, she leads the project’s visual creation while also contributing significantly to its narrative sensibility. Together, they are building a creative universe that reimagines knowledge and the future through non-human perspectives.
             </p>
             <p>
               Alice Shin studied design, art, and language education at Georgetown University and brings a strong visual and narrative sensibility to the project. Together, they are building a creative universe that reimagines knowledge, civilization, and the future through non-human perspectives.

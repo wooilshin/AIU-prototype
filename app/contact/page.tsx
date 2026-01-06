@@ -60,32 +60,13 @@ export default function Contact() {
         </div>
       </section>
 
+      <div className="contact-hero-bear-mobile">
+        <img src="/images/icon/bear.svg" alt="Bear" />
+      </div>
+
       <section className="contact-section">
         <div className="container">
           <div className="contact-content">
-            <div className="contact-info">
-              <h2>Get in Touch</h2>
-              <div className="contact-details">
-                <div className="contact-item">
-                  <div className="contact-icon">
-                    <i className="fas fa-envelope"></i>
-                  </div>
-                  <div className="contact-text">
-                    <h3>Email</h3>
-                    <p><a href="mailto:contentdirector@student-b.com">contentdirector@student-b.com</a></p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="social-contact">
-                <h3>Follow Us</h3>
-                <div className="social-icons-contact">
-                  <a href="https://www.facebook.com/studentbunny/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i className="fab fa-facebook"></i></a>
-                  <a href="https://www.instagram.com/student_bunny/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i className="fab fa-instagram"></i></a>
-                </div>
-              </div>
-            </div>
-
             <div className="contact-form-wrapper">
               <h2>Send us a Message</h2>
               <form className="contact-form" onSubmit={handleSubmit}>
@@ -102,7 +83,6 @@ export default function Contact() {
                   <select id="subject" name="subject" required>
                     <option value="">Select a subject</option>
                     <option value="general">General Inquiry</option>
-                    <option value="author">Author Inquiry</option>
                     <option value="media">Business Inquiry</option>
                   </select>
                 </div>

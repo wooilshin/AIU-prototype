@@ -144,6 +144,131 @@ body {
     color: #4a90e2;
 }
 
+/* Mobile Menu Toggle Button */
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+    padding: 8px;
+    transition: color 0.3s;
+}
+
+.mobile-menu-toggle:hover {
+    color: #4a90e2;
+}
+
+/* Mobile Menu Overlay */
+.mobile-menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.mobile-menu-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* Mobile Menu Drawer */
+.mobile-menu-drawer {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100%;
+    background-color: #fff;
+    z-index: 1000;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease;
+    overflow-y: auto;
+}
+
+.mobile-menu-drawer.active {
+    right: 0;
+}
+
+.mobile-menu-header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.mobile-menu-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+    padding: 8px;
+    transition: color 0.3s;
+}
+
+.mobile-menu-close:hover {
+    color: #4a90e2;
+}
+
+.mobile-menu-nav {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+}
+
+.mobile-menu-nav a,
+.mobile-menu-nav span {
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s, color 0.3s;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.mobile-menu-nav a:hover {
+    background-color: #f5f5f5;
+    color: #4a90e2;
+}
+
+.mobile-nav-disabled {
+    color: #999 !important;
+    cursor: not-allowed;
+}
+
+.mobile-nav-disabled:hover {
+    background-color: #f5f5f5;
+    color: #4a90e2 !important;
+}
+
+.mobile-newsletter-btn {
+    margin: 15px 20px;
+    background-color: #87CEEB;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: background-color 0.3s;
+}
+
+.mobile-newsletter-btn:hover {
+    background-color: #6BB6D6;
+}
+
 /* Hero Section */
 .hero-section {
     position: relative;
@@ -514,7 +639,7 @@ body {
 .footer {
     background-color: #1a1a1a;
     color: #fff;
-    padding: 60px 0 30px;
+    padding: 30px 0 20px;
 }
 
 .footer-bottom {
@@ -724,6 +849,23 @@ body {
     background-color: #fafafa;
     padding: 80px 0 30px;
     text-align: center;
+    background-image: url('/images/icon/bear.svg');
+    background-repeat: no-repeat;
+    background-position: right 65%;
+    background-size: auto 120px;
+    position: relative;
+}
+
+.contact-hero-bear-mobile {
+    display: none;
+    text-align: center;
+    padding: 20px 0;
+    background-color: #fafafa;
+}
+
+.contact-hero-bear-mobile img {
+    width: 120px;
+    height: auto;
 }
 
 .contact-hero h1 {
@@ -743,16 +885,46 @@ body {
 }
 
 .contact-content {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 60px;
-    align-items: stretch;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .contact-info {
     display: flex;
     flex-direction: column;
     padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: relative;
+    background-color: #fafafa;
+    border-radius: 8px;
+}
+
+.contact-info::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/images/icon/bear.svg');
+    background-repeat: repeat;
+    background-size: 150px 75px;
+    background-position: 0 0;
+    opacity: 0.25;
+    z-index: 0;
+    pointer-events: none;
+    border-radius: 8px;
+}
+
+.contact-info > * {
+    position: relative;
+    z-index: 1;
 }
 
 .contact-info h2,
@@ -762,6 +934,7 @@ body {
     margin-top: 0;
     margin-bottom: 30px;
     color: #000;
+    text-align: left;
 }
 
 .contact-details {
@@ -848,8 +1021,25 @@ body {
 
 .contact-form-wrapper {
     background-color: #fafafa;
-    padding: 40px;
+    padding: 30px;
     border-radius: 8px;
+    flex: 1;
+    max-width: 400px;
+}
+
+.contact-bear-image {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    margin-top: -30px;
+}
+
+.contact-bear-image img {
+    width: 400px;
+    height: auto;
+    opacity: 0.7;
 }
 
 .contact-form {
@@ -917,15 +1107,36 @@ body {
 /* Responsive Design */
 @media (max-width: 768px) {
     .header-content {
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
     }
 
     .nav-menu {
-        order: 3;
-        width: 100%;
-        margin-top: 15px;
-        flex-wrap: wrap;
-        gap: 15px;
+        display: none;
+    }
+
+    .mobile-menu-toggle {
+        display: block;
+    }
+
+    .mobile-menu-overlay {
+        display: block;
+    }
+
+    .mobile-menu-drawer {
+        display: block;
+    }
+
+    .header-actions {
+        gap: 10px;
+    }
+
+    .newsletter-btn {
+        display: none;
+    }
+
+    .search-btn {
+        font-size: 16px;
+        padding: 6px;
     }
 
     .hero-content {
@@ -956,12 +1167,33 @@ body {
         grid-template-columns: 1fr;
     }
 
+    .key-areas-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .footer {
+        padding: 20px 0 15px;
+    }
+
     .footer-bottom {
         grid-template-columns: 1fr;
+        padding-left: 0;
+        gap: 30px;
     }
 
     .footer-bottom-left {
         grid-template-columns: 1fr;
+    }
+
+    .footer-bottom-right {
+        margin-top: 0;
+    }
+
+    .footer-address h4,
+    .footer-contact h4,
+    .footer-bottom-right h4 {
+        font-size: 15px;
     }
 
     .carousel-btn {
@@ -985,6 +1217,14 @@ body {
 
     .about-cta {
         padding: 40px 20px;
+    }
+
+    .contact-hero {
+        background-image: none;
+    }
+
+    .contact-hero-bear-mobile {
+        display: block;
     }
 
     .contact-content {
@@ -1024,6 +1264,14 @@ body {
 
     .about-cta h2 {
         font-size: 24px;
+    }
+
+    .contact-hero {
+        background-image: none;
+    }
+
+    .contact-hero-bear-mobile {
+        display: block;
     }
 
     .contact-hero h1 {
