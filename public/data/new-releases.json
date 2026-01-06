@@ -8,14 +8,16 @@
       "title": "Animal Intelligence\nThe Book of Forgotten History",
       "description": "A retelling of history from the eye of extinct animals",
       "coverImage": "/images/books/History.svg",
-      "coverStyle": "background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);"
+      "coverStyle": "background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);",
+      "link": "https://www.amazon.com/Animal-Intelligence-Book-Forgotten-History-ebook/dp/B0F624S8B2/"
     },
     {
       "id": 2,
       "title": "Guidebook to the AIU\nWhere the Ark lies Hidden",
       "description": "A guidebook that maps where AIU animals live across the world and what roles they play today",
       "coverImage": "/images/books/Guide.svg",
-      "coverStyle": "background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"
+      "coverStyle": "background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);",
+      "link": "https://www.amazon.com/gp/product/B0GBQKZHD5"
     },
     {
       "id": 3,

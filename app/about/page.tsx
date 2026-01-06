@@ -18,7 +18,7 @@ export default function About() {
           <div className="about-section">
             <h2>Project Animal Intelligence</h2>
             <p>
-              Animal Intelligence is an original IP project developed and published by Student B Press.The project began as a publishing initiative and has since expanded into a multi-volume series that includes short comic collections, fiction, and nonfiction works. Its flagship title is Animal Intelligence: Knowledge Era, in which animal narrators reimagine human knowledge and the future through non-human perspectives.
+            Animal Intelligence is an original IP project developed and published by Student B Press. The project places the animals around us at the center of its narrative, using their perspectives to explore human life, society, technology, and ultimately the future. It unfolds not only through fiction and comics, but also through knowledge-based guidebooks and experimental AI-powered media. Together, these forms create a living universe that invites readers to rethink intelligence, coexistence, and the future we are building.
             </p>
           </div>
 
@@ -44,14 +44,14 @@ export default function About() {
               </div>
               <div className="key-area-card">
                 <div className="key-area-icon">
-                  <i className="fas fa-newspaper"></i>
+                  <i className="fas fa-book-open"></i>
                 </div>
                 <h3>Comics</h3>
                 <p>Student B Press also publishes a collection of light comics, offering social satire and everyday observations from animal perspectives.</p>
               </div>
               <div className="key-area-card">
                 <div className="key-area-icon">
-                  <i className="fas fa-unlock"></i>
+                  <i className="fas fa-laptop"></i>
                 </div>
                 <h3>AI-system</h3>
                 <p>Student B tech Lab is envisioned to expand into AI-based edutech content that brings the AIU world into an interactive form.</p>

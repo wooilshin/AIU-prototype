@@ -1,0 +1,48 @@
+.interactiveContainer {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 120px); /* 헤더 높이만 빼기 */
+  background: white;
+}
+
+/* 3D 영역 */
+.sceneWrapper {
+  flex: 3;                 /* 🔥 더 크게 */
+  position: relative;
+  width: 100%;
+  min-height: 0;           /* 중요 */
+}
+
+/* 채팅 영역 */
+.chatWrapper {
+  flex: 2;
+  width: 100%;
+  background: white;
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;           /* 중요 */
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #333;
+  font-size: 18px;
+}
+
+@media (max-width: 968px) {
+  .sceneWrapper {
+    height: 50vh;
+    min-height: 400px;
+  }
+  
+  .chatWrapper {
+    height: 50vh;
+    min-height: 350px;
+  }
+}
+
+

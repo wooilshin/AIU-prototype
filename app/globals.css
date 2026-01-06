@@ -84,9 +84,27 @@ body {
     font-size: 14px;
     font-weight: 600;
     transition: color 0.3s;
+    cursor: pointer;
 }
 
 .nav-menu a:hover {
+    color: #4a90e2;
+}
+
+.nav-menu a:active {
+    color: #4a90e2;
+}
+
+.nav-menu .nav-disabled {
+    color: #999;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: not-allowed;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-menu .nav-disabled:hover {
     color: #4a90e2;
 }
 
@@ -703,7 +721,7 @@ body {
 /* Contact Page Styles */
 .contact-hero {
     background-color: #fafafa;
-    padding: 80px 0 60px;
+    padding: 80px 0 30px;
     text-align: center;
 }
 
@@ -720,7 +738,7 @@ body {
 }
 
 .contact-section {
-    padding: 60px 0;
+    padding: 30px 0 60px;
 }
 
 .contact-content {

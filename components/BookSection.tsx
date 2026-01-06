@@ -8,6 +8,7 @@ interface Book {
   description?: string
   coverStyle?: string
   coverImage?: string
+  link?: string
 }
 
 interface BookSectionData {
@@ -47,41 +48,60 @@ export default function BookSection({ dataFile, sectionClass }: BookSectionProps
           <a href={data.viewAllLink} className="view-all-link">View all</a>
         </div>
         <div className="books-grid">
-          {data.books.map((book) => (
-            <div key={book.id} className="book-card">
-              {book.coverImage ? (
-                <div className="book-cover">
-                  <img 
-                    src={book.coverImage} 
-                    alt={book.title}
-                    className="book-cover-image"
-                  />
-                </div>
-              ) : (
-                <div
-                  className="book-cover"
-                  style={{ background: book.coverStyle }}
-                >
+          {data.books.map((book) => {
+            const bookCardContent = (
+              <>
+                {book.coverImage ? (
+                  <div className="book-cover">
+                    <img 
+                      src={book.coverImage} 
+                      alt={book.title}
+                      className="book-cover-image"
+                    />
+                  </div>
+                ) : (
+                  <div
+                    className="book-cover"
+                    style={{ background: book.coverStyle }}
+                  >
+                    {book.description && (
+                      <div className="book-title-small">{book.description}</div>
+                    )}
+                  </div>
+                )}
+                <div className="book-info">
+                  <h3>
+                    {book.title.split('\n').map((line, index) => (
+                      <span key={index}>
+                        {line}
+                        {index < book.title.split('\n').length - 1 && <br />}
+                      </span>
+                    ))}
+                  </h3>
                   {book.description && (
-                    <div className="book-title-small">{book.description}</div>
+                    <p className="book-description">{book.description}</p>
                   )}
                 </div>
-              )}
-              <div className="book-info">
-                <h3>
-                  {book.title.split('\n').map((line, index) => (
-                    <span key={index}>
-                      {line}
-                      {index < book.title.split('\n').length - 1 && <br />}
-                    </span>
-                  ))}
-                </h3>
-                {book.description && (
-                  <p className="book-description">{book.description}</p>
-                )}
+              </>
+            )
+
+            return book.link ? (
+              <a
+                key={book.id}
+                href={book.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="book-card"
+                style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}
+              >
+                {bookCardContent}
+              </a>
+            ) : (
+              <div key={book.id} className="book-card">
+                {bookCardContent}
               </div>
-            </div>
-          ))}
+            )
+          })}
         </div>
       </div>
     </section>

@@ -11,7 +11,9 @@ export default function Contact() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    const formData = new FormData(e.currentTarget)
+    // 비동기 작업 전에 form 요소를 변수에 저장 (나중에 null이 될 수 있으므로)
+    const form = e.currentTarget
+    const formData = new FormData(form)
     
     try {
       const response = await fetch('/api/contact', {
@@ -19,17 +21,30 @@ export default function Contact() {
         body: formData,
       })
       
+      // 응답 상태 확인
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`)
+      }
+      
       const data = await response.json()
       
       if (data.success) {
         alert(data.message)
-        e.currentTarget.reset()
+        // 저장된 form 요소를 사용하여 reset
+        if (form) {
+          form.reset()
+        }
       } else {
         alert(data.message)
       }
     } catch (error) {
       console.error('Error:', error)
-      alert('Sorry, there was an error sending your message. Please try again later or contact us directly at sns@student-b.com')
+      // 네트워크 에러인지 JSON 파싱 에러인지 구분
+      if (error instanceof TypeError && error.message.includes('fetch')) {
+        alert('Network error. Please check your connection and try again.')
+      } else {
+        alert('Sorry, there was an error sending your message. Please try again later or contact us directly at sns@student-b.com')
+      }
     } finally {
       setIsSubmitting(false)
     }
@@ -65,9 +80,8 @@ export default function Contact() {
               <div className="social-contact">
                 <h3>Follow Us</h3>
                 <div className="social-icons-contact">
-                  <a href="#facebook" aria-label="Facebook"><i className="fab fa-facebook"></i></a>
-                  <a href="#instagram" aria-label="Instagram"><i className="fab fa-instagram"></i></a>
-                  <a href="#linkedin" aria-label="LinkedIn"><i className="fab fa-linkedin"></i></a>
+                  <a href="https://www.facebook.com/studentbunny/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i className="fab fa-facebook"></i></a>
+                  <a href="https://www.instagram.com/student_bunny/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i className="fab fa-instagram"></i></a>
                 </div>
               </div>
             </div>
@@ -90,7 +104,6 @@ export default function Contact() {
                     <option value="general">General Inquiry</option>
                     <option value="author">Author Inquiry</option>
                     <option value="media">Business Inquiry</option>
-                    <option value="other">Other</option>
                   </select>
                 </div>
                 <div className="form-group">
