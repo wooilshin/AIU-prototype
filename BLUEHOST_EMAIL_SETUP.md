@@ -28,9 +28,11 @@ SMTP_USER=your-email@student-b.com
 SMTP_PASSWORD=your-email-password
 
 # Contact form 받는 이메일 주소
+# 주소: contentdirector [at] student-b.com
 CONTACT_RECIPIENT_EMAIL=contentdirector@student-b.com
 
 # Newsletter 관리자 알림 이메일 (선택사항, 없으면 CONTACT_RECIPIENT_EMAIL 사용)
+# 주소: contentdirector [at] student-b.com
 NEWSLETTER_ADMIN_EMAIL=contentdirector@student-b.com
 ```
 
@@ -59,7 +61,7 @@ npm run dev
 ### Contact Form 테스트
 1. Contact 페이지에서 폼 작성
 2. "Send Message" 버튼 클릭
-3. `contentdirector@student-b.com`으로 이메일이 도착하는지 확인
+3. `contentdirector [at] student-b.com`으로 이메일이 도착하는지 확인
 
 ### Newsletter 구독 테스트
 1. 홈페이지 Newsletter 섹션에서 이름과 이메일 입력

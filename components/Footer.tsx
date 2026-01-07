@@ -8,14 +8,14 @@ export default function Footer() {
           <div className="footer-bottom-left">
             <div className="footer-contact">
               <h4>Contact</h4>
-              <p>contentcreator@student.com</p>
+              <p>contentcreator[at]student.com</p>
             </div>
           </div>
           <div className="footer-bottom-right">
             <h4>Connect</h4>
             <div className="social-icons">
               <a href="https://www.facebook.com/studentbunny/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i className="fab fa-facebook"></i></a>
-              <a href="https://www.instagram.com/student_bunny/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i className="fab fa-instagram"></i></a>
+              <a href="https://www.instagram.com/ai.AnimalIntelligence/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i className="fab fa-instagram"></i></a>
             </div>
           </div>
         </div>
