@@ -5,12 +5,20 @@
     box-sizing: border-box;
 }
 
+html {
+    overflow-x: hidden;
+    width: 100%;
+}
+
 body {
     font-family: 'Inter', 'Acumin Variable Concept', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
     font-size: 19px;
     line-height: 1.6;
     color: #333;
     background-color: #fff;
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
 }
 
 /* 숫자에 Acumin Variable Concept 우선 적용 */
@@ -24,6 +32,8 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 /* Header Styles */
@@ -42,15 +52,17 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+    overflow: hidden;
 }
 
 .logo {
     display: flex;
     align-items: center;
-}
-
-.logo {
     position: relative; /* Create stacking context for transform */
+    overflow: hidden;
+    flex-shrink: 0;
+    max-width: 50%;
 }
 
 .logo-image {
@@ -58,6 +70,8 @@ body {
     width: auto;
     transform: scale(4.5) translateY(-2px);
     will-change: transform; /* iOS-safe transform optimization */
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .logo-lines {
@@ -175,7 +189,7 @@ body {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 999;
+    z-index: 1001;
     opacity: 0;
     transition: opacity 0.3s ease;
     pointer-events: none;
@@ -195,10 +209,11 @@ body {
     width: 280px;
     height: 100%;
     background-color: #fff;
-    z-index: 1000;
+    z-index: 1002;
     box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
     transition: right 0.3s ease;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .mobile-menu-drawer.active {
@@ -293,11 +308,13 @@ body {
     top: 0;
     left: 0;
     width: 100%;
+    max-width: 100%;
     opacity: 0;
     visibility: hidden;
     padding: 60px 0;
     transition: opacity 0.5s ease, visibility 0.5s ease;
     pointer-events: none;
+    overflow: hidden;
 }
 
 .hero-slide.active {
@@ -305,6 +322,8 @@ body {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .hero-content {
@@ -314,10 +333,15 @@ body {
     align-items: center;
     max-width: 700px;
     margin: 0 auto;
+    width: 100%;
+    overflow: hidden;
 }
 
 .hero-image {
     position: relative;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .hero-image-placeholder {
@@ -331,6 +355,9 @@ body {
     padding: 20px;
     position: relative;
     overflow: hidden;
+    max-width: 100%;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
 }
 
 .hero-image-content {
@@ -338,6 +365,10 @@ body {
     height: 100%;
     object-fit: cover;
     border-radius: 8px;
+    display: block;
+    max-width: 100%;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
 }
 
 .image-label {
@@ -1125,6 +1156,17 @@ body {
 @media (max-width: 768px) {
     .header-content {
         flex-wrap: nowrap;
+        overflow: hidden;
+    }
+
+    .logo {
+        max-width: 40%;
+        overflow: hidden;
+    }
+
+    .logo-image {
+        transform: scale(3.5) translateY(-2px);
+        max-width: 100%;
     }
 
     .nav-menu {
@@ -1163,6 +1205,15 @@ body {
     .hero-content {
         grid-template-columns: 1fr;
         gap: 30px;
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .hero-image {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
     }
 
     .hero-text h1 {
@@ -1171,6 +1222,16 @@ body {
 
     .hero-image-placeholder {
         height: 300px;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .hero-image-content {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        max-width: 100%;
+        display: block;
     }
 
     .books-grid {
