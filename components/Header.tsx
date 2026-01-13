@@ -156,30 +156,6 @@ export default function Header() {
           >
             {t.interactive}
           </span>
-          <button 
-            className={`mobile-language-btn ${isEnglishDomain ? 'disabled' : ''}`}
-            onClick={handleLanguageSwitch}
-            disabled={isEnglishDomain}
-            style={{ 
-              margin: '15px 20px',
-              background: isEnglishDomain ? '#ccc' : '#87CEEB',
-              color: '#fff',
-              border: 'none',
-              padding: '12px 20px',
-              fontSize: '16px',
-              fontWeight: 700,
-              cursor: isEnglishDomain ? 'not-allowed' : 'pointer',
-              borderRadius: '2px',
-              transition: 'background-color 0.3s',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              gap: '8px'
-            }}
-          >
-            <i className="fas fa-globe"></i>
-            <span>{language === 'ko' ? 'English' : '한국어'}</span>
-          </button>
         </nav>
       </div>
     </header>
