@@ -1,0 +1,15 @@
+{
+  "sectionTitle": "어린이",
+  "sectionDescription": "인간의 지식을 배우고 예상치 못한 모험이 가득한 세상을 탐험하는 동물들에 대한 다권 시리즈",
+  "viewAllLink": "#all-kids",
+  "books": [
+    {
+      "id": 1,
+      "title": "AI Story Vol.1",
+      "description": "공부하기로 결심한 동물들의 고민과 모험에 대한 어린이 이야기\n(출간 예정)",
+      "coverImage": "/images/books/Story1.svg",
+      "coverStyle": "background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);"
+    }
+  ]
+}
+

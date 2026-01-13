@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 interface Book {
   id: number
@@ -24,14 +25,18 @@ interface BookSectionProps {
 }
 
 export default function BookSection({ dataFile, sectionClass }: BookSectionProps) {
+  const { language } = useLanguage()
   const [data, setData] = useState<BookSectionData | null>(null)
 
   useEffect(() => {
-    fetch(`/data/${dataFile}`)
+    // dataFile이 "new-releases.json" 형식이면 baseFileName은 "new-releases"
+    const baseFileName = dataFile.endsWith('.json') ? dataFile.replace('.json', '') : dataFile
+    const langFile = language === 'ko' ? `${baseFileName}.ko.json` : `${baseFileName}.json`
+    fetch(`/data/${langFile}`)
       .then(res => res.json())
       .then((jsonData: BookSectionData) => setData(jsonData))
-      .catch(err => console.error(`Error loading ${dataFile}:`, err))
-  }, [dataFile])
+      .catch(err => console.error(`Error loading ${langFile}:`, err))
+  }, [dataFile, language])
 
   if (!data) return null
 
@@ -45,7 +50,9 @@ export default function BookSection({ dataFile, sectionClass }: BookSectionProps
               <p className="section-description">{data.sectionDescription}</p>
             )}
           </div>
-          <a href={data.viewAllLink} className="view-all-link">View all</a>
+          <a href={data.viewAllLink} className="view-all-link">
+            {language === 'ko' ? '전체보기' : 'View all'}
+          </a>
         </div>
         <div className="books-grid">
           {data.books.map((book) => {

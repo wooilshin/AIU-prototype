@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 interface Article {
   id: number
@@ -17,14 +18,16 @@ interface NewsUpdateData {
 }
 
 export default function NewsUpdateSection() {
+  const { language } = useLanguage()
   const [data, setData] = useState<NewsUpdateData | null>(null)
 
   useEffect(() => {
-    fetch('/data/newsupdate.json')
+    const dataFile = language === 'ko' ? '/data/newsupdate.ko.json' : '/data/newsupdate.json'
+    fetch(dataFile)
       .then(res => res.json())
       .then((jsonData: NewsUpdateData) => setData(jsonData))
       .catch(err => console.error('Error loading news update data:', err))
-  }, [])
+  }, [language])
 
   if (!data) return null
 
@@ -33,7 +36,9 @@ export default function NewsUpdateSection() {
       <div className="container">
         <div className="section-header">
           <h2>{data.sectionTitle}</h2>
-          <a href={data.viewAllLink} className="view-all-link">View all</a>
+          <a href={data.viewAllLink} className="view-all-link">
+            {language === 'ko' ? '전체보기' : 'View all'}
+          </a>
         </div>
         <div className="newsupdate-articles">
           {data.articles.map((article) => (

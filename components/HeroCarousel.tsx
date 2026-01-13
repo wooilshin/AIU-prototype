@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 interface Slide {
   id: number
@@ -19,17 +20,19 @@ interface CarouselData {
 }
 
 export default function HeroCarousel() {
+  const { language } = useLanguage()
   const [slides, setSlides] = useState<Slide[]>([])
   const [currentSlide, setCurrentSlide] = useState(0)
 
   useEffect(() => {
-    fetch('/data/carousel.json')
+    const dataFile = language === 'ko' ? '/data/carousel.ko.json' : '/data/carousel.json'
+    fetch(dataFile)
       .then(res => res.json())
       .then((data: CarouselData) => {
         setSlides(data.slides)
       })
       .catch(err => console.error('Error loading carousel:', err))
-  }, [])
+  }, [language])
 
   useEffect(() => {
     if (slides.length === 0) return
