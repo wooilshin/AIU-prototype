@@ -22,7 +22,7 @@ export default function NewsletterSection() {
     },
     ko: {
       title: '뉴스레터',
-      description: '도서, 할인, 이벤트에 대한 독점 정보를 받아보세요.',
+      description: 'AI 동물지능 도서 및 이벤트에 대한 정보를 받아보세요.',
       firstName: '이름',
       lastName: '성',
       email: '이메일',
