@@ -25,17 +25,17 @@ export default function About() {
       aiDesc: 'Student B tech Lab is envisioned to expand into AI-based edutech content that brings the AIU world into an interactive form.'
     },
     ko: {
-      title: '소개',
+      title: 'AI 동물지능 소개',
       subtitle: '새로운 스토리텔링을 만들어 나갑니다',
-      projectTitle: 'AI 동물지능 프로젝트',
+      projectTitle: '프로젝트',
       projectDesc: 'AI (Animal Intelligence)는 격변하는 시대 인간의 현재 그리고 미래 기술, 사회, 그리고 삶을 조망하기 위한 목적으로 시작되었습니다. 동 프로젝트는 동물의 시선으로 인간 세상을 바라본다는 설정 아래 풍자 만화, 픽션, 및 지식 교양서 그리고 AI 시스템 기반 미디어 등 다양한 미디어를 제작하고 있습니다.',
-      creatorsTitle: '제작자 소개',
+      creatorsTitle: '제작자',
       creatorsDesc: 'Student B의 작가진은 남매인 Will과 Alice로 구성되어 있습니다. 펜실베이니아 공대에서 인공지능 그리고 하버드에서 개발경제학을 공부한 Will은 AI의 세계관을 만드는데 주력하고 있으며, 디자인과 응용언어학을 전공한 Alice는 AI 세계의 동물들이 많은 독자들에게 어필하도록 일러스트와 디자인을 맡고 있습니다.',
-      whatWeMakeTitle: '우리가 만드는 것',
+      whatWeMakeTitle: 'AIU의 출판물 및 미디어',
       booksTitle: '도서',
-      booksDesc: 'AI의 지식편 시리즈는 동물의 관점에서 현대사회의 철학, 사회과학, 과학지식을 통합적으로 그리고 재미있게 설명하는 교양서를 제작하고 있습니다.',
+      booksDesc: '동물의 관점에서 현대사회의 철학, 사회과학, 과학지식을 통합적으로 그리고 재미있게 설명하는 '지식편' 및 아동을 위한 21세기형 동물우화인 '스토리'를 제작하고 있습니다.',
       comicsTitle: '만화',
-      comicsDesc: 'AI 철학툰 시리즈는 격변하는 시대 인간 사회와 문명을 풍자하는 레트로 형식의 2컷, 3컷 만화 모음집을을 출간하고 있습니다.',
+      comicsDesc: '격변하는 시대 인간 사회와 문명을 풍자하는 레트로 형식의 2컷, 3컷 만화 모음집을 제작하고 있습니다.',
       aiTitle: 'AI 시스템',
       aiDesc: '스튜던트 비 Tech Lab은 AIU 세계의 동물들의 지식을 담은 커스텀 LLM 시스템을 개발중입니다.'
     }
