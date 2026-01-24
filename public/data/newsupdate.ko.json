@@ -4,19 +4,20 @@
   "articles": [
     {
       "id": 1,
-      "title": "Kirkus Reviews, Animal Intelligence 극찬",
-      "description": "Kirkus Reviews는 Animal Intelligence를 \"풍부하고 놀라운 대안적 과거 비전\"이라고 극찬하며 Get It 배지를 수여했으며, 뛰어난 편집 추천 작품으로 인정했습니다.",
+      "title": "미국 Kirkus Reviews, AI 동물지능 강력 추천",
+      "description": "Kirkus Reviews는 AI 동물지능에 'Get It' 추천 의견을 내며\"역사를 대안적으로 바라보는 풍부하고 놀라운 이야기\"라고 극찬하였였습니다.",
       "date": "2025-12-22",
       "link": "https://www.kirkusreviews.com/book-reviews/will-shin/animal-intelligence-2/"
     },
     {
       "id": 2,
       "title": "Animal Intelligence, The European에 소개",
-      "description": "The European은 Animal Intelligence를 철학, 일러스트레이션, 동물 스토리텔링을 장기적이고 지식 중심의 프로젝트로 결합한 상상력 있는 역사 접근 방식으로 강조했습니다.",
+      "description": "유럽의 The European지는 신간 소개 코너에 Animal Intelligence를 다루며 철학, 일러스트레이션, 동물 스토리텔링이 어우러진 지식 중심의 프로젝트로 소개하였였습니다.",
       "date": "2025-12-17",
       "link": "https://the-european.eu/story-54107/book-review-a-history-of-the-world-told-by-animals-and-it-changes-everything.html"
     }
   ]
 }
+
 
 

@@ -5,7 +5,7 @@
   "books": [
     {
       "id": 1,
-      "title": "Animal Intelligence\n잊혀진 역사의 책",
+      "title": "AI 동물지능\n잊혀진 역사의 기록들",
       "description": "멸종한 동물들의 눈으로 다시 쓴 역사 이야기",
       "coverImage": "/images/books/History.svg",
       "coverStyle": "background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);",
@@ -13,20 +13,21 @@
     },
     {
       "id": 2,
-      "title": "AIU 가이드북\n방주가 숨겨진 곳",
-      "description": "AIU 동물들이 전 세계 어디에 살고 있으며 오늘날 어떤 역할을 하는지 매핑한 가이드북",
+      "title": "AI 동물지능 세계관 가이드북\n",
+      "description": "AI 세계의 동물들이 지구 어디에 살고 있으며 어떤 역할을 하는지를 소개한 가이드북",
       "coverImage": "/images/books/Guide.svg",
       "coverStyle": "background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);",
       "link": "https://www.amazon.com/gp/product/B0GBQKZHD5"
     },
     {
       "id": 3,
-      "title": "AI 단편 만화 Vol.1",
-      "description": "동물들의 일상과 인간 사회를 관찰하며 느끼는 감정에 대한 가벼운 철학적 만화\n(출간 예정)",
+      "title": "AI 동물지능 철학툰 Vol.1",
+      "description": "AI 시대 동물들의 인간세상 관찰기\n(2월 출간 예정)",
       "coverImage": "/images/books/Comic1.svg",
       "coverStyle": "background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);"
     }
   ]
 }
+
 
 

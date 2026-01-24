@@ -1,30 +1,31 @@
 {
-  "sectionTitle": "지식시대",
-  "sectionDescription": "인간의 지식을 관찰하고 기록한 동물들의 시선을 통해 재해석된 인간 지식의 종합 모음집",
+  "sectionTitle": "지식편",
+  "sectionDescription": "동물들의 시선을 통해 재해석된 최신 인간 지식 안내서",
   "viewAllLink": "#all-knowledge",
   "books": [
     {
       "id": 1,
       "title": "Knowledge Book Vol.1",
-      "description": "인간 세계를 염탐한 고양이, 개, 새, 파충류들이 편찬한 20-21세기 인간 지식 모음\n(2026년 여름 출간 예정)",
+      "description": "인간 세계를 염탐한 고양이, 개, 새, 파충류들이 편찬한 20-21세기 인간 지식\n(2026년 여름 출간 예정)",
       "coverImage": "/images/books/Knowledge1.svg",
       "coverStyle": "background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"
     },
     {
       "id": 2,
       "title": "Knowledge Book Vol.2",
-      "description": "동물의 시선으로 설명하는 현대 인간 공학—지구화를 중심으로—에 대한 지식서\n(2026년 봄 출간 예정)",
+      "description": "동물의 관점에서 설명하는 인간의 공학 안내서\n(2026년 가을 출간 예정)",
       "coverImage": "/images/books/Knowledge2.svg",
       "coverStyle": "background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"
     },
     {
       "id": 3,
       "title": "Knowledge Book Vol.3",
-      "description": "한때 지구를 탈출하려 했던 유대류들이 들려주는 추측 과학 및 철학서\n(2026년 가을 출간 예정)",
+      "description": "지구를 떠나려고 준비했던 유대류들이 들려주는 우주/미래 기술 설명서\n(2026년 가을 출간 예정)",
       "coverImage": "/images/books/Knowledge3.svg",
       "coverStyle": "background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"
     }
   ]
 }
+
 
 

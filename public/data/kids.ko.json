@@ -1,16 +1,17 @@
 {
-  "sectionTitle": "어린이",
-  "sectionDescription": "인간의 지식을 배우고 예상치 못한 모험이 가득한 세상을 탐험하는 동물들에 대한 다권 시리즈",
+  "sectionTitle": "아동/청소년 도서",
+  "sectionDescription": "인간 지식을 공부하게된 동물들의 모험을 담은 5부작 이야기 책 시리즈",
   "viewAllLink": "#all-kids",
   "books": [
     {
       "id": 1,
       "title": "AI Story Vol.1",
-      "description": "공부하기로 결심한 동물들의 고민과 모험에 대한 어린이 이야기\n(출간 예정)",
+      "description": "인간 세상을 염탐하기 위해 결성된 동물 수재팀 '최고의 일곱마리'의 모험담\n(출간 예정)",
       "coverImage": "/images/books/Story1.svg",
       "coverStyle": "background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);"
     }
   ]
 }
+
 
 

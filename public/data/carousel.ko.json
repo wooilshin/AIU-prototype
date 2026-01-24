@@ -4,8 +4,8 @@
       "id": 1,
       "imageLabel": "Kirkus Get It",
       "title": "Kirkus Get It Pick",
-      "description": "Kirkus Reviews가 발견할 가치가 있는 작품으로 선정했습니다.",
-      "buttonText": "Kirkus가 추천하는 이유 보기",
+      "description": "미국 도서 리뷰 업체 Kirkus Reviews의 '강력 추천' 라뷰 획득.",
+      "buttonText": "Kirkus의 추천 리뷰뷰 보기",
       "buttonLink": "https://www.kirkusreviews.com/book-reviews/will-shin/animal-intelligence-2/",
       "imagePath": "/images/carousel/History.svg",
       "imageStyle": "background: linear-gradient(135deg, #f0f0f0 0%, #fafafa 100%);"
@@ -13,14 +13,15 @@
     {
       "id": 2,
       "imageLabel": "New Release",
-      "title": "신간:\nAI 우주 가이드북",
-      "description": "지금 Amazon에서 구매 가능합니다.",
-      "buttonText": "Amazon에서 구매하기",
+      "title": "신간:\nAI 동물지능 유니버스 가이드북",
+      "description": "지금 교보문고에서 구매 가능합니다.",
+      "buttonText": "교보문고에서 구매하기",
       "buttonLink": "https://www.amazon.com/Guidebook-Animal-Intelligence-Universe-Will-ebook/dp/B0GBQKZHD5/",
       "imagePath": "/images/carousel/Guide.svg",
       "imageStyle": "background: linear-gradient(135deg, #f3f3f3 0%, #ffffff 100%);"
     }
   ]
 }
+
 
 
