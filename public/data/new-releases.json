@@ -21,10 +21,11 @@
     },
     {
       "id": 3,
-      "title": "AI Short Comics Vol.1",
+      "title": "Watching them humans in the AI age: Animal Intelligence Comics",
       "description": "A light philosophical comic about animals’ daily lives and the emotions they feel while observing human society\n(Coming Soon)",
       "coverImage": "/images/books/Comic1.svg",
-      "coverStyle": "background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);"
+      "coverStyle": "background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);",
+      "link": "https://www.amazon.com/dp/B0GL3Y57DK/"
     }
   ]
 }
