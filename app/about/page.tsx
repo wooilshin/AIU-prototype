@@ -71,17 +71,23 @@ export default function About() {
         <div className="container">
           <div className="about-section">
             <h2>{t.projectTitle}</h2>
-            <p>{t.projectDesc}</p>
+            {t.projectDesc.split('\n\n').map((paragraph, index) => (
+              paragraph.trim() && <p key={index}>{paragraph.trim()}</p>
+            ))}
           </div>
 
           <div className="about-section">
             <h2>{t.targetAudienceTitle}</h2>
-            <p>{t.targetAudienceDesc}</p>
+            {t.targetAudienceDesc.split('\n\n').map((paragraph, index) => (
+              paragraph.trim() && <p key={index}>{paragraph.trim()}</p>
+            ))}
           </div>
 
           <div className="about-section">
             <h2>{t.creatorsTitle}</h2>
-            <p>{t.creatorsDesc}</p>
+            {t.creatorsDesc.split('\n\n').map((paragraph, index) => (
+              paragraph.trim() && <p key={index}>{paragraph.trim()}</p>
+            ))}
           </div>
 
           <div className="about-section">
