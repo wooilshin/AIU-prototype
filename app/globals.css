@@ -916,9 +916,9 @@ body {
     margin-bottom: 20px;
 }
 
-/* About 섹션 첫 문장 - 진한 검정 */
+/* About 섹션 첫 문장 - 진한 검정 (subtitle과 동일한 색상) */
 .about-section p strong {
-    color: #000;
+    color: #000 !important;
     font-weight: 900;
 }
 
