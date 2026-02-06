@@ -11,9 +11,9 @@ export default function About() {
   const translations = {
     en: {
       title: 'About',
-      subtitle: 'We create a new way of storytelling',
+      subtitle: 'A storytelling project that explores the age of AI through animal perspectives',
       projectTitle: 'Project Animal Intelligence',
-      projectDesc: `Animal Intelligence is a story-driven content universe that invites readers to reflect on future technologies—and on life itself—through animal-centered storytelling, with a particular focus on AI. 
+      projectDesc: `Animal Intelligence is a story-driven content universe that invites readers to reflect on future technologies—and on life itself—through animal-centered storytelling. \n\n
       
       The story begins when animals start to notice the strange contradictions and accelerating crises of human civilization. Sensing that humans may be heading toward self-destruction, they decide to study human knowledge in order to help. With the assistance of AI, the animals begin learning science, history, and technology. However, this process does not merely transform their understanding of humans—it also triggers profound social, political, and ethical changes within the animal world itself.
 
@@ -23,7 +23,7 @@ export default function About() {
       
       While the project incorporates satire to reflect AI-driven social change, it maintains a balanced and reflective perspective. Alongside critiques of institutional failure and ethical risk, it also explores AI's positive potential—from addressing global disasters and systemic risks to enabling scientific discovery and space exploration. Rather than promoting fear or blind optimism, Animal Intelligence aims to create a thoughtful space for reflection on how humans and intelligent systems might coexist responsibly in the future.`,
       targetAudienceTitle: 'Target Audience',
-      targetAudienceDesc: `The primary target community of Animal Intelligence is, in principle, multi-generational, though the intended audience varies slightly by publication format. The fantasy fiction is primarily aimed at middle and high school readers, while the knowledge-focused volumes—which combine engineering and AI concepts with comics—are designed for older high school students and university-level readers. The satirical comics, in contrast, are largely directed toward adults and reflect on AI-driven social change from a more critical perspective.
+      targetAudienceDesc: `The primary target community of Animal Intelligence is, in principle, multi-generational, though the intended audience varies slightly by publication format. \n\nThe fantasy fiction is primarily aimed at middle and high school readers, while the knowledge-focused volumes—which combine engineering and AI concepts with comics—are designed for older high school students and university-level readers. The satirical comics, in contrast, are largely directed toward adults and reflect on AI-driven social change from a more critical perspective.
 
       This multi-layered audience design is intentional. Rather than separating content strictly by age, Animal Intelligence is structured so that a single narrative world can be experienced differently across generations. By engaging readers of different ages with the same characters and themes, the project encourages shared interpretation, discussion, and discovery—allowing families, students, and educators to explore the story together and exchange perspectives on the future shaped by AI.`,
       creatorsTitle: 'About our Creators',
@@ -75,23 +75,71 @@ export default function About() {
         <div className="container">
           <div className="about-section">
             <h2>{t.projectTitle}</h2>
-            {t.projectDesc.split('\n\n').map((paragraph, index) => (
-              paragraph.trim() && <p key={index}>{paragraph.trim()}</p>
-            ))}
+            {t.projectDesc.split('\n\n').map((paragraph, index) => {
+              if (!paragraph.trim()) return null;
+              const trimmed = paragraph.trim();
+              if (index === 0) {
+                // 첫 문단의 첫 문장만 bold 처리
+                const firstSentenceEnd = trimmed.match(/[.!?]\s/);
+                if (firstSentenceEnd && firstSentenceEnd.index !== undefined) {
+                  const firstSentence = trimmed.substring(0, firstSentenceEnd.index + 1);
+                  const rest = trimmed.substring(firstSentenceEnd.index + 1).trim();
+                  return (
+                    <p key={index}>
+                      <strong>{firstSentence}</strong>
+                      {rest && ` ${rest}`}
+                    </p>
+                  );
+                }
+              }
+              return <p key={index}>{trimmed}</p>;
+            })}
           </div>
 
           <div className="about-section">
             <h2>{t.targetAudienceTitle}</h2>
-            {t.targetAudienceDesc.split('\n\n').map((paragraph, index) => (
-              paragraph.trim() && <p key={index}>{paragraph.trim()}</p>
-            ))}
+            {t.targetAudienceDesc.split('\n\n').map((paragraph, index) => {
+              if (!paragraph.trim()) return null;
+              const trimmed = paragraph.trim();
+              if (index === 0) {
+                // 첫 문단의 첫 문장만 bold 처리
+                const firstSentenceEnd = trimmed.match(/[.!?]\s/);
+                if (firstSentenceEnd && firstSentenceEnd.index !== undefined) {
+                  const firstSentence = trimmed.substring(0, firstSentenceEnd.index + 1);
+                  const rest = trimmed.substring(firstSentenceEnd.index + 1).trim();
+                  return (
+                    <p key={index}>
+                      <strong>{firstSentence}</strong>
+                      {rest && ` ${rest}`}
+                    </p>
+                  );
+                }
+              }
+              return <p key={index}>{trimmed}</p>;
+            })}
           </div>
 
           <div className="about-section">
             <h2>{t.creatorsTitle}</h2>
-            {t.creatorsDesc.split('\n\n').map((paragraph, index) => (
-              paragraph.trim() && <p key={index}>{paragraph.trim()}</p>
-            ))}
+            {t.creatorsDesc.split('\n\n').map((paragraph, index) => {
+              if (!paragraph.trim()) return null;
+              const trimmed = paragraph.trim();
+              if (index === 0) {
+                // 첫 문단의 첫 문장만 bold 처리
+                const firstSentenceEnd = trimmed.match(/[.!?]\s/);
+                if (firstSentenceEnd && firstSentenceEnd.index !== undefined) {
+                  const firstSentence = trimmed.substring(0, firstSentenceEnd.index + 1);
+                  const rest = trimmed.substring(firstSentenceEnd.index + 1).trim();
+                  return (
+                    <p key={index}>
+                      <strong>{firstSentence}</strong>
+                      {rest && ` ${rest}`}
+                    </p>
+                  );
+                }
+              }
+              return <p key={index}>{trimmed}</p>;
+            })}
           </div>
 
           <div className="about-section">
