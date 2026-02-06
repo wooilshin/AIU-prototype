@@ -29,12 +29,14 @@ export default function About() {
       creatorsTitle: 'About our Creators',
       creatorsDesc: 'Will Shin works alongside his sister, Alice Shin, as a sibling creative team behind the Animal Intelligence series.\n\n Will studied artificial intelligence at the University of Pennsylvania and public policy at Harvard, and his academic background informs the project\'s conceptual framework—exploring the intersections of world-building and future technologies. \n\nAlice Shin studied design and art, and later pursued applied linguistics at Georgetown University. With a strong interest in myth and a deep affection for animals, she leads the project\'s visual creation while also contributing to its narrative sensibility. Together, they are building a creative universe that reimagines knowledge and the future through non-human perspectives.',
       whatWeMakeTitle: 'What We Make',
-      booksTitle: 'Books',
-      booksDesc: 'Animal Intelligence is a curated publication that reframes knowledge through non-human perspectives. Our flagship publication, Knowledge Era, organizes and presents future-oriented knowledge across philosophy, social sciences, and science.',
-      comicsTitle: 'Comics',
-      comicsDesc: 'Student B Press also publishes a collection of light comics, offering social satire and everyday observations from animal perspectives.',
-      aiTitle: 'AI-system',
-      aiDesc: 'Student B tech Lab is envisioned to expand into AI-based edutech content that brings the AIU world into an interactive form.'
+      bookStoryTitle: 'Book (Story)',
+      bookStoryDesc: 'Student B creates a long-form narrative fantasy centered on animals who travel across the world to study human knowledge. While presented as an animal-driven epic, the story functions as an allegory for the civilization in the post–AI era.',
+      bookKnowledgeTitle: 'Book (Knowledge Series)',
+      bookKnowledgeDesc: 'Student B also produces a nonfiction book series that explores science, social science, and philosophy before and after the emergence of AI. These volumes serve as accessible companion books to the narrative series, intuitively introducing the knowledge and ideas that the animal characters encounter.',
+      comicsTitle: 'Comic',
+      comicsDesc: 'As Student B\'s flagship and entry point, the comic series consists of short-form illustrated works that reflect on human life in the age of AI. Through satire and observation, these comics invite readers to pause and reconsider everyday assumptions.',
+      aiTitle: 'AI System',
+      aiDesc: 'Student B operates an AI tech lab where we develop experimental systems that bring comic characters to life. These characters are designed to be embedded in lightweight smart toys or figurines, allowing users to engage in learning through storytelling-driven AI experiences.'
     },
     ko: {
       title: 'AI 동물지능 소개',
@@ -46,12 +48,14 @@ export default function About() {
       creatorsTitle: '제작자',
       creatorsDesc: 'Student B의 작가진은 남매인 Will과 Alice로 구성되어 있습니다. 펜실베이니아 공대에서 인공지능 그리고 하버드에서 개발경제학을 공부한 Will은 AI의 세계관을 만드는데 주력하고 있으며, 디자인과 응용언어학을 전공한 Alice는 AI 세계의 동물들이 많은 독자들에게 어필하도록 일러스트와 디자인을 맡고 있습니다.',
       whatWeMakeTitle: 'AIU의 출판물 및 미디어',
-      booksTitle: '도서',
-      booksDesc: '동물의 관점에서 현대사회의 철학, 사회과학, 과학지식을 통합적으로 그리고 재미있게 설명하는 지식편 그리고 아동을 위한 21세기형 동물 모험기 이야기편을 제작하고 있습니다.',
+      bookStoryTitle: '도서 (스토리)',
+      bookStoryDesc: 'Student B는 인간의 지식을 연구하기 위해 세계를 여행하는 동물들을 중심으로 한 장편 서사 판타지를 제작합니다. 동물 중심의 서사시로 제시되지만, 이 이야기는 AI 이후 시대의 문명에 대한 우화로 기능합니다.',
+      bookKnowledgeTitle: '도서 (지식 시리즈)',
+      bookKnowledgeDesc: 'Student B는 또한 AI의 등장 전후의 과학, 사회과학, 철학을 탐구하는 논픽션 도서 시리즈를 제작합니다. 이 권들은 서사 시리즈에 대한 접근 가능한 동반 도서 역할을 하며, 동물 캐릭터들이 만나는 지식과 아이디어를 직관적으로 소개합니다.',
       comicsTitle: '만화',
-      comicsDesc: '격변하는 시대 인간 사회와 문명을 풍자하는 레트로 형식의 2컷, 3컷 만화 모음집을 제작하고 있습니다.',
+      comicsDesc: 'Student B의 플래그십이자 진입점인 만화 시리즈는 AI 시대의 인간의 삶을 반영하는 단편 삽화 작품들로 구성됩니다. 풍자와 관찰을 통해 이 만화들은 독자들이 일시 정지하고 일상적인 가정을 재고하도록 초대합니다.',
       aiTitle: 'AI 시스템',
-      aiDesc: '스튜던트 비 Tech Lab은 AIU 세계의 동물들의 지식을 담은 커스텀 LLM 시스템을 개발중입니다.'
+      aiDesc: 'Student B는 만화 캐릭터를 생생하게 만드는 실험적 시스템을 개발하는 AI 기술 연구소를 운영합니다. 이 캐릭터들은 경량 스마트 장난감이나 피규어에 내장되도록 설계되어 사용자가 스토리텔링 기반 AI 경험을 통해 학습에 참여할 수 있도록 합니다.'
     }
   }
   
@@ -97,12 +101,19 @@ export default function About() {
                 <div className="key-area-icon">
                   <i className="fas fa-book"></i>
                 </div>
-                <h3>{t.booksTitle}</h3>
-                <p>{t.booksDesc}</p>
+                <h3>{t.bookStoryTitle}</h3>
+                <p>{t.bookStoryDesc}</p>
               </div>
               <div className="key-area-card">
                 <div className="key-area-icon">
                   <i className="fas fa-book-open"></i>
+                </div>
+                <h3>{t.bookKnowledgeTitle}</h3>
+                <p>{t.bookKnowledgeDesc}</p>
+              </div>
+              <div className="key-area-card">
+                <div className="key-area-icon">
+                  <i className="fas fa-comments"></i>
                 </div>
                 <h3>{t.comicsTitle}</h3>
                 <p>{t.comicsDesc}</p>
