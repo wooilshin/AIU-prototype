@@ -916,6 +916,12 @@ body {
     margin-bottom: 20px;
 }
 
+/* About 섹션 첫 문장 - 진한 검정 */
+.about-section p strong {
+    color: #000;
+    font-weight: 900;
+}
+
 /* 주요 영역 그리드 - 4열 그리드로 카드 배치 */
 .key-areas-grid {
     display: grid;
