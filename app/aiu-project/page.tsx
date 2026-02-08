@@ -14,9 +14,9 @@ export default function AIUProject() {
       projectTitle: 'The Project',
       projectDesc: `Animal Intelligence Project is a story-driven content that invites readers to reflect on future and on life itself through animal-centered storytelling.
 
-While the project incorporates satire to reflect AI-driven social change, it maintains a balanced and reflective perspective. Alongside critiques of institutional failure and ethical risk, it also explores AI's positive potential—from addressing global disasters and systemic risks to enabling scientific discovery and space exploration. Rather than promoting fear or blind optimism, Animal Intelligence aims to create a thoughtful space for reflection on how humans and intelligent systems might coexist responsibly in the future.`,
-      targetAudienceTitle: 'Target Audience',
-      targetAudienceDesc: `The primary target community of Animal Intelligence is, in principle, multi-generational, though the intended audience varies slightly by publication format.
+While the project incorporates satire to reflect AI-driven social change, it maintains a balanced and reflective perspective. Alongside critiques of institutional failure and ethical risk, it also explores AI's positive potential—from addressing global disasters and systemic risks to enabling scientific discovery and space exploration. Rather than promoting fear or blind optimism, Animal Intelligence aims to create a thoughtful space for reflection on how humans and intelligent systems might coexist responsibly in the future.
+
+The primary target community of Animal Intelligence is, in principle, multi-generational, though the intended audience varies slightly by publication format.
 
 The fantasy fiction is primarily aimed at middle and high school readers, while the knowledge-focused volumes—which combine engineering and AI concepts with comics—are designed for older high school students and university-level readers. The satirical comics, in contrast, are largely directed toward adults and reflect on AI-driven social change from a more critical perspective.
 
