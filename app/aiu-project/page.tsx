@@ -15,6 +15,12 @@ export default function AIUProject() {
       projectDesc: `Animal Intelligence Project is a story-driven content that invites readers to reflect on future and on life itself through animal-centered storytelling.
 
 While the project incorporates satire to reflect AI-driven social change, it maintains a balanced and reflective perspective. Alongside critiques of institutional failure and ethical risk, it also explores AI's positive potential—from addressing global disasters and systemic risks to enabling scientific discovery and space exploration. Rather than promoting fear or blind optimism, Animal Intelligence aims to create a thoughtful space for reflection on how humans and intelligent systems might coexist responsibly in the future.`,
+      targetAudienceTitle: 'Target Audience',
+      targetAudienceDesc: `The primary target community of Animal Intelligence is, in principle, multi-generational, though the intended audience varies slightly by publication format.
+
+The fantasy fiction is primarily aimed at middle and high school readers, while the knowledge-focused volumes—which combine engineering and AI concepts with comics—are designed for older high school students and university-level readers. The satirical comics, in contrast, are largely directed toward adults and reflect on AI-driven social change from a more critical perspective.
+
+This multi-layered audience design is intentional. Rather than separating content strictly by age, Animal Intelligence is structured so that a single narrative world can be experienced differently across generations. By engaging readers of different ages with the same characters and themes, the project encourages shared interpretation, discussion, and discovery—allowing families, students, and educators to explore the story together and exchange perspectives on the future shaped by AI.`,
       storyTitle: 'The Story',
       storyDesc: `The story begins when animals start to notice the strange contradictions and accelerating crises of human civilization. Sensing that humans may be heading toward self-destruction, they decide to study human knowledge in order to help. With the assistance of AI, the animals begin learning science, history, and technology. However, this process does not merely transform their understanding of humans—it also triggers profound social, political, and ethical changes within the animal world itself.
 
@@ -52,6 +58,8 @@ This volume contains the animals' explorations of cosmology, biology, neuroscien
       subtitle: '새로운 스토리텔링을 만들어 나갑니다',
       projectTitle: '프로젝트',
       projectDesc: 'Animal Intelligence Project는 동물 중심의 스토리텔링을 통해 독자들이 미래와 삶 자체에 대해 성찰하도록 초대하는 스토리 중심 콘텐츠입니다.\n\n이 프로젝트는 AI 주도 사회 변화를 반영하기 위해 풍자를 포함하지만, 균형 잡힌 성찰적 관점을 유지합니다. 제도적 실패와 윤리적 위험에 대한 비판과 함께, 전 세계적 재난과 체계적 위험을 해결하고 과학적 발견과 우주 탐사를 가능하게 하는 등 AI의 긍정적 잠재력을 탐구합니다. 두려움이나 맹목적 낙관론을 조장하기보다는, Animal Intelligence는 인간과 지능 시스템이 미래에 책임감 있게 공존할 수 있는 방법에 대한 성찰을 위한 사고의 공간을 만들고자 합니다.',
+      targetAudienceTitle: '타겟 오디언스',
+      targetAudienceDesc: 'Animal Intelligence의 주요 타겟 커뮤니티는 원칙적으로 다세대를 대상으로 하며, 출판 형식에 따라 약간씩 다른 독자층을 목표로 합니다.\n\n판타지 픽션은 주로 중고등학생 독자를 대상으로 하며, 엔지니어링과 AI 개념을 만화와 결합한 지식 중심 권은 고등학생 후반과 대학 수준의 독자를 위해 설계되었습니다. 반면 풍자 만화는 주로 성인을 대상으로 하며 AI 주도 사회 변화를 더 비판적인 관점에서 반영합니다.\n\n이러한 다층적 오디언스 설계는 의도적입니다. 연령에 따라 콘텐츠를 엄격하게 분리하기보다는, Animal Intelligence는 단일 서사 세계가 세대에 따라 다르게 경험될 수 있도록 구조화되어 있습니다. 서로 다른 연령대의 독자들이 같은 캐릭터와 주제로 참여함으로써, 이 프로젝트는 공유된 해석, 토론, 발견을 장려합니다—가족, 학생, 교육자가 함께 이야기를 탐구하고 AI가 형성한 미래에 대한 관점을 교환할 수 있도록 합니다.',
       storyTitle: '스토리',
       storyDesc: '이야기는 동물들이 인간 문명의 이상한 모순과 가속화되는 위기를 알아차리기 시작할 때 시작됩니다. 인간이 자멸로 향하고 있을 수 있다고 감지한 동물들은 도움을 주기 위해 인간의 지식을 공부하기로 결정합니다. AI의 도움으로 동물들은 과학, 역사, 기술을 배우기 시작합니다. 그러나 이 과정은 단순히 인간에 대한 그들의 이해를 변화시키는 것이 아니라, 동물 세계 자체 내에서 깊은 사회적, 정치적, 윤리적 변화를 촉발합니다.\n\n서사가 전개되면서 동물들은 AI의 오용으로 인한 일련의 위기와 재난을 만나게 됩니다. 이러한 경험을 통해 그들은 근본적인 질문들과 마주해야 합니다: 어떻게 살아야 하는가? 의미 있는 삶의 핵심은 무엇인가? 지식과 AI를 맹목적이거나 파괴적으로가 아니라 사려 깊게 사용할 수 있는 방법은 무엇인가? 그리고 다음 세대가 앞으로 나아가야 할 희망과 의미는 어떤 종류인가?\n\n이 우주는 풍자 만화, 장편 판타지 시리즈, 삽화 출판물을 포함한 다양한 형식으로 전개됩니다.',
       knowledgeBooksTitle: 'Knowledge Books',
@@ -76,6 +84,13 @@ This volume contains the animals' explorations of cosmology, biology, neuroscien
           <div className="about-section">
             <h2>{t.projectTitle}</h2>
             {t.projectDesc.split('\n\n').map((paragraph, index) => (
+              paragraph.trim() && <p key={index}>{paragraph.trim()}</p>
+            ))}
+          </div>
+
+          <div className="about-section">
+            <h2>{t.targetAudienceTitle}</h2>
+            {t.targetAudienceDesc.split('\n\n').map((paragraph, index) => (
               paragraph.trim() && <p key={index}>{paragraph.trim()}</p>
             ))}
           </div>
