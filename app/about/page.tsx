@@ -26,7 +26,8 @@ export default function About() {
       targetAudienceDesc: `The primary target community of Animal Intelligence is, in principle, multi-generational, though the intended audience varies slightly by publication format. \n\nThe fantasy fiction is primarily aimed at middle and high school readers, while the knowledge-focused volumes—which combine engineering and AI concepts with comics—are designed for older high school students and university-level readers. The satirical comics, in contrast, are largely directed toward adults and reflect on AI-driven social change from a more critical perspective.
 
       This multi-layered audience design is intentional. Rather than separating content strictly by age, Animal Intelligence is structured so that a single narrative world can be experienced differently across generations. By engaging readers of different ages with the same characters and themes, the project encourages shared interpretation, discussion, and discovery—allowing families, students, and educators to explore the story together and exchange perspectives on the future shaped by AI.`,
-      rspectives.',
+      creatorsTitle: 'About our Creators',
+      creatorsDesc: 'Will Shin works alongside his sister, Alice Shin, as a sibling creative team behind the Animal Intelligence series.\n\n Will studied artificial intelligence at the University of Pennsylvania and public policy at Harvard, and his academic background informs the project\'s conceptual framework—exploring the intersections of world-building and future technologies. \n\nAlice Shin studied design and art, and later pursued applied linguistics at Georgetown University. With a strong interest in myth and a deep affection for animals, she leads the project\'s visual creation while also contributing to its narrative sensibility. Together, they are building a creative universe that reimagines knowledge and the future through non-human perspectives.',
       whatWeMakeTitle: 'What We Make',
       bookStoryTitle: 'Book (Story)',
       bookStoryDesc: 'Student B creates a long-form narrative fantasy centered on animals who travel across the world to study human knowledge. While presented as an animal-driven epic, the story functions as an allegory for the civilization in the post–AI era.',
@@ -74,71 +75,23 @@ export default function About() {
         <div className="container">
           <div className="about-section">
             <h2>{t.projectTitle}</h2>
-            {t.projectDesc.split('\n\n').map((paragraph, index) => {
-              if (!paragraph.trim()) return null;
-              const trimmed = paragraph.trim();
-              if (index === 0) {
-                // 첫 문단의 첫 문장만 bold 처리
-                const firstSentenceEnd = trimmed.match(/[.!?]\s/);
-                if (firstSentenceEnd && firstSentenceEnd.index !== undefined) {
-                  const firstSentence = trimmed.substring(0, firstSentenceEnd.index + 1);
-                  const rest = trimmed.substring(firstSentenceEnd.index + 1).trim();
-                  return (
-                    <p key={index}>
-                      <strong>{firstSentence}</strong>
-                      {rest && ` ${rest}`}
-                    </p>
-                  );
-                }
-              }
-              return <p key={index}>{trimmed}</p>;
-            })}
+            {t.projectDesc.split('\n\n').map((paragraph, index) => (
+              paragraph.trim() && <p key={index}>{paragraph.trim()}</p>
+            ))}
           </div>
 
           <div className="about-section">
             <h2>{t.targetAudienceTitle}</h2>
-            {t.targetAudienceDesc.split('\n\n').map((paragraph, index) => {
-              if (!paragraph.trim()) return null;
-              const trimmed = paragraph.trim();
-              if (index === 0) {
-                // 첫 문단의 첫 문장만 bold 처리
-                const firstSentenceEnd = trimmed.match(/[.!?]\s/);
-                if (firstSentenceEnd && firstSentenceEnd.index !== undefined) {
-                  const firstSentence = trimmed.substring(0, firstSentenceEnd.index + 1);
-                  const rest = trimmed.substring(firstSentenceEnd.index + 1).trim();
-                  return (
-                    <p key={index}>
-                      <strong>{firstSentence}</strong>
-                      {rest && ` ${rest}`}
-                    </p>
-                  );
-                }
-              }
-              return <p key={index}>{trimmed}</p>;
-            })}
+            {t.targetAudienceDesc.split('\n\n').map((paragraph, index) => (
+              paragraph.trim() && <p key={index}>{paragraph.trim()}</p>
+            ))}
           </div>
 
           <div className="about-section">
             <h2>{t.creatorsTitle}</h2>
-            {t.creatorsDesc.split('\n\n').map((paragraph, index) => {
-              if (!paragraph.trim()) return null;
-              const trimmed = paragraph.trim();
-              if (index === 0) {
-                // 첫 문단의 첫 문장만 bold 처리
-                const firstSentenceEnd = trimmed.match(/[.!?]\s/);
-                if (firstSentenceEnd && firstSentenceEnd.index !== undefined) {
-                  const firstSentence = trimmed.substring(0, firstSentenceEnd.index + 1);
-                  const rest = trimmed.substring(firstSentenceEnd.index + 1).trim();
-                  return (
-                    <p key={index}>
-                      <strong>{firstSentence}</strong>
-                      {rest && ` ${rest}`}
-                    </p>
-                  );
-                }
-              }
-              return <p key={index}>{trimmed}</p>;
-            })}
+            {t.creatorsDesc.split('\n\n').map((paragraph, index) => (
+              paragraph.trim() && <p key={index}>{paragraph.trim()}</p>
+            ))}
           </div>
 
           <div className="about-section">

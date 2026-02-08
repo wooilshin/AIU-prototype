@@ -50,11 +50,8 @@ body {
     background-color: #fff;
     border-bottom: 1px solid #e0e0e0;
     padding: 20px 0;
-    position: fixed;
+    position: sticky;
     top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
     z-index: 999;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     will-change: transform; /* iOS-safe for sticky + transform combination */
@@ -343,7 +340,6 @@ body {
 .hero-section {
     position: relative;
     margin-bottom: 60px;
-    margin-top: 80px; /* 헤더 높이만큼 상단 여백 추가 */
     background-color: #fff;
 }
 
@@ -871,7 +867,6 @@ body {
 .about-hero {
     background-color: #fafafa;
     padding: 80px 0 60px;
-    padding-top: 160px; /* 헤더 높이(80px) + 기존 padding-top(80px) */
     text-align: center;
 }
 
@@ -916,19 +911,13 @@ body {
     margin-bottom: 20px;
 }
 
-/* About 섹션 첫 문장 - 진한 검정 (subtitle과 동일한 색상) */
-.about-section p strong {
-    color: #000 !important;
-    font-weight: 900;
-}
-
-/* 주요 영역 그리드 - 4열 그리드로 카드 배치 */
+/* 주요 영역 그리드 - 3열 그리드로 카드 배치 */
 .key-areas-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     margin-top: 40px;
-    max-width: 1200px;
+    max-width: 900px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -1026,7 +1015,6 @@ body {
 .contact-hero {
     background-color: #fafafa;
     padding: 80px 0 30px;
-    padding-top: 160px; /* 헤더 높이(80px) + 기존 padding-top(80px) */
     text-align: center;
     background-image: url('/images/icon/bear.svg');
     background-repeat: no-repeat;
@@ -1307,14 +1295,6 @@ body {
 /* ========================================
    반응형 디자인 (Responsive Design)
    ======================================== */
-/* 태블릿 (769px ~ 1200px) */
-@media (min-width: 769px) and (max-width: 1200px) {
-    .key-areas-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 25px;
-    }
-}
-
 /* 태블릿 및 모바일 (768px 이하) */
 @media (max-width: 768px) {
     .header-content {

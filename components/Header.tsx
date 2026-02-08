@@ -15,16 +15,16 @@ export default function Header() {
   const translations = {
     en: {
       home: 'Home',
-      about: 'About',
       aiuProject: 'AIU Project',
+      about: 'About',
       contact: 'Contact Us',
       interactive: 'Interactive (Alpha)',
       newsletter: 'Newsletter'
     },
     ko: {
       home: '홈',
-      about: '소개',
       aiuProject: 'AIU 프로젝트',
+      about: '소개',
       contact: '문의하기',
       interactive: 'Interactive (Alpha)',
       newsletter: '뉴스레터'
@@ -105,8 +105,8 @@ export default function Header() {
           </div>
           <nav className="nav-menu">
             <Link href="/">{t.home}</Link>
-            <Link href="/about">{t.about}</Link>
             <Link href="/aiu-project">{t.aiuProject}</Link>
+            <Link href="/about">{t.about}</Link>
             <Link href="/contact">{t.contact}</Link>
             <span 
               className="nav-disabled"
@@ -151,8 +151,8 @@ export default function Header() {
         </div>
         <nav className="mobile-menu-nav">
           <Link href="/" onClick={handleMenuLinkClick}>{t.home}</Link>
-          <Link href="/about" onClick={handleMenuLinkClick}>{t.about}</Link>
           <Link href="/aiu-project" onClick={handleMenuLinkClick}>{t.aiuProject}</Link>
+          <Link href="/about" onClick={handleMenuLinkClick}>{t.about}</Link>
           <Link href="/contact" onClick={handleMenuLinkClick}>{t.contact}</Link>
           <span 
             className="mobile-nav-disabled"
