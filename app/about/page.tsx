@@ -12,9 +12,9 @@ export default function About() {
     en: {
       title: 'About',
       creatorsTitle: 'Our Creators',
-      creatorsDesc: 'Will Shin works alongside his sister, Alice Shin, as a sibling creative team behind the Animal Intelligence series.\n\n Will studied artificial intelligence at the University of Pennsylvania and public policy at Harvard, and his academic background informs the project\'s conceptual framework—exploring the intersections of world-building and future technologies. \n\nAlice Shin studied design and art, and later pursued applied linguistics at Georgetown University. With a strong interest in myth and a deep affection for animals, she leads the project\'s visual creation while also contributing to its narrative sensibility. Together, they are building a creative universe that reimagines knowledge and the future through non-human perspectives.',
-      studentBTitle: 'Student B',
-      studentBDesc: 'Student B is a company that produces AIU-related publications and related media.',
+      creatorsDesc: 'Will Shin works alongside his sister, Alice Shin, as a sibling creative team behind the Animal Intelligence series.\n\n Will Shin is trained in artificial intelligence at the University of Pennsylvania and public policy at Harvard University. He chose to move into full-time writing out of a conviction that storytelling is essential for creating space where people can think reflectively about AI. The project’s title, Animal Intelligence, was deliberately chosen to emphasize the importance of cultural and philosophical intelligence alongside artificial intelligence in the AI era.\n\nAlice Shin studied design and art at the undergraduate level before pursuing applied linguistics at Georgetown University. She leads the project’s visual storytelling. By intentionally adopting a “cute” illustrative style, she lowers the barrier to engaging with serious subjects, inviting readers to approach complex questions about the future without resistance.',
+      studentBTitle: 'About Student B',
+      studentBDesc: 'Student B press is the name of thecompany that produces AIU-related publications and related media.',
       whatWeMakeTitle: 'What We Make',
       bookStoryTitle: 'Book (Story)',
       bookStoryDesc: 'Student B creates a long-form narrative fantasy centered on animals who travel across the world to study human knowledge. While presented as an animal-driven epic, the story functions as an allegory for the civilization in the post–AI era.',
