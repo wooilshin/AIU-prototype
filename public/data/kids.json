@@ -1,12 +1,12 @@
 {
-  "sectionTitle": "For Kids",
+  "sectionTitle": "Fiction Story",
   "sectionDescription": "A multi-book series about animals who learn from human knowledge and navigate a world full of unexpected adventures",
   "viewAllLink": "#all-kids",
   "books": [
     {
       "id": 1,
-      "title": "AI Story Vol.1",
-      "description": "A children’s story about the struggles and adventures of animals who decide to study\n(Coming Soon)",
+      "title": "The Story Part.1: The last Barbary Lion",
+      "description": "Fantasy story about the struggles and adventures of animals who decide to study\n(Coming Soon)",
       "coverImage": "/images/books/Story1.svg",
       "coverStyle": "background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);"
     }
