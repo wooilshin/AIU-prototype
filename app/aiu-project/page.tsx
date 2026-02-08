@@ -5,12 +5,12 @@ import Footer from '@/components/Footer'
 import Link from 'next/link'
 import { useLanguage } from '@/contexts/LanguageContext'
 
-export default function About() {
+export default function AIUProject() {
   const { language } = useLanguage()
   
   const translations = {
     en: {
-      title: 'About',
+      title: 'AIU Project',
       subtitle: 'A storytelling project that explores the age of AI through animal perspectives',
       projectTitle: 'Project Animal Intelligence',
       projectDesc: `Animal Intelligence is a story-driven content universe that invites readers to reflect on future technologies—and on life itself—through animal-centered storytelling. \n\n
@@ -22,11 +22,37 @@ export default function About() {
       This universe unfolds across multiple formats, including satirical comics, a long-form fantasy series, and illustrated publications that intuitively explain future technologies, particularly AI.
       
       While the project incorporates satire to reflect AI-driven social change, it maintains a balanced and reflective perspective. Alongside critiques of institutional failure and ethical risk, it also explores AI's positive potential—from addressing global disasters and systemic risks to enabling scientific discovery and space exploration. Rather than promoting fear or blind optimism, Animal Intelligence aims to create a thoughtful space for reflection on how humans and intelligent systems might coexist responsibly in the future.`,
+      knowledgeEraTitle: 'Knowledge Era Books',
+      knowledgeEraDesc: `Knowledge Era is a companion knowledge series to the AIU universe, written alongside the main narrative.
+It serves as an organized collection of knowledge explored by animals, designed to help readers intuitively understand modern ideas through comics and storytelling.
+
+Knowledge Era I — Observation
+The animal world observes and records human concerns and conflicts from the Industrial Revolution through the World Wars and into modernity.
+Watching the introduction of artificial intelligence in the present day, the animals sense crises that are likely to repeat within human society.
+This volume presents a collection of 20th- and 21st-century human mathematics, philosophy, and history, compiled by a cat who leads the animals' intelligence and espionage efforts.
+
+Knowledge Era II — Engineering
+Having lost trust in humans, the animals begin studying engineering in order to solve the world's problems themselves.
+Their ambition is to acquire technologies more advanced than those of humans and ultimately achieve terraforming—the ability to control planetary-scale environments.
+However, internal conflicts fracture animal society, and their technological ambitions remain at the conceptual stage.
+This era focuses on birds trained in engineering and reptiles with strong IT expertise, exploring applied mathematics, computer science, environmental engineering, and energy engineering.
+
+Knowledge Era III — Design
+After the collapse of animal society, those who remain realize that technology alone is insufficient to solve the world's problems.
+To avoid repeating humanity's long-standing mistake of "technology first, institutions later," the animals decide to redesign society itself.
+Centered on cattle who study law and raccoons who study economics, this volume explores AI ethics and new forms of economics shaped by digital technology.
+
+Knowledge Era IV — Expansion
+Exhausted by endless internal conflicts, some birds and Australian marsupials choose not to participate in the new social design.
+Instead, they plan to leave Earth. Drawing on materials taken from advanced human research institutes, they begin studying cosmology, survival in space, and the construction of extraterrestrial habitats.
+Although they ultimately recognize the limits of their technology and decide to remain on Earth, their research becomes a crucial foundation for the future expansion of the world by both humans and animals.
+This volume contains the animals' explorations of cosmology, biology, neuroscience, and urban engineering.`,
       targetAudienceTitle: 'Target Audience',
       targetAudienceDesc: `The primary target community of Animal Intelligence is, in principle, multi-generational, though the intended audience varies slightly by publication format. \n\nThe fantasy fiction is primarily aimed at middle and high school readers, while the knowledge-focused volumes—which combine engineering and AI concepts with comics—are designed for older high school students and university-level readers. The satirical comics, in contrast, are largely directed toward adults and reflect on AI-driven social change from a more critical perspective.
 
       This multi-layered audience design is intentional. Rather than separating content strictly by age, Animal Intelligence is structured so that a single narrative world can be experienced differently across generations. By engaging readers of different ages with the same characters and themes, the project encourages shared interpretation, discussion, and discovery—allowing families, students, and educators to explore the story together and exchange perspectives on the future shaped by AI.`,
-      rspectives.',
+      creatorsTitle: 'About our Creators',
+      creatorsDesc: 'Will Shin works alongside his sister, Alice Shin, as a sibling creative team behind the Animal Intelligence series.\n\n Will studied artificial intelligence at the University of Pennsylvania and public policy at Harvard, and his academic background informs the project\'s conceptual framework—exploring the intersections of world-building and future technologies. \n\nAlice Shin studied design and art, and later pursued applied linguistics at Georgetown University. With a strong interest in myth and a deep affection for animals, she leads the project\'s visual creation while also contributing to its narrative sensibility. Together, they are building a creative universe that reimagines knowledge and the future through non-human perspectives.',
       whatWeMakeTitle: 'What We Make',
       bookStoryTitle: 'Book (Story)',
       bookStoryDesc: 'Student B creates a long-form narrative fantasy centered on animals who travel across the world to study human knowledge. While presented as an animal-driven epic, the story functions as an allegory for the civilization in the post–AI era.',
@@ -38,10 +64,12 @@ export default function About() {
       aiDesc: 'Student B operates an AI tech lab where we develop experimental systems that bring comic characters to life. These characters are designed to be embedded in lightweight smart toys or figurines, allowing users to engage in learning through storytelling-driven AI experiences.'
     },
     ko: {
-      title: 'AI 동물지능 소개',
+      title: 'AIU 프로젝트',
       subtitle: '새로운 스토리텔링을 만들어 나갑니다',
       projectTitle: '프로젝트',
       projectDesc: 'AI (Animal Intelligence)는 격변하는 시대 인간의 현재 그리고 미래 기술, 사회, 그리고 삶을 조망하기 위한 목적으로 시작되었습니다. 동 프로젝트는 동물의 시선으로 인간 세상을 바라본다는 설정 아래 풍자 만화, 픽션, 및 지식 교양서 그리고 AI 시스템 기반 미디어 등 다양한 미디어를 제작하고 있습니다.',
+      knowledgeEraTitle: 'Knowledge Era Books',
+      knowledgeEraDesc: 'Knowledge Era는 AIU 세계에 대한 동반 지식 시리즈로, 메인 서사와 함께 작성되었습니다.\n\n이 시리즈는 동물들이 탐구한 지식의 체계적인 모음집으로, 만화와 스토리텔링을 통해 독자들이 현대적 아이디어를 직관적으로 이해할 수 있도록 설계되었습니다.\n\nKnowledge Era I — Observation\n동물 세계는 산업혁명부터 세계대전을 거쳐 현대에 이르기까지 인간의 관심사와 갈등을 관찰하고 기록합니다.\n현재 인공지능의 도입을 지켜보면서, 동물들은 인간 사회 내에서 반복될 가능성이 있는 위기를 감지합니다.\n이 권은 동물들의 정보 및 첩보 활동을 이끄는 고양이가 편집한 20세기와 21세기 인간의 수학, 철학, 역사 모음집을 제시합니다.\n\nKnowledge Era II — Engineering\n인간에 대한 신뢰를 잃은 동물들은 세계의 문제를 스스로 해결하기 위해 공학을 공부하기 시작합니다.\n그들의 야망은 인간보다 더 진보된 기술을 획득하고 궁극적으로 테라포밍—행성 규모의 환경을 제어하는 능력—을 달성하는 것입니다.\n그러나 내부 갈등이 동물 사회를 분열시키고, 그들의 기술적 야망은 개념적 단계에 머물러 있습니다.\n이 시대는 공학을 배운 새들과 강한 IT 전문성을 가진 파충류에 초점을 맞추며, 응용수학, 컴퓨터 과학, 환경 공학, 에너지 공학을 탐구합니다.\n\nKnowledge Era III — Design\n동물 사회의 붕괴 이후, 남은 자들은 기술만으로는 세계의 문제를 해결하기에 부족하다는 것을 깨닫습니다.\n인간의 오래된 실수인 "기술 우선, 제도 나중"을 반복하지 않기 위해, 동물들은 사회 자체를 재설계하기로 결정합니다.\n법을 공부하는 소와 경제를 공부하는 너구리를 중심으로, 이 권은 AI 윤리와 디지털 기술이 형성한 새로운 형태의 경제를 탐구합니다.\n\nKnowledge Era IV — Expansion\n끝없는 내부 갈등에 지친 일부 새들과 호주 유대류들은 새로운 사회 설계에 참여하지 않기로 선택합니다.\n대신, 그들은 지구를 떠날 계획을 세웁니다. 고급 인간 연구소에서 가져온 자료를 바탕으로, 그들은 우주론, 우주에서의 생존, 외계 거주지 건설을 공부하기 시작합니다.\n비록 그들이 궁극적으로 자신들의 기술의 한계를 인식하고 지구에 남기로 결정하지만, 그들의 연구는 인간과 동물 모두에 의한 세계의 미래 확장을 위한 중요한 기초가 됩니다.\n이 권은 동물들의 우주론, 생물학, 신경과학, 도시 공학 탐구를 담고 있습니다.',
       targetAudienceTitle: '타겟 오디언스',
       targetAudienceDesc: 'Animal Intelligence의 주요 타겟 커뮤니티는 원칙적으로 다세대를 대상으로 하며, 출판 형식에 따라 약간씩 다른 독자층을 목표로 합니다. 판타지 픽션은 주로 중고등학생 독자를 대상으로 하며, 엔지니어링과 AI 개념을 만화와 결합한 지식 중심 권은 고등학생 후반과 대학 수준의 독자를 위해 설계되었습니다. 반면 풍자 만화는 주로 성인을 대상으로 하며 AI 주도 사회 변화를 더 비판적인 관점에서 반영합니다.\n\n이러한 다층적 오디언스 설계는 의도적입니다. 연령에 따라 콘텐츠를 엄격하게 분리하기보다는, Animal Intelligence는 단일 서사 세계가 세대에 따라 다르게 경험될 수 있도록 구조화되어 있습니다. 서로 다른 연령대의 독자들이 같은 캐릭터와 주제로 참여함으로써, 이 프로젝트는 공유된 해석, 토론, 발견을 장려합니다—가족, 학생, 교육자가 함께 이야기를 탐구하고 AI가 형성한 미래에 대한 관점을 교환할 수 있도록 합니다.',
       creatorsTitle: '제작자',
@@ -75,6 +103,29 @@ export default function About() {
           <div className="about-section">
             <h2>{t.projectTitle}</h2>
             {t.projectDesc.split('\n\n').map((paragraph, index) => {
+              if (!paragraph.trim()) return null;
+              const trimmed = paragraph.trim();
+              if (index === 0) {
+                // 첫 문단의 첫 문장만 bold 처리
+                const firstSentenceEnd = trimmed.match(/[.!?]\s/);
+                if (firstSentenceEnd && firstSentenceEnd.index !== undefined) {
+                  const firstSentence = trimmed.substring(0, firstSentenceEnd.index + 1);
+                  const rest = trimmed.substring(firstSentenceEnd.index + 1).trim();
+                  return (
+                    <p key={index}>
+                      <strong>{firstSentence}</strong>
+                      {rest && ` ${rest}`}
+                    </p>
+                  );
+                }
+              }
+              return <p key={index}>{trimmed}</p>;
+            })}
+          </div>
+
+          <div className="about-section">
+            <h2>{t.knowledgeEraTitle}</h2>
+            {t.knowledgeEraDesc.split('\n\n').map((paragraph, index) => {
               if (!paragraph.trim()) return null;
               const trimmed = paragraph.trim();
               if (index === 0) {
