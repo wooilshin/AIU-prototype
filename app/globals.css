@@ -24,6 +24,7 @@ body {
     overflow-x: hidden;
     width: 100%;
     position: relative;
+    padding-top: 80px; /* 헤더 고정을 위한 공간 */
 }
 
 /* 숫자에 Acumin Variable Concept 폰트 우선 적용 (0-9 숫자 전용) */
@@ -50,11 +51,13 @@ body {
     background-color: #fff;
     border-bottom: 1px solid #e0e0e0;
     padding: 20px 0;
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
     z-index: 999;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    will-change: transform; /* iOS-safe for sticky + transform combination */
 }
 
 /* 헤더 내용 - 로고, 메뉴, 액션 버튼을 가로로 배치 */
