@@ -911,13 +911,13 @@ body {
     margin-bottom: 20px;
 }
 
-/* 주요 영역 그리드 - 3열 그리드로 카드 배치 */
+/* 주요 영역 그리드 - 4열 그리드로 카드 배치 */
 .key-areas-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     margin-top: 40px;
-    max-width: 900px;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -1295,6 +1295,14 @@ body {
 /* ========================================
    반응형 디자인 (Responsive Design)
    ======================================== */
+/* 태블릿 (769px ~ 1200px) */
+@media (min-width: 769px) and (max-width: 1200px) {
+    .key-areas-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+}
+
 /* 태블릿 및 모바일 (768px 이하) */
 @media (max-width: 768px) {
     .header-content {

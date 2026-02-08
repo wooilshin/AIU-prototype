@@ -29,23 +29,23 @@ This universe unfolds across multiple formats, including satirical comics, a lon
       knowledgeBooksDesc: `Knowledge Book is a companion knowledge series to the AIU universe, written alongside the main narrative.
 It serves as an organized collection of knowledge explored by animals, designed to help readers intuitively understand modern ideas through comics and storytelling.
 
-Knowledge Book I — Observation
+Knowledge Book I — Observation\n\n
 The animal world observes and records human concerns and conflicts from the Industrial Revolution through the World Wars and into modernity.
 Watching the introduction of artificial intelligence in the present day, the animals sense crises that are likely to repeat within human society.
 This volume presents a collection of 20th- and 21st-century human mathematics, philosophy, and history, compiled by a cat who leads the animals' intelligence and espionage efforts.
 
-Knowledge Book II — Engineering
+Knowledge Book II — Engineering\n\n
 Having lost trust in humans, the animals begin studying engineering in order to solve the world's problems themselves.
 Their ambition is to acquire technologies more advanced than those of humans and ultimately achieve terraforming—the ability to control planetary-scale environments.
 However, internal conflicts fracture animal society, and their technological ambitions remain at the conceptual stage.
 This era focuses on birds trained in engineering and reptiles with strong IT expertise, exploring applied mathematics, computer science, environmental engineering, and energy engineering.
 
-Knowledge Book III — Design
+Knowledge Book III — New Design\n\n
 After the collapse of animal society, those who remain realize that technology alone is insufficient to solve the world's problems.
 To avoid repeating humanity's long-standing mistake of "technology first, institutions later," the animals decide to redesign society itself.
 Centered on cattle who study law and raccoons who study economics, this volume explores AI ethics and new forms of economics shaped by digital technology.
 
-Knowledge Book IV — Expansion
+Knowledge Book IV — Expansion\n\n
 Exhausted by endless internal conflicts, some birds and Australian marsupials choose not to participate in the new social design.
 Instead, they plan to leave Earth. Drawing on materials taken from advanced human research institutes, they begin studying cosmology, survival in space, and the construction of extraterrestrial habitats.
 Although they ultimately recognize the limits of their technology and decide to remain on Earth, their research becomes a crucial foundation for the future expansion of the world by both humans and animals.
