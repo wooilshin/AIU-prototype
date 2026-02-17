@@ -14,7 +14,7 @@ export default function Footer() {
     },
     ko: {
       contact: '연락처',
-      connect: '연결',
+      connect: 'SNS',
       copyright: '© 2025 Student B Press. All Rights Reserved.'
     }
   }
@@ -28,7 +28,7 @@ export default function Footer() {
           <div className="footer-bottom-left">
             <div className="footer-contact">
               <h4>{t.contact}</h4>
-              <p>contentcreator[at]student-b.com</p>
+              <p>contentdirector[at]student-b.com</p>
             </div>
           </div>
           <div className="footer-bottom-right">
