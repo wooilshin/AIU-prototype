@@ -31,8 +31,10 @@ export default function Footer() {
             <div className="footer-contact">
               <h4>{t.contact}</h4>
               <p>{t.address}</p>
-              <p>Publishing team: contentdirector[at]student-b.com</p>
-              <p>Tech team:techlab[at]student-b.com</p>
+              <p>Business team: contentdirector[at]student-b.com</p>
+              <p>Tech team: techlab[at]student-b.com</p>
+              <p>Our creators: aliceshin[at]student-b.com</p>
+              <p>              willshin[at]student-b.com</p>
             </div>
           </div>
           <div className="footer-bottom-right">
