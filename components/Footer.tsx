@@ -9,11 +9,13 @@ export default function Footer() {
   const translations = {
     en: {
       contact: 'Contact',
-      connect: 'Connect',
+      address: 'Gyeonggi Pangyo Creative Media Center, 6-17, South Korea',
+      connect: 'SNS',
       copyright: '© 2025 Student B Press. All Rights Reserved.'
     },
     ko: {
       contact: '연락처',
+      address: '경기 판교 크리에이티브 미디어 센터 6-17, 대한민국',
       connect: 'SNS',
       copyright: '© 2025 Student B Press. All Rights Reserved.'
     }
@@ -28,7 +30,9 @@ export default function Footer() {
           <div className="footer-bottom-left">
             <div className="footer-contact">
               <h4>{t.contact}</h4>
-              <p>contentdirector[at]student-b.com</p>
+              <p>{t.address}</p>
+              <p>Publishing team: contentdirector[at]student-b.com</p>
+              <p>Tech team:techlab[at]student-b.com</p>
             </div>
           </div>
           <div className="footer-bottom-right">
