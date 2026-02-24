@@ -9,7 +9,6 @@ export default function Footer() {
   const translations = {
     en: {
       contact: 'Contact',
-      address: 'Gyeonggi Pangyo Creative Media Center, 6-17, South Korea',
       connect: 'SNS',
       copyright: '© 2025 Student B Press. All Rights Reserved.'
     },
@@ -29,18 +28,18 @@ export default function Footer() {
         <div className="footer-bottom">
           <div className="footer-bottom-left">
             <div className="footer-contact">
-              <h4>{t.contact}</h4>
-              <div>
+              <strong className="footer-section-title">{t.contact}</strong>
+              <div className="footer-email-item">
                 <strong>Business team:</strong><br />
-                contentdirector[at]student-b.com
+                contentdirector [at] student-b.com
               </div>
 
-              <div>
+              <div className="footer-email-item">
                 <strong>Tech team</strong><br />
-                techlab[at]student-b.com
+                techlab[at] student-b.com
               </div>
 
-              <div>
+              <div className="footer-email-item">
                 <strong>Our creators</strong><br />
                 aliceshin[at]student-b.com<br />
                 willshin[at]student-b.com
@@ -48,7 +47,7 @@ export default function Footer() {
             </div>
           </div>
           <div className="footer-bottom-right">
-            <h4>{t.connect}</h4>
+            <strong className="footer-section-title">{t.connect}</strong>
             <div className="social-icons">
               <a href="https://www.facebook.com/studentbpress/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i className="fab fa-facebook"></i></a>
               <a href="https://www.instagram.com/ai_AnimalIntelligence/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i className="fab fa-instagram"></i></a>

@@ -815,6 +815,28 @@ body {
     color: #fff;
 }
 
+/* 푸터 섹션 제목 (Contact, SNS) */
+.footer-section-title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #fff;
+    display: block;
+}
+
+/* 푸터 이메일 항목 (작은 글씨) */
+.footer-email-item {
+    font-size: 13px;
+    color: #ccc;
+    line-height: 1.8;
+    margin-bottom: 12px;
+}
+
+.footer-email-item strong {
+    font-weight: 600;
+    color: #fff;
+}
+
 /* 푸터 주소 텍스트 */
 .footer-address p {
     font-size: 15px;
@@ -1439,6 +1461,10 @@ body {
     .footer-contact h4,
     .footer-bottom-right h4 {
         font-size: 15px;
+    }
+
+    .footer-section-title {
+        font-size: 18px;
     }
 
     .carousel-btn {
