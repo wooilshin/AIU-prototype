@@ -35,14 +35,14 @@ export default function Footer() {
               </div>
 
               <div className="footer-email-item">
-                <strong>Tech team</strong><br />
-                techlab[at] student-b.com
+                <strong>Tech Lab team</strong><br />
+                techlab [at] student-b.com
               </div>
 
               <div className="footer-email-item">
                 <strong>Our creators</strong><br />
-                aliceshin[at]student-b.com<br />
-                willshin[at]student-b.com
+                aliceshin [at] student-b.com<br />
+                willshin [at] student-b.com
               </div>
             </div>
           </div>
