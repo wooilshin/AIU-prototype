@@ -15,7 +15,7 @@ export default function Footer() {
     },
     ko: {
       contact: '연락처',
-      address: '경기 판교 크리에이티브 미디어 센터 6-17, 대한민국',
+      address: '경기도 성남시 대왕판교로 645 창조경제혁신센터 6-17',
       connect: 'SNS',
       copyright: '© 2025 Student B Press. All Rights Reserved.'
     }
@@ -30,11 +30,21 @@ export default function Footer() {
           <div className="footer-bottom-left">
             <div className="footer-contact">
               <h4>{t.contact}</h4>
-              <p>{t.address}</p>
-              <p>Business team: contentdirector[at]student-b.com</p>
-              <p>Tech team: techlab[at]student-b.com</p>
-              <p>Our creators: aliceshin[at]student-b.com</p>
-              <p>              willshin[at]student-b.com</p>
+              <div>
+                <strong>Business team:</strong><br />
+                contentdirector[at]student-b.com
+              </div>
+
+              <div>
+                <strong>Tech team</strong><br />
+                techlab[at]student-b.com
+              </div>
+
+              <div>
+                <strong>Our creators</strong><br />
+                aliceshin[at]student-b.com<br />
+                willshin[at]student-b.com
+              </div>
             </div>
           </div>
           <div className="footer-bottom-right">
