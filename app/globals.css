@@ -1039,6 +1039,58 @@ body {
 }
 
 /* ========================================
+   Creative Tech Lab 페이지 스타일
+   ======================================== */
+.tech-lab-section {
+    padding: 60px 0 80px;
+    background-color: #fff;
+}
+
+.tech-lab-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.tech-lab-image-wrapper {
+    flex: 0 0 40%;
+    max-width: 420px;
+}
+
+.tech-lab-image {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    display: block;
+}
+
+.tech-lab-content {
+    flex: 1;
+}
+
+.tech-lab-content h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: #000;
+}
+
+.tech-lab-content p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+.tech-lab-warning {
+    font-size: 14px;
+    color: #b22222;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+/* ========================================
    Contact 페이지 스타일
    ======================================== */
 /* Contact 페이지 히어로 섹션 - 배경에 곰 아이콘 포함 */
@@ -1488,6 +1540,14 @@ body {
 
     .about-cta {
         padding: 40px 20px;
+    }
+
+    .tech-lab-layout {
+        flex-direction: column;
+    }
+
+    .tech-lab-image-wrapper {
+        max-width: 100%;
     }
 
     .contact-hero {
