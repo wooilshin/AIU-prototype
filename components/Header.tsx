@@ -17,16 +17,16 @@ export default function Header() {
       home: 'Home',
       aiuProject: 'AIU Project',
       about: 'About',
+      creativeTechLab: 'Creative Tech Lab',
       contact: 'Contact Us',
-      interactive: 'Interactive (Alpha)',
       newsletter: 'Newsletter'
     },
     ko: {
       home: '홈',
       aiuProject: 'AIU 프로젝트',
       about: '소개',
+      creativeTechLab: 'Creative Tech Lab',
       contact: '문의하기',
-      interactive: 'Interactive (Alpha)',
       newsletter: '뉴스레터'
     }
   }
@@ -107,13 +107,13 @@ export default function Header() {
             <Link href="/">{t.home}</Link>
             <Link href="/aiu-project">{t.aiuProject}</Link>
             <Link href="/about">{t.about}</Link>
-            <Link href="/contact">{t.contact}</Link>
             <span 
               className="nav-disabled"
               onClick={(e) => e.preventDefault()}
             >
-              {t.interactive}
+              {t.creativeTechLab}
             </span>
+            <Link href="/contact">{t.contact}</Link>
           </nav>
           <div className="header-actions">
             <button className="newsletter-btn" onClick={handleNewsletterClick}>{t.newsletter}</button>
@@ -153,13 +153,13 @@ export default function Header() {
           <Link href="/" onClick={handleMenuLinkClick}>{t.home}</Link>
           <Link href="/aiu-project" onClick={handleMenuLinkClick}>{t.aiuProject}</Link>
           <Link href="/about" onClick={handleMenuLinkClick}>{t.about}</Link>
-          <Link href="/contact" onClick={handleMenuLinkClick}>{t.contact}</Link>
           <span 
             className="mobile-nav-disabled"
             onClick={(e) => e.preventDefault()}
           >
-            {t.interactive}
+            {t.creativeTechLab}
           </span>
+          <Link href="/contact" onClick={handleMenuLinkClick}>{t.contact}</Link>
         </nav>
       </div>
     </header>
