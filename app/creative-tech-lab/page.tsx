@@ -14,7 +14,7 @@ export default function CreativeTechLabPage() {
       paragraphs: [
         'Our first-generation device is a static figurine that connects to an AI system to enable meaningful, character-driven conversations.',
         'At this stage, our primary focus is not on hardware complexity, but on validating and refining the AI system — including dialogue quality, character consistency, and system stability.',
-        'Future generation devices will explore the addition of movement and enhanced interactivity, aligned with today\\'s technological maturity.',
+        'Future generation devices will explore the addition of movement and enhanced interactivity, aligned with today\'s technological maturity.',
         'Our core goal — whether through storytelling or interactive devices — is to create experiences that are engaging, educational, and safe.',
         'We aim to design products that genuinely entertain while also supporting learning and positive development.'
       ],
@@ -27,7 +27,7 @@ export default function CreativeTechLabPage() {
       paragraphs: [
         'Our first-generation device is a static figurine that connects to an AI system to enable meaningful, character-driven conversations.',
         'At this stage, our primary focus is not on hardware complexity, but on validating and refining the AI system — including dialogue quality, character consistency, and system stability.',
-        'Future generation devices will explore the addition of movement and enhanced interactivity, aligned with today\\'s technological maturity.',
+        'Future generation devices will explore the addition of movement and enhanced interactivity, aligned with today\'s technological maturity.',
         'Our core goal — whether through storytelling or interactive devices — is to create experiences that are engaging, educational, and safe.',
         'We aim to design products that genuinely entertain while also supporting learning and positive development.'
       ],
