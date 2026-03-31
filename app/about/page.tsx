@@ -18,13 +18,13 @@ export default function About() {
       studentBTitle: 'About Student B',
       studentBDesc: 'Student B is a startup and publishing house founded to explore and redefine new standards in edutainment. It is currently focused on publishing AIU-related works.',
       whatWeMakeTitle: 'What We Make',
-      bookStoryTitle: 'Book (Story)',
+      bookStoryTitle: 'Book (The Animal Intelligence Story)',
       bookStoryDesc: 'Student B creates a long-form narrative fantasy centered on animals who travel across the world to study human knowledge. While presented as an animal-driven epic, the story functions as an allegory for the civilization in the post–AI era.',
-      bookKnowledgeTitle: 'Book (Knowledge Series)',
+      bookKnowledgeTitle: 'Book (Knowledge Era Series)',
       bookKnowledgeDesc: 'Student B also produces a nonfiction book series that explores science, social science, and philosophy before and after the emergence of AI. These volumes serve as accessible companion books to the narrative series, intuitively introducing the knowledge and ideas that the animal characters encounter.',
       comicsTitle: 'Comic (Watching them Humans Series)',
       comicsDesc: 'As Student B\'s flagship and entry point, the comic series consists of short-form illustrated works that reflect on human life in the age of AI. Through satire and observation, these comics invite readers to pause and reconsider everyday assumptions.',
-      aiTitle: 'AI System',
+      aiTitle: 'AI-driven toys',
       aiDesc: 'Student B operates an AI tech lab where we develop experimental systems that bring comic characters to life. These characters are designed to be embedded in lightweight smart toys or figurines, allowing users to engage in learning through storytelling-driven AI experiences.'
     },
     ko: {
