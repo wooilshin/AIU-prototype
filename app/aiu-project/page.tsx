@@ -10,7 +10,7 @@ export default function AIUProject() {
   const translations = {
     en: {
       title: 'AIU Project',
-      subtitle: 'A storytelling project that explores the age of AI through animal perspectives',
+      subtitle: 'A storytelling project that explores our knowledge world through animal perspectives',
       projectTitle: 'The Project',
       projectDesc: `The Animal Intelligence Project is a cross-format storytelling initiative that brings together comics, fantasy novels, and future knowledge guidebooks within one connected universe. Its name was intentionally chosen to echo Artificial Intelligence, emphasizing not only the rise of AI but also the importance of human responsibility, judgment, and choice in shaping the future.
 
@@ -18,9 +18,9 @@ Designed for multiple generations, the project offers different formats for diff
 
 The animal characters—who study knowledge and attempt to understand human civilization—serve as metaphors for ourselves. While the stories highlight adventure, humor, and imagination, they also carry a clear purpose: to encourage open discussion about how humans can grow and act responsibly in a rapidly changing technological world. Positioned between anxiety and hope, the project seeks to imagine the future with balance, building a meaningful intellectual property that inspires reflection rather than fear or blind optimism.`,
       storyTitle: 'The Story',
-      storyDesc: `The story begins when animals start to notice the strange contradictions and accelerating crises of human civilization. Sensing that humans may be heading toward self-destruction, they decide to study human knowledge in order to help. With the assistance of AI, the animals begin learning science, history, and technology. However, this process does not merely transform their understanding of humans—it also triggers profound social, political, and ethical changes within the animal world itself.
+      storyDesc: `The story begins when animals start to notice the accelerating crises of human civilization. Sensing that humans may be heading toward self-destruction, they decide to study human knowledge in order to help. However, this process does not merely transform their understanding of humans—it also triggers profound social, political, and ethical changes within the animal world itself.
 
-As the narrative unfolds, the animals encounter a series of crises and disasters caused by the misuse of AI. Through these experiences, they are forced to confront fundamental questions: How should one live? What lies at the core of a meaningful life? How can knowledge and AI be used thoughtfully rather than blindly or destructively? And what kinds of hope and meaning should the next generation carry forward?
+As the narrative unfolds, the animals encounter a series of crises and disasters caused by the misuse of knowledge. Through these experiences, they are forced to confront fundamental questions: How should one live? What lies at the core of a meaningful life? How can knowledge and AI be used thoughtfully rather than blindly or destructively? And what kinds of hope and meaning should the next generation carry forward?
 
 This universe unfolds across multiple formats, including satirical comics, a long-form fantasy series, and illustrated publications.`,
       knowledgeBooksTitle: 'Knowledge Books',
