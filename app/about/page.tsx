@@ -2,7 +2,6 @@
 
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import Link from 'next/link'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function About() {
@@ -59,13 +58,6 @@ export default function About() {
           <div className="about-section">
             <h2>{t.creatorsTitle}</h2>
             {t.creatorsDesc.split('\n\n').map((paragraph, index) => (
-              paragraph.trim() && <p key={index}>{paragraph.trim()}</p>
-            ))}
-          </div>
-
-          <div className="about-section">
-            <h2>{t.techLabTitle}</h2>
-            {t.techLabDesc.split('\n\n').map((paragraph, index) => (
               paragraph.trim() && <p key={index}>{paragraph.trim()}</p>
             ))}
           </div>
