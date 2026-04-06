@@ -12,11 +12,11 @@ export default function AIUProject() {
       title: 'AIU Project',
       subtitle: 'A storytelling project that explores our knowledge world through animal perspectives',
       projectTitle: 'The Project',
-      projectDesc: `The Animal Intelligence Project is a cross-format storytelling initiative that brings together comics, fantasy novels, and future knowledge guidebooks within one connected universe. Its name was intentionally chosen to echo Artificial Intelligence, emphasizing not only the rise of AI but also the importance of human responsibility, judgment, and choice in shaping the future.
+      projectDesc: `The Animal Intelligence Project is a storytelling project that connects comics, fantasy novels, and knowledge books into one shared universe. The name is similar to "Artificial Intelligence," but it focuses on something different—human responsibility, judgment, and choice in the AI age.
 
-The animal characters—who study knowledge and attempt to understand human civilization—serve as metaphors for ourselves. While the stories highlight adventure, humor, and imagination, they also carry a clear purpose: to encourage open discussion about how humans can grow and act responsibly in a rapidly changing technological world.
+In the story, animal characters observe the human world and learn about human knowledge. They watch how humans live, think, and make decisions. While the stories are full of adventure, humor, and imagination, they also have a clear purpose: to question the world to think about how to live responsibly in a fast-changing world.
 
-Designed for multiple generations, the project offers different formats for different age groups. The fantasy fiction series, which follows the animals' adventures and conflicts, is primarily written for middle and high school readers. The knowledge-focused volumes combine engineering and AI concepts with comics and accessible explanations, making them suitable for older high school and university students. The satirical comics are aimed more at adults, offering deeper reflections on how AI is transforming society.`,
+The project is made for different age groups. The fantasy stories, which follow the animals' adventures and conflicts, are mainly for middle and high school students. The knowledge books explain topics like engineering and AI in a simple and visual way, so they are suitable for older students, including high school and university level. The satirical comics are more for adults, offering deeper thoughts about how AI is changing society.`,
       storyTitle: 'The Story',
       storyCoverAlt:
         'Book cover: The Last Barbary Lion — Animal Intelligence, by Will Shin and Alice Shin (Student B Press)',
@@ -51,7 +51,7 @@ This volume contains the animals' explorations of cosmology, biology, neuroscien
       title: 'AIU 프로젝트',
       subtitle: '새로운 스토리텔링을 만들어 나갑니다',
       projectTitle: '프로젝트',
-      projectDesc: 'Animal Intelligence Project는 동물 중심의 스토리텔링을 통해 독자들이 미래와 삶 자체에 대해 성찰하도록 초대하는 스토리 중심 콘텐츠입니다.\n\n이 프로젝트는 AI 주도 사회 변화를 반영하기 위해 풍자를 포함하지만, 균형 잡힌 성찰적 관점을 유지합니다. 제도적 실패와 윤리적 위험에 대한 비판과 함께, 전 세계적 재난과 체계적 위험을 해결하고 과학적 발견과 우주 탐사를 가능하게 하는 등 AI의 긍정적 잠재력을 탐구합니다. 두려움이나 맹목적 낙관론을 조장하기보다는, Animal Intelligence는 인간과 지능 시스템이 미래에 책임감 있게 공존할 수 있는 방법에 대한 성찰을 위한 사고의 공간을 만들고자 합니다.',
+      projectDesc: 'Animal Intelligence Project는 만화, 판타지 소설, 지식 도서를 하나의 공유 세계관으로 잇는 스토리텔링 프로젝트입니다. 이름은 “인공지능(Artificial Intelligence)”과 비슷하지만, 초점은 다릅니다—AI 시대에 인간의 책임, 판단, 선택입니다.\n\n이야기 속 동물들은 인간 세계를 관찰하고 인간의 지식을 배웁니다. 인간이 어떻게 살고, 생각하고, 결정하는지 지켜봅니다. 이야기는 모험과 유머, 상상력이 가득하면서도 분명한 목적을 담고 있습니다. 급변하는 세상에서 어떻게 책임감 있게 살아갈지 세계를 질문하도록 이끕니다.\n\n프로젝트는 연령대별로 다르게 구성되어 있습니다. 동물들의 모험과 갈등을 다루는 판타지 이야기는 주로 중·고등학생을 위해 쓰였습니다. 공학과 AI 같은 주제를 쉽고 시각적으로 풀어 주는 지식 도서는 고등학생과 대학 수준을 포함한 더 나이 든 학생들에게 적합합니다. 풍자적 만화는 성인을 위해 AI가 사회를 어떻게 바꾸는지 더 깊게 생각해 보게 합니다.',
       storyTitle: '스토리',
       storyCoverAlt:
         '도서 표지: The Last Barbary Lion — Animal Intelligence, Will Shin·Alice Shin (Student B Press)',
@@ -84,15 +84,17 @@ This volume contains the animals' explorations of cosmology, biology, neuroscien
 
           <div className="about-section aiu-story-section">
             <h2>{t.storyTitle}</h2>
-            <figure className="aiu-story-cover">
-              <img
-                src="/images/aiu-project/the-last-barbary-lion-cover.png"
-                alt={t.storyCoverAlt}
-              />
-            </figure>
-            {t.storyDesc.split('\n\n').map((paragraph, index) => (
-              paragraph.trim() && <p key={index}>{paragraph.trim()}</p>
-            ))}
+            <div className="aiu-story-body">
+              <figure className="aiu-story-cover">
+                <img
+                  src="/images/aiu-project/the-last-barbary-lion-cover.png"
+                  alt={t.storyCoverAlt}
+                />
+              </figure>
+              {t.storyDesc.split('\n\n').map((paragraph, index) => (
+                paragraph.trim() && <p key={index}>{paragraph.trim()}</p>
+              ))}
+            </div>
           </div>
 
           <div className="about-section">

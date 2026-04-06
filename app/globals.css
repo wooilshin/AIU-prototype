@@ -945,11 +945,19 @@ body {
     margin-bottom: 20px;
 }
 
-/* AIU Project — The Story 도서 표지 */
+/* AIU Project — The Story: 표지 왼쪽, 본문 오른쪽으로 흐름 */
+.aiu-story-body::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
 .aiu-story-cover {
-    margin: 0 0 28px;
+    float: left;
+    width: 32%;
+    max-width: 200px;
+    margin: 4px 22px 10px 0;
     padding: 0;
-    max-width: 340px;
 }
 
 .aiu-story-cover img {
@@ -957,7 +965,7 @@ body {
     height: auto;
     display: block;
     border-radius: 6px;
-    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
 }
 
 /* 주요 영역 그리드 - 3열 그리드로 카드 배치 */
@@ -1587,6 +1595,13 @@ body {
         width: 100%;
         max-width: 300px;
         margin: 0 auto 20px;
+    }
+
+    .aiu-story-cover {
+        float: none;
+        width: 100%;
+        max-width: 200px;
+        margin: 0 auto 18px;
     }
 
     .tech-lab-content h2 {
