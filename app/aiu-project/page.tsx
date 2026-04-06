@@ -20,9 +20,7 @@ Designed for multiple generations, the project offers different formats for diff
       storyTitle: 'The Story',
       storyDesc: `The story begins when animals start to notice the accelerating crises of human civilization. Sensing that humans may be heading toward self-destruction, they decide to study human knowledge in order to help. However, this process does not merely transform their understanding of humans—it also triggers profound social, political, and ethical changes within the animal world itself.
 
-As the narrative unfolds, the animals encounter a series of crises and disasters caused by the misuse of knowledge. Through these experiences, they are forced to confront fundamental questions: What lies at the core of a meaningful life? How can knowledge and AI be used thoughtfully rather than blindly or destructively? And what kinds of hope and meaning should the next generation carry forward?
-
-This universe unfolds across multiple formats, including satirical comics, a long-form fantasy series, and illustrated publications.`,
+As the narrative unfolds, the animals encounter a series of crises and disasters caused by the misuse of knowledge.`,
       knowledgeBooksTitle: 'Knowledge Books',
       knowledgeBooksDesc: `Knowledge Book is a companion knowledge series to the AIU universe, written alongside the main narrative.
 It serves as an organized collection of knowledge explored by animals, designed to help readers intuitively understand modern ideas through comics and storytelling.

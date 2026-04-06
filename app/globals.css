@@ -833,6 +833,33 @@ body {
     line-height: 1.8;
 }
 
+/* Footer.tsx: Contact / SNS 제목 (마크업은 strong, h4 스타일과 동일) */
+.footer-section-title {
+    font-size: 17px;
+    font-weight: 400;
+    display: block;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+/* Footer.tsx: 이메일 블록 — body 19px 상속 방지, 기존 .footer-contact p와 동일 톤 */
+.footer-email-item {
+    font-size: 15px;
+    color: #ccc;
+    line-height: 1.8;
+    margin-bottom: 14px;
+}
+
+.footer-email-item:last-child {
+    margin-bottom: 0;
+}
+
+.footer-email-item strong {
+    font-size: 15px;
+    font-weight: 600;
+    color: #e8e8e8;
+}
+
 /* 소셜 아이콘 그룹 - Facebook, Instagram 등 */
 .social-icons {
     display: flex;
@@ -1072,17 +1099,29 @@ body {
 }
 
 .tech-lab-content-solo {
-    max-width: 800px;
+    max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.tech-lab-build-figure {
-    margin-top: 28px;
-    max-width: 420px;
+/* 첫 섹션: 글 왼쪽, 거북이 이미지 오른쪽 */
+.tech-lab-split {
+    display: flex;
+    align-items: flex-start;
+    gap: 36px;
 }
 
-.tech-lab-build-figure .tech-lab-image {
+.tech-lab-split-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.tech-lab-split-media {
+    flex: 0 0 38%;
+    max-width: 400px;
+}
+
+.tech-lab-split-media .tech-lab-image {
     width: 100%;
     height: auto;
     display: block;
@@ -1498,7 +1537,8 @@ body {
 
     .footer-address h4,
     .footer-contact h4,
-    .footer-bottom-right h4 {
+    .footer-bottom-right h4,
+    .footer-section-title {
         font-size: 15px;
     }
 
@@ -1527,6 +1567,17 @@ body {
     }
 
     .tech-lab-image-wrapper {
+        flex: none;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .tech-lab-split {
+        flex-direction: column;
+        gap: 28px;
+    }
+
+    .tech-lab-split-media {
         flex: none;
         max-width: 100%;
         width: 100%;
