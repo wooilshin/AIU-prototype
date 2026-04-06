@@ -8,13 +8,18 @@
     box-sizing: border-box;
 }
 
+:root {
+    --header-offset: 81px;
+}
+
 /* HTML 요소 - 좌우 스크롤 방지 (모바일 레이아웃 고정) */
 html {
     overflow-x: hidden;
     width: 100%;
+    scroll-padding-top: var(--header-offset);
 }
 
-/* Body 스타일 - 폰트, 색상, 배경 등 기본 설정 */
+/* Body 스타일 - 폰트, 색상, 배경 등 기본 설정 (고정 헤더 높이만큼 상단 패딩) */
 body {
     font-family: 'Inter', 'Acumin Variable Concept', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
     font-size: 19px;
@@ -24,6 +29,7 @@ body {
     overflow-x: hidden;
     width: 100%;
     position: relative;
+    padding-top: var(--header-offset);
 }
 
 /* 숫자에 Acumin Variable Concept 폰트 우선 적용 (0-9 숫자 전용) */
@@ -45,16 +51,17 @@ body {
 /* ========================================
    헤더 (Header) 스타일
    ======================================== */
-/* 헤더 컨테이너 - 상단 고정, 그림자 효과 */
+/* 헤더 컨테이너 - 뷰포트 상단 고정, 아주 약한 구분감 */
 .header {
-    background-color: #fff;
-    border-bottom: 1px solid #e0e0e0;
-    padding: 20px 0;
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 999;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    will-change: transform; /* iOS-safe for sticky + transform combination */
+    background-color: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.035);
 }
 
 /* 헤더 내용 - 로고, 메뉴, 액션 버튼을 가로로 배치 */
