@@ -18,9 +18,7 @@ The animal characters—who study knowledge and attempt to understand human civi
 
 Designed for multiple generations, the project offers different formats for different age groups. The fantasy fiction series, which follows the animals' adventures and conflicts, is primarily written for middle and high school readers. The knowledge-focused volumes combine engineering and AI concepts with comics and accessible explanations, making them suitable for older high school and university students. The satirical comics are aimed more at adults, offering deeper reflections on how AI is transforming society.`,
       storyTitle: 'The Story',
-      storyDesc: `The story begins when animals start to notice the accelerating crises of human civilization. Sensing that humans may be heading toward self-destruction, they decide to study human knowledge in order to help. However, this process does not merely transform their understanding of humans—it also triggers profound social, political, and ethical changes within the animal world itself.
-
-As the narrative unfolds, the animals encounter a series of crises and disasters caused by the misuse of knowledge.`,
+      storyDesc: `The story begins when animals start to notice the accelerating crises of human civilization. Sensing that humans may be heading toward self-destruction, they decide to study human knowledge in order to help. However, this process does not merely transform their understanding of humans—it also triggers profound social, political, and ethical changes within the animal world itself.`,
       knowledgeBooksTitle: 'Knowledge Books',
       knowledgeBooksDesc: `Knowledge Book is a companion knowledge series to the AIU universe, written alongside the main narrative.
 It serves as an organized collection of knowledge explored by animals, designed to help readers intuitively understand modern ideas through comics and storytelling.

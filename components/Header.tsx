@@ -106,8 +106,8 @@ export default function Header() {
           <nav className="nav-menu">
             <Link href="/">{t.home}</Link>
             <Link href="/aiu-project">{t.aiuProject}</Link>
-            <Link href="/about">{t.about}</Link>
             <Link href="/creative-tech-lab">{t.creativeTechLab}</Link>
+            <Link href="/about">{t.about}</Link>
             <Link href="/contact">{t.contact}</Link>
           </nav>
           <div className="header-actions">
@@ -147,8 +147,8 @@ export default function Header() {
         <nav className="mobile-menu-nav">
           <Link href="/" onClick={handleMenuLinkClick}>{t.home}</Link>
           <Link href="/aiu-project" onClick={handleMenuLinkClick}>{t.aiuProject}</Link>
-          <Link href="/about" onClick={handleMenuLinkClick}>{t.about}</Link>
           <Link href="/creative-tech-lab" onClick={handleMenuLinkClick}>{t.creativeTechLab}</Link>
+          <Link href="/about" onClick={handleMenuLinkClick}>{t.about}</Link>
           <Link href="/contact" onClick={handleMenuLinkClick}>{t.contact}</Link>
         </nav>
       </div>

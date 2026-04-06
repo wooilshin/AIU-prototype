@@ -7,8 +7,6 @@ import { useLanguage } from '@/contexts/LanguageContext'
 type TechLabSection = {
   title: string
   paragraphs: string[]
-  /** 거북이 이미지 왼쪽, 본문 오른쪽 (첫 섹션) */
-  sideBySideImage?: boolean
 }
 
 const translations: Record<
@@ -26,7 +24,6 @@ const translations: Record<
     sections: [
       {
         title: 'What our Tech team is building',
-        sideBySideImage: true,
         paragraphs: [
           'We are a small tech team trying to bring our Animal Intelligence characters into the human world. Using AI and robotics, we are exploring a simple idea: what if characters were not just something you watch, but something you live with?',
           'Organizations like Disney Imagineering have already shown that characters can exist in physical space in surprisingly believable ways. But those characters are still built mainly for performance—for short moments of entertainment. What we want is different. We want to give characters a voice that can think and grow, and expand the field of edutainment.'
@@ -59,7 +56,6 @@ const translations: Record<
     sections: [
       {
         title: '우리 기술 팀이 하려는 일',
-        sideBySideImage: true,
         paragraphs: [
           '우리는 Animal Intelligence의 캐릭터들을 인간의 세계로 가져오려는 작은 기술 팀입니다. AI와 로보틱스를 활용해 이런 질문을 탐구하고 있습니다. 캐릭터가 그저 보는 존재가 아니라, 함께 사는 존재가 된다면 어떨까?',
           '디즈니 이매지니어링 같은 조직은 이미 캐릭터가 물리적 공간에 놀랄 만큼 자연스럽게 존재할 수 있음을 보여 주었습니다. 하지만 그런 캐릭터들은 여전히 연주(퍼포먼스)를 위해—짧은 순간의 오락을 위해—주로 만들어집니다. 우리가 원하는 것은 다릅니다. 생각하고 성장할 수 있는 목소리를 캐릭터에게 주고, 에듀테인먼트의 영역을 넓히고 싶습니다.'
@@ -104,32 +100,24 @@ export default function CreativeTechLabPage() {
 
       <section className="tech-lab-section">
         <div className="container">
-          <div className="tech-lab-content tech-lab-content-solo">
-            {t.sections.map((section, sectionIndex) => (
-              <div key={section.title} className="tech-lab-content-block">
-                <h2>{section.title}</h2>
-                {section.sideBySideImage ? (
-                  <div className="tech-lab-split">
-                    <div className="tech-lab-split-media">
-                      <img
-                        src="/images/tech-lab/turtle-device.png"
-                        alt={t.deviceImageAlt}
-                        className="tech-lab-image"
-                      />
-                    </div>
-                    <div className="tech-lab-split-text">
-                      {section.paragraphs.map((paragraph, pIndex) => (
-                        <p key={`${sectionIndex}-${pIndex}`}>{paragraph}</p>
-                      ))}
-                    </div>
-                  </div>
-                ) : (
-                  section.paragraphs.map((paragraph, pIndex) => (
+          <div className="tech-lab-page-layout">
+            <aside className="tech-lab-visual-column">
+              <img
+                src="/images/tech-lab/turtle-device.png"
+                alt={t.deviceImageAlt}
+                className="tech-lab-image"
+              />
+            </aside>
+            <div className="tech-lab-text-column tech-lab-content">
+              {t.sections.map((section, sectionIndex) => (
+                <div key={section.title} className="tech-lab-content-block">
+                  <h2>{section.title}</h2>
+                  {section.paragraphs.map((paragraph, pIndex) => (
                     <p key={`${sectionIndex}-${pIndex}`}>{paragraph}</p>
-                  ))
-                )}
-              </div>
-            ))}
+                  ))}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
