@@ -7,7 +7,7 @@ import { useLanguage } from '@/contexts/LanguageContext'
 type TechLabSection = {
   title: string
   paragraphs: string[]
-  /** 본문 왼쪽, 거북이 이미지 오른쪽 (첫 섹션) */
+  /** 거북이 이미지 왼쪽, 본문 오른쪽 (첫 섹션) */
   sideBySideImage?: boolean
 }
 
@@ -35,9 +35,10 @@ const translations: Record<
       {
         title: 'What is edutainment?',
         paragraphs: [
-          'Edutainment means learning through fun—through movies, games, music, and stories. It sounds like a new concept, but in truth, it has been part of our lives for a long time. One of the most well-known examples is Sesame Street.',
-          'When I was young, I watched characters like Elmo and Cookie Monster, and without even realizing it, I learned the alphabet, numbers, and even something about how those strange, colorful characters saw the world. Learning did not feel like studying. It simply happened.',
-          'But that kind of learning did not continue forever. At some point, things became serious. The ideas became more complex, and they seemed to require serious teachers with serious faces. There were limits to what could be taught through television or simple stories. Over time, more edutainment content appeared, but much of it stayed on the surface.'
+          'Edutainment means learning through fun—through movies, games, music, and stories. It may sound like a new concept, but in truth, it has been part of our lives for a long time. One of the most well-known examples is Sesame Street.',
+          'Think back to characters like Elmo, Cookie Monster, and even the big yellow bird. Without even realizing it, children learn the alphabet, numbers, and even their sense of humor. At least at that stage, learning does not feel like studying.',
+          'But as time passes, Sesame Street slowly fades away, and that kind of learning does not continue forever. As we grow older, the knowledge we need to learn becomes more complex—too complex for Elmo and his friends to explain. The tone also changes. What once felt playful becomes serious. And in their place, teachers with serious faces take over.',
+          'Is this the limit of edutainment?'
         ]
       },
       {
@@ -45,10 +46,8 @@ const translations: Record<
         paragraphs: [
           'For the first time, it feels like a real edutainment movement could begin. The ultimate form of edutainment now feels within reach. There are two reasons for this.',
           'First, we now have tools that can explain knowledge in ways that are easier than ever before. Second, characters are no longer confined to screens or pages—they can begin to exist alongside us.',
-          'And that changes everything.',
-          'Imagine not just watching a character but living with one. You talk with them, argue with them, and learn from them. Not like a distant, overly serious teacher, but like a friend. In that kind of relationship, learning is no longer something you have to force. It becomes something you want to do.',
-          'What we are building is still small. We are beginning with the simplest forms—AI-connected figures—and will gradually move toward something more complex. Over time, these characters will sit next to you, read with you, and think with you. Step by step, they will stop being objects and start becoming presences.',
-          'Ultimately, this is what we aim for: learning becomes something you live with, something that grows with you, and maybe, for the first time, something that can truly feel interesting again.'
+          'Imagine not just watching a character but living with one. You talk with them, argue with them, and learn from them. Not like a distant, overly serious teacher, but like a friend.',
+          'What we are building is still small. We are beginning with the simplest forms—AI-connected figures—and will gradually move toward something more complex. Over time, these characters will sit next to you, read with you, and think with you. Ultimately, this is what we aim for: learning becomes something you live with, something that grows with you, and maybe, for the first time, something that can truly feel interesting again.'
         ]
       }
     ]
@@ -69,9 +68,10 @@ const translations: Record<
       {
         title: '에듀테인먼트란?',
         paragraphs: [
-          '에듀테인먼트는 영화, 게임, 음악, 이야기를 통해 즐거움 속에서 배우는 것을 뜻합니다. 새로운 개념처럼 들리지만, 사실 오랫동안 우리 삶의 일부였습니다. 가장 잘 알려진 예 중 하나가 세서미 스트리트입니다.',
-          '어릴 때 엘모, 쿠키 몬스터 같은 캐릭터를 보며, 스스로도 모르게 알파벳과 숫자, 그리고 저 이상하고 알록달록한 캐릭터들이 세상을 어떻게 보는지까지 배웠습니다. 공부하는 것 같지 않았습니다. 그저 자연스럽게 일어났습니다.',
-          '하지만 그런 학습이 영원히 이어지지는 않았습니다. 어느 순간부터 모든 것이 진지해졌습니다. 생각은 더 복잡해졌고, 진지한 표정의 진지한 선생님이 필요해진 것처럼 느껴졌습니다. TV나 단순한 이야기로 가르칠 수 있는 것에는 한계가 있었습니다. 시간이 지나며 에듀테인먼트 콘텐츠는 늘었지만, 많은 것이 겉에 머물렀습니다.'
+          '에듀테인먼트는 영화, 게임, 음악, 이야기를 통해 즐거움 속에서 배우는 것을 뜻합니다. 새로운 개념처럼 들릴 수도 있지만, 사실 오랫동안 우리 삶의 일부였습니다. 가장 잘 알려진 예 중 하나가 세서미 스트리트입니다.',
+          '엘모, 쿠키 몬스터, 그리고 큰 노란 새까지 떠올려 보세요. 아이들은 스스로도 모르게 알파벳과 숫자, 심지어 유머 감각까지 배웁니다. 적어도 그 시기에는 배움이 공부처럼 느껴지지 않습니다.',
+          '하지만 시간이 지나면 세서미 스트리트는 서서히 멀어지고, 그런 식의 배움도 영원히 이어지지는 않습니다. 나이가 들수록 배워야 할 지식은 더 복잡해지고—엘모와 친구들이 설명하기엔 너무 복잡합니다. 분위기도 바뀝니다. 한때 장난스러웠던 것은 진지해지고, 그 자리를 진지한 표정의 선생님들이 대신합니다.',
+          '그렇다면 이것이 에듀테인먼트의 한계일까요?'
         ]
       },
       {
@@ -110,17 +110,17 @@ export default function CreativeTechLabPage() {
                 <h2>{section.title}</h2>
                 {section.sideBySideImage ? (
                   <div className="tech-lab-split">
-                    <div className="tech-lab-split-text">
-                      {section.paragraphs.map((paragraph, pIndex) => (
-                        <p key={`${sectionIndex}-${pIndex}`}>{paragraph}</p>
-                      ))}
-                    </div>
                     <div className="tech-lab-split-media">
                       <img
                         src="/images/tech-lab/turtle-device.png"
                         alt={t.deviceImageAlt}
                         className="tech-lab-image"
                       />
+                    </div>
+                    <div className="tech-lab-split-text">
+                      {section.paragraphs.map((paragraph, pIndex) => (
+                        <p key={`${sectionIndex}-${pIndex}`}>{paragraph}</p>
+                      ))}
                     </div>
                   </div>
                 ) : (

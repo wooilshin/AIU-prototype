@@ -1104,7 +1104,7 @@ body {
     margin-right: auto;
 }
 
-/* 첫 섹션: 글 왼쪽, 거북이 이미지 오른쪽 */
+/* 첫 섹션: 거북이 이미지 왼쪽, 글 오른쪽 */
 .tech-lab-split {
     display: flex;
     align-items: flex-start;
@@ -1573,7 +1573,7 @@ body {
     }
 
     .tech-lab-split {
-        flex-direction: column;
+        flex-direction: column-reverse;
         gap: 28px;
     }
 
