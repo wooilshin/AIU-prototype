@@ -12,11 +12,13 @@ export default function AIUProject() {
       title: 'AIU Project',
       subtitle: 'A storytelling project that explores our knowledge world',
       projectTitle: 'The Project',
-      projectDesc: `The Animal Intelligence Project is a storytelling project that connects comics, fantasy novels, and knowledge books into one shared universe. The name is similar to "Artificial Intelligence," but it focuses on something different—human responsibility, judgment, and choice in the AI age.
+      projectDesc: `The Animal Intelligence Project is a storytelling universe that brings together comics, fantasy novels, and knowledge books into a single, connected world. In this world, animals observe humans, learn our knowledge, and begin to change through that process.
 
-In the story, animal characters observe the human world and learn about human knowledge. They watch how humans live, think, and make decisions. While the stories are full of adventure and imagination, they also have a clear purpose: to question the humans to think about how to live responsibly in a fast-changing world.
+While the name "AI" may sound like a play on words, it reflects a deeper purpose: to reconsider what knowledge truly means—from the animals' perspective—and to question the value and direction of our world in a time of rapid change.
 
-The project is made for different age groups. The fantasy stories, which follow the animals' adventures and conflicts, are mainly for middle and high school students. The knowledge books explain topics like engineering and AI in a simple and visual way, so they are suitable for older students, including high school and university level. The satirical comics are more for adults, offering deeper thoughts about how AI is changing society.`,
+The project is designed for a wide range of audiences. The fantasy series, which follows the animals' adventures and conflicts, is primarily aimed at younger readers. The knowledge books are intended for more mature audiences, including high school and university students, introducing topics such as engineering, space, philosophy, and social sciences in a visual and accessible way.
+
+Meanwhile, the satirical comics are geared toward adult readers. They revisit the kinds of fable-like characters we once loved, but use them to deliver a sharper, more critical reflection on how AI is reshaping our world.`,
       storyTitle: 'The Story',
       storyCoverAlt:
         'Book cover: The Last Barbary Lion — Animal Intelligence, by Will Shin and Alice Shin (Student B Press)',
@@ -56,7 +58,7 @@ This volume contains the animals' explorations of cosmology, biology, neuroscien
       title: 'AIU 프로젝트',
       subtitle: '새로운 스토리텔링을 만들어 나갑니다',
       projectTitle: '프로젝트',
-      projectDesc: 'Animal Intelligence Project는 만화, 판타지 소설, 지식 도서를 하나의 공유 세계관으로 잇는 스토리텔링 프로젝트입니다. 이름은 “인공지능(Artificial Intelligence)”과 비슷하지만, 초점은 다릅니다—AI 시대에 인간의 책임, 판단, 선택입니다.\n\n이야기 속 동물들은 인간 세계를 관찰하고 인간의 지식을 배웁니다. 인간이 어떻게 살고, 생각하고, 결정하는지 지켜봅니다. 이야기는 모험과 유머, 상상력이 가득하면서도 분명한 목적을 담고 있습니다. 급변하는 세상에서 어떻게 책임감 있게 살아갈지 세계를 질문하도록 이끕니다.\n\n프로젝트는 연령대별로 다르게 구성되어 있습니다. 동물들의 모험과 갈등을 다루는 판타지 이야기는 주로 중·고등학생을 위해 쓰였습니다. 공학과 AI 같은 주제를 쉽고 시각적으로 풀어 주는 지식 도서는 고등학생과 대학 수준을 포함한 더 나이 든 학생들에게 적합합니다. 풍자적 만화는 성인을 위해 AI가 사회를 어떻게 바꾸는지 더 깊게 생각해 보게 합니다.',
+      projectDesc: 'Animal Intelligence Project는 만화, 판타지 소설, 지식 도서를 하나로 묶어 하나의 연결된 세계로 보여 주는 스토리텔링 세계관입니다. 이 세계에서 동물들은 인간을 관찰하고, 우리의 지식을 배우며, 그 과정에서 스스로 변화하기 시작합니다.\n\n이름의 “AI”가 말장난처럼 들릴 수 있지만, 더 깊은 의도를 담고 있습니다. 동물의 시선에서 지식이 무엇을 의미하는지 다시 생각해 보고, 급변하는 시대에 우리 세계의 가치와 방향을 묻는 것입니다.\n\n프로젝트는 다양한 독자를 겨냥해 설계되었습니다. 동물들의 모험과 갈등을 그리는 판타지 시리즈는 주로 어린 독자를 대상으로 합니다. 지식 도서는 고등학생과 대학생을 포함한 더 성숙한 독자를 위해, 공학·우주·철학·사회과학 등을 시각적이고 접근하기 쉬운 방식으로 소개합니다.\n\n한편 풍자 만화는 성인 독자를 대상으로 합니다. 한때 우리가 사랑했던 우화적 캐릭터를 다시 불러오되, AI가 우리 세계를 어떻게 바꾸는지에 대해 더 날카롭고 비판적인 성찰을 전달합니다.',
       storyTitle: '스토리',
       storyCoverAlt:
         '도서 표지: The Last Barbary Lion — Animal Intelligence, Will Shin·Alice Shin (Student B Press)',
