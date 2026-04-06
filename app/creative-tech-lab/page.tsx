@@ -100,24 +100,30 @@ export default function CreativeTechLabPage() {
 
       <section className="tech-lab-section">
         <div className="container">
-          <div className="tech-lab-page-layout">
-            <aside className="tech-lab-visual-column">
-              <img
-                src="/images/tech-lab/turtle-device.png"
-                alt={t.deviceImageAlt}
-                className="tech-lab-image"
-              />
-            </aside>
-            <div className="tech-lab-text-column tech-lab-content">
-              {t.sections.map((section, sectionIndex) => (
-                <div key={section.title} className="tech-lab-content-block">
-                  <h2>{section.title}</h2>
-                  {section.paragraphs.map((paragraph, pIndex) => (
+          <div className="tech-lab-article tech-lab-content">
+            {t.sections.map((section, sectionIndex) => (
+              <div key={section.title} className="tech-lab-content-block">
+                <h2>{section.title}</h2>
+                {sectionIndex === 0 ? (
+                  <div className="tech-lab-lead-flow">
+                    <figure className="tech-lab-float-figure">
+                      <img
+                        src="/images/tech-lab/turtle-device.png"
+                        alt={t.deviceImageAlt}
+                        className="tech-lab-image"
+                      />
+                    </figure>
+                    {section.paragraphs.map((paragraph, pIndex) => (
+                      <p key={`${sectionIndex}-${pIndex}`}>{paragraph}</p>
+                    ))}
+                  </div>
+                ) : (
+                  section.paragraphs.map((paragraph, pIndex) => (
                     <p key={`${sectionIndex}-${pIndex}`}>{paragraph}</p>
-                  ))}
-                </div>
-              ))}
-            </div>
+                  ))
+                )}
+              </div>
+            ))}
           </div>
         </div>
       </section>
