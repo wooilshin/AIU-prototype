@@ -863,9 +863,9 @@ body {
 /* ========================================
    About 페이지 스타일
    ======================================== */
-/* About 페이지 히어로 섹션 - 상단 타이틀 영역 */
+/* About 페이지 히어로 섹션 - 상단 타이틀 영역 (위쪽만 살짝 회색 → 아래로 흰색) */
 .about-hero {
-    background-color: #e9ebef;
+    background: linear-gradient(180deg, #eef1f6 0%, #f5f7fa 38%, #fafcfd 70%, #ffffff 100%);
     padding: 80px 0 60px;
     text-align: center;
 }
@@ -1084,15 +1084,16 @@ body {
 /* ========================================
    Contact 페이지 스타일
    ======================================== */
-/* Contact 페이지 히어로 섹션 - 배경에 곰 아이콘 포함 */
+/* Contact 페이지 히어로 섹션 - 곰 아이콘 + 상단 회색→하단 흰색 그라데이션 */
 .contact-hero {
-    background-color: #e9ebef;
     padding: 80px 0 30px;
     text-align: center;
-    background-image: url('/images/icon/bear.svg');
-    background-repeat: no-repeat;
-    background-position: right 65%;
-    background-size: auto 120px;
+    background-image:
+        url('/images/icon/bear.svg'),
+        linear-gradient(180deg, #eef1f6 0%, #f5f7fa 38%, #fafcfd 70%, #ffffff 100%);
+    background-repeat: no-repeat, no-repeat;
+    background-position: right 65%, 0 0;
+    background-size: auto 120px, 100% 100%;
     position: relative;
 }
 
@@ -1101,7 +1102,7 @@ body {
     display: none;
     text-align: center;
     padding: 20px 0;
-    background-color: #e9ebef;
+    background: linear-gradient(180deg, #eef1f6 0%, #f5f7fa 38%, #fafcfd 70%, #ffffff 100%);
 }
 
 .contact-hero-bear-mobile img {
@@ -1533,7 +1534,7 @@ body {
     }
 
     .contact-hero {
-        background-image: none;
+        background-image: linear-gradient(180deg, #eef1f6 0%, #f5f7fa 38%, #fafcfd 70%, #ffffff 100%);
     }
 
     .contact-hero-bear-mobile {
@@ -1581,7 +1582,7 @@ body {
     }
 
     .contact-hero {
-        background-image: none;
+        background-image: linear-gradient(180deg, #eef1f6 0%, #f5f7fa 38%, #fafcfd 70%, #ffffff 100%);
     }
 
     .contact-hero-bear-mobile {
