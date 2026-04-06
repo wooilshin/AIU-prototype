@@ -10,10 +10,10 @@ export default function About() {
   const translations = {
     en: {
       title: 'About',
-      creatorsTitle: 'Our Creators',
+      creatorsTitle: 'Our Creators and Engineers',
       creatorsDesc: 'Will Shin works alongside his sister, Alice Shin, as a sibling creative team behind the Animal Intelligence series.\n\n Will Shin is trained in artificial intelligence at the University of Pennsylvania and public policy at Harvard University. He chose to move into full-time writing out of a conviction that storytelling is essential for creating space where people can think reflectively about AI. The project\'s title, Animal Intelligence, was deliberately chosen to emphasize the importance of cultural and philosophical intelligence alongside artificial intelligence in the AI era.\n\nAlice Shin studied design and art at the undergraduate level before pursuing applied linguistics at Georgetown University. She leads the project\'s visual storytelling. By intentionally adopting a "cute" illustrative style, she lowers the barrier to engaging with serious subjects, inviting readers to approach complex questions about the future without resistance.\n\nJoseph SH Chun holds a Ph.D. in Electrical Engineering from the University of Maryland and is a specialist in communications and embedded systems. He is particularly interested in designing animal character–based physical devices that are safe, playful, and educationally meaningful for the next generation.',
       studentBTitle: 'About Student B',
-      studentBDesc: 'Student B is a startup and publishing house founded to explore and redefine new standards in edutainment. It is currently focused on publishing AIU-related works and building AI platforms',
+      studentBDesc: 'Student B is a startup publishing house founded to explore new standards in edutainment. It is currently focused on publishing AIU-related works and building AI driven character toys',
       whatWeMakeTitle: 'What We Make',
       bookStoryTitle: 'Book (The Animal Intelligence Story)',
       bookStoryDesc: 'Student B creates a long-form narrative fantasy centered on animals who travel across the world to study human knowledge. While presented as an animal-driven epic, the story functions as an allegory for the civilization in the post–AI era.',
