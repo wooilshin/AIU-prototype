@@ -20,7 +20,7 @@ The project is made for different age groups. The fantasy stories, which follow 
       storyTitle: 'The Story',
       storyCoverAlt:
         'Book cover: The Last Barbary Lion — Animal Intelligence, by Will Shin and Alice Shin (Student B Press)',
-      storyDesc: `The story is planned as a seven-part series—a long-form narrative that portrays the world of animals. It begins when the last descendant of the Barbary lion—an animal believed to be extinct—is called by the White Giraffe, a prophet of the animal world.
+      storyDesc: `The story is planned as a seven-part series—a long-form narrative that portrays the story of the Animal Intelligence Universe. It begins when the last descendant of the Barbary lion—an animal believed to be extinct—is called by the White Giraffe, a prophet of the animal world.
 
 The animals believe that humans are destroying the world. Because of this, they decide to finally learn human knowledge—something they had long ignored—and begin a journey to do so. Their goal is to rediscover something they once had but lost—the right posture for learning and understanding knowledge.
 
