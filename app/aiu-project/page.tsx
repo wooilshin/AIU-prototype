@@ -20,7 +20,12 @@ The project is made for different age groups. The fantasy stories, which follow 
       storyTitle: 'The Story',
       storyCoverAlt:
         'Book cover: The Last Barbary Lion — Animal Intelligence, by Will Shin and Alice Shin (Student B Press)',
-      storyDesc: `The story begins when animals start to notice the accelerating crises of human civilization. Sensing that humans may be heading toward self-destruction, they decide to study human knowledge in order to help. However, this process does not merely transform their understanding of humans—it also triggers profound social, political, and ethical changes within the animal world itself.`,
+      storyDesc: `The story is planned as a seven-part series—a long-form narrative that portrays the world of animals. It begins when the last descendant of the Barbary lion—an animal believed to be extinct—is called by the White Giraffe, a prophet of the animal world.
+
+The animals believe that humans are destroying the world. Because of this, they decide to finally learn human knowledge—something they had long ignored—and begin a journey to do so. Their goal is to rediscover something they once had but lost—the right posture for learning and understanding knowledge.
+
+As the story unfolds, the last Barbary lion and his team set out on this journey together.
+Will the animal team be able to find that lost posture again?`,
       knowledgeBooksTitle: 'Knowledge Books',
       knowledgeBooksDesc: `Knowledge Book is a companion knowledge series to the AIU universe, written alongside the main narrative.
 It serves as an organized collection of knowledge explored by animals, designed to help readers intuitively understand modern ideas through comics and storytelling.
@@ -55,7 +60,7 @@ This volume contains the animals' explorations of cosmology, biology, neuroscien
       storyTitle: '스토리',
       storyCoverAlt:
         '도서 표지: The Last Barbary Lion — Animal Intelligence, Will Shin·Alice Shin (Student B Press)',
-      storyDesc: '이야기는 동물들이 인간 문명의 이상한 모순과 가속화되는 위기를 알아차리기 시작할 때 시작됩니다. 인간이 자멸로 향하고 있을 수 있다고 감지한 동물들은 도움을 주기 위해 인간의 지식을 공부하기로 결정합니다. AI의 도움으로 동물들은 과학, 역사, 기술을 배우기 시작합니다. 그러나 이 과정은 단순히 인간에 대한 그들의 이해를 변화시키는 것이 아니라, 동물 세계 자체 내에서 깊은 사회적, 정치적, 윤리적 변화를 촉발합니다.\n\n서사가 전개되면서 동물들은 AI의 오용으로 인한 일련의 위기와 재난을 만나게 됩니다. 이러한 경험을 통해 그들은 근본적인 질문들과 마주해야 합니다: 어떻게 살아야 하는가? 의미 있는 삶의 핵심은 무엇인가? 지식과 AI를 맹목적이거나 파괴적으로가 아니라 사려 깊게 사용할 수 있는 방법은 무엇인가? 그리고 다음 세대가 앞으로 나아가야 할 희망과 의미는 어떤 종류인가?\n\n이 우주는 풍자 만화, 장편 판타지 시리즈, 삽화 출판물을 포함한 다양한 형식으로 전개됩니다.',
+      storyDesc: '이야기는 7부작 장편 서사로 기획되어 있으며, 동물들의 세계를 그립니다. 멸종한 것으로 여겨졌던 바버리 사자의 마지막 자손이 동물 세계의 예언자인 하얀 기린(White Giraffe)에게 부름받으며 시작됩니다.\n\n동물들은 인간이 세상을 망가뜨리고 있다고 믿습니다. 그래서 오랫동안 외면해 온 인간의 지식을 마침내 배우기로 하고, 그 길을 떠나는 여정을 시작합니다. 그들의 목표는 한때 가졌다가 잃어버린 것—지식을 배우고 이해하는 올바른 자세—을 다시 찾는 것입니다.\n\n이야기가 전개되면서 마지막 바버리 사자와 그의 팀은 함께 이 여정을 떠납니다.\n동물 팀은 그 잃어버린 자세를 다시 찾을 수 있을까요?',
       knowledgeBooksTitle: 'Knowledge Books',
       knowledgeBooksDesc: 'Knowledge Book은 메인 서사와 함께 작성된 AIU 세계에 대한 동반 지식 시리즈입니다.\n\n이 시리즈는 동물들이 탐구한 지식의 체계적인 모음집으로, 만화와 스토리텔링을 통해 독자들이 현대적 아이디어를 직관적으로 이해할 수 있도록 설계되었습니다.\n\nKnowledge Book I — Observation\n동물 세계는 산업혁명부터 세계대전을 거쳐 현대에 이르기까지 인간의 관심사와 갈등을 관찰하고 기록합니다.\n현재 인공지능의 도입을 지켜보면서, 동물들은 인간 사회 내에서 반복될 가능성이 있는 위기를 감지합니다.\n이 권은 동물들의 정보 및 첩보 활동을 이끄는 고양이가 편집한 20세기와 21세기 인간의 수학, 철학, 역사 모음집을 제시합니다.\n\nKnowledge Book II — Engineering\n인간에 대한 신뢰를 잃은 동물들은 세계의 문제를 스스로 해결하기 위해 공학을 공부하기 시작합니다.\n그들의 야망은 인간보다 더 진보된 기술을 획득하고 궁극적으로 테라포밍—행성 규모의 환경을 제어하는 능력—을 달성하는 것입니다.\n그러나 내부 갈등이 동물 사회를 분열시키고, 그들의 기술적 야망은 개념적 단계에 머물러 있습니다.\n이 시대는 공학을 배운 새들과 강한 IT 전문성을 가진 파충류에 초점을 맞추며, 응용수학, 컴퓨터 과학, 환경 공학, 에너지 공학을 탐구합니다.\n\nKnowledge Book III — Design\n동물 사회의 붕괴 이후, 남은 자들은 기술만으로는 세계의 문제를 해결하기에 부족하다는 것을 깨닫습니다.\n인간의 오래된 실수인 "기술 우선, 제도 나중"을 반복하지 않기 위해, 동물들은 사회 자체를 재설계하기로 결정합니다.\n법을 공부하는 소와 경제를 공부하는 너구리를 중심으로, 이 권은 AI 윤리와 디지털 기술이 형성한 새로운 형태의 경제를 탐구합니다.\n\nKnowledge Book IV — Expansion\n끝없는 내부 갈등에 지친 일부 새들과 호주 유대류들은 새로운 사회 설계에 참여하지 않기로 선택합니다.\n대신, 그들은 지구를 떠날 계획을 세웁니다. 고급 인간 연구소에서 가져온 자료를 바탕으로, 그들은 우주론, 우주에서의 생존, 외계 거주지 건설을 공부하기 시작합니다.\n비록 그들이 궁극적으로 자신들의 기술의 한계를 인식하고 지구에 남기로 결정하지만, 그들의 연구는 인간과 동물 모두에 의한 세계의 미래 확장을 위한 중요한 기초가 됩니다.\n이 권은 동물들의 우주론, 생물학, 신경과학, 도시 공학 탐구를 담고 있습니다.'
     }
