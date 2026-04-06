@@ -10,17 +10,17 @@ export default function AIUProject() {
   const translations = {
     en: {
       title: 'AIU Project',
-      subtitle: 'A storytelling project that explores our knowledge world through animal perspectives',
+      subtitle: 'A storytelling project that explores our knowledge world',
       projectTitle: 'The Project',
       projectDesc: `The Animal Intelligence Project is a storytelling project that connects comics, fantasy novels, and knowledge books into one shared universe. The name is similar to "Artificial Intelligence," but it focuses on something different—human responsibility, judgment, and choice in the AI age.
 
-In the story, animal characters observe the human world and learn about human knowledge. They watch how humans live, think, and make decisions. While the stories are full of adventure, humor, and imagination, they also have a clear purpose: to question the world to think about how to live responsibly in a fast-changing world.
+In the story, animal characters observe the human world and learn about human knowledge. They watch how humans live, think, and make decisions. While the stories are full of adventure and imagination, they also have a clear purpose: to question the humans to think about how to live responsibly in a fast-changing world.
 
 The project is made for different age groups. The fantasy stories, which follow the animals' adventures and conflicts, are mainly for middle and high school students. The knowledge books explain topics like engineering and AI in a simple and visual way, so they are suitable for older students, including high school and university level. The satirical comics are more for adults, offering deeper thoughts about how AI is changing society.`,
       storyTitle: 'The Story',
       storyCoverAlt:
         'Book cover: The Last Barbary Lion — Animal Intelligence, by Will Shin and Alice Shin (Student B Press)',
-      storyDesc: `The story is planned as a seven-part series—a long-form narrative that portrays the story of the Animal Intelligence Universe. It begins when the last descendant of the Barbary lion—an animal believed to be extinct—is called by the White Giraffe, a prophet of the animal world.
+      storyDesc: `The story is planned as a seven-part series—a long-form narrative that portrays the Animal Intelligence Universe. It begins when the last descendant of the Barbary lion—an animal believed to be extinct—is called by the White Giraffe, the prophet of the animal world.
 
 The animals believe that humans are destroying the world. Because of this, they decide to finally learn human knowledge—something they had long ignored—and begin a journey to do so. Their goal is to rediscover something they once had but lost—the right posture for learning and understanding knowledge.
 
