@@ -1,5 +1,5 @@
 {
-  "sectionTitle": "New Releases",
+  "sectionTitle": "Watching Them Humans",
   "sectionDescription": "Discover our flagship Watching Them Humans comic series, along with books that introduce the Animal Intelligence Universe",
   "viewAllLink": "#all-releases",
   "books": [
@@ -25,7 +25,7 @@
       "description": "A light philosophical comic about animals’ daily lives and the emotions they feel while observing human society\n(Coming Soon)",
       "coverImage": "/images/books/Comic1.svg",
       "coverStyle": "background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);",
-      "link": "https://www.amazon.com/dp/B0GL3Y57DK/"
+      "link": "https://www.amazon.com/Watching-Them-Humans-Age-Intelligence-ebook/dp/B0GX555DH9/"
     }
   ]
 }
