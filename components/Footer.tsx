@@ -50,7 +50,7 @@ export default function Footer() {
             <strong className="footer-section-title">{t.connect}</strong>
             <div className="social-icons">
               <a href="https://www.facebook.com/studentbpress/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i className="fab fa-facebook"></i></a>
-              <a href="https://www.instagram.com/ai_AnimalIntelligence/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i className="fab fa-instagram"></i></a>
+              <a href="https://www.instagram.com/studentbpress/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i className="fab fa-instagram"></i></a>
               <a href="https://www.linkedin.com/company/animal-intelligence" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i className="fab fa-linkedin-in"></i></a>
             </div>
           </div>
