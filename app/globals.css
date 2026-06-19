@@ -994,6 +994,24 @@ body {
     margin-bottom: 0;
 }
 
+.aiu-characters-wrap {
+    max-width: 52rem;
+    margin: 0 auto 48px;
+    padding: 0 20px;
+}
+
+.aiu-main-characters {
+    margin: 0;
+    padding: 0;
+}
+
+.aiu-main-characters img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
 .aiu-story-body::after {
     content: '';
     display: table;

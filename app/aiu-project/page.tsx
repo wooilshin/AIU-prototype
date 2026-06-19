@@ -27,6 +27,8 @@ Together, these stories and characters can expand across publishing, animation, 
       visionDesc: `AIU is not just a story about animals. It is a new way to turn knowledge into characters, stories, and worlds.
 
 By making learning emotional, visual, and story-driven, AIU aims to become a global knowledge-based character IP for readers, learners, and audiences of all ages.`,
+      charactersAlt:
+        'Animal Intelligence main characters: Red Fox, Blue Bird, Green Sea Turtle, Capybara, Beaglier, Bunny, Raccoon, White Giraffe, Korat Cat, Barbary Lion, Squirrel, and Black Panther',
     },
     ko: {
       title: 'AIU 프로젝트',
@@ -47,6 +49,8 @@ AIU의 중심에는 간단한 질문이 있습니다. 동물들이 인간이 아
       visionDesc: `AIU는 단순히 동물에 관한 이야기가 아닙니다. 지식을 캐릭터, 이야기, 세계로 바꾸는 새로운 방식입니다.
 
 학습을 감정적이고, 시각적이며, 스토리 중심으로 만들어, AIU는 모든 연령의 독자·학습자·관객을 위한 글로벌 지식 기반 캐릭터 IP가 되는 것을 목표로 합니다.`,
+      charactersAlt:
+        'Animal Intelligence 주요 캐릭터: Red Fox, Blue Bird, Green Sea Turtle, Capybara, Beaglier, Bunny, Raccoon, White Giraffe, Korat Cat, Barbary Lion, Squirrel, Black Panther',
     },
   }
 
@@ -70,7 +74,18 @@ AIU의 중심에는 간단한 질문이 있습니다. 동물들이 인간이 아
                 paragraph.trim() && <p key={index}>{paragraph.trim()}</p>
             )}
           </div>
+        </div>
 
+        <div className="container aiu-characters-wrap">
+          <figure className="aiu-main-characters">
+            <img
+              src="/images/aiu-project/main-characters.png"
+              alt={t.charactersAlt}
+            />
+          </figure>
+        </div>
+
+        <div className="container aiu-project-prose">
           <div className="about-section">
             <h2>{t.ipTitle}</h2>
             {t.ipDesc.split('\n\n').map(
