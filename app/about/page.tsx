@@ -77,8 +77,8 @@ Joseph SH Chun은 메릴랜드 대학교에서 전기공학 박사 학위를 취
         </div>
       </section>
 
-      <section className="about-content-section">
-        <div className="container">
+      <section className="about-content-section about-prose-page">
+        <div className="container about-prose">
           <div className="about-section">
             <h2>{t.ceoTitle}</h2>
             {t.ceoDesc.split('\n\n').map((paragraph, index) => (

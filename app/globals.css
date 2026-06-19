@@ -958,40 +958,53 @@ body {
     margin-bottom: 20px;
 }
 
-/* AIU Project — 읽기 좋은 본문 너비·간격 */
-.aiu-project-hero .hero-subtitle {
+/* About / AIU Project — 읽기 좋은 본문 너비·간격 */
+.about-prose-hero .hero-subtitle {
     max-width: 42rem;
     margin-left: auto;
     margin-right: auto;
     line-height: 1.6;
 }
 
-.aiu-project-prose {
+.about-prose {
     max-width: 42rem;
     margin-left: auto;
     margin-right: auto;
 }
 
-.aiu-project-page .about-section {
+.about-prose-page .about-section {
     margin-bottom: 48px;
 }
 
-.aiu-project-page .about-section:last-child {
+.about-prose-page .about-section:last-child {
     margin-bottom: 0;
 }
 
-.aiu-project-page .about-section h2 {
+.about-prose-page .about-section h2 {
     font-size: 28px;
     margin-bottom: 20px;
 }
 
-.aiu-project-page .about-section p {
+.about-prose-page .about-section p {
     line-height: 1.65;
     margin-bottom: 0.9em;
 }
 
-.aiu-project-page .about-section p:last-child {
+.about-prose-page .about-section p:last-child {
     margin-bottom: 0;
+}
+
+.about-prose-page .key-areas-grid {
+    max-width: 100%;
+    margin-top: 24px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+@media (max-width: 599px) {
+    .about-prose-page .key-areas-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .aiu-characters-wrap {

@@ -12,9 +12,7 @@ export default function AIUProject() {
       title: 'AIU Project',
       subtitle:
         'A story-driven IP universe where animals learn from humans and use that knowledge to build a civilization of their own.',
-      introDesc: `AIU, short for Animal Intelligence Universe, is an original IP project about animals who observe humans, learn human knowledge, and begin to build their own civilization.
-
-The project brings together comics, fantasy novels, illustrated knowledge books, character goods, music, short-form animation, and educational content into one connected world.
+      introDesc: `AIU, short for Animal Intelligence Universe, is an original IP project about animals who observe humans, learn human knowledge, and begin to build their own civilization. The project brings together comics, fantasy novels, illustrated knowledge books, character goods, music, short-form animation, and educational content into one connected world.
 
 At the center of AIU is a simple question: What if animals learned everything humans know — and built a world of their own?`,
       ipTitle: 'The IP',
@@ -24,9 +22,7 @@ The fantasy stories follow the animals as they explore, learn, fight, and grow. 
 
 Together, these stories and characters can expand across publishing, animation, education, merchandise, music, and digital content.`,
       visionTitle: 'Our Vision',
-      visionDesc: `AIU is not just a story about animals. It is a new way to turn knowledge into characters, stories, and worlds.
-
-By making learning emotional, visual, and story-driven, AIU aims to become a global knowledge-based character IP for readers, learners, and audiences of all ages.`,
+      visionDesc: `AIU is not just a story about animals. It is a new way to turn knowledge into characters, stories, and worlds. By making learning emotional, visual, and story-driven, AIU aims to become a global knowledge-based character IP for readers, learners, and audiences of all ages.`,
       charactersAlt:
         'Animal Intelligence main characters: Red Fox, Blue Bird, Green Sea Turtle, Capybara, Beaglier, Bunny, Raccoon, White Giraffe, Korat Cat, Barbary Lion, Squirrel, and Black Panther',
     },
@@ -59,15 +55,15 @@ AIU의 중심에는 간단한 질문이 있습니다. 동물들이 인간이 아
   return (
     <>
       <Header />
-      <section className="about-hero aiu-project-hero">
+      <section className="about-hero about-prose-hero">
         <div className="container">
           <h1>{t.title}</h1>
           <p className="hero-subtitle">{t.subtitle}</p>
         </div>
       </section>
 
-      <section className="about-content-section aiu-project-page">
-        <div className="container aiu-project-prose">
+      <section className="about-content-section about-prose-page">
+        <div className="container about-prose">
           <div className="about-section">
             {t.introDesc.split('\n\n').map(
               (paragraph, index) =>
@@ -85,7 +81,7 @@ AIU의 중심에는 간단한 질문이 있습니다. 동물들이 인간이 아
           </figure>
         </div>
 
-        <div className="container aiu-project-prose">
+        <div className="container about-prose">
           <div className="about-section">
             <h2>{t.ipTitle}</h2>
             {t.ipDesc.split('\n\n').map(
