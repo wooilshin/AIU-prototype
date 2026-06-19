@@ -6,70 +6,64 @@ import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function AIUProject() {
   const { language } = useLanguage()
-  
+
   const translations = {
     en: {
       title: 'AIU Project',
-      subtitle: 'A storytelling project that explores our knowledge world',
-      projectTitle: 'The Project',
-      projectDesc: `The Animal Intelligence Project is a storytelling universe that brings together comics, fantasy novels, and knowledge books into a single, connected world. In this world, animals observe humans, learn our knowledge, and begin to change through that process.
+      subtitle:
+        'A story-driven IP universe where animals learn from humans and use that knowledge to build a civilization of their own.',
+      introDesc: `AIU, short for Animal Intelligence Universe, is an original IP project about animals who observe humans, learn human knowledge, and begin to build their own civilization.
 
-While the name "AI" may sound like a play on words, it reflects a deeper purpose: to reconsider what knowledge truly means—from the animals' perspective—and to question the value and direction of our world in a time of rapid change.
+The project brings together comics, fantasy novels, illustrated knowledge books, character goods, music, short-form animation, and educational content into one connected world.
 
-The project is designed for a wide range of audiences. The fantasy series, which follows the animals' adventures and conflicts, is primarily aimed at younger readers. The knowledge books are intended for more mature audiences, including high school and university students, introducing topics such as engineering, space, philosophy, and social sciences in a visual and accessible way.
+At the center of AIU is a simple question:
 
-Meanwhile, the satirical comics are geared toward adult readers. They revisit the kinds of fable-like characters we once loved, but use them to deliver a sharper, more critical reflection on how AI is reshaping our world.`,
-      storyTitle: 'The Story',
-      storyCoverAlt:
-        'Book cover: The Last Barbary Lion — Animal Intelligence, by Will Shin and Alice Shin (Student B Press)',
-      storyDesc: `The story is planned as a seven-part series—a long-form narrative that portrays the Animal Intelligence Universe. It begins when the last descendant of the Barbary lion—an animal believed to be extinct—is called by the White Giraffe, the prophet of the animal world.
+What if animals learned everything humans know — and built a world of their own?`,
+      ipTitle: 'The IP',
+      ipDesc: `AIU is designed as a multi-format character IP.
 
-The animals believe that humans are destroying the world. Because of this, they decide to finally learn human knowledge—something they had long ignored—and begin a journey to do so. Their goal is to rediscover something they once had but lost—the right posture for learning and understanding knowledge.
+The fantasy stories follow the animals as they explore, learn, fight, and grow.
+The knowledge books introduce topics such as science, technology, space, philosophy, economics, and society in a visual and accessible way.
+The satirical comics use animal characters to reflect on AI, education, power, and the strange direction of the human world.
 
-As the story unfolds, the last Barbary lion and his team set out on this journey together.
-Will the animal team be able to find that lost posture again?`,
-      knowledgeBooksTitle: 'Knowledge Books',
-      knowledgeBooksDesc: `Knowledge Book is a companion knowledge series to the AIU universe, written alongside the main narrative.
-It serves as an organized collection of knowledge explored by animals, designed to help readers intuitively understand modern ideas through comics and storytelling.
+Together, these stories and characters can expand across publishing, animation, education, merchandise, music, and digital content.`,
+      visionTitle: 'Our Vision',
+      visionDesc: `AIU is not just a story about animals.
 
-Knowledge Book I — Observation\n\n
-The animal world observes and records human concerns and conflicts from the Industrial Revolution through the World Wars and into modernity.
-Watching the introduction of artificial intelligence in the present day, the animals sense crises that are likely to repeat within human society.
-This volume presents a collection of 20th- and 21st-century human mathematics, philosophy, and history, compiled by a cat who leads the animals' intelligence and espionage efforts.
+It is a new way to turn knowledge into characters, stories, and worlds.
 
-Knowledge Book II — Engineering\n\n
-Having lost trust in humans, the animals begin studying engineering in order to solve the world's problems themselves.
-Their ambition is to acquire technologies more advanced than those of humans and ultimately achieve terraforming—the ability to control planetary-scale environments.
-However, internal conflicts fracture animal society, and their technological ambitions remain at the conceptual stage.
-This era focuses on birds trained in engineering and reptiles with strong IT expertise, exploring applied mathematics, computer science, environmental engineering, and energy engineering.
-
-Knowledge Book III — New Design\n\n
-After the collapse of animal society, those who remain realize that technology alone is insufficient to solve the world's problems.
-To avoid repeating humanity's long-standing mistake of "technology first, institutions later," the animals decide to redesign society itself.
-Centered on cattle who study law and raccoons who study economics, this volume explores AI ethics and new forms of economics shaped by digital technology.
-
-Knowledge Book IV — Expansion\n\n
-Exhausted by endless internal conflicts, some birds and Australian marsupials choose not to participate in the new social design.
-Instead, they plan to leave Earth. Drawing on materials taken from advanced human research institutes, they begin studying cosmology, survival in space, and the construction of extraterrestrial habitats.
-Although they ultimately recognize the limits of their technology and decide to remain on Earth, their research becomes a crucial foundation for the future expansion of the world by both humans and animals.
-This volume contains the animals' explorations of cosmology, biology, neuroscience, and urban engineering.`
+By making learning emotional, visual, and story-driven, AIU aims to become a global knowledge-based character IP for readers, learners, and audiences of all ages.`,
     },
     ko: {
       title: 'AIU 프로젝트',
-      subtitle: '새로운 스토리텔링을 만들어 나갑니다',
-      projectTitle: '프로젝트',
-      projectDesc: 'Animal Intelligence Project는 만화, 판타지 소설, 지식 도서를 하나로 묶어 하나의 연결된 세계로 보여 주는 스토리텔링 세계관입니다. 이 세계에서 동물들은 인간을 관찰하고, 우리의 지식을 배우며, 그 과정에서 스스로 변화하기 시작합니다.\n\n이름의 “AI”가 말장난처럼 들릴 수 있지만, 더 깊은 의도를 담고 있습니다. 동물의 시선에서 지식이 무엇을 의미하는지 다시 생각해 보고, 급변하는 시대에 우리 세계의 가치와 방향을 묻는 것입니다.\n\n프로젝트는 다양한 독자를 겨냥해 설계되었습니다. 동물들의 모험과 갈등을 그리는 판타지 시리즈는 주로 어린 독자를 대상으로 합니다. 지식 도서는 고등학생과 대학생을 포함한 더 성숙한 독자를 위해, 공학·우주·철학·사회과학 등을 시각적이고 접근하기 쉬운 방식으로 소개합니다.\n\n한편 풍자 만화는 성인 독자를 대상으로 합니다. 한때 우리가 사랑했던 우화적 캐릭터를 다시 불러오되, AI가 우리 세계를 어떻게 바꾸는지에 대해 더 날카롭고 비판적인 성찰을 전달합니다.',
-      storyTitle: '스토리',
-      storyCoverAlt:
-        '도서 표지: The Last Barbary Lion — Animal Intelligence, Will Shin·Alice Shin (Student B Press)',
-      storyDesc: '이야기는 7부작 장편 서사로 기획되어 있으며, 동물들의 세계를 그립니다. 멸종한 것으로 여겨졌던 바버리 사자의 마지막 자손이 동물 세계의 예언자인 하얀 기린(White Giraffe)에게 부름받으며 시작됩니다.\n\n동물들은 인간이 세상을 망가뜨리고 있다고 믿습니다. 그래서 오랫동안 외면해 온 인간의 지식을 마침내 배우기로 하고, 그 길을 떠나는 여정을 시작합니다. 그들의 목표는 한때 가졌다가 잃어버린 것—지식을 배우고 이해하는 올바른 자세—을 다시 찾는 것입니다.\n\n이야기가 전개되면서 마지막 바버리 사자와 그의 팀은 함께 이 여정을 떠납니다.\n동물 팀은 그 잃어버린 자세를 다시 찾을 수 있을까요?',
-      knowledgeBooksTitle: 'Knowledge Books',
-      knowledgeBooksDesc: 'Knowledge Book은 메인 서사와 함께 작성된 AIU 세계에 대한 동반 지식 시리즈입니다.\n\n이 시리즈는 동물들이 탐구한 지식의 체계적인 모음집으로, 만화와 스토리텔링을 통해 독자들이 현대적 아이디어를 직관적으로 이해할 수 있도록 설계되었습니다.\n\nKnowledge Book I — Observation\n동물 세계는 산업혁명부터 세계대전을 거쳐 현대에 이르기까지 인간의 관심사와 갈등을 관찰하고 기록합니다.\n현재 인공지능의 도입을 지켜보면서, 동물들은 인간 사회 내에서 반복될 가능성이 있는 위기를 감지합니다.\n이 권은 동물들의 정보 및 첩보 활동을 이끄는 고양이가 편집한 20세기와 21세기 인간의 수학, 철학, 역사 모음집을 제시합니다.\n\nKnowledge Book II — Engineering\n인간에 대한 신뢰를 잃은 동물들은 세계의 문제를 스스로 해결하기 위해 공학을 공부하기 시작합니다.\n그들의 야망은 인간보다 더 진보된 기술을 획득하고 궁극적으로 테라포밍—행성 규모의 환경을 제어하는 능력—을 달성하는 것입니다.\n그러나 내부 갈등이 동물 사회를 분열시키고, 그들의 기술적 야망은 개념적 단계에 머물러 있습니다.\n이 시대는 공학을 배운 새들과 강한 IT 전문성을 가진 파충류에 초점을 맞추며, 응용수학, 컴퓨터 과학, 환경 공학, 에너지 공학을 탐구합니다.\n\nKnowledge Book III — Design\n동물 사회의 붕괴 이후, 남은 자들은 기술만으로는 세계의 문제를 해결하기에 부족하다는 것을 깨닫습니다.\n인간의 오래된 실수인 "기술 우선, 제도 나중"을 반복하지 않기 위해, 동물들은 사회 자체를 재설계하기로 결정합니다.\n법을 공부하는 소와 경제를 공부하는 너구리를 중심으로, 이 권은 AI 윤리와 디지털 기술이 형성한 새로운 형태의 경제를 탐구합니다.\n\nKnowledge Book IV — Expansion\n끝없는 내부 갈등에 지친 일부 새들과 호주 유대류들은 새로운 사회 설계에 참여하지 않기로 선택합니다.\n대신, 그들은 지구를 떠날 계획을 세웁니다. 고급 인간 연구소에서 가져온 자료를 바탕으로, 그들은 우주론, 우주에서의 생존, 외계 거주지 건설을 공부하기 시작합니다.\n비록 그들이 궁극적으로 자신들의 기술의 한계를 인식하고 지구에 남기로 결정하지만, 그들의 연구는 인간과 동물 모두에 의한 세계의 미래 확장을 위한 중요한 기초가 됩니다.\n이 권은 동물들의 우주론, 생물학, 신경과학, 도시 공학 탐구를 담고 있습니다.'
-    }
+      subtitle:
+        '동물들이 인간에게서 배우고, 그 지식으로 자신만의 문명을 세워 가는 스토리 중심 IP 세계관입니다.',
+      introDesc: `AIU는 Animal Intelligence Universe의 약자로, 인간을 관찰하고 인간의 지식을 배우며 스스로의 문명을 세워 가기 시작하는 동물들에 관한 오리지널 IP 프로젝트입니다.
+
+이 프로젝트는 만화, 판타지 소설, 그림 지식서, 캐릭터 굿즈, 음악, 숏폼 애니메이션, 교육 콘텐츠를 하나의 연결된 세계로 묶습니다.
+
+AIU의 중심에는 간단한 질문이 있습니다.
+
+동물들이 인간이 아는 모든 것을 배우고, 그들만의 세계를 세운다면 어떻게 될까요?`,
+      ipTitle: 'The IP',
+      ipDesc: `AIU는 다양한 형식의 캐릭터 IP로 설계되었습니다.
+
+판타지 이야기는 동물들이 탐험하고, 배우고, 싸우고, 성장하는 과정을 따라갑니다.
+지식 도서는 과학, 기술, 우주, 철학, 경제, 사회 같은 주제를 시각적이고 접근하기 쉬운 방식으로 소개합니다.
+풍자 만화는 동물 캐릭터를 통해 AI, 교육, 권력, 인간 세계의 기묘한 방향을 비춰 봅니다.
+
+이 이야기와 캐릭터들은 출판, 애니메이션, 교육, 머천다이즈, 음악, 디지털 콘텐츠로 확장될 수 있습니다.`,
+      visionTitle: 'Our Vision',
+      visionDesc: `AIU는 단순히 동물에 관한 이야기가 아닙니다.
+
+지식을 캐릭터, 이야기, 세계로 바꾸는 새로운 방식입니다.
+
+학습을 감정적이고, 시각적이며, 스토리 중심으로 만들어, AIU는 모든 연령의 독자·학습자·관객을 위한 글로벌 지식 기반 캐릭터 IP가 되는 것을 목표로 합니다.`,
+    },
   }
-  
+
   const t = translations[language]
-  
+
   return (
     <>
       <Header />
@@ -83,32 +77,26 @@ This volume contains the animals' explorations of cosmology, biology, neuroscien
       <section className="about-content-section">
         <div className="container">
           <div className="about-section">
-            <h2>{t.projectTitle}</h2>
-            {t.projectDesc.split('\n\n').map((paragraph, index) => (
-              paragraph.trim() && <p key={index}>{paragraph.trim()}</p>
-            ))}
-          </div>
-
-          <div className="about-section aiu-story-section">
-            <h2>{t.storyTitle}</h2>
-            <div className="aiu-story-body">
-              <figure className="aiu-story-cover">
-                <img
-                  src="/images/aiu-project/the-last-barbary-lion-cover.png"
-                  alt={t.storyCoverAlt}
-                />
-              </figure>
-              {t.storyDesc.split('\n\n').map((paragraph, index) => (
+            {t.introDesc.split('\n\n').map(
+              (paragraph, index) =>
                 paragraph.trim() && <p key={index}>{paragraph.trim()}</p>
-              ))}
-            </div>
+            )}
           </div>
 
           <div className="about-section">
-            <h2>{t.knowledgeBooksTitle}</h2>
-            {t.knowledgeBooksDesc.split('\n\n').map((paragraph, index) => (
-              paragraph.trim() && <p key={index}>{paragraph.trim()}</p>
-            ))}
+            <h2>{t.ipTitle}</h2>
+            {t.ipDesc.split('\n\n').map(
+              (paragraph, index) =>
+                paragraph.trim() && <p key={index}>{paragraph.trim()}</p>
+            )}
+          </div>
+
+          <div className="about-section">
+            <h2>{t.visionTitle}</h2>
+            {t.visionDesc.split('\n\n').map(
+              (paragraph, index) =>
+                paragraph.trim() && <p key={index}>{paragraph.trim()}</p>
+            )}
           </div>
         </div>
       </section>
@@ -116,4 +104,3 @@ This volume contains the animals' explorations of cosmology, biology, neuroscien
     </>
   )
 }
-
