@@ -12,6 +12,7 @@ export default function AIUProject() {
       title: 'AIU Project',
       subtitle:
         'A story-driven IP universe where animals learn from humans and use that knowledge to build a civilization of their own.',
+      introTitle: 'AIU Project',
       introDesc: `AIU, short for Animal Intelligence Universe, is an original IP project about animals who observe humans, learn human knowledge, and begin to build their own civilization.
 
 The project brings together comics, fantasy novels, illustrated knowledge books, character goods, music, short-form animation, and educational content into one connected world.
@@ -32,6 +33,7 @@ Together, these stories and characters can expand across publishing, animation, 
       title: 'AIU 프로젝트',
       subtitle:
         '동물들이 인간에게서 배우고, 그 지식으로 자신만의 문명을 세워 가는 스토리 중심 IP 세계관입니다.',
+      introTitle: 'AIU Project',
       introDesc: `AIU는 Animal Intelligence Universe의 약자로, 인간을 관찰하고 인간의 지식을 배우며 스스로의 문명을 세워 가기 시작하는 동물들에 관한 오리지널 IP 프로젝트입니다.
 
 이 프로젝트는 만화, 판타지 소설, 그림 지식서, 캐릭터 굿즈, 음악, 숏폼 애니메이션, 교육 콘텐츠를 하나의 연결된 세계로 묶습니다.
@@ -76,14 +78,13 @@ AIU의 중심에는 간단한 질문이 있습니다. 동물들이 인간이 아
 
         <div className="container about-prose">
           <div className="about-section">
+            <h2>{t.introTitle}</h2>
             {t.introDesc.split('\n\n').map(
               (paragraph, index) =>
                 paragraph.trim() && <p key={index}>{paragraph.trim()}</p>
             )}
           </div>
-        </div>
 
-        <div className="container about-prose">
           <div className="about-section">
             <h2>{t.ipTitle}</h2>
             {t.ipDesc.split('\n\n').map(

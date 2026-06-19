@@ -1008,11 +1008,9 @@ body {
 }
 
 .aiu-characters-wrap {
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto 40px;
+    max-width: 52rem;
+    margin: 0 auto 48px;
     padding: 0 20px;
-    overflow: visible;
 }
 
 .aiu-characters-wrap--lead {
@@ -1022,13 +1020,13 @@ body {
 .aiu-main-characters {
     margin: 0;
     padding: 0;
-    overflow: visible;
 }
 
 .aiu-main-characters img {
     width: 100%;
     height: auto;
     display: block;
+    border-radius: 8px;
 }
 
 .aiu-story-body::after {
