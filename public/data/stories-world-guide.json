@@ -1,7 +1,7 @@
 {
-  "sectionTitle": "Animal Intelligence Story",
-  "sectionDescription": "A multi-book fiction series about animals that navigate the world full of unexpected adventures",
-  "viewAllLink": "#all-kids",
+  "sectionTitle": "Animal Intelligence Stories & World Guide",
+  "sectionDescription": "The main stories of the Animal Intelligence series, together with a guide to its characters, history, and world.",
+  "viewAllLink": "#stories-world-guide",
   "books": [
     {
       "id": 1,

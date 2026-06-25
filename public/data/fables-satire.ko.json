@@ -1,7 +1,7 @@
 {
-  "sectionTitle": "만화 및 세계관 소개 도서",
-  "sectionDescription": "동물의 시선을 통해 역사, 과학, 철학을 탐구하는 최신 출간물을 만나보세요",
-  "viewAllLink": "#all-releases",
+  "sectionTitle": "Animal Intelligence Fables & Satire",
+  "sectionDescription": "동물들이 21세기를 살아가며 겪는 짧은 우화와 풍자 만화 모음",
+  "viewAllLink": "#fables-satire",
   "books": [
     {
       "id": 1,

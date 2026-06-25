@@ -1,7 +1,7 @@
 {
-  "sectionTitle": "이야기편 (아동/청소년)",
-  "sectionDescription": "인간 지식을 공부하게된 동물들의 모험을 담은 5부작 이야기 책 시리즈",
-  "viewAllLink": "#all-kids",
+  "sectionTitle": "Animal Intelligence Stories & World Guide",
+  "sectionDescription": "Animal Intelligence 시리즈의 주요 이야기와 캐릭터·역사·세계관 가이드",
+  "viewAllLink": "#stories-world-guide",
   "books": [
     {
       "id": 1,

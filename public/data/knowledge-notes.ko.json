@@ -1,7 +1,7 @@
 {
-  "sectionTitle": "지식편",
-  "sectionDescription": "동물들의 시선을 통해 재해석된 최신 인간 지식 안내서",
-  "viewAllLink": "#all-knowledge",
+  "sectionTitle": "Animal Intelligence Knowledge Notes",
+  "sectionDescription": "동물들이 인간의 지식을 관찰하고 배운 내용을 담은 노트 시리즈",
+  "viewAllLink": "#knowledge-notes",
   "books": [
     {
       "id": 1,

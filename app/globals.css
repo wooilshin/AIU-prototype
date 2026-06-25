@@ -561,23 +561,18 @@ body {
     text-decoration: underline;
 }
 
-/* ========================================
-   책 섹션 스타일 (신간, 지식시대, 어린이)
-   ======================================== */
-/* 신간 도서 섹션 */
-.new-releases-section {
+/* 책 섹션 스타일 */
+.fables-satire-section {
     padding: 40px 0;
     background-color: #fff;
 }
 
-/* 지식시대 섹션 */
-.knowledge-era-section {
+.knowledge-notes-section {
     padding: 40px 0;
     background-color: #fff;
 }
 
-/* 어린이 섹션 */
-.kids-section {
+.stories-world-guide-section {
     padding: 40px 0;
     background-color: #fff;
 }
