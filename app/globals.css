@@ -1178,8 +1178,9 @@ body {
 
 /* 거북이 이미지 — 본문 위 블록 배치 */
 .tech-lab-figure {
-    margin: 0 0 24px;
+    margin: 0 auto 24px;
     padding: 0;
+    max-width: 50%;
 }
 
 .tech-lab-figure .tech-lab-image {
