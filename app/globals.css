@@ -1175,14 +1175,25 @@ body {
     display: block;
 }
 
-/* 본문 단일 컬럼(이미지 아래부터 전체 너비로 이어짐) */
+/* 본문 — about-prose 너비와 함께 사용 */
 .tech-lab-article.tech-lab-content {
-    max-width: 920px;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: none;
+    margin: 0;
 }
 
-/* 첫 섹션: 거북이를 글 흐름 안에 float */
+/* 거북이 이미지 — 본문 위 블록 배치 */
+.tech-lab-figure {
+    margin: 0 0 24px;
+    padding: 0;
+}
+
+.tech-lab-figure .tech-lab-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 첫 섹션: 거북이를 글 흐름 안에 float (레거시) */
 .tech-lab-lead-flow::after {
     content: '';
     display: table;
@@ -1191,9 +1202,9 @@ body {
 
 .tech-lab-float-figure {
     float: left;
-    width: 42%;
-    max-width: 340px;
-    margin: 6px 28px 12px 0;
+    width: 44%;
+    max-width: 280px;
+    margin: 4px 22px 10px 0;
     padding: 0;
 }
 
@@ -1207,6 +1218,7 @@ body {
     margin-top: 48px;
 }
 
+.about-prose-page.tech-lab-section .tech-lab-content h2,
 .tech-lab-content h2 {
     font-size: 36px;
     font-weight: 700;
