@@ -45,7 +45,14 @@ export default function BookSection({ dataFile, sectionClass }: BookSectionProps
       <div className="container">
         <div className="section-header">
           <div>
-            <h2>{data.sectionTitle}</h2>
+            <h2>
+              {data.sectionTitle.split('\n').map((line, index, lines) => (
+                <span key={index}>
+                  {line}
+                  {index < lines.length - 1 && <br />}
+                </span>
+              ))}
+            </h2>
             {data.sectionDescription && (
               <p className="section-description">{data.sectionDescription}</p>
             )}
