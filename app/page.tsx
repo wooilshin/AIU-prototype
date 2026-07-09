@@ -25,9 +25,9 @@ export default function Home() {
     <>
       <Header />
       <HeroCarousel />
-      <BookSection dataFile="fables-satire.json" sectionClass="fables-satire-section" />
-      <BookSection dataFile="knowledge-notes.json" sectionClass="knowledge-notes-section" />
       <BookSection dataFile="stories-world-guide.json" sectionClass="stories-world-guide-section" />
+      <BookSection dataFile="knowledge-notes.json" sectionClass="knowledge-notes-section" />
+      <BookSection dataFile="stories-of-animal-characters.json" sectionClass="stories-of-animal-characters-section" />
       <NewsUpdateSection />
       <NewsletterSection />
       <Footer />

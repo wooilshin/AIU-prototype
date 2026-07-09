@@ -1,14 +1,31 @@
 {
-  "sectionTitle": "Stories of Animal Characters",
-  "sectionDescription": "Also known as the My Name Is... series, these booklets tell the story of the world through the eyes of individual Animal Intelligence characters.",
+  "sectionTitle": "Animal Intelligence\nStories & World Guide",
+  "sectionDescription": "The main stories of the Animal Intelligence series, together with a guide to its characters, history, and world.",
   "viewAllLink": "#stories-world-guide",
   "books": [
     {
       "id": 1,
-      "title": "My name is Nacho",
-      "description": "The first adventure of Nacho, a second-generation Animal Intelligence agent, exploring human society.\n(Coming Soon)",
-      "coverImage": "/images/books/Story1.svg",
-      "coverStyle": "background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);"
+      "title": "Animal Intelligence\nThe Book of Forgotten History",
+      "description": "A story collection exploring history through the eyes of the ancestors of the Animal Intelligence Universe, including extinct species that once shaped the world.",
+      "coverImage": "/images/books/History.svg",
+      "coverStyle": "background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);",
+      "link": "https://www.amazon.com/Animal-Intelligence-Book-Forgotten-History-ebook/dp/B0F624S8B2/"
+    },
+    {
+      "id": 2,
+      "title": "Guidebook to the AIU\nWhere the Ark lies Hidden",
+      "description": "A complete guidebook to the seven civilizations of the Animal Intelligence Universe, introducing the animal characters, their cultures, and the roles they play in today's world.",
+      "coverImage": "/images/books/Guide.svg",
+      "coverStyle": "background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);",
+      "link": "https://www.amazon.com/gp/product/B0GBQKZHD5"
+    },
+    {
+      "id": 3,
+      "title": "Watching them humans in the AI age: Animal Intelligence Comics",
+      "description": "A light philosophical comic featuring the characters of the Animal Intelligence Universe, exploring the emotions they experience while observing human society in the age of AI.",
+      "coverImage": "/images/books/Comic1.svg",
+      "coverStyle": "background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);",
+      "link": "https://www.amazon.com/Watching-Them-Humans-Age-Intelligence-ebook/dp/B0GX555DH9/"
     }
   ]
 }

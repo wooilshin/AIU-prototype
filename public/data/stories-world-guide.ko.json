@@ -1,14 +1,30 @@
 {
-  "sectionTitle": "Stories & World Guide",
+  "sectionTitle": "Animal Intelligence\nStories & World Guide",
   "sectionDescription": "Animal Intelligence 시리즈의 주요 이야기와 캐릭터·역사·세계관 가이드",
   "viewAllLink": "#stories-world-guide",
   "books": [
     {
       "id": 1,
-      "title": "AI 스토리 1부",
-      "description": "인간 세상을 염탐하기 위해 결성된 동물 수재팀 '최고의 일곱마리'의 모험담\n(출간 예정)",
-      "coverImage": "/images/books/Story1.svg",
-      "coverStyle": "background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);"
+      "title": "AI 동물지능\n잊혀진 역사의 기록들",
+      "description": "멸종한 동물들의 눈으로 다시 쓴 역사 이야기",
+      "coverImage": "/images/books/History.svg",
+      "coverStyle": "background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);",
+      "link": "https://www.amazon.com/Animal-Intelligence-Book-Forgotten-History-ebook/dp/B0F624S8B2/"
+    },
+    {
+      "id": 2,
+      "title": "AI 동물지능 세계관 가이드북\n",
+      "description": "AI 세계의 동물들이 지구 어디에 살고 있으며 어떤 역할을 하는지를 소개한 가이드북",
+      "coverImage": "/images/books/Guide.svg",
+      "coverStyle": "background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);",
+      "link": "https://www.amazon.com/gp/product/B0GBQKZHD5"
+    },
+    {
+      "id": 3,
+      "title": "AI 동물지능 철학툰 Vol.1",
+      "description": "AI 시대 동물들의 인간세상 관찰기\n(2월 출간 예정)",
+      "coverImage": "/images/books/Comic1.svg",
+      "coverStyle": "background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);"
     }
   ]
 }

@@ -29,7 +29,7 @@ export default function BookSection({ dataFile, sectionClass }: BookSectionProps
   const [data, setData] = useState<BookSectionData | null>(null)
 
   useEffect(() => {
-    // dataFile이 "fables-satire.json" 형식이면 baseFileName은 "fables-satire"
+    // dataFile이 "stories-world-guide.json" 형식이면 baseFileName은 "stories-world-guide"
     const baseFileName = dataFile.endsWith('.json') ? dataFile.replace('.json', '') : dataFile
     const langFile = language === 'ko' ? `${baseFileName}.ko.json` : `${baseFileName}.json`
     fetch(`/data/${langFile}`)
