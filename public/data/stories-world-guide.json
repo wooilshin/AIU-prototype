@@ -1,12 +1,12 @@
 {
-  "sectionTitle": "Stories & World Guide",
-  "sectionDescription": "The main stories of the Animal Intelligence series, together with a guide to its characters, history, and world.",
+  "sectionTitle": "Stories of Animal Characters",
+  "sectionDescription": "Also known as the My Name Is... series, these booklets tell the story of the world through the eyes of individual Animal Intelligence characters.",
   "viewAllLink": "#stories-world-guide",
   "books": [
     {
       "id": 1,
-      "title": "The Story Part.1: The last Barbary Lion",
-      "description": "Fantasy story about the struggles and adventures of animals who decide to study\n(Coming Soon)",
+      "title": "My name is Nacho",
+      "description": "The first adventure of Nacho, a second-generation Animal Intelligence agent, exploring human society.\n(Coming Soon)",
       "coverImage": "/images/books/Story1.svg",
       "coverStyle": "background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);"
     }
