@@ -1,26 +1,26 @@
 {
   "sectionTitle": "Knowledge Notes",
-  "sectionDescription": "Also known as the Why Animals Should Learn... series, these educational booklets present the notes of animal agents as they reinterpret human knowledge in an intuitive and accessible way.",
+  "sectionDescription": "Also known as the Why 'Animals Should Learn...' series, these educational booklets present the notes of animal agents as they reinterpret human knowledge in an intuitive and accessible way.",
   "viewAllLink": "#knowledge-notes",
   "books": [
     {
       "id": 1,
-      "title": "Knowledge Note Vol.1 (The Python Book)",
-      "description": "This book introduces AI, robotics, and AI ethics at a level accessible to high school students.\n(Scheduled for Summer 2026)",
+      "title": "Knowledge Note Vol.1\n(The Python Book)",
+      "description": "This book introduces AI, robotics, and AI ethics at a level accessible to high school students.\n(Coming Soon)",
       "coverImage": "/images/books/Knowledge1.svg",
       "coverStyle": "background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"
     },
     {
       "id": 2,
-      "title": "Knowledge Note Vol.2 (The Cat Book)",
-      "description": "This book shows how the mathematics learned in high school is applied to advanced science, engineering, and modern technology.\n(Scheduled for Fall 2026)",
+      "title": "Knowledge Note Vol.2\n(The Cat Book)",
+      "description": "This book shows how the mathematics learned in high school is applied to advanced science, engineering, and modern technology.\n(Coming Soon)",
       "coverImage": "/images/books/Knowledge2.svg",
       "coverStyle": "background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"
     },
     {
       "id": 3,
-      "title": "Knowledge Note Vol.3 (The Raccoon Book)",
-      "description": "Known as The Raccoon Book or Economics as Code, this book explores how AI could transform the future economy. Intended for university students and general readers interested in economics and AI.\n(Scheduled for Fall 2026)",
+      "title": "Knowledge Note Vol.3\n(The Raccoon Book)",
+      "description": "Known as The Raccoon Book or Economics as Code, this book explores how AI could transform the future economy. Intended for university students and general readers interested in economics and AI.\n(Coming Soon)",
       "coverImage": "/images/books/Knowledge3.svg",
       "coverStyle": "background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"
     }
