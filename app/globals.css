@@ -1768,3 +1768,317 @@ body {
         font-size: 24px;
     }
 }
+
+/* ========================================
+   Music Lab (experimental — Suno Lab–style orbit)
+   ======================================== */
+.music-lab {
+    min-height: calc(100vh - 120px);
+    padding: 40px 0 80px;
+    background:
+        radial-gradient(ellipse at 50% 30%, #eef2f6 0%, transparent 55%),
+        linear-gradient(180deg, #f7f8fa 0%, #ffffff 45%, #f4f5f7 100%);
+}
+
+.music-lab-header {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.music-lab-kicker {
+    display: inline-block;
+    margin: 0 0 10px;
+    padding: 4px 10px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #5a6a7a;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.music-lab-header h1 {
+    font-size: 42px;
+    font-weight: 700;
+    margin: 0 0 10px;
+    color: #111;
+}
+
+.music-lab-subtitle {
+    margin: 0;
+    font-size: 16px;
+    color: #666;
+}
+
+.music-lab-stage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 0 16px;
+}
+
+.music-lab-orbit {
+    --orbit-size: min(560px, 88vw);
+    --orbit-radius: calc(var(--orbit-size) * 0.42);
+    position: relative;
+    width: var(--orbit-size);
+    height: var(--orbit-size);
+}
+
+.music-lab-spokes {
+    position: absolute;
+    inset: 0;
+    animation: music-lab-spin 48s linear infinite;
+}
+
+.music-lab-orbit.is-paused .music-lab-spokes {
+    animation-play-state: paused;
+}
+
+.music-lab-orbit-ring {
+    position: absolute;
+    inset: 12%;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.music-lab-spoke {
+    --angle: 0deg;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    transform: rotate(var(--angle)) translateY(calc(var(--orbit-radius) * -1));
+}
+
+.music-lab-node {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 999px;
+    padding: 8px 14px;
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+    cursor: pointer;
+    transition: background 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    white-space: nowrap;
+    animation: music-lab-unspin 48s linear infinite;
+}
+
+.music-lab-orbit.is-paused .music-lab-node {
+    animation-play-state: paused;
+}
+
+.music-lab-node:hover {
+    background: #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.music-lab-node.is-active {
+    background: var(--node-color, #ddd);
+    border-color: transparent;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.14);
+}
+
+.music-lab-node.is-active .music-lab-node-label {
+    color: #111;
+    font-weight: 700;
+}
+
+.music-lab-node-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #444;
+}
+
+.music-lab-center {
+    position: absolute;
+    inset: 22%;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.88);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(8px);
+}
+
+.music-lab-avatar {
+    position: relative;
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    margin-bottom: 12px;
+    box-shadow: inset 0 0 0 3px rgba(255, 255, 255, 0.45);
+}
+
+.music-lab-avatar.is-playing {
+    box-shadow:
+        inset 0 0 0 3px rgba(255, 255, 255, 0.45),
+        0 0 0 6px rgba(0, 0, 0, 0.04);
+}
+
+.music-lab-avatar-initial {
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+    letter-spacing: 0.04em;
+}
+
+.music-lab-pulse {
+    position: absolute;
+    inset: -8px;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, 0.18);
+    animation: music-lab-pulse 1.6s ease-out infinite;
+    pointer-events: none;
+}
+
+.music-lab-name {
+    margin: 0 0 4px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #111;
+}
+
+.music-lab-genre {
+    margin: 0 0 10px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #6a7a8a;
+}
+
+.music-lab-desc {
+    margin: 0 0 14px;
+    max-width: 260px;
+    font-size: 13px;
+    line-height: 1.55;
+    color: #555;
+}
+
+.music-lab-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+}
+
+.music-lab-play,
+.music-lab-orbit-toggle {
+    border: none;
+    border-radius: 999px;
+    padding: 8px 14px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.music-lab-play {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #111;
+    color: #fff;
+}
+
+.music-lab-play:hover {
+    transform: translateY(-1px);
+}
+
+.music-lab-orbit-toggle {
+    background: #eef1f4;
+    color: #334;
+}
+
+.music-lab-audio-note {
+    margin: 12px 0 0;
+    max-width: 240px;
+    font-size: 11px;
+    line-height: 1.4;
+    color: #888;
+}
+
+.music-lab-hint {
+    margin: 0;
+    font-size: 13px;
+    color: #888;
+}
+
+@keyframes music-lab-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes music-lab-unspin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(-360deg); }
+}
+
+@keyframes music-lab-pulse {
+    0% { transform: scale(0.95); opacity: 0.7; }
+    100% { transform: scale(1.2); opacity: 0; }
+}
+
+@media (max-width: 767px) {
+    .music-lab-header h1 {
+        font-size: 32px;
+    }
+
+    .music-lab-orbit {
+        --orbit-size: min(420px, 94vw);
+    }
+
+    .music-lab-node {
+        padding: 6px 10px;
+    }
+
+    .music-lab-node-label {
+        font-size: 10px;
+    }
+
+    .music-lab-center {
+        inset: 24%;
+        padding: 14px;
+    }
+
+    .music-lab-avatar {
+        width: 70px;
+        height: 70px;
+    }
+
+    .music-lab-name {
+        font-size: 18px;
+    }
+
+    .music-lab-desc {
+        font-size: 12px;
+        max-width: 200px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .nav-menu {
+        gap: 22px;
+    }
+}
+

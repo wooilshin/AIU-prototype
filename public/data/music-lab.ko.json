@@ -1,0 +1,118 @@
+{
+  "title": "Music Lab",
+  "subtitle": "동물을 고르면, 그 세계의 음악이 들립니다.",
+  "hint": "원 위의 이름을 클릭하세요",
+  "playingLabel": "재생 중",
+  "pausedLabel": "일시정지",
+  "audioSoonLabel": "오디오 준비 중 — /public/audio 에 MP3를 넣어 주세요",
+  "characters": [
+    {
+      "id": "red-fox",
+      "name": "Red Fox",
+      "genre": "Ambient Folk",
+      "description": "인간 도시 가장자리를 거니는 관찰자. 일상의 소음을 고요하고 방황하는 멜로디로 바꿉니다.",
+      "color": "#7a8fa3",
+      "accent": "#e8a067",
+      "audio": "/audio/red-fox.mp3"
+    },
+    {
+      "id": "blue-bird",
+      "name": "Blue Bird",
+      "genre": "Soft Pop",
+      "description": "짧은 아침과 작은 비행을 위한 가벼운 고음. 하늘을 가로지르는 메시지 같은 노래.",
+      "color": "#d9cfc0",
+      "accent": "#4a90c8",
+      "audio": "/audio/blue-bird.mp3"
+    },
+    {
+      "id": "green-sea-turtle",
+      "name": "Green Sea Turtle",
+      "genre": "Ambient Chill",
+      "description": "느린 해류와 깊은 인내. 조류처럼 넓고 고요하게 이어지는 음악.",
+      "color": "#e8d9a8",
+      "accent": "#5ca077",
+      "audio": "/audio/green-sea-turtle.mp3"
+    },
+    {
+      "id": "capybara",
+      "name": "Capybara",
+      "genre": "Lo-fi",
+      "description": "서두르지 않는 따뜻한 비트. 세상이 바빠도 함께 앉아 있는 소리.",
+      "color": "#e8b88a",
+      "accent": "#a06a40",
+      "audio": "/audio/capybara.mp3"
+    },
+    {
+      "id": "beaglier",
+      "name": "Beaglier",
+      "genre": "Indie Acoustic",
+      "description": "우정의 화음과 열린 코드. 문을 조금 열어 둔 채 미지로 걸어가는 노래.",
+      "color": "#b8d4c8",
+      "accent": "#6b8f7a",
+      "audio": "/audio/beaglier.mp3"
+    },
+    {
+      "id": "bunny",
+      "name": "Bunny",
+      "genre": "Dream Pop",
+      "description": "부드러운 탄력과 파스텔 빛. 오후에 반쯤 떠오른 기억 같은 멜로디.",
+      "color": "#b8d4e8",
+      "accent": "#7a9fc0",
+      "audio": "/audio/bunny.mp3"
+    },
+    {
+      "id": "raccoon",
+      "name": "Raccoon",
+      "genre": "Jazz Swing",
+      "description": "야시장과 영리한 손. 옥상과 잔해 사이를 스치는 싱커페이션.",
+      "color": "#e8b8c8",
+      "accent": "#7a6a70",
+      "audio": "/audio/raccoon.mp3"
+    },
+    {
+      "id": "white-giraffe",
+      "name": "White Giraffe",
+      "genre": "Ethereal Ambient",
+      "description": "예언자의 음색. 지평선보다 더 먼 곳을 바라보는, 서두르지 않는 하모니.",
+      "color": "#c8c8c8",
+      "accent": "#f5f5f5",
+      "audio": "/audio/white-giraffe.mp3"
+    },
+    {
+      "id": "korat-cat",
+      "name": "Korat Cat",
+      "genre": "Neo Classical",
+      "description": "은빛으로 다듬어진 주제. 먼저 보고, 세상을 깔끔한 모티프로 정리하는 지능.",
+      "color": "#d46a9e",
+      "accent": "#8a8a9a",
+      "audio": "/audio/korat-cat.mp3"
+    },
+    {
+      "id": "barbary-lion",
+      "name": "Barbary Lion",
+      "genre": "Cinematic Epic",
+      "description": "마지막 자손의 찬가. 옛 세계가 새 세계를 부를 때 울리는 드럼과 브라스.",
+      "color": "#d4b898",
+      "accent": "#c9a227",
+      "audio": "/audio/barbary-lion.mp3"
+    },
+    {
+      "id": "squirrel",
+      "name": "Squirrel",
+      "genre": "Playful Folk",
+      "description": "빠른 모티프와 저장해 둔 씨앗 같은 선율. 지식의 나무 사이를 달리는 발걸음.",
+      "color": "#8fb88a",
+      "accent": "#6b4a30",
+      "audio": "/audio/squirrel.mp3"
+    },
+    {
+      "id": "black-panther",
+      "name": "Black Panther",
+      "genre": "Dark Electronic",
+      "description": "그림자의 펄스와 낮은 전압. 조용히 움직이다가, 문득 모든 것이 지켜보는 듯한 소리.",
+      "color": "#6a6a6a",
+      "accent": "#1a1a1a",
+      "audio": "/audio/black-panther.mp3"
+    }
+  ]
+}
