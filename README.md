@@ -24,7 +24,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ├── app/                  # Next.js App Router pages
 │   ├── layout.tsx       # Root layout
 │   ├── page.tsx         # Home page
-│   ├── about/           # About page
 │   ├── contact/         # Contact page
 │   ├── api/             # API routes
 │   └── globals.css      # Global styles

@@ -1006,6 +1006,31 @@ h1, h2, h3, h4, h5, h6 {
     color: #222;
 }
 
+.about-staff .staff-role {
+    margin-top: 28px;
+}
+
+.about-staff .staff-role:first-of-type {
+    margin-top: 8px;
+}
+
+.about-staff .staff-role h3 {
+    font-family: 'Satoshi', 'Noto Sans KR', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #111;
+    margin: 0 0 14px;
+    letter-spacing: 0;
+}
+
+.about-staff .staff-role p {
+    margin-bottom: 1em;
+}
+
+.about-staff .staff-role p:last-child {
+    margin-bottom: 0;
+}
+
 .about-prose-page .about-section p:last-child {
     margin-bottom: 0;
 }

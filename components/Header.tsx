@@ -16,7 +16,6 @@ export default function Header() {
     en: {
       home: 'Home',
       aiuProject: 'AIU Project',
-      about: 'About',
       creativeTechLab: 'Creative Tech Lab',
       music: 'Music',
       contact: 'Contact Us',
@@ -25,7 +24,6 @@ export default function Header() {
     ko: {
       home: '홈',
       aiuProject: 'AIU 프로젝트',
-      about: '소개',
       creativeTechLab: 'Creative Tech Lab',
       music: 'Music',
       contact: '문의하기',
@@ -110,7 +108,6 @@ export default function Header() {
             <Link href="/aiu-project">{t.aiuProject}</Link>
             <Link href="/creative-tech-lab">{t.creativeTechLab}</Link>
             <Link href="/music">{t.music}</Link>
-            <Link href="/about">{t.about}</Link>
             <Link href="/contact">{t.contact}</Link>
           </nav>
           <div className="header-actions">
@@ -152,7 +149,6 @@ export default function Header() {
           <Link href="/aiu-project" onClick={handleMenuLinkClick}>{t.aiuProject}</Link>
           <Link href="/creative-tech-lab" onClick={handleMenuLinkClick}>{t.creativeTechLab}</Link>
           <Link href="/music" onClick={handleMenuLinkClick}>{t.music}</Link>
-          <Link href="/about" onClick={handleMenuLinkClick}>{t.about}</Link>
           <Link href="/contact" onClick={handleMenuLinkClick}>{t.contact}</Link>
         </nav>
       </div>
