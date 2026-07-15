@@ -244,31 +244,42 @@ export default function AnimalMusicLab() {
         </div>
 
         <div className="music-lab-cascade" aria-label="Animal list">
-          <div className="music-lab-cascade-inner">
-            {data.groups.map((group) => (
-              <div key={group.id} className="music-lab-cascade-group">
-                <div className="music-lab-cascade-heading">
-                  <span>{language === 'ko' ? group.titleKo || group.title : group.title}</span>
-                  {group.subtitle ? <em>{group.subtitle}</em> : null}
-                </div>
-                <div className="music-lab-cascade-row">
-                  {group.animals.map((animal, index) => {
-                    const isActive = animal.id === selected.id
-                    const color = CASCADE_COLORS[index % CASCADE_COLORS.length]
-                    return (
-                      <button
-                        key={animal.id}
-                        type="button"
-                        className={`music-lab-chip ${isActive ? 'is-active' : ''}`}
-                        style={{ ['--chip-color' as string]: color }}
-                        onClick={() => handleSelect(animal)}
-                        aria-pressed={isActive}
-                      >
-                        {slugLabel(animal, language)}
-                      </button>
-                    )
-                  })}
-                </div>
+          <div className="music-lab-cascade-track">
+            {[0, 1].map((copy) => (
+              <div
+                key={copy}
+                className="music-lab-cascade-inner"
+                aria-hidden={copy === 1 ? true : undefined}
+              >
+                {data.groups.map((group) => (
+                  <div key={`${copy}-${group.id}`} className="music-lab-cascade-group">
+                    <div className="music-lab-cascade-heading">
+                      <span>
+                        {language === 'ko' ? group.titleKo || group.title : group.title}
+                      </span>
+                      {group.subtitle ? <em>{group.subtitle}</em> : null}
+                    </div>
+                    <div className="music-lab-cascade-row">
+                      {group.animals.map((animal, index) => {
+                        const isActive = animal.id === selected.id
+                        const color = CASCADE_COLORS[index % CASCADE_COLORS.length]
+                        return (
+                          <button
+                            key={`${copy}-${animal.id}`}
+                            type="button"
+                            className={`music-lab-chip ${isActive ? 'is-active' : ''}`}
+                            style={{ ['--chip-color' as string]: color }}
+                            onClick={() => handleSelect(animal)}
+                            aria-pressed={isActive}
+                            tabIndex={copy === 1 ? -1 : 0}
+                          >
+                            {slugLabel(animal, language)}
+                          </button>
+                        )
+                      })}
+                    </div>
+                  </div>
+                ))}
               </div>
             ))}
           </div>

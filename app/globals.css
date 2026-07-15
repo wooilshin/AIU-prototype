@@ -1934,20 +1934,50 @@ body {
     position: relative;
     min-height: 640px;
     overflow: hidden;
-    mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
+    mask-image: linear-gradient(
+        180deg,
+        transparent 0%,
+        #000 12%,
+        #000 88%,
+        transparent 100%
+    );
+}
+
+.music-lab-cascade-track {
+    position: absolute;
+    top: -10%;
+    right: -8%;
+    width: 125%;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    transform: rotate(-28deg);
+    transform-origin: center right;
+    animation: music-lab-cascade-drift 55s linear infinite;
+    will-change: transform;
+}
+
+.music-lab-cascade:hover .music-lab-cascade-track {
+    animation-play-state: paused;
 }
 
 .music-lab-cascade-inner {
-    position: absolute;
-    top: 4%;
-    right: -4%;
-    width: 118%;
-    transform: rotate(-28deg);
-    transform-origin: center right;
     display: flex;
     flex-direction: column;
     gap: 18px;
     user-select: none;
+    flex-shrink: 0;
+    padding-bottom: 28px;
+}
+
+@keyframes music-lab-cascade-drift {
+    from {
+        transform: rotate(-28deg) translateY(0);
+    }
+    to {
+        /* 복제된 리스트 한 세트만큼 사선 위로 이동 (무한 루프) */
+        transform: rotate(-28deg) translateY(-50%);
+    }
 }
 
 .music-lab-cascade-group {
@@ -2018,17 +2048,16 @@ body {
 
     .music-lab-cascade {
         min-height: 420px;
-        mask-image: none;
     }
 
-    .music-lab-cascade-inner {
+    .music-lab-cascade-track {
         position: relative;
         top: 0;
         right: 0;
-        width: 100%;
-        transform: rotate(-12deg);
+        width: 110%;
+        margin: 8px 0 24px;
         transform-origin: top left;
-        margin: 10px 0 30px 4%;
+        animation-duration: 48s;
     }
 }
 
@@ -2049,9 +2078,10 @@ body {
         font-size: 24px;
     }
 
-    .music-lab-cascade-inner {
-        transform: none;
-        margin: 0;
+    .music-lab-cascade-track {
+        width: 100%;
+        transform-origin: center center;
+        animation-duration: 42s;
     }
 
     .music-lab-chip {
