@@ -1,7 +1,7 @@
 {
   "title": "Animal Intelligence의 사운드 세계를 탐험하세요",
   "subtitle": "동물을 고르면, 그 세계의 음악이 들립니다.",
-  "hint": "오른쪽 이름을 골라 주세요",
+  "hint": "오른쪽 원의 이름을 골라 주세요",
   "playingLabel": "재생 중",
   "pausedLabel": "일시정지",
   "audioSoonLabel": "오디오 준비 중 — /public/audio 에 WAV 또는 MP3를 넣어 주세요",

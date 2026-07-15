@@ -31,7 +31,22 @@ interface MusicLabData {
   groups: LabGroup[]
 }
 
-const CASCADE_COLORS = [
+type WheelItem =
+  | {
+      kind: 'heading'
+      id: string
+      label: string
+      sub?: string
+    }
+  | {
+      kind: 'animal'
+      id: string
+      label: string
+      animal: LabAnimal & { groupTitle: string; groupSubtitle?: string }
+      color: string
+    }
+
+const WHEEL_COLORS = [
   '#ff8a4c',
   '#ff6b8a',
   '#d4a5ff',
@@ -56,6 +71,7 @@ export default function AnimalMusicLab() {
   const [isPlaying, setIsPlaying] = useState(false)
   const [audioMissing, setAudioMissing] = useState(false)
   const [progress, setProgress] = useState(0)
+  const [orbitPaused, setOrbitPaused] = useState(false)
   const audioRef = useRef<HTMLAudioElement | null>(null)
 
   useEffect(() => {
@@ -90,6 +106,39 @@ export default function AnimalMusicLab() {
         groupSubtitle: group.subtitle,
       }))
     )
+  }, [data, language])
+
+  const wheelItems = useMemo(() => {
+    if (!data) return [] as WheelItem[]
+    const items: WheelItem[] = []
+    let colorIndex = 0
+
+    data.groups.forEach((group) => {
+      const groupTitle = language === 'ko' ? group.titleKo || group.title : group.title
+      items.push({
+        kind: 'heading',
+        id: `heading-${group.id}`,
+        label: groupTitle,
+        sub: group.subtitle || undefined,
+      })
+
+      group.animals.forEach((animal) => {
+        items.push({
+          kind: 'animal',
+          id: animal.id,
+          label: slugLabel(animal, language),
+          color: WHEEL_COLORS[colorIndex % WHEEL_COLORS.length],
+          animal: {
+            ...animal,
+            groupTitle,
+            groupSubtitle: group.subtitle,
+          },
+        })
+        colorIndex += 1
+      })
+    })
+
+    return items
   }, [data, language])
 
   const selected =
@@ -143,6 +192,7 @@ export default function AnimalMusicLab() {
 
   const handleSelect = (animal: LabAnimal) => {
     setSelectedId(animal.id)
+    setOrbitPaused(true)
     void playAnimal(animal)
   }
 
@@ -182,6 +232,8 @@ export default function AnimalMusicLab() {
   const displayNote =
     selected.note ||
     (language === 'ko' ? selected.name : selected.nameKo)
+
+  const count = wheelItems.length
 
   return (
     <section className="music-lab">
@@ -240,50 +292,59 @@ export default function AnimalMusicLab() {
             )}
           </div>
 
-          <p className="music-lab-hint">{data.hint}</p>
+          <div className="music-lab-orbit-actions">
+            <button
+              type="button"
+              className="music-lab-orbit-toggle"
+              onClick={() => setOrbitPaused((v) => !v)}
+            >
+              {orbitPaused ? 'Resume wheel' : 'Pause wheel'}
+            </button>
+            <p className="music-lab-hint">{data.hint}</p>
+          </div>
         </div>
 
-        <div className="music-lab-cascade" aria-label="Animal list">
-          <div className="music-lab-cascade-stage">
-            <div className="music-lab-cascade-track">
-              {[0, 1].map((copy) => (
+        <div className="music-lab-wheel" aria-label="Animal wheel">
+          <div
+            className={`music-lab-wheel-spin ${orbitPaused ? 'is-paused' : ''}`}
+            style={{ ['--wheel-count' as string]: count }}
+          >
+            {wheelItems.map((item, index) => {
+              const angle = (360 / count) * index
+              if (item.kind === 'heading') {
+                return (
+                  <div
+                    key={item.id}
+                    className="music-lab-wheel-spoke music-lab-wheel-spoke--heading"
+                    style={{ ['--angle' as string]: `${angle}deg` }}
+                  >
+                    <span className="music-lab-wheel-label music-lab-wheel-label--heading">
+                      {item.label}
+                      {item.sub ? <em> · {item.sub}</em> : null}
+                    </span>
+                  </div>
+                )
+              }
+
+              const isActive = item.id === selected.id
+              return (
                 <div
-                  key={copy}
-                  className="music-lab-cascade-inner"
-                  aria-hidden={copy === 1 ? true : undefined}
+                  key={item.id}
+                  className="music-lab-wheel-spoke"
+                  style={{ ['--angle' as string]: `${angle}deg` }}
                 >
-                  {data.groups.map((group) => (
-                    <div key={`${copy}-${group.id}`} className="music-lab-cascade-group">
-                      <div className="music-lab-cascade-heading">
-                        <span>
-                          {language === 'ko' ? group.titleKo || group.title : group.title}
-                        </span>
-                        {group.subtitle ? <em>{group.subtitle}</em> : null}
-                      </div>
-                      <div className="music-lab-cascade-row">
-                        {group.animals.map((animal, index) => {
-                          const isActive = animal.id === selected.id
-                          const color = CASCADE_COLORS[index % CASCADE_COLORS.length]
-                          return (
-                            <button
-                              key={`${copy}-${animal.id}`}
-                              type="button"
-                              className={`music-lab-chip ${isActive ? 'is-active' : ''}`}
-                              style={{ ['--chip-color' as string]: color }}
-                              onClick={() => handleSelect(animal)}
-                              aria-pressed={isActive}
-                              tabIndex={copy === 1 ? -1 : 0}
-                            >
-                              {slugLabel(animal, language)}
-                            </button>
-                          )
-                        })}
-                      </div>
-                    </div>
-                  ))}
+                  <button
+                    type="button"
+                    className={`music-lab-wheel-label ${isActive ? 'is-active' : ''}`}
+                    style={{ ['--chip-color' as string]: item.color }}
+                    onClick={() => handleSelect(item.animal)}
+                    aria-pressed={isActive}
+                  >
+                    {item.label}
+                  </button>
                 </div>
-              ))}
-            </div>
+              )
+            })}
           </div>
         </div>
       </div>

@@ -1924,125 +1924,155 @@ body {
     color: #888;
 }
 
+.music-lab-orbit-actions {
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.music-lab-orbit-toggle {
+    border: 1px solid rgba(255, 138, 76, 0.35);
+    border-radius: 999px;
+    padding: 7px 12px;
+    background: transparent;
+    color: #ff8a4c;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+}
+
+.music-lab-orbit-toggle:hover {
+    background: rgba(255, 138, 76, 0.12);
+}
+
 .music-lab-hint {
-    margin: 18px 0 0;
-    font-size: 13px;
+    margin: 0;
+    font-size: 12px;
     color: #777;
 }
 
-.music-lab-cascade {
+/* 오른쪽: 원의 오른쪽 반만 보이도록 클리핑 + 천천히 회전 */
+.music-lab-wheel {
+    --wheel-size: min(920px, 125%);
+    --wheel-radius: calc(var(--wheel-size) * 0.42);
     position: relative;
     min-height: 680px;
-    height: min(78vh, 780px);
+    height: min(82vh, 820px);
     overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    /* 원의 중심이 왼쪽 가장자리 쪽에 있어 오른쪽 반원만 노출 */
     mask-image: linear-gradient(
-        180deg,
+        90deg,
         transparent 0%,
-        #000 8%,
-        #000 92%,
-        transparent 100%
+        rgba(0, 0, 0, 0.15) 8%,
+        #000 22%,
+        #000 100%
     );
 }
 
-/* 기울기만 담당 — 오른쪽 영역에서 / 방향으로 세워둠 */
-.music-lab-cascade-stage {
-    width: min(640px, 96%);
-    margin-right: -2%;
-    transform: rotate(-26deg);
-    transform-origin: center center;
-}
-
-.music-lab-cascade-track {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    /* 로컬 Y축 위로 이동 → 기울기 때문에 화면에서는 오른쪽 위 사선 */
-    animation: music-lab-cascade-drift 38s linear infinite;
+.music-lab-wheel-spin {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: var(--wheel-size);
+    height: var(--wheel-size);
+    margin-top: calc(var(--wheel-size) * -0.5);
+    margin-left: calc(var(--wheel-size) * -0.52);
+    animation: music-lab-wheel-spin 70s linear infinite;
     will-change: transform;
 }
 
-.music-lab-cascade-inner {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    user-select: none;
-    flex-shrink: 0;
-    padding-bottom: 32px;
+.music-lab-wheel-spin.is-paused {
+    animation-play-state: paused;
 }
 
-@keyframes music-lab-cascade-drift {
-    from {
-        transform: translateY(0);
-    }
-    to {
-        transform: translateY(-50%);
-    }
+.music-lab-wheel-spoke {
+    --angle: 0deg;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    transform: rotate(var(--angle)) translateY(calc(var(--wheel-radius) * -1));
 }
 
-@media (prefers-reduced-motion: reduce) {
-    .music-lab-cascade-track {
-        animation: none;
-        transform: none;
-    }
-}
-
-.music-lab-cascade-group {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.music-lab-cascade-heading {
-    display: flex;
-    align-items: baseline;
-    gap: 10px;
-    padding-left: 4px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 13px;
-    color: rgba(255, 255, 255, 0.55);
-}
-
-.music-lab-cascade-heading em {
-    font-style: italic;
-    font-size: 11px;
-    color: rgba(255, 138, 76, 0.75);
-}
-
-.music-lab-cascade-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px 14px;
-    align-items: center;
-}
-
-.music-lab-chip {
+.music-lab-wheel-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%) rotate(calc(var(--angle) * -1));
+    animation: music-lab-wheel-unspin 70s linear infinite;
     border: none;
     background: transparent;
     padding: 0;
+    margin: 0;
     font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
-    font-size: clamp(16px, 1.7vw, 22px);
-    font-weight: 600;
-    letter-spacing: -0.01em;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    line-height: 1.1;
     color: var(--chip-color, #ff8a4c);
-    cursor: pointer;
-    opacity: 0.88;
-    transition: opacity 0.2s ease, transform 0.2s ease, text-shadow 0.2s ease;
     white-space: nowrap;
+    cursor: pointer;
+    opacity: 0.78;
+    transition: opacity 0.2s ease, text-shadow 0.2s ease, color 0.2s ease;
 }
 
-.music-lab-chip:hover {
-    opacity: 1;
-    transform: translateY(-1px);
+.music-lab-wheel-spin.is-paused .music-lab-wheel-label {
+    animation-play-state: paused;
 }
 
-.music-lab-chip.is-active {
+.music-lab-wheel-label:hover {
     opacity: 1;
-    text-shadow: 0 0 18px rgba(255, 138, 76, 0.45);
+}
+
+.music-lab-wheel-label.is-active {
+    opacity: 1;
+    font-weight: 700;
+    text-shadow: 0 0 14px rgba(255, 138, 76, 0.55);
     text-decoration: underline;
-    text-underline-offset: 4px;
+    text-underline-offset: 3px;
+}
+
+.music-lab-wheel-label--heading {
+    cursor: default;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: none;
+    color: rgba(255, 255, 255, 0.42);
+    opacity: 1;
+    animation: music-lab-wheel-unspin 70s linear infinite;
+}
+
+.music-lab-wheel-spin.is-paused .music-lab-wheel-label--heading {
+    animation-play-state: paused;
+}
+
+.music-lab-wheel-label--heading em {
+    font-style: italic;
+    color: rgba(255, 138, 76, 0.55);
+}
+
+@keyframes music-lab-wheel-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes music-lab-wheel-unspin {
+    from { transform: translate(-50%, -50%) rotate(calc(var(--angle) * -1)); }
+    to { transform: translate(-50%, -50%) rotate(calc(var(--angle) * -1 - 360deg)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .music-lab-wheel-spin,
+    .music-lab-wheel-label,
+    .music-lab-wheel-label--heading {
+        animation: none !important;
+    }
 }
 
 @media (max-width: 980px) {
@@ -2055,19 +2085,17 @@ body {
         position: static;
     }
 
-    .music-lab-cascade {
-        min-height: 460px;
-        height: 520px;
-        justify-content: center;
-    }
-
-    .music-lab-cascade-stage {
-        width: 100%;
-        margin-right: 0;
-    }
-
-    .music-lab-cascade-track {
-        animation-duration: 34s;
+    .music-lab-wheel {
+        --wheel-size: min(720px, 160vw);
+        min-height: 420px;
+        height: 460px;
+        mask-image: linear-gradient(
+            90deg,
+            transparent 0%,
+            rgba(0, 0, 0, 0.2) 12%,
+            #000 28%,
+            #000 100%
+        );
     }
 }
 
@@ -2088,17 +2116,18 @@ body {
         font-size: 24px;
     }
 
-    .music-lab-cascade {
-        min-height: 380px;
-        height: 400px;
+    .music-lab-wheel {
+        --wheel-size: min(620px, 185vw);
+        min-height: 340px;
+        height: 360px;
     }
 
-    .music-lab-cascade-track {
-        animation-duration: 30s;
+    .music-lab-wheel-label {
+        font-size: 10px;
     }
 
-    .music-lab-chip {
-        font-size: 16px;
+    .music-lab-wheel-label--heading {
+        font-size: 9px;
     }
 }
 
