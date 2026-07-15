@@ -9,7 +9,7 @@
 }
 
 :root {
-    --header-offset: 81px;
+    --header-offset: 112px;
 }
 
 /* HTML 요소 - 좌우 스크롤 방지 (모바일 레이아웃 고정) */
@@ -21,11 +21,11 @@ html {
 
 /* Body 스타일 - 폰트, 색상, 배경 등 기본 설정 (고정 헤더 높이만큼 상단 패딩) */
 body {
-    /* Guggenheim About typography feel: Guggenheim Sans ≈ Inter Tight (+ Noto Sans KR for Hangul) */
-    font-family: 'Inter Tight', 'Noto Sans KR', 'Acumin Variable Concept', -apple-system, BlinkMacSystemFont, system-ui, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+    /* Guggenheim-like open sans: regular Inter (not Tight) + neutral tracking */
+    font-family: 'Inter', 'Noto Sans KR', 'Acumin Variable Concept', -apple-system, BlinkMacSystemFont, system-ui, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
     font-size: 19px;
-    line-height: 1.6;
-    letter-spacing: -0.011em;
+    line-height: 1.7;
+    letter-spacing: 0.01em;
     color: #333;
     background-color: #fff;
     overflow-x: hidden;
@@ -35,8 +35,8 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Inter Tight', 'Noto Sans KR', sans-serif;
-    letter-spacing: -0.02em;
+    font-family: 'Inter', 'Noto Sans KR', sans-serif;
+    letter-spacing: 0;
 }
 
 /* 숫자에 Acumin Variable Concept 폰트 우선 적용 (0-9 숫자 전용) */
@@ -55,10 +55,10 @@ h1, h2, h3, h4, h5, h6 {
     overflow-x: hidden;
 }
 
-/* ========================================
-   헤더 (Header) 스타일
-   ======================================== */
-/* 헤더 컨테이너 - 뷰포트 상단 고정, 아주 약한 구분감 */
+.header .container {
+    overflow: visible;
+}
+
 .header {
     position: fixed;
     top: 0;
@@ -67,8 +67,9 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 999;
     background-color: #fff;
     border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-    padding: 20px 0;
+    padding: 28px 0;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    overflow: visible;
 }
 
 /* 헤더 내용 - 로고, 메뉴, 액션 버튼을 가로로 배치 */
@@ -77,27 +78,29 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     justify-content: space-between;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
+    min-height: 56px;
 }
 
-/* 로고 영역 - 크기 제한 및 overflow 처리 */
+/* 로고 영역 - 구겐하임처럼 워드마크가 크게 보이도록 */
 .logo {
     display: flex;
     align-items: center;
-    position: relative; /* Create stacking context for transform */
-    overflow: hidden;
+    position: relative;
+    overflow: visible;
     flex-shrink: 0;
-    max-width: 50%;
+    max-width: none;
+    z-index: 2;
 }
 
 /* 로고 이미지 - 크기 조정 및 iOS 최적화 */
 .logo-image {
-    height: 40px;
+    height: 48px;
     width: auto;
-    transform: scale(4.5) translateY(-2px);
-    will-change: transform; /* iOS-safe transform optimization */
-    max-width: 100%;
-    overflow: hidden;
+    transform: scale(6.2) translateY(-1px);
+    transform-origin: left center;
+    will-change: transform;
+    max-width: none;
 }
 
 /* 로고 라인 (대체 로고 디자인) - 여러 개의 세로선으로 구성 */
@@ -130,8 +133,8 @@ h1, h2, h3, h4, h5, h6 {
 .nav-menu a {
     text-decoration: none;
     color: #333;
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 15px;
+    font-weight: 500;
     transition: color 0.3s;
     cursor: pointer;
 }
@@ -455,8 +458,8 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 20px;
     line-height: 1.2;
     color: #000;
-    font-family: 'Inter Tight', 'Noto Sans KR', sans-serif;
-    letter-spacing: -0.025em;
+    font-family: 'Inter', 'Noto Sans KR', sans-serif;
+    letter-spacing: 0;
 }
 
 /* 히어로 텍스트 - 설명 문단 */
@@ -925,7 +928,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
     margin-bottom: 20px;
     color: #000;
-    letter-spacing: -0.03em;
+    letter-spacing: 0;
 }
 
 /* 히어로 부제목 */
@@ -952,7 +955,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
     margin-bottom: 30px;
     color: #000;
-    letter-spacing: -0.025em;
+    letter-spacing: 0;
 }
 
 /* About 섹션 본문 */
@@ -991,8 +994,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .about-prose-page .about-section p {
-    line-height: 1.65;
-    margin-bottom: 0.9em;
+    line-height: 1.75;
+    letter-spacing: 0.015em;
+    margin-bottom: 1em;
 }
 
 .about-prose-page .about-section p:last-child {
@@ -1536,19 +1540,30 @@ h1, h2, h3, h4, h5, h6 {
    ======================================== */
 /* 태블릿 및 모바일 (768px 이하) */
 @media (max-width: 768px) {
+    :root {
+        --header-offset: 88px;
+    }
+
+    .header {
+        padding: 22px 0;
+    }
+
     .header-content {
         flex-wrap: nowrap;
-        overflow: hidden;
+        overflow: visible;
+        min-height: 44px;
     }
 
     .logo {
-        max-width: 40%;
-        overflow: hidden;
+        max-width: none;
+        overflow: visible;
     }
 
     .logo-image {
-        transform: scale(3.5) translateY(-2px);
-        max-width: 100%;
+        height: 40px;
+        transform: scale(4.8) translateY(-1px);
+        transform-origin: left center;
+        max-width: none;
     }
 
     .nav-menu {
@@ -1817,12 +1832,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .music-lab-title {
     margin: 0 0 14px;
-    font-family: 'Inter Tight', 'Noto Sans KR', sans-serif;
+    font-family: 'Inter', 'Noto Sans KR', sans-serif;
     font-size: clamp(32px, 4vw, 48px);
     font-weight: 500;
     line-height: 1.15;
     color: #111;
-    letter-spacing: -0.025em;
+    letter-spacing: 0;
 }
 
 .music-lab-subtitle {
@@ -1863,11 +1878,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .music-lab-player-name {
     margin: 0 0 6px;
-    font-family: 'Inter Tight', 'Noto Sans KR', sans-serif;
+    font-family: 'Inter', 'Noto Sans KR', sans-serif;
     font-size: 28px;
     font-weight: 500;
     color: #111;
-    letter-spacing: -0.02em;
+    letter-spacing: 0;
 }
 
 .music-lab-player-note {
@@ -1984,7 +1999,7 @@ h1, h2, h3, h4, h5, h6 {
     gap: 8px;
     width: max-content;
     max-width: 90%;
-    font-family: 'Inter Tight', 'Noto Sans KR', sans-serif;
+    font-family: 'Inter', 'Noto Sans KR', sans-serif;
     font-size: 11px;
     color: rgba(0, 0, 0, 0.38);
     transform-origin: left center;
@@ -2004,9 +2019,9 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
     width: max-content;
     max-width: 92%;
-    font-family: 'Inter Tight', 'Noto Sans KR', sans-serif;
+    font-family: 'Inter', 'Noto Sans KR', sans-serif;
     font-weight: 600;
-    letter-spacing: -0.01em;
+    letter-spacing: 0.01em;
     color: var(--chip-color, #e06b2c);
     cursor: pointer;
     transition: opacity 0.2s ease, text-shadow 0.2s ease, color 0.2s ease;
