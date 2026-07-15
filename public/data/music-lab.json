@@ -1,118 +1,135 @@
 {
-  "title": "Music Lab",
-  "subtitle": "Choose an animal. Hear their world.",
-  "hint": "Click a name on the ring",
+  "title": "Explore the Animal Intelligence soundtrack",
+  "subtitle": "Choose an agent. Hear their world.",
+  "hint": "Pick a name from the cascade",
   "playingLabel": "Playing",
   "pausedLabel": "Paused",
-  "audioSoonLabel": "Audio coming soon — drop an MP3 into /public/audio",
-  "characters": [
+  "audioSoonLabel": "Audio coming soon — drop a WAV or MP3 into /public/audio",
+  "prevLabel": "Previous",
+  "nextLabel": "Next",
+  "groups": [
     {
-      "id": "red-fox",
-      "name": "Red Fox",
-      "genre": "Ambient Folk",
-      "description": "A curious observer who wanders at the edge of human cities, turning everyday noise into quiet, wandering melodies.",
-      "color": "#7a8fa3",
-      "accent": "#e8a067",
-      "audio": "/audio/red-fox.mp3"
+      "id": "gen1",
+      "title": "1st Generation Agents",
+      "titleKo": "1세대 요원",
+      "subtitle": "The Magnificent Seven",
+      "animals": [
+        { "id": "turtle", "name": "Turtle", "nameKo": "거북이", "audio": "/audio/turtle.wav" },
+        { "id": "bunny", "name": "Bunny", "nameKo": "토끼", "audio": "/audio/bunny.wav" },
+        { "id": "capybara", "name": "Capybara", "nameKo": "카피바라", "audio": "/audio/capybara.wav" },
+        { "id": "bluebird", "name": "Bluebird", "nameKo": "파랑새", "audio": "/audio/bluebird.wav" },
+        { "id": "raccoon", "name": "Raccoon", "nameKo": "너구리", "audio": "/audio/raccoon.wav" },
+        { "id": "halo", "name": "Halo", "nameKo": "고양이", "audio": "/audio/halo.wav" },
+        { "id": "fox", "name": "Fox", "nameKo": "여우", "audio": "/audio/fox.wav" }
+      ]
     },
     {
-      "id": "blue-bird",
-      "name": "Blue Bird",
-      "genre": "Soft Pop",
-      "description": "Light, high notes for small moments—morning light, short flights, and messages carried across the sky.",
-      "color": "#d9cfc0",
-      "accent": "#4a90c8",
-      "audio": "/audio/blue-bird.mp3"
+      "id": "royals",
+      "title": "The Royals",
+      "titleKo": "왕가",
+      "subtitle": "",
+      "animals": [
+        { "id": "nesu", "name": "Nesu", "nameKo": "바바리사자", "note": "Barbary Lion", "audio": "/audio/nesu.wav" },
+        { "id": "white-giraffe", "name": "White Giraffe", "nameKo": "흰기린", "note": "White Oracle", "audio": "/audio/white-giraffe.wav" },
+        { "id": "black-panther", "name": "Black Panther", "nameKo": "흑표범", "note": "Black Oracle", "audio": "/audio/black-panther.wav" }
+      ]
     },
     {
-      "id": "green-sea-turtle",
-      "name": "Green Sea Turtle",
-      "genre": "Ambient Chill",
-      "description": "Slow currents and deep patience. Music that moves like tides—steady, wide, and quietly enduring.",
-      "color": "#e8d9a8",
-      "accent": "#5ca077",
-      "audio": "/audio/green-sea-turtle.mp3"
+      "id": "gen2",
+      "title": "2nd Generation Agents",
+      "titleKo": "2세대 요원",
+      "subtitle": "",
+      "animals": [
+        { "id": "nacho", "name": "Nacho", "nameKo": "나초", "note": "Beagle-mix rescue", "audio": "/audio/nacho.wav" },
+        { "id": "python", "name": "Python", "nameKo": "비단뱀", "audio": "/audio/python.wav" }
+      ]
     },
     {
-      "id": "capybara",
-      "name": "Capybara",
-      "genre": "Lo-fi",
-      "description": "Warm, unhurried beats. The sound of calm company—sitting together while the world rushes past.",
-      "color": "#e8b88a",
-      "accent": "#a06a40",
-      "audio": "/audio/capybara.mp3"
+      "id": "india",
+      "title": "India",
+      "titleKo": "인도",
+      "subtitle": "",
+      "animals": [
+        { "id": "elephant", "name": "Elephant", "nameKo": "코끼리", "audio": "/audio/elephant.wav" },
+        { "id": "northern-white-rhino", "name": "Northern White Rhinoceros", "nameKo": "북부흰코뿔소", "audio": "/audio/northern-white-rhino.wav" }
+      ]
     },
     {
-      "id": "beaglier",
-      "name": "Beaglier",
-      "genre": "Indie Acoustic",
-      "description": "Loyal rhythms and open chords—songs for friendship, doors left cracked, and walks into the unknown.",
-      "color": "#b8d4c8",
-      "accent": "#6b8f7a",
-      "audio": "/audio/beaglier.mp3"
+      "id": "patagonia",
+      "title": "Patagonia",
+      "titleKo": "파타고니아",
+      "subtitle": "",
+      "animals": [
+        { "id": "two-prime", "name": "Two-prime", "nameKo": "투프라임", "note": "Cattle", "audio": "/audio/two-prime.wav" },
+        { "id": "gray-wolf", "name": "Gray Wolf", "nameKo": "회색늑대", "audio": "/audio/gray-wolf.wav" },
+        { "id": "sheep", "name": "Sheep", "nameKo": "양", "audio": "/audio/sheep.wav" }
+      ]
     },
     {
-      "id": "bunny",
-      "name": "Bunny",
-      "genre": "Dream Pop",
-      "description": "Soft bounce and pastel haze. Melodies that feel like memories half-remembered in the afternoon.",
-      "color": "#b8d4e8",
-      "accent": "#7a9fc0",
-      "audio": "/audio/bunny.mp3"
+      "id": "yukon",
+      "title": "Yukon",
+      "titleKo": "유콘",
+      "subtitle": "",
+      "animals": [
+        { "id": "polar-bear", "name": "Polar Bear", "nameKo": "북극곰", "audio": "/audio/polar-bear.wav" },
+        { "id": "puffin", "name": "Puffin", "nameKo": "퍼핀", "audio": "/audio/puffin.wav" },
+        { "id": "lemming", "name": "Lemming", "nameKo": "레밍", "audio": "/audio/lemming.wav" }
+      ]
     },
     {
-      "id": "raccoon",
-      "name": "Raccoon",
-      "genre": "Jazz Swing",
-      "description": "Night markets and clever hands. Syncopated footsteps between dumpsters, rooftops, and human leftovers.",
-      "color": "#e8b8c8",
-      "accent": "#7a6a70",
-      "audio": "/audio/raccoon.mp3"
+      "id": "amazon",
+      "title": "Amazon",
+      "titleKo": "아마존",
+      "subtitle": "",
+      "animals": [
+        { "id": "anteater", "name": "Anteater", "nameKo": "개미핥기", "audio": "/audio/anteater.wav" },
+        { "id": "marine-iguana", "name": "Marine Iguana", "nameKo": "바다이구아나", "audio": "/audio/marine-iguana.wav" },
+        { "id": "poison-dart-frog", "name": "Poison Dart Frog", "nameKo": "독화살개구리", "audio": "/audio/poison-dart-frog.wav" }
+      ]
     },
     {
-      "id": "white-giraffe",
-      "name": "White Giraffe",
-      "genre": "Ethereal Ambient",
-      "description": "The prophet’s tone—long lines of harmony that look farther than the horizon and speak without hurry.",
-      "color": "#c8c8c8",
-      "accent": "#f5f5f5",
-      "audio": "/audio/white-giraffe.mp3"
+      "id": "australia",
+      "title": "Australia",
+      "titleKo": "호주",
+      "subtitle": "",
+      "animals": [
+        { "id": "wallaby", "name": "Wallaby", "nameKo": "왈라비", "audio": "/audio/wallaby.wav" },
+        { "id": "kangaroo", "name": "Kangaroo", "nameKo": "캥거루", "audio": "/audio/kangaroo.wav" }
+      ]
     },
     {
-      "id": "korat-cat",
-      "name": "Korat Cat",
-      "genre": "Neo Classical",
-      "description": "Precise, silver-edged themes. Intelligence that watches first, then arranges the world into clean motifs.",
-      "color": "#d46a9e",
-      "accent": "#8a8a9a",
-      "audio": "/audio/korat-cat.mp3"
+      "id": "siberia",
+      "title": "Siberia",
+      "titleKo": "시베리아",
+      "subtitle": "",
+      "animals": [
+        { "id": "white-ferret", "name": "White Ferret", "nameKo": "흰족제비", "audio": "/audio/white-ferret.wav" },
+        { "id": "white-rat", "name": "White Rat", "nameKo": "흰쥐", "audio": "/audio/white-rat.wav" }
+      ]
     },
     {
-      "id": "barbary-lion",
-      "name": "Barbary Lion",
-      "genre": "Cinematic Epic",
-      "description": "Last descendant’s anthem—drum and brass for journeys that begin when the old world calls the new.",
-      "color": "#d4b898",
-      "accent": "#c9a227",
-      "audio": "/audio/barbary-lion.mp3"
+      "id": "gobi-himalaya",
+      "title": "Gobi / Himalaya",
+      "titleKo": "고비 / 히말라야",
+      "subtitle": "",
+      "animals": [
+        { "id": "ibex", "name": "Ibex", "nameKo": "아이벡스", "audio": "/audio/ibex.wav" },
+        { "id": "moon-bear", "name": "Moon Bear", "nameKo": "반달가슴곰", "audio": "/audio/moon-bear.wav" },
+        { "id": "dromedary-camel", "name": "Dromedary Camel", "nameKo": "단봉낙타", "audio": "/audio/dromedary-camel.wav" },
+        { "id": "bactrian-camel", "name": "Bactrian Camel", "nameKo": "쌍봉낙타", "audio": "/audio/bactrian-camel.wav" }
+      ]
     },
     {
-      "id": "squirrel",
-      "name": "Squirrel",
-      "genre": "Playful Folk",
-      "description": "Quick motifs and stored seeds of melody—scurrying between trees of knowledge and winter plans.",
-      "color": "#8fb88a",
-      "accent": "#6b4a30",
-      "audio": "/audio/squirrel.mp3"
-    },
-    {
-      "id": "black-panther",
-      "name": "Black Panther",
-      "genre": "Dark Electronic",
-      "description": "Shadow pulse and low voltage. Power that moves silently until everything suddenly feels watched.",
-      "color": "#6a6a6a",
-      "accent": "#1a1a1a",
-      "audio": "/audio/black-panther.mp3"
+      "id": "lab-others",
+      "title": "Lab & Others",
+      "titleKo": "연구소 및 기타",
+      "subtitle": "",
+      "animals": [
+        { "id": "golden-hamster", "name": "Golden Hamster", "nameKo": "골든햄스터", "audio": "/audio/golden-hamster.wav" },
+        { "id": "duck", "name": "Duck", "nameKo": "오리", "audio": "/audio/duck.wav" },
+        { "id": "black-swan", "name": "Black Swan", "nameKo": "흑고니", "audio": "/audio/black-swan.wav" },
+        { "id": "leopard-gecko", "name": "Leopard Gecko", "nameKo": "레오파드 게코", "audio": "/audio/leopard-gecko.wav" }
+      ]
     }
   ]
 }

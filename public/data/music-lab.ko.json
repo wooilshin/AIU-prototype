@@ -1,118 +1,135 @@
 {
-  "title": "Music Lab",
+  "title": "Animal Intelligence의 사운드 세계를 탐험하세요",
   "subtitle": "동물을 고르면, 그 세계의 음악이 들립니다.",
-  "hint": "원 위의 이름을 클릭하세요",
+  "hint": "오른쪽 이름을 골라 주세요",
   "playingLabel": "재생 중",
   "pausedLabel": "일시정지",
-  "audioSoonLabel": "오디오 준비 중 — /public/audio 에 MP3를 넣어 주세요",
-  "characters": [
+  "audioSoonLabel": "오디오 준비 중 — /public/audio 에 WAV 또는 MP3를 넣어 주세요",
+  "prevLabel": "이전",
+  "nextLabel": "다음",
+  "groups": [
     {
-      "id": "red-fox",
-      "name": "Red Fox",
-      "genre": "Ambient Folk",
-      "description": "인간 도시 가장자리를 거니는 관찰자. 일상의 소음을 고요하고 방황하는 멜로디로 바꿉니다.",
-      "color": "#7a8fa3",
-      "accent": "#e8a067",
-      "audio": "/audio/red-fox.mp3"
+      "id": "gen1",
+      "title": "1세대 요원",
+      "titleKo": "1세대 요원",
+      "subtitle": "The Magnificent Seven",
+      "animals": [
+        { "id": "turtle", "name": "Turtle", "nameKo": "거북이", "audio": "/audio/turtle.wav" },
+        { "id": "bunny", "name": "Bunny", "nameKo": "토끼", "audio": "/audio/bunny.wav" },
+        { "id": "capybara", "name": "Capybara", "nameKo": "카피바라", "audio": "/audio/capybara.wav" },
+        { "id": "bluebird", "name": "Bluebird", "nameKo": "파랑새", "audio": "/audio/bluebird.wav" },
+        { "id": "raccoon", "name": "Raccoon", "nameKo": "너구리", "audio": "/audio/raccoon.wav" },
+        { "id": "halo", "name": "Halo", "nameKo": "고양이", "audio": "/audio/halo.wav" },
+        { "id": "fox", "name": "Fox", "nameKo": "여우", "audio": "/audio/fox.wav" }
+      ]
     },
     {
-      "id": "blue-bird",
-      "name": "Blue Bird",
-      "genre": "Soft Pop",
-      "description": "짧은 아침과 작은 비행을 위한 가벼운 고음. 하늘을 가로지르는 메시지 같은 노래.",
-      "color": "#d9cfc0",
-      "accent": "#4a90c8",
-      "audio": "/audio/blue-bird.mp3"
+      "id": "royals",
+      "title": "왕가",
+      "titleKo": "왕가",
+      "subtitle": "",
+      "animals": [
+        { "id": "nesu", "name": "Nesu", "nameKo": "바바리사자", "note": "Barbary Lion", "audio": "/audio/nesu.wav" },
+        { "id": "white-giraffe", "name": "White Giraffe", "nameKo": "흰기린", "note": "White Oracle", "audio": "/audio/white-giraffe.wav" },
+        { "id": "black-panther", "name": "Black Panther", "nameKo": "흑표범", "note": "Black Oracle", "audio": "/audio/black-panther.wav" }
+      ]
     },
     {
-      "id": "green-sea-turtle",
-      "name": "Green Sea Turtle",
-      "genre": "Ambient Chill",
-      "description": "느린 해류와 깊은 인내. 조류처럼 넓고 고요하게 이어지는 음악.",
-      "color": "#e8d9a8",
-      "accent": "#5ca077",
-      "audio": "/audio/green-sea-turtle.mp3"
+      "id": "gen2",
+      "title": "2세대 요원",
+      "titleKo": "2세대 요원",
+      "subtitle": "",
+      "animals": [
+        { "id": "nacho", "name": "Nacho", "nameKo": "나초", "note": "비글 믹스 유기견", "audio": "/audio/nacho.wav" },
+        { "id": "python", "name": "Python", "nameKo": "비단뱀", "audio": "/audio/python.wav" }
+      ]
     },
     {
-      "id": "capybara",
-      "name": "Capybara",
-      "genre": "Lo-fi",
-      "description": "서두르지 않는 따뜻한 비트. 세상이 바빠도 함께 앉아 있는 소리.",
-      "color": "#e8b88a",
-      "accent": "#a06a40",
-      "audio": "/audio/capybara.mp3"
+      "id": "india",
+      "title": "인도",
+      "titleKo": "인도",
+      "subtitle": "",
+      "animals": [
+        { "id": "elephant", "name": "Elephant", "nameKo": "코끼리", "audio": "/audio/elephant.wav" },
+        { "id": "northern-white-rhino", "name": "Northern White Rhinoceros", "nameKo": "북부흰코뿔소", "audio": "/audio/northern-white-rhino.wav" }
+      ]
     },
     {
-      "id": "beaglier",
-      "name": "Beaglier",
-      "genre": "Indie Acoustic",
-      "description": "우정의 화음과 열린 코드. 문을 조금 열어 둔 채 미지로 걸어가는 노래.",
-      "color": "#b8d4c8",
-      "accent": "#6b8f7a",
-      "audio": "/audio/beaglier.mp3"
+      "id": "patagonia",
+      "title": "파타고니아",
+      "titleKo": "파타고니아",
+      "subtitle": "",
+      "animals": [
+        { "id": "two-prime", "name": "Two-prime", "nameKo": "투프라임", "note": "소", "audio": "/audio/two-prime.wav" },
+        { "id": "gray-wolf", "name": "Gray Wolf", "nameKo": "회색늑대", "audio": "/audio/gray-wolf.wav" },
+        { "id": "sheep", "name": "Sheep", "nameKo": "양", "audio": "/audio/sheep.wav" }
+      ]
     },
     {
-      "id": "bunny",
-      "name": "Bunny",
-      "genre": "Dream Pop",
-      "description": "부드러운 탄력과 파스텔 빛. 오후에 반쯤 떠오른 기억 같은 멜로디.",
-      "color": "#b8d4e8",
-      "accent": "#7a9fc0",
-      "audio": "/audio/bunny.mp3"
+      "id": "yukon",
+      "title": "유콘",
+      "titleKo": "유콘",
+      "subtitle": "",
+      "animals": [
+        { "id": "polar-bear", "name": "Polar Bear", "nameKo": "북극곰", "audio": "/audio/polar-bear.wav" },
+        { "id": "puffin", "name": "Puffin", "nameKo": "퍼핀", "audio": "/audio/puffin.wav" },
+        { "id": "lemming", "name": "Lemming", "nameKo": "레밍", "audio": "/audio/lemming.wav" }
+      ]
     },
     {
-      "id": "raccoon",
-      "name": "Raccoon",
-      "genre": "Jazz Swing",
-      "description": "야시장과 영리한 손. 옥상과 잔해 사이를 스치는 싱커페이션.",
-      "color": "#e8b8c8",
-      "accent": "#7a6a70",
-      "audio": "/audio/raccoon.mp3"
+      "id": "amazon",
+      "title": "아마존",
+      "titleKo": "아마존",
+      "subtitle": "",
+      "animals": [
+        { "id": "anteater", "name": "Anteater", "nameKo": "개미핥기", "audio": "/audio/anteater.wav" },
+        { "id": "marine-iguana", "name": "Marine Iguana", "nameKo": "바다이구아나", "audio": "/audio/marine-iguana.wav" },
+        { "id": "poison-dart-frog", "name": "Poison Dart Frog", "nameKo": "독화살개구리", "audio": "/audio/poison-dart-frog.wav" }
+      ]
     },
     {
-      "id": "white-giraffe",
-      "name": "White Giraffe",
-      "genre": "Ethereal Ambient",
-      "description": "예언자의 음색. 지평선보다 더 먼 곳을 바라보는, 서두르지 않는 하모니.",
-      "color": "#c8c8c8",
-      "accent": "#f5f5f5",
-      "audio": "/audio/white-giraffe.mp3"
+      "id": "australia",
+      "title": "호주",
+      "titleKo": "호주",
+      "subtitle": "",
+      "animals": [
+        { "id": "wallaby", "name": "Wallaby", "nameKo": "왈라비", "audio": "/audio/wallaby.wav" },
+        { "id": "kangaroo", "name": "Kangaroo", "nameKo": "캥거루", "audio": "/audio/kangaroo.wav" }
+      ]
     },
     {
-      "id": "korat-cat",
-      "name": "Korat Cat",
-      "genre": "Neo Classical",
-      "description": "은빛으로 다듬어진 주제. 먼저 보고, 세상을 깔끔한 모티프로 정리하는 지능.",
-      "color": "#d46a9e",
-      "accent": "#8a8a9a",
-      "audio": "/audio/korat-cat.mp3"
+      "id": "siberia",
+      "title": "시베리아",
+      "titleKo": "시베리아",
+      "subtitle": "",
+      "animals": [
+        { "id": "white-ferret", "name": "White Ferret", "nameKo": "흰족제비", "audio": "/audio/white-ferret.wav" },
+        { "id": "white-rat", "name": "White Rat", "nameKo": "흰쥐", "audio": "/audio/white-rat.wav" }
+      ]
     },
     {
-      "id": "barbary-lion",
-      "name": "Barbary Lion",
-      "genre": "Cinematic Epic",
-      "description": "마지막 자손의 찬가. 옛 세계가 새 세계를 부를 때 울리는 드럼과 브라스.",
-      "color": "#d4b898",
-      "accent": "#c9a227",
-      "audio": "/audio/barbary-lion.mp3"
+      "id": "gobi-himalaya",
+      "title": "고비 / 히말라야",
+      "titleKo": "고비 / 히말라야",
+      "subtitle": "",
+      "animals": [
+        { "id": "ibex", "name": "Ibex", "nameKo": "아이벡스", "audio": "/audio/ibex.wav" },
+        { "id": "moon-bear", "name": "Moon Bear", "nameKo": "반달가슴곰", "audio": "/audio/moon-bear.wav" },
+        { "id": "dromedary-camel", "name": "Dromedary Camel", "nameKo": "단봉낙타", "audio": "/audio/dromedary-camel.wav" },
+        { "id": "bactrian-camel", "name": "Bactrian Camel", "nameKo": "쌍봉낙타", "audio": "/audio/bactrian-camel.wav" }
+      ]
     },
     {
-      "id": "squirrel",
-      "name": "Squirrel",
-      "genre": "Playful Folk",
-      "description": "빠른 모티프와 저장해 둔 씨앗 같은 선율. 지식의 나무 사이를 달리는 발걸음.",
-      "color": "#8fb88a",
-      "accent": "#6b4a30",
-      "audio": "/audio/squirrel.mp3"
-    },
-    {
-      "id": "black-panther",
-      "name": "Black Panther",
-      "genre": "Dark Electronic",
-      "description": "그림자의 펄스와 낮은 전압. 조용히 움직이다가, 문득 모든 것이 지켜보는 듯한 소리.",
-      "color": "#6a6a6a",
-      "accent": "#1a1a1a",
-      "audio": "/audio/black-panther.mp3"
+      "id": "lab-others",
+      "title": "연구소 및 기타",
+      "titleKo": "연구소 및 기타",
+      "subtitle": "",
+      "animals": [
+        { "id": "golden-hamster", "name": "Golden Hamster", "nameKo": "골든햄스터", "audio": "/audio/golden-hamster.wav" },
+        { "id": "duck", "name": "Duck", "nameKo": "오리", "audio": "/audio/duck.wav" },
+        { "id": "black-swan", "name": "Black Swan", "nameKo": "흑고니", "audio": "/audio/black-swan.wav" },
+        { "id": "leopard-gecko", "name": "Leopard Gecko", "nameKo": "레오파드 게코", "audio": "/audio/leopard-gecko.wav" }
+      ]
     }
   ]
 }

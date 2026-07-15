@@ -1,16 +1,22 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { useLanguage } from '@/contexts/LanguageContext'
 
-interface LabCharacter {
+interface LabAnimal {
   id: string
   name: string
-  genre: string
-  description: string
-  color: string
-  accent: string
+  nameKo: string
+  note?: string
   audio: string
+}
+
+interface LabGroup {
+  id: string
+  title: string
+  titleKo: string
+  subtitle?: string
+  animals: LabAnimal[]
 }
 
 interface MusicLabData {
@@ -20,7 +26,27 @@ interface MusicLabData {
   playingLabel: string
   pausedLabel: string
   audioSoonLabel: string
-  characters: LabCharacter[]
+  prevLabel: string
+  nextLabel: string
+  groups: LabGroup[]
+}
+
+const CASCADE_COLORS = [
+  '#ff8a4c',
+  '#ff6b8a',
+  '#d4a5ff',
+  '#f5d76e',
+  '#ff9f6b',
+  '#e879a9',
+  '#c4b5fd',
+  '#fbbf24',
+  '#fb923c',
+  '#f472b6',
+]
+
+function slugLabel(animal: LabAnimal, language: 'en' | 'ko') {
+  if (language === 'ko') return animal.nameKo
+  return animal.name.toLowerCase()
 }
 
 export default function AnimalMusicLab() {
@@ -29,7 +55,7 @@ export default function AnimalMusicLab() {
   const [selectedId, setSelectedId] = useState<string | null>(null)
   const [isPlaying, setIsPlaying] = useState(false)
   const [audioMissing, setAudioMissing] = useState(false)
-  const [orbitPaused, setOrbitPaused] = useState(false)
+  const [progress, setProgress] = useState(0)
   const audioRef = useRef<HTMLAudioElement | null>(null)
 
   useEffect(() => {
@@ -38,8 +64,9 @@ export default function AnimalMusicLab() {
       .then((res) => res.json())
       .then((json: MusicLabData) => {
         setData(json)
-        if (json.characters.length > 0) {
-          setSelectedId((prev) => prev ?? json.characters[0].id)
+        const first = json.groups[0]?.animals[0]
+        if (first) {
+          setSelectedId((prev) => prev ?? first.id)
         }
       })
       .catch((err) => console.error('Error loading music lab data:', err))
@@ -54,10 +81,23 @@ export default function AnimalMusicLab() {
     }
   }, [])
 
-  if (!data) return null
+  const flatAnimals = useMemo(() => {
+    if (!data) return [] as Array<LabAnimal & { groupTitle: string; groupSubtitle?: string }>
+    return data.groups.flatMap((group) =>
+      group.animals.map((animal) => ({
+        ...animal,
+        groupTitle: language === 'ko' ? group.titleKo || group.title : group.title,
+        groupSubtitle: group.subtitle,
+      }))
+    )
+  }, [data, language])
 
   const selected =
-    data.characters.find((c) => c.id === selectedId) ?? data.characters[0]
+    flatAnimals.find((a) => a.id === selectedId) ?? flatAnimals[0] ?? null
+
+  const selectedIndex = selected
+    ? flatAnimals.findIndex((a) => a.id === selected.id)
+    : -1
 
   const stopAudio = () => {
     if (audioRef.current) {
@@ -65,20 +105,31 @@ export default function AnimalMusicLab() {
       audioRef.current = null
     }
     setIsPlaying(false)
+    setProgress(0)
   }
 
-  const playCharacter = async (character: LabCharacter) => {
+  const playAnimal = async (animal: LabAnimal) => {
     stopAudio()
     setAudioMissing(false)
 
-    const audio = new Audio(character.audio)
+    const audio = new Audio(animal.audio)
     audioRef.current = audio
 
-    audio.addEventListener('ended', () => setIsPlaying(false))
+    const onTimeUpdate = () => {
+      if (!audio.duration || Number.isNaN(audio.duration)) return
+      setProgress(audio.currentTime / audio.duration)
+    }
+
+    audio.addEventListener('timeupdate', onTimeUpdate)
+    audio.addEventListener('ended', () => {
+      setIsPlaying(false)
+      setProgress(0)
+    })
     audio.addEventListener('error', () => {
       setAudioMissing(true)
       setIsPlaying(false)
       audioRef.current = null
+      setProgress(0)
     })
 
     try {
@@ -90,10 +141,9 @@ export default function AnimalMusicLab() {
     }
   }
 
-  const handleSelect = (character: LabCharacter) => {
-    setSelectedId(character.id)
-    setOrbitPaused(true)
-    void playCharacter(character)
+  const handleSelect = (animal: LabAnimal) => {
+    setSelectedId(animal.id)
+    void playAnimal(animal)
   }
 
   const togglePlay = () => {
@@ -116,92 +166,113 @@ export default function AnimalMusicLab() {
       return
     }
 
-    void playCharacter(selected)
+    void playAnimal(selected)
   }
 
-  const count = data.characters.length
+  const goRelative = (delta: number) => {
+    if (flatAnimals.length === 0 || selectedIndex < 0) return
+    const next =
+      flatAnimals[(selectedIndex + delta + flatAnimals.length) % flatAnimals.length]
+    handleSelect(next)
+  }
+
+  if (!data || !selected) return null
+
+  const displayName = language === 'ko' ? selected.nameKo : selected.name
+  const displayNote =
+    selected.note ||
+    (language === 'ko' ? selected.name : selected.nameKo)
 
   return (
     <section className="music-lab">
-      <div className="container music-lab-header">
-        <p className="music-lab-kicker">Experimental</p>
-        <h1>{data.title}</h1>
-        <p className="music-lab-subtitle">{data.subtitle}</p>
-      </div>
+      <div className="music-lab-shell">
+        <div className="music-lab-left">
+          <p className="music-lab-kicker">Experimental · AIU Music Lab</p>
+          <h1 className="music-lab-title">{data.title}</h1>
+          <p className="music-lab-subtitle">{data.subtitle}</p>
 
-      <div className="music-lab-stage">
-        <div className={`music-lab-orbit ${orbitPaused ? 'is-paused' : ''}`}>
-          <div className="music-lab-orbit-ring" aria-hidden="true" />
+          <div className="music-lab-player">
+            <div className="music-lab-player-meta">
+              <span className="music-lab-player-group">{selected.groupTitle}</span>
+              {selected.groupSubtitle ? (
+                <span className="music-lab-player-group-sub">{selected.groupSubtitle}</span>
+              ) : null}
+              <h2 className="music-lab-player-name">{displayName}</h2>
+              <p className="music-lab-player-note">{displayNote}</p>
+            </div>
 
-          <div className="music-lab-spokes">
-            {data.characters.map((character, index) => {
-              const angle = (360 / count) * index - 90
-              const isActive = character.id === selected?.id
-              return (
-                <div
-                  key={character.id}
-                  className="music-lab-spoke"
-                  style={{ ['--angle' as string]: `${angle}deg` }}
-                >
-                  <button
-                    type="button"
-                    className={`music-lab-node ${isActive ? 'is-active' : ''}`}
-                    style={{
-                      ['--node-color' as string]: character.color,
-                      ['--node-accent' as string]: character.accent,
-                    }}
-                    onClick={() => handleSelect(character)}
-                    aria-pressed={isActive}
-                  >
-                    <span className="music-lab-node-label">{character.name}</span>
-                  </button>
-                </div>
-              )
-            })}
-          </div>
+            <div className="music-lab-player-controls">
+              <button
+                type="button"
+                className="music-lab-icon-btn"
+                onClick={() => goRelative(-1)}
+                aria-label={data.prevLabel}
+              >
+                <i className="fas fa-backward-step" />
+              </button>
+              <button
+                type="button"
+                className="music-lab-icon-btn music-lab-icon-btn--play"
+                onClick={togglePlay}
+                aria-label={isPlaying ? data.pausedLabel : data.playingLabel}
+              >
+                <i className={`fas ${isPlaying ? 'fa-pause' : 'fa-play'}`} />
+              </button>
+              <button
+                type="button"
+                className="music-lab-icon-btn"
+                onClick={() => goRelative(1)}
+                aria-label={data.nextLabel}
+              >
+                <i className="fas fa-forward-step" />
+              </button>
+            </div>
 
-          <div className="music-lab-center">
-            {selected && (
-              <>
-                <div
-                  className={`music-lab-avatar ${isPlaying ? 'is-playing' : ''}`}
-                  style={{
-                    background: `radial-gradient(circle at 30% 28%, ${selected.accent} 0%, ${selected.color} 55%, #2a2a2a 100%)`,
-                  }}
-                >
-                  <span className="music-lab-avatar-initial">
-                    {selected.name
-                      .split(' ')
-                      .map((w) => w[0])
-                      .join('')
-                      .slice(0, 2)}
-                  </span>
-                  {isPlaying && <span className="music-lab-pulse" aria-hidden="true" />}
-                </div>
-                <h2 className="music-lab-name">{selected.name}</h2>
-                <p className="music-lab-genre">{selected.genre}</p>
-                <p className="music-lab-desc">{selected.description}</p>
-                <div className="music-lab-controls">
-                  <button type="button" className="music-lab-play" onClick={togglePlay}>
-                    <i className={`fas ${isPlaying ? 'fa-pause' : 'fa-play'}`} />
-                    <span>{isPlaying ? data.playingLabel : data.pausedLabel}</span>
-                  </button>
-                  <button
-                    type="button"
-                    className="music-lab-orbit-toggle"
-                    onClick={() => setOrbitPaused((v) => !v)}
-                  >
-                    {orbitPaused ? 'Resume orbit' : 'Pause orbit'}
-                  </button>
-                </div>
-                {audioMissing && (
-                  <p className="music-lab-audio-note">{data.audioSoonLabel}</p>
-                )}
-              </>
+            <div className="music-lab-progress" aria-hidden="true">
+              <div
+                className="music-lab-progress-fill"
+                style={{ width: `${Math.max(2, progress * 100)}%` }}
+              />
+            </div>
+
+            {audioMissing && (
+              <p className="music-lab-audio-note">{data.audioSoonLabel}</p>
             )}
           </div>
+
+          <p className="music-lab-hint">{data.hint}</p>
         </div>
-        <p className="music-lab-hint">{data.hint}</p>
+
+        <div className="music-lab-cascade" aria-label="Animal list">
+          <div className="music-lab-cascade-inner">
+            {data.groups.map((group) => (
+              <div key={group.id} className="music-lab-cascade-group">
+                <div className="music-lab-cascade-heading">
+                  <span>{language === 'ko' ? group.titleKo || group.title : group.title}</span>
+                  {group.subtitle ? <em>{group.subtitle}</em> : null}
+                </div>
+                <div className="music-lab-cascade-row">
+                  {group.animals.map((animal, index) => {
+                    const isActive = animal.id === selected.id
+                    const color = CASCADE_COLORS[index % CASCADE_COLORS.length]
+                    return (
+                      <button
+                        key={animal.id}
+                        type="button"
+                        className={`music-lab-chip ${isActive ? 'is-active' : ''}`}
+                        style={{ ['--chip-color' as string]: color }}
+                        onClick={() => handleSelect(animal)}
+                        aria-pressed={isActive}
+                      >
+                        {slugLabel(animal, language)}
+                      </button>
+                    )
+                  })}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   )
