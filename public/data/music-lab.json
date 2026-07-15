@@ -1,7 +1,7 @@
 {
   "title": "Explore the Animal Intelligence soundtrack",
   "subtitle": "Choose an agent. Hear their world.",
-  "hint": "Pick a name on the wheel",
+  "hint": "Pick a name from the scrolling list",
   "playingLabel": "Playing",
   "pausedLabel": "Paused",
   "audioSoonLabel": "Audio coming soon — drop a WAV or MP3 into /public/audio",

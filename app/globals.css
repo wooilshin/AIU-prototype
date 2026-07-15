@@ -1770,13 +1770,13 @@ body {
 }
 
 /* ========================================
-   Music Lab (experimental — Suno Labs dark cascade)
+   Music Lab (experimental — light theme)
    ======================================== */
 .music-lab {
     min-height: calc(100vh - 100px);
     padding: 48px 0 72px;
-    background: #0a0a0a;
-    color: #f5f5f5;
+    background: #ffffff;
+    color: #333;
     overflow: hidden;
 }
 
@@ -1802,7 +1802,7 @@ body {
     font-weight: 700;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: #ff8a4c;
+    color: #4a90e2;
 }
 
 .music-lab-title {
@@ -1811,7 +1811,7 @@ body {
     font-size: clamp(32px, 4vw, 48px);
     font-weight: 500;
     line-height: 1.15;
-    color: #fff;
+    color: #111;
     letter-spacing: -0.02em;
 }
 
@@ -1819,15 +1819,15 @@ body {
     margin: 0 0 28px;
     font-size: 15px;
     line-height: 1.5;
-    color: #9a9a9a;
+    color: #666;
 }
 
 .music-lab-player {
-    border: 1px solid #ff8a4c;
+    border: 1.5px solid #87CEEB;
     border-radius: 18px;
     padding: 20px 18px 16px;
-    background: linear-gradient(180deg, #141414 0%, #0f0f0f 100%);
-    box-shadow: 0 0 0 1px rgba(255, 138, 76, 0.08), 0 20px 50px rgba(0, 0, 0, 0.45);
+    background: #fff;
+    box-shadow: 0 8px 28px rgba(74, 144, 226, 0.1);
 }
 
 .music-lab-player-meta {
@@ -1840,7 +1840,7 @@ body {
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: #ff8a4c;
+    color: #4a90e2;
     margin-bottom: 4px;
 }
 
@@ -1856,13 +1856,13 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 28px;
     font-weight: 500;
-    color: #fff;
+    color: #111;
 }
 
 .music-lab-player-note {
     margin: 0;
     font-size: 13px;
-    color: #aaa;
+    color: #666;
 }
 
 .music-lab-player-controls {
@@ -1879,41 +1879,41 @@ body {
     border: none;
     border-radius: 50%;
     background: transparent;
-    color: #ff8a4c;
+    color: #4a90e2;
     font-size: 16px;
     cursor: pointer;
     transition: transform 0.2s ease, color 0.2s ease, background 0.2s ease;
 }
 
 .music-lab-icon-btn:hover {
-    color: #ffb07a;
+    color: #6BB6D6;
     transform: scale(1.06);
 }
 
 .music-lab-icon-btn--play {
     width: 52px;
     height: 52px;
-    background: #ff8a4c;
-    color: #111;
+    background: #87CEEB;
+    color: #fff;
     font-size: 18px;
 }
 
 .music-lab-icon-btn--play:hover {
-    background: #ffb07a;
-    color: #111;
+    background: #6BB6D6;
+    color: #fff;
 }
 
 .music-lab-progress {
     height: 3px;
     border-radius: 999px;
-    background: rgba(255, 255, 255, 0.12);
+    background: rgba(74, 144, 226, 0.15);
     overflow: hidden;
 }
 
 .music-lab-progress-fill {
     height: 100%;
     border-radius: inherit;
-    background: #ff8a4c;
+    background: #4a90e2;
     transition: width 0.15s linear;
 }
 
@@ -1924,154 +1924,110 @@ body {
     color: #888;
 }
 
-.music-lab-orbit-actions {
-    margin-top: 18px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: flex-start;
-}
-
-.music-lab-orbit-toggle {
-    border: 1px solid rgba(255, 138, 76, 0.35);
-    border-radius: 999px;
-    padding: 7px 12px;
-    background: transparent;
-    color: #ff8a4c;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.04em;
-    cursor: pointer;
-}
-
-.music-lab-orbit-toggle:hover {
-    background: rgba(255, 138, 76, 0.12);
-}
-
 .music-lab-hint {
-    margin: 0;
+    margin: 18px 0 0;
     font-size: 12px;
     color: #777;
 }
 
-/* 오른쪽: 원의 오른쪽 반만 보이도록 클리핑 + 천천히 회전 */
-.music-lab-wheel {
-    --wheel-size: min(920px, 125%);
-    --wheel-radius: calc(var(--wheel-size) * 0.42);
+/* 오른쪽: 아래에서 위로 스크롤되는 이름 리스트 */
+.music-lab-scroll {
     position: relative;
-    min-height: 680px;
-    height: min(82vh, 820px);
+    min-height: 560px;
+    height: min(78vh, 760px);
     overflow: hidden;
-    /* 원의 중심이 왼쪽 가장자리 쪽에 있어 오른쪽 반원만 노출 */
     mask-image: linear-gradient(
-        90deg,
+        180deg,
         transparent 0%,
-        rgba(0, 0, 0, 0.15) 8%,
-        #000 22%,
-        #000 100%
+        #000 12%,
+        #000 88%,
+        transparent 100%
     );
 }
 
-.music-lab-wheel-spin {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: var(--wheel-size);
-    height: var(--wheel-size);
-    margin-top: calc(var(--wheel-size) * -0.5);
-    margin-left: calc(var(--wheel-size) * -0.52);
-    animation: music-lab-wheel-spin 70s linear infinite;
+.music-lab-scroll-track {
+    display: flex;
+    flex-direction: column;
+    animation: music-lab-scroll-up 45s linear infinite;
     will-change: transform;
 }
 
-.music-lab-wheel-spin.is-paused {
+.music-lab-scroll:hover .music-lab-scroll-track {
     animation-play-state: paused;
 }
 
-.music-lab-wheel-spoke {
-    --angle: 0deg;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    transform: rotate(var(--angle)) translateY(calc(var(--wheel-radius) * -1));
+.music-lab-scroll-set {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 0;
+    padding: 16px 4px 36px;
+    flex-shrink: 0;
+    box-sizing: border-box;
 }
 
-.music-lab-wheel-label {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translate(-50%, -50%) rotate(calc(var(--angle) * -1));
-    animation: music-lab-wheel-unspin 70s linear infinite;
+.music-lab-scroll-heading {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 8px;
+    width: max-content;
+    max-width: 90%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 11px;
+    color: rgba(0, 0, 0, 0.38);
+    transform-origin: left center;
+}
+
+.music-lab-scroll-heading em {
+    font-style: italic;
+    font-size: 10px;
+    color: rgba(74, 144, 226, 0.75);
+}
+
+.music-lab-scroll-item {
+    display: block;
     border: none;
     background: transparent;
     padding: 0;
     margin: 0;
+    width: max-content;
+    max-width: 92%;
     font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
-    font-size: 11px;
     font-weight: 500;
     letter-spacing: 0.01em;
-    line-height: 1.1;
-    color: var(--chip-color, #ff8a4c);
-    white-space: nowrap;
+    color: var(--chip-color, #4a90e2);
     cursor: pointer;
-    opacity: 0.78;
     transition: opacity 0.2s ease, text-shadow 0.2s ease, color 0.2s ease;
+    white-space: nowrap;
+    text-align: left;
+    transform-origin: left center;
 }
 
-.music-lab-wheel-spin.is-paused .music-lab-wheel-label {
-    animation-play-state: paused;
+.music-lab-scroll-item:hover {
+    opacity: 1 !important;
 }
 
-.music-lab-wheel-label:hover {
-    opacity: 1;
-}
-
-.music-lab-wheel-label.is-active {
-    opacity: 1;
+.music-lab-scroll-item.is-active {
+    opacity: 1 !important;
     font-weight: 700;
-    text-shadow: 0 0 14px rgba(255, 138, 76, 0.55);
+    text-shadow: 0 0 12px rgba(74, 144, 226, 0.28);
     text-decoration: underline;
     text-underline-offset: 3px;
 }
 
-.music-lab-wheel-label--heading {
-    cursor: default;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 10px;
-    font-weight: 500;
-    letter-spacing: 0.04em;
-    text-transform: none;
-    color: rgba(255, 255, 255, 0.42);
-    opacity: 1;
-    animation: music-lab-wheel-unspin 70s linear infinite;
-}
-
-.music-lab-wheel-spin.is-paused .music-lab-wheel-label--heading {
-    animation-play-state: paused;
-}
-
-.music-lab-wheel-label--heading em {
-    font-style: italic;
-    color: rgba(255, 138, 76, 0.55);
-}
-
-@keyframes music-lab-wheel-spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
-
-@keyframes music-lab-wheel-unspin {
-    from { transform: translate(-50%, -50%) rotate(calc(var(--angle) * -1)); }
-    to { transform: translate(-50%, -50%) rotate(calc(var(--angle) * -1 - 360deg)); }
+@keyframes music-lab-scroll-up {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-50%);
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .music-lab-wheel-spin,
-    .music-lab-wheel-label,
-    .music-lab-wheel-label--heading {
-        animation: none !important;
+    .music-lab-scroll-track {
+        animation: none;
     }
 }
 
@@ -2085,17 +2041,9 @@ body {
         position: static;
     }
 
-    .music-lab-wheel {
-        --wheel-size: min(720px, 160vw);
-        min-height: 420px;
-        height: 460px;
-        mask-image: linear-gradient(
-            90deg,
-            transparent 0%,
-            rgba(0, 0, 0, 0.2) 12%,
-            #000 28%,
-            #000 100%
-        );
+    .music-lab-scroll {
+        min-height: 380px;
+        height: 420px;
     }
 }
 
@@ -2116,18 +2064,9 @@ body {
         font-size: 24px;
     }
 
-    .music-lab-wheel {
-        --wheel-size: min(620px, 185vw);
-        min-height: 340px;
-        height: 360px;
-    }
-
-    .music-lab-wheel-label {
-        font-size: 10px;
-    }
-
-    .music-lab-wheel-label--heading {
-        font-size: 9px;
+    .music-lab-scroll {
+        min-height: 320px;
+        height: 340px;
     }
 }
 

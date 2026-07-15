@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState, type CSSProperties } from 'react'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 interface LabAnimal {
@@ -31,7 +31,7 @@ interface MusicLabData {
   groups: LabGroup[]
 }
 
-type WheelItem =
+type ListItem =
   | {
       kind: 'heading'
       id: string
@@ -46,22 +46,46 @@ type WheelItem =
       color: string
     }
 
-const WHEEL_COLORS = [
-  '#ff8a4c',
-  '#ff6b8a',
-  '#d4a5ff',
-  '#f5d76e',
-  '#ff9f6b',
-  '#e879a9',
-  '#c4b5fd',
-  '#fbbf24',
-  '#fb923c',
-  '#f472b6',
+const LIST_COLORS = [
+  '#4a90e2',
+  '#87CEEB',
+  '#6BB6D6',
+  '#5BA3D9',
+  '#7EB8E8',
+  '#3A7BC8',
+  '#A8D8EA',
+  '#69B3E7',
+  '#2E86C1',
+  '#76C7F0',
 ]
 
 function slugLabel(animal: LabAnimal, language: 'en' | 'ko') {
   if (language === 'ko') return animal.nameKo
   return animal.name.toLowerCase()
+}
+
+/** 같은 id면 항상 같은 “랜덤” 배치가 나오도록 해시 기반 오프셋 */
+function scatterStyle(seed: string, index: number) {
+  let hash = 2166136261
+  const text = `${seed}:${index}`
+  for (let i = 0; i < text.length; i += 1) {
+    hash ^= text.charCodeAt(i)
+    hash = Math.imul(hash, 16777619)
+  }
+  const h = hash >>> 0
+  const left = 2 + (h % 82)
+  const topGap = 2 + (h % 22)
+  const size = 11 + (h % 6)
+  const tilt = ((h % 15) - 7) * 0.55
+  const opacity = 0.55 + ((h >> 8) % 40) / 100
+
+  return {
+    marginLeft: `${left}%`,
+    marginTop: `${topGap}px`,
+    fontSize: `${size}px`,
+    transform: `rotate(${tilt.toFixed(2)}deg)`,
+    opacity,
+  } as CSSProperties
 }
 
 export default function AnimalMusicLab() {
@@ -71,7 +95,6 @@ export default function AnimalMusicLab() {
   const [isPlaying, setIsPlaying] = useState(false)
   const [audioMissing, setAudioMissing] = useState(false)
   const [progress, setProgress] = useState(0)
-  const [orbitPaused, setOrbitPaused] = useState(false)
   const audioRef = useRef<HTMLAudioElement | null>(null)
 
   useEffect(() => {
@@ -108,9 +131,9 @@ export default function AnimalMusicLab() {
     )
   }, [data, language])
 
-  const wheelItems = useMemo(() => {
-    if (!data) return [] as WheelItem[]
-    const items: WheelItem[] = []
+  const listItems = useMemo(() => {
+    if (!data) return [] as ListItem[]
+    const items: ListItem[] = []
     let colorIndex = 0
 
     data.groups.forEach((group) => {
@@ -127,7 +150,7 @@ export default function AnimalMusicLab() {
           kind: 'animal',
           id: animal.id,
           label: slugLabel(animal, language),
-          color: WHEEL_COLORS[colorIndex % WHEEL_COLORS.length],
+          color: LIST_COLORS[colorIndex % LIST_COLORS.length],
           animal: {
             ...animal,
             groupTitle,
@@ -192,7 +215,6 @@ export default function AnimalMusicLab() {
 
   const handleSelect = (animal: LabAnimal) => {
     setSelectedId(animal.id)
-    setOrbitPaused(true)
     void playAnimal(animal)
   }
 
@@ -233,7 +255,49 @@ export default function AnimalMusicLab() {
     selected.note ||
     (language === 'ko' ? selected.name : selected.nameKo)
 
-  const count = wheelItems.length
+  const renderList = (copy: number) =>
+    listItems.map((item, index) => {
+      const layout = scatterStyle(item.id, index)
+
+      if (item.kind === 'heading') {
+        return (
+          <div
+            key={`${copy}-${item.id}`}
+            className="music-lab-scroll-heading"
+            style={{
+              marginLeft: layout.marginLeft,
+              marginTop: layout.marginTop,
+              transform: layout.transform,
+            }}
+          >
+            <span>{item.label}</span>
+            {item.sub ? <em>{item.sub}</em> : null}
+          </div>
+        )
+      }
+
+      const isActive = item.id === selected.id
+      return (
+        <button
+          key={`${copy}-${item.id}`}
+          type="button"
+          className={`music-lab-scroll-item ${isActive ? 'is-active' : ''}`}
+          style={{
+            ['--chip-color' as string]: item.color,
+            marginLeft: layout.marginLeft,
+            marginTop: layout.marginTop,
+            fontSize: layout.fontSize,
+            transform: layout.transform,
+            opacity: isActive ? 1 : layout.opacity,
+          }}
+          onClick={() => handleSelect(item.animal)}
+          aria-pressed={isActive}
+          tabIndex={copy === 1 ? -1 : 0}
+        >
+          {item.label}
+        </button>
+      )
+    })
 
   return (
     <section className="music-lab">
@@ -292,59 +356,15 @@ export default function AnimalMusicLab() {
             )}
           </div>
 
-          <div className="music-lab-orbit-actions">
-            <button
-              type="button"
-              className="music-lab-orbit-toggle"
-              onClick={() => setOrbitPaused((v) => !v)}
-            >
-              {orbitPaused ? 'Resume wheel' : 'Pause wheel'}
-            </button>
-            <p className="music-lab-hint">{data.hint}</p>
-          </div>
+          <p className="music-lab-hint">{data.hint}</p>
         </div>
 
-        <div className="music-lab-wheel" aria-label="Animal wheel">
-          <div
-            className={`music-lab-wheel-spin ${orbitPaused ? 'is-paused' : ''}`}
-            style={{ ['--wheel-count' as string]: count }}
-          >
-            {wheelItems.map((item, index) => {
-              const angle = (360 / count) * index
-              if (item.kind === 'heading') {
-                return (
-                  <div
-                    key={item.id}
-                    className="music-lab-wheel-spoke music-lab-wheel-spoke--heading"
-                    style={{ ['--angle' as string]: `${angle}deg` }}
-                  >
-                    <span className="music-lab-wheel-label music-lab-wheel-label--heading">
-                      {item.label}
-                      {item.sub ? <em> · {item.sub}</em> : null}
-                    </span>
-                  </div>
-                )
-              }
-
-              const isActive = item.id === selected.id
-              return (
-                <div
-                  key={item.id}
-                  className="music-lab-wheel-spoke"
-                  style={{ ['--angle' as string]: `${angle}deg` }}
-                >
-                  <button
-                    type="button"
-                    className={`music-lab-wheel-label ${isActive ? 'is-active' : ''}`}
-                    style={{ ['--chip-color' as string]: item.color }}
-                    onClick={() => handleSelect(item.animal)}
-                    aria-pressed={isActive}
-                  >
-                    {item.label}
-                  </button>
-                </div>
-              )
-            })}
+        <div className="music-lab-scroll" aria-label="Animal list">
+          <div className="music-lab-scroll-track">
+            <div className="music-lab-scroll-set">{renderList(0)}</div>
+            <div className="music-lab-scroll-set" aria-hidden="true">
+              {renderList(1)}
+            </div>
           </div>
         </div>
       </div>
