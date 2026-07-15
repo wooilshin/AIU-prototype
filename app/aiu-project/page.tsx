@@ -22,15 +22,16 @@ At the center of AIU is a simple question: What if animals learned everything hu
       ceoTitle: 'CEO & Creative Lead',
       ceoDesc: `Alice Shin serves as the CEO and Creative Lead of Student B.
 
-She studied design and art at the undergraduate level before pursuing applied linguistics at Georgetown University. At Student B, she leads the visual storytelling and overall creative direction of the Animal Intelligence Universe.
-
-By adopting a cute and accessible illustrative style, she helps make serious subjects easier to approach and invites readers to engage with complex questions about knowledge, technology, and the future.`,
+She studied design and art at the undergraduate level before pursuing applied linguistics at Georgetown University. At Student B, she leads the visual storytelling and overall creative direction of the Animal Intelligence Universe.`,
       techLabTitle: 'Tech Lab Engineers',
       techLabDesc: `Will Shin and Joseph SH Chun lead Student B's Tech Lab as engineers and product developers.
 
 Will Shin is trained in artificial intelligence at the University of Pennsylvania and public policy at Harvard University. At Student B's Tech Lab, he works on character-based learning concepts and the integration of generative AI into the Animal Intelligence Universe.
 
 Joseph SH Chun holds a Ph.D. in Electrical Engineering from the University of Maryland and is a specialist in communications and embedded systems. At Student B's Tech Lab, he focuses on designing animal character–based physical devices that are safe, playful, and educationally meaningful for the next generation.`,
+      bizTitle: 'Biz Team',
+      bizDesc:
+        'Jin, Soy, and Guinea are responsible for promoting the IP and preparing to expand its business opportunities.',
       studentBTitle: 'About Student B',
       studentBDesc: `Student B is a startup built around original IP and founded to explore new standards in edutainment.
 
@@ -69,15 +70,16 @@ AIU의 중심에는 간단한 질문이 있습니다. 동물들이 인간이 아
       ceoTitle: 'CEO & Creative Lead',
       ceoDesc: `Alice Shin은 Student B의 CEO이자 Creative Lead입니다.
 
-학부에서 디자인과 미술을 공부한 뒤 조지타운 대학교에서 응용언어학을 전공했습니다. Student B에서 Animal Intelligence Universe의 비주얼 스토리텔링과 전체 크리에이티브 방향을 이끕니다.
-
-귀엽고 접근하기 쉬운 일러스트 스타일을 통해 진지한 주제를 더 쉽게 다가가게 하고, 독자들이 지식·기술·미래에 대한 복잡한 질문에 참여하도록 이끕니다.`,
+학부에서 디자인과 미술을 공부한 뒤 조지타운 대학교에서 응용언어학을 전공했습니다. Student B에서 Animal Intelligence Universe의 비주얼 스토리텔링과 전체 크리에이티브 방향을 이끕니다.`,
       techLabTitle: 'Tech Lab Engineers',
       techLabDesc: `Will Shin과 Joseph SH Chun은 Student B Tech Lab의 엔지니어이자 제품 개발자로 활동합니다.
 
 Will Shin은 펜실베이니아 대학교에서 인공지능을, 하버드 대학교에서 공공정책을 공부했습니다. Student B Tech Lab에서 캐릭터 기반 학습 개념과 Animal Intelligence Universe에 생성형 AI를 통합하는 작업을 담당합니다.
 
 Joseph SH Chun은 메릴랜드 대학교에서 전기공학 박사 학위를 취득했으며, 통신 및 임베디드 시스템 전문가입니다. Student B Tech Lab에서 다음 세대를 위한 안전하고, 유희적이며, 교육적으로 의미 있는 동물 캐릭터 기반 물리적 디바이스 설계에 집중합니다.`,
+      bizTitle: 'Biz Team',
+      bizDesc:
+        'Jin, Soy, Guinea는 IP의 비즈니스 홍보와 IP 비즈니스 기회 확장을 책임지고 준비하고 있습니다.',
       studentBTitle: 'About Student B',
       studentBDesc: `Student B는 오리지널 IP를 중심으로 설립된 스타트업으로, 에듀테인먼트의 새로운 기준을 탐구하기 위해 만들어졌습니다.
 
@@ -157,46 +159,51 @@ Joseph SH Chun은 메릴랜드 대학교에서 전기공학 박사 학위를 취
                   paragraph.trim() && <p key={index}>{paragraph.trim()}</p>
               )}
             </div>
+
+            <div className="staff-role">
+              <h3>{t.bizTitle}</h3>
+              <p>{t.bizDesc}</p>
+            </div>
           </div>
 
-          <div className="about-section">
+          <div className="about-section about-student-b">
             <h2>{t.studentBTitle}</h2>
             {t.studentBDesc.split('\n\n').map(
               (paragraph, index) =>
                 paragraph.trim() && <p key={index}>{paragraph.trim()}</p>
             )}
-          </div>
 
-          <div className="about-section">
-            <h2>{t.whatWeMakeTitle}</h2>
-            <div className="key-areas-grid">
-              <div className="key-area-card">
-                <div className="key-area-icon">
-                  <i className="fas fa-book"></i>
+            <div className="staff-role what-we-make">
+              <h3>{t.whatWeMakeTitle}</h3>
+              <div className="key-areas-grid">
+                <div className="key-area-card">
+                  <div className="key-area-icon">
+                    <i className="fas fa-book"></i>
+                  </div>
+                  <h3>{t.bookStoryTitle}</h3>
+                  <p>{t.bookStoryDesc}</p>
                 </div>
-                <h3>{t.bookStoryTitle}</h3>
-                <p>{t.bookStoryDesc}</p>
-              </div>
-              <div className="key-area-card">
-                <div className="key-area-icon">
-                  <i className="fas fa-book-open"></i>
+                <div className="key-area-card">
+                  <div className="key-area-icon">
+                    <i className="fas fa-book-open"></i>
+                  </div>
+                  <h3>{t.bookKnowledgeTitle}</h3>
+                  <p>{t.bookKnowledgeDesc}</p>
                 </div>
-                <h3>{t.bookKnowledgeTitle}</h3>
-                <p>{t.bookKnowledgeDesc}</p>
-              </div>
-              <div className="key-area-card">
-                <div className="key-area-icon">
-                  <i className="fas fa-comments"></i>
+                <div className="key-area-card">
+                  <div className="key-area-icon">
+                    <i className="fas fa-comments"></i>
+                  </div>
+                  <h3>{t.comicsTitle}</h3>
+                  <p>{t.comicsDesc}</p>
                 </div>
-                <h3>{t.comicsTitle}</h3>
-                <p>{t.comicsDesc}</p>
-              </div>
-              <div className="key-area-card">
-                <div className="key-area-icon">
-                  <i className="fas fa-laptop"></i>
+                <div className="key-area-card">
+                  <div className="key-area-icon">
+                    <i className="fas fa-laptop"></i>
+                  </div>
+                  <h3>{t.aiTitle}</h3>
+                  <p>{t.aiDesc}</p>
                 </div>
-                <h3>{t.aiTitle}</h3>
-                <p>{t.aiDesc}</p>
               </div>
             </div>
           </div>
