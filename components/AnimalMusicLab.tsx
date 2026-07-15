@@ -68,7 +68,7 @@ function scatterStyle(seed: string, index: number) {
   const h = hash >>> 0
   const left = 2 + (h % 82)
   const topGap = 2 + (h % 22)
-  const size = 14 + (h % 7)
+  const size = 15 + (h % 7)
   const tilt = ((h % 15) - 7) * 0.55
   const opacity = 0.78 + ((h >> 8) % 22) / 100
 

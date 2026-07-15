@@ -20,12 +20,12 @@ html {
 
 /* Body ??????- ???, ???, ?? ???? ??? (?? ??? ????? ??? ???) */
 body {
-    /* Body: Satoshi ? Headings: Clash Grotesk */
+    /* Satoshi for body and headings */
     font-family: 'Satoshi', 'Noto Sans KR', 'Acumin Variable Concept', -apple-system, BlinkMacSystemFont, system-ui, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
-    font-size: 19px;
-    line-height: 1.7;
+    font-size: 21px;
+    line-height: 1.55;
     letter-spacing: 0.01em;
-    color: #333;
+    color: #222;
     background-color: #fff;
     overflow-x: hidden;
     width: 100%;
@@ -34,7 +34,8 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Clash Grotesk', 'Noto Sans KR', sans-serif;
+    font-family: 'Satoshi', 'Noto Sans KR', sans-serif;
+    font-weight: 700;
     letter-spacing: 0;
 }
 
@@ -140,7 +141,7 @@ h1, h2, h3, h4, h5, h6 {
 .nav-menu a {
     text-decoration: none;
     color: #333;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 500;
     transition: color 0.3s;
     cursor: pointer;
@@ -459,21 +460,21 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ??????????- ??? ??????*/
 .hero-text h1 {
-    font-size: 42px;
+    font-size: 46px;
     font-weight: 700;
     margin-bottom: 20px;
     line-height: 1.2;
     color: #000;
-    font-family: 'Clash Grotesk', 'Noto Sans KR', sans-serif;
+    font-family: 'Satoshi', 'Noto Sans KR', sans-serif;
     letter-spacing: 0;
 }
 
 /* ??????????- ??? ?? */
 .hero-text p {
-    font-size: 18px;
-    color: #666;
+    font-size: 19px;
+    color: #222;
     margin-bottom: 30px;
-    line-height: 1.6;
+    line-height: 1.55;
 }
 
 /* CTA ?? (Call To Action) - ??? ??? ?? */
@@ -548,8 +549,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ??? ??? (h2) */
 .section-header h2 {
-    font-family: 'Clash Grotesk', 'Noto Sans KR', sans-serif;
-    font-size: 46px;
+    font-family: 'Satoshi', 'Noto Sans KR', sans-serif;
+    font-size: 48px;
     font-weight: 700;
     color: #000;
     margin-bottom: 0;
@@ -557,11 +558,11 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ??? ??? ?????*/
 .section-description {
-    font-size: 18px;
-    color: #666;
+    font-size: 19px;
+    color: #222;
     margin-top: 10px;
     margin-bottom: 20px;
-    line-height: 1.5;
+    line-height: 1.55;
     display: block;
 }
 
@@ -639,7 +640,7 @@ h1, h2, h3, h4, h5, h6 {
 /* ????? - ??? */
 .book-info h3 {
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 700;
     color: #000;
     margin-bottom: 8px;
 }
@@ -708,7 +709,7 @@ h1, h2, h3, h4, h5, h6 {
 /* ?? ??? */
 .newsupdate-article h3 {
     font-size: 17px;
-    font-weight: 600;
+    font-weight: 700;
     color: #000;
     margin-bottom: 10px;
 }
@@ -716,8 +717,8 @@ h1, h2, h3, h4, h5, h6 {
 /* ?? ?? */
 .newsupdate-article p {
     font-size: 14px;
-    color: #666;
-    line-height: 1.6;
+    color: #222;
+    line-height: 1.55;
     margin-bottom: 10px;
 }
 
@@ -739,7 +740,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ?????? ??? */
 .newsletter-section h2 {
-    font-size: 36px;
+    font-size: 44px;
     font-weight: 700;
     margin-bottom: 15px;
     color: #000;
@@ -748,7 +749,7 @@ h1, h2, h3, h4, h5, h6 {
 /* ?????? ??? ?????*/
 .newsletter-section p {
     font-size: 16px;
-    color: #666;
+    color: #222;
     margin-bottom: 30px;
 }
 
@@ -859,8 +860,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Footer.tsx: Contact / SNS ??? (?????? strong, h4 ??????? ???) */
 .footer-section-title {
-    font-family: 'Clash Grotesk', 'Noto Sans KR', sans-serif;
-    font-size: 17px;
+    font-family: 'Satoshi', 'Noto Sans KR', sans-serif;
+    font-size: 18px;
     font-weight: 400;
     display: block;
     margin-bottom: 15px;
@@ -929,8 +930,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .about-hero h1 {
-    font-size: 52px;
-    font-weight: 600;
+    font-size: 56px;
+    font-weight: 700;
     margin-bottom: 20px;
     color: #000;
     letter-spacing: 0;
@@ -938,10 +939,9 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ????????? */
 .hero-subtitle {
-    font-size: 18px;
-    color: #666;
+    font-size: 19px;
+    color: #222;
     margin-bottom: 20px;
-    color: #000;
 }
 
 /* About ??????? */
@@ -956,8 +956,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* About ??? ??? */
 .about-section h2 {
-    font-size: 36px;
-    font-weight: 600;
+    font-size: 44px;
+    font-weight: 700;
     margin-bottom: 30px;
     color: #000;
     letter-spacing: 0;
@@ -965,9 +965,9 @@ h1, h2, h3, h4, h5, h6 {
 
 /* About ??? ?? */
 .about-section p {
-    font-size: 16px;
-    color: #666;
-    line-height: 1.8;
+    font-size: 17px;
+    color: #222;
+    line-height: 1.6;
     margin-bottom: 20px;
 }
 
@@ -976,7 +976,7 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 42rem;
     margin-left: auto;
     margin-right: auto;
-    line-height: 1.6;
+    line-height: 1.55;
 }
 
 .about-prose {
@@ -994,14 +994,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .about-prose-page .about-section h2 {
-    font-size: 28px;
+    font-size: 44px;
+    font-weight: 700;
     margin-bottom: 20px;
 }
 
 .about-prose-page .about-section p {
-    line-height: 1.75;
-    letter-spacing: 0.015em;
+    line-height: 1.6;
+    letter-spacing: 0.01em;
     margin-bottom: 1em;
+    color: #222;
 }
 
 .about-prose-page .about-section p:last-child {
@@ -1106,15 +1108,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .key-area-card h3 {
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: 15px;
     color: #000;
 }
 
 .key-area-card p {
     font-size: 15px;
-    color: #666;
-    line-height: 1.6;
+    color: #222;
+    line-height: 1.55;
 }
 
 /* About CTA ??? - ?????????????? ??? ??? */
@@ -1234,16 +1236,16 @@ h1, h2, h3, h4, h5, h6 {
 
 .about-prose-page.tech-lab-section .tech-lab-content h2,
 .tech-lab-content h2 {
-    font-size: 36px;
+    font-size: 44px;
     font-weight: 700;
     margin-bottom: 30px;
     color: #000;
 }
 
 .tech-lab-content p {
-    font-size: 16px;
-    color: #666;
-    line-height: 1.8;
+    font-size: 17px;
+    color: #222;
+    line-height: 1.6;
     margin-bottom: 20px;
 }
 
@@ -1283,7 +1285,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .contact-hero h1 {
-    font-size: 52px;
+    font-size: 56px;
     font-weight: 700;
     margin-bottom: 15px;
     color: #000;
@@ -1291,7 +1293,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .contact-hero p {
     font-size: 18px;
-    color: #666;
+    color: #222;
+    line-height: 1.55;
 }
 
 /* Contact ??? */
@@ -1348,7 +1351,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Contact ??? */
 .contact-info h2,
 .contact-form-wrapper h2 {
-    font-size: 36px;
+    font-size: 44px;
     font-weight: 700;
     margin-top: 0;
     margin-bottom: 30px;
@@ -1385,15 +1388,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .contact-text h3 {
     font-size: 19px;
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: 8px;
     color: #000;
 }
 
 .contact-text p {
     font-size: 16px;
-    color: #666;
-    line-height: 1.6;
+    color: #222;
+    line-height: 1.55;
 }
 
 .contact-text a {
@@ -1730,8 +1733,9 @@ h1, h2, h3, h4, h5, h6 {
         margin: 0 auto 18px;
     }
 
-    .tech-lab-content h2 {
-        font-size: 28px;
+    .tech-lab-content h2,
+    .about-prose-page.tech-lab-section .tech-lab-content h2 {
+        font-size: 32px;
     }
 
     .about-cta {
@@ -1767,7 +1771,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .section-header h2 {
-        font-size: 28px;
+        font-size: 32px;
     }
 
     .books-grid {
@@ -1775,15 +1779,16 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .about-hero h1 {
-        font-size: 28px;
+        font-size: 36px;
     }
 
-    .about-section h2 {
-        font-size: 28px;
+    .about-section h2,
+    .about-prose-page .about-section h2 {
+        font-size: 32px;
     }
 
     .about-cta h2 {
-        font-size: 24px;
+        font-size: 28px;
     }
 
     .contact-hero {
@@ -1842,9 +1847,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .music-lab-title {
     margin: 0 0 14px;
-    font-family: 'Clash Grotesk', 'Noto Sans KR', sans-serif;
-    font-size: clamp(32px, 4vw, 48px);
-    font-weight: 500;
+    font-family: 'Satoshi', 'Noto Sans KR', sans-serif;
+    font-size: clamp(36px, 4.2vw, 52px);
+    font-weight: 700;
     line-height: 1.15;
     color: #111;
     letter-spacing: 0;
@@ -1852,8 +1857,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .music-lab-subtitle {
     margin: 0 0 28px;
-    font-size: 15px;
-    line-height: 1.5;
+    font-size: 16px;
+    line-height: 1.55;
     color: #666;
 }
 
@@ -1888,9 +1893,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .music-lab-player-name {
     margin: 0 0 6px;
-    font-family: 'Clash Grotesk', 'Noto Sans KR', sans-serif;
-    font-size: 28px;
-    font-weight: 500;
+    font-family: 'Satoshi', 'Noto Sans KR', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
     color: #111;
     letter-spacing: 0;
 }
