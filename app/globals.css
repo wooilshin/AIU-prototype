@@ -1932,51 +1932,60 @@ body {
 
 .music-lab-cascade {
     position: relative;
-    min-height: 640px;
+    min-height: 680px;
+    height: min(78vh, 780px);
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
     mask-image: linear-gradient(
         180deg,
         transparent 0%,
-        #000 12%,
-        #000 88%,
+        #000 8%,
+        #000 92%,
         transparent 100%
     );
 }
 
+/* 기울기만 담당 — 오른쪽 영역에서 / 방향으로 세워둠 */
+.music-lab-cascade-stage {
+    width: min(640px, 96%);
+    margin-right: -2%;
+    transform: rotate(-26deg);
+    transform-origin: center center;
+}
+
 .music-lab-cascade-track {
-    position: absolute;
-    top: -10%;
-    right: -8%;
-    width: 125%;
     display: flex;
     flex-direction: column;
     gap: 0;
-    transform: rotate(-28deg);
-    transform-origin: center right;
-    animation: music-lab-cascade-drift 55s linear infinite;
+    /* 로컬 Y축 위로 이동 → 기울기 때문에 화면에서는 오른쪽 위 사선 */
+    animation: music-lab-cascade-drift 38s linear infinite;
     will-change: transform;
-}
-
-.music-lab-cascade:hover .music-lab-cascade-track {
-    animation-play-state: paused;
 }
 
 .music-lab-cascade-inner {
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 20px;
     user-select: none;
     flex-shrink: 0;
-    padding-bottom: 28px;
+    padding-bottom: 32px;
 }
 
 @keyframes music-lab-cascade-drift {
     from {
-        transform: rotate(-28deg) translateY(0);
+        transform: translateY(0);
     }
     to {
-        /* 복제된 리스트 한 세트만큼 사선 위로 이동 (무한 루프) */
-        transform: rotate(-28deg) translateY(-50%);
+        transform: translateY(-50%);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .music-lab-cascade-track {
+        animation: none;
+        transform: none;
     }
 }
 
@@ -2014,12 +2023,12 @@ body {
     background: transparent;
     padding: 0;
     font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
-    font-size: clamp(14px, 1.5vw, 18px);
-    font-weight: 500;
+    font-size: clamp(16px, 1.7vw, 22px);
+    font-weight: 600;
     letter-spacing: -0.01em;
     color: var(--chip-color, #ff8a4c);
     cursor: pointer;
-    opacity: 0.72;
+    opacity: 0.88;
     transition: opacity 0.2s ease, transform 0.2s ease, text-shadow 0.2s ease;
     white-space: nowrap;
 }
@@ -2047,17 +2056,18 @@ body {
     }
 
     .music-lab-cascade {
-        min-height: 420px;
+        min-height: 460px;
+        height: 520px;
+        justify-content: center;
+    }
+
+    .music-lab-cascade-stage {
+        width: 100%;
+        margin-right: 0;
     }
 
     .music-lab-cascade-track {
-        position: relative;
-        top: 0;
-        right: 0;
-        width: 110%;
-        margin: 8px 0 24px;
-        transform-origin: top left;
-        animation-duration: 48s;
+        animation-duration: 34s;
     }
 }
 
@@ -2078,14 +2088,17 @@ body {
         font-size: 24px;
     }
 
+    .music-lab-cascade {
+        min-height: 380px;
+        height: 400px;
+    }
+
     .music-lab-cascade-track {
-        width: 100%;
-        transform-origin: center center;
-        animation-duration: 42s;
+        animation-duration: 30s;
     }
 
     .music-lab-chip {
-        font-size: 15px;
+        font-size: 16px;
     }
 }
 
