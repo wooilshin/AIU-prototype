@@ -8,14 +8,12 @@ const translations: Record<
   'en' | 'ko',
   {
     title: string
-    sectionTitle: string
     deviceImageAlt: string
     paragraphs: string[]
   }
 > = {
   en: {
     title: 'Creative Tech Lab',
-    sectionTitle: 'What We Are Building',
     deviceImageAlt:
       'Conceptual visualization of the Animal Intelligence turtle device showing internal components',
     paragraphs: [
@@ -26,7 +24,6 @@ const translations: Record<
   },
   ko: {
     title: 'Creative Tech Lab',
-    sectionTitle: 'What Our Tech Team Is Building',
     deviceImageAlt:
       'Animal Intelligence 거북이 캐릭터를 기반으로 한 개념 시각화(내부 구성 요소 표시)',
     paragraphs: [
@@ -53,7 +50,6 @@ export default function CreativeTechLabPage() {
       <section className="about-content-section about-prose-page tech-lab-section">
         <div className="container about-prose">
           <div className="about-section">
-            <h2>{t.sectionTitle}</h2>
             <figure className="tech-lab-figure">
               <img
                 src="/images/tech-lab/turtle-device.png"

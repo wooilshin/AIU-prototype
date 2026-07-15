@@ -9,9 +9,6 @@ export default function AIUProject() {
 
   const translations = {
     en: {
-      title: 'AIU Project',
-      subtitle:
-        'A story-driven IP universe where animals learn from humans and use that knowledge to build a civilization of their own.',
       introTitle: 'AIU Project',
       introDesc: `AIU, short for Animal Intelligence Universe, is an original IP project about animals who observe humans, learn human knowledge, and begin to build their own civilization.
 
@@ -30,9 +27,8 @@ Will Shin is trained in artificial intelligence at the University of Pennsylvani
       bizTitle: 'Biz Team',
       bizDesc: `Jin holds an MBA from Northwestern and works on IP planning. Soy graduated from Seoul National University’s Business School and manages entertainment rights. Guinea handles publishing and publicity.`,
       studentBTitle: 'About Student B',
-      studentBDesc: `Student B is a startup built around original IP and founded to explore new standards in edutainment.
-
-The company is currently focused on publishing AIU-related books, music, videos, and other content works, while also developing AI-driven character toys.`,
+      studentBDesc:
+        'Student B is a startup built around original IP and founded to explore new standards in edutainment. The company is currently focused on publishing AIU-related books, music, videos, and other content works, while also developing AI-driven character toys.',
       whatWeMakeTitle: 'What We Make',
       bookStoryTitle: 'Book (The Animal Intelligence Story)',
       bookStoryDesc:
@@ -50,9 +46,6 @@ The company is currently focused on publishing AIU-related books, music, videos,
         'Animal Intelligence main characters: Red Fox, Blue Bird, Green Sea Turtle, Capybara, Beaglier, Bunny, Raccoon, White Giraffe, Korat Cat, Barbary Lion, Squirrel, and Black Panther',
     },
     ko: {
-      title: 'AIU 프로젝트',
-      subtitle:
-        '동물들이 인간에게서 배우고, 그 지식으로 자신만의 문명을 세워 가는 스토리 중심 IP 세계관입니다.',
       introTitle: 'AIU Project',
       introDesc: `AIU는 Animal Intelligence Universe의 약자로, 인간을 관찰하고 인간의 지식을 배우며 스스로의 문명을 세워 가기 시작하는 동물들에 관한 오리지널 IP 프로젝트입니다.
 
@@ -76,9 +69,8 @@ Will Shin은 펜실베이니아 대학교에서 인공지능을, 하버드 대�
       bizDesc:
         'Jin은 Northwestern MBA를 졸업했으며 IP 기획을 담당합니다. Soy는 서울대 경영학과를 졸업하고 엔터테인먼트 판권 관리를 맡습니다. Guinea는 출판 및 홍보를 담당합니다.',
       studentBTitle: 'About Student B',
-      studentBDesc: `Student B는 오리지널 IP를 중심으로 설립된 스타트업으로, 에듀테인먼트의 새로운 기준을 탐구하기 위해 만들어졌습니다.
-
-회사는 현재 AIU 관련 도서, 음악, 영상 및 기타 콘텐츠 작품 출판에 집중하면서, AI 기반 캐릭터 장난감 개발도 함께 진행하고 있습니다.`,
+      studentBDesc:
+        'Student B는 오리지널 IP를 중심으로 설립된 스타트업으로, 에듀테인먼트의 새로운 기준을 탐구하기 위해 만들어졌습니다. 회사는 현재 AIU 관련 도서, 음악, 영상 및 기타 콘텐츠 작품 출판에 집중하면서, AI 기반 캐릭터 장난감 개발도 함께 진행하고 있습니다.',
       whatWeMakeTitle: 'AIU의 출판물 및 미디어',
       bookStoryTitle: '도서 (스토리)',
       bookStoryDesc:
@@ -102,13 +94,6 @@ Will Shin은 펜실베이니아 대학교에서 인공지능을, 하버드 대�
   return (
     <>
       <Header />
-      <section className="about-hero about-prose-hero">
-        <div className="container">
-          <h1>{t.title}</h1>
-          <p className="hero-subtitle">{t.subtitle}</p>
-        </div>
-      </section>
-
       <section className="about-content-section about-prose-page">
         <div className="container aiu-characters-wrap aiu-characters-wrap--lead">
           <figure className="aiu-main-characters">
