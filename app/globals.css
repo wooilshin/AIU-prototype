@@ -21,15 +21,22 @@ html {
 
 /* Body 스타일 - 폰트, 색상, 배경 등 기본 설정 (고정 헤더 높이만큼 상단 패딩) */
 body {
-    font-family: 'Inter', 'Acumin Variable Concept', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+    /* Guggenheim About typography feel: Guggenheim Sans ≈ Inter Tight (+ Noto Sans KR for Hangul) */
+    font-family: 'Inter Tight', 'Noto Sans KR', 'Acumin Variable Concept', -apple-system, BlinkMacSystemFont, system-ui, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
     font-size: 19px;
     line-height: 1.6;
+    letter-spacing: -0.011em;
     color: #333;
     background-color: #fff;
     overflow-x: hidden;
     width: 100%;
     position: relative;
     padding-top: var(--header-offset);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter Tight', 'Noto Sans KR', sans-serif;
+    letter-spacing: -0.02em;
 }
 
 /* 숫자에 Acumin Variable Concept 폰트 우선 적용 (0-9 숫자 전용) */
@@ -448,7 +455,8 @@ body {
     margin-bottom: 20px;
     line-height: 1.2;
     color: #000;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter Tight', 'Noto Sans KR', sans-serif;
+    letter-spacing: -0.025em;
 }
 
 /* 히어로 텍스트 - 설명 문단 */
@@ -914,9 +922,10 @@ body {
 
 .about-hero h1 {
     font-size: 52px;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 20px;
     color: #000;
+    letter-spacing: -0.03em;
 }
 
 /* 히어로 부제목 */
@@ -940,9 +949,10 @@ body {
 /* About 섹션 제목 */
 .about-section h2 {
     font-size: 36px;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 30px;
     color: #000;
+    letter-spacing: -0.025em;
 }
 
 /* About 섹션 본문 */
@@ -1807,12 +1817,12 @@ body {
 
 .music-lab-title {
     margin: 0 0 14px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Inter Tight', 'Noto Sans KR', sans-serif;
     font-size: clamp(32px, 4vw, 48px);
     font-weight: 500;
     line-height: 1.15;
     color: #111;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.025em;
 }
 
 .music-lab-subtitle {
@@ -1853,10 +1863,11 @@ body {
 
 .music-lab-player-name {
     margin: 0 0 6px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Inter Tight', 'Noto Sans KR', sans-serif;
     font-size: 28px;
     font-weight: 500;
     color: #111;
+    letter-spacing: -0.02em;
 }
 
 .music-lab-player-note {
@@ -1973,7 +1984,7 @@ body {
     gap: 8px;
     width: max-content;
     max-width: 90%;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Inter Tight', 'Noto Sans KR', sans-serif;
     font-size: 11px;
     color: rgba(0, 0, 0, 0.38);
     transform-origin: left center;
@@ -1993,10 +2004,10 @@ body {
     margin: 0;
     width: max-content;
     max-width: 92%;
-    font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
-    font-weight: 500;
-    letter-spacing: 0.01em;
-    color: var(--chip-color, #4a90e2);
+    font-family: 'Inter Tight', 'Noto Sans KR', sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--chip-color, #e06b2c);
     cursor: pointer;
     transition: opacity 0.2s ease, text-shadow 0.2s ease, color 0.2s ease;
     white-space: nowrap;
@@ -2011,7 +2022,7 @@ body {
 .music-lab-scroll-item.is-active {
     opacity: 1 !important;
     font-weight: 700;
-    text-shadow: 0 0 12px rgba(74, 144, 226, 0.28);
+    text-shadow: 0 0 10px color-mix(in srgb, var(--chip-color, #e06b2c) 35%, transparent);
     text-decoration: underline;
     text-underline-offset: 3px;
 }

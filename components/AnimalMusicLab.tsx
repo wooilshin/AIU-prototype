@@ -31,32 +31,25 @@ interface MusicLabData {
   groups: LabGroup[]
 }
 
-type ListItem =
-  | {
-      kind: 'heading'
-      id: string
-      label: string
-      sub?: string
-    }
-  | {
-      kind: 'animal'
-      id: string
-      label: string
-      animal: LabAnimal & { groupTitle: string; groupSubtitle?: string }
-      color: string
-    }
+type ListItem = {
+  kind: 'animal'
+  id: string
+  label: string
+  animal: LabAnimal & { groupTitle: string; groupSubtitle?: string }
+  color: string
+}
 
 const LIST_COLORS = [
-  '#4a90e2',
-  '#87CEEB',
-  '#6BB6D6',
-  '#5BA3D9',
-  '#7EB8E8',
-  '#3A7BC8',
-  '#A8D8EA',
-  '#69B3E7',
-  '#2E86C1',
-  '#76C7F0',
+  '#e06b2c',
+  '#d9486e',
+  '#9b5fd4',
+  '#c9a016',
+  '#e07040',
+  '#c43d78',
+  '#7c5cd6',
+  '#d4920a',
+  '#d95f18',
+  '#c93a7a',
 ]
 
 function slugLabel(animal: LabAnimal, language: 'en' | 'ko') {
@@ -75,9 +68,9 @@ function scatterStyle(seed: string, index: number) {
   const h = hash >>> 0
   const left = 2 + (h % 82)
   const topGap = 2 + (h % 22)
-  const size = 11 + (h % 6)
+  const size = 14 + (h % 7)
   const tilt = ((h % 15) - 7) * 0.55
-  const opacity = 0.55 + ((h >> 8) % 40) / 100
+  const opacity = 0.78 + ((h >> 8) % 22) / 100
 
   return {
     marginLeft: `${left}%`,
@@ -138,12 +131,6 @@ export default function AnimalMusicLab() {
 
     data.groups.forEach((group) => {
       const groupTitle = language === 'ko' ? group.titleKo || group.title : group.title
-      items.push({
-        kind: 'heading',
-        id: `heading-${group.id}`,
-        label: groupTitle,
-        sub: group.subtitle || undefined,
-      })
 
       group.animals.forEach((animal) => {
         items.push({
@@ -258,25 +245,8 @@ export default function AnimalMusicLab() {
   const renderList = (copy: number) =>
     listItems.map((item, index) => {
       const layout = scatterStyle(item.id, index)
-
-      if (item.kind === 'heading') {
-        return (
-          <div
-            key={`${copy}-${item.id}`}
-            className="music-lab-scroll-heading"
-            style={{
-              marginLeft: layout.marginLeft,
-              marginTop: layout.marginTop,
-              transform: layout.transform,
-            }}
-          >
-            <span>{item.label}</span>
-            {item.sub ? <em>{item.sub}</em> : null}
-          </div>
-        )
-      }
-
       const isActive = item.id === selected.id
+
       return (
         <button
           key={`${copy}-${item.id}`}
