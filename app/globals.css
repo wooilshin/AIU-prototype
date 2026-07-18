@@ -90,7 +90,7 @@ h1, h2, h3, h4, h5, h6 {
 .logo {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     position: relative;
     overflow: hidden;
     width: 220px;
@@ -105,7 +105,7 @@ h1, h2, h3, h4, h5, h6 {
     height: 40px;
     width: auto;
     transform: scale(5.4) translateY(-1px);
-    transform-origin: left center;
+    transform-origin: center center;
     will-change: transform;
     max-width: none;
 }
@@ -819,43 +819,31 @@ h1, h2, h3, h4, h5, h6 {
     padding: 30px 0 20px;
 }
 
-/* ??? ??? ??? - 2??????(??: ??/????? ???: SNS) */
-.footer-bottom {
+/* 푸터 3열 레이아웃: 저작권 | Contact | SNS (섹션 사이 세로줄) */
+.footer-columns {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0px;
-    padding-left: 100px;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    align-items: stretch;
 }
 
-/* ??? ?? ??? - ???? ?????? 2??? ?? */
-.footer-bottom-left {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
+.footer-col {
+    padding: 10px 40px;
 }
 
-/* ??? ??? (h4) - ??, ????? SNS ??? ??? */
-.footer-address h4,
-.footer-contact h4,
-.footer-bottom-right h4 {
-    font-size: 17px;
-    font-weight: 400;
-    margin-bottom: 15px;
-    color: #fff;
+.footer-col:first-child {
+    padding-left: 0;
 }
 
-/* ??? ?? ?????*/
-.footer-address p {
-    font-size: 15px;
-    color: #ccc;
-    line-height: 1.8;
+.footer-col + .footer-col {
+    border-left: 1px solid rgba(255, 255, 255, 0.25);
 }
 
-/* ??? ??????????*/
-.footer-contact p {
-    font-size: 15px;
-    color: #ccc;
-    line-height: 1.8;
+.footer-copyright-text {
+    font-size: 14px;
+    color: #999;
+    line-height: 1.7;
+    margin: 0;
+    max-width: 320px;
 }
 
 /* Footer.tsx: Contact / SNS ??? (?????? strong, h4 ??????? ???) */
@@ -907,18 +895,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ??? ????? ??? - ??? ??????? */
-.footer-copyright {
-    text-align: center;
-    padding-top: 30px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    margin-top: 0;
-}
-
-.footer-copyright p {
-    font-size: 14px;
-    color: #999;
-    margin: 0;
-}
 
 /* ========================================
    About ???? ??????   ======================================== */
@@ -1608,12 +1584,13 @@ h1, h2, h3, h4, h5, h6 {
         max-width: 150px;
         height: 44px;
         overflow: hidden;
+        justify-content: center;
     }
 
     .logo-image {
         height: 34px;
         transform: scale(4.4) translateY(-1px);
-        transform-origin: left center;
+        transform-origin: center center;
         max-width: none;
     }
 
@@ -1706,23 +1683,23 @@ h1, h2, h3, h4, h5, h6 {
         padding: 20px 0 15px;
     }
 
-    .footer-bottom {
-        grid-template-columns: 1fr;
-        padding-left: 0;
-        gap: 30px;
-    }
-
-    .footer-bottom-left {
+    .footer-columns {
         grid-template-columns: 1fr;
     }
 
-    .footer-bottom-right {
-        margin-top: 0;
+    .footer-col {
+        padding: 20px 0;
     }
 
-    .footer-address h4,
-    .footer-contact h4,
-    .footer-bottom-right h4,
+    .footer-col + .footer-col {
+        border-left: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.25);
+    }
+
+    .footer-copyright-text {
+        max-width: none;
+    }
+
     .footer-section-title {
         font-size: 15px;
     }

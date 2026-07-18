@@ -10,13 +10,12 @@ export default function Footer() {
     en: {
       contact: 'Contact',
       connect: 'SNS',
-      copyright: '© 2025 Student B Press. All Rights Reserved.'
+      copyright: 'All content copyright © 2026 Student B or its respective owners. Student B® and its logos are registered trademarks of Student B. All rights reserved.'
     },
     ko: {
       contact: '연락처',
-      address: '경기도 성남시 대왕판교로 645 창조경제혁신센터 6-17',
       connect: 'SNS',
-      copyright: '© 2025 Student B Press. All Rights Reserved.'
+      copyright: 'All content copyright © 2026 Student B or its respective owners. Student B® and its logos are registered trademarks of Student B. All rights reserved.'
     }
   }
   
@@ -25,28 +24,29 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="container">
-        <div className="footer-bottom">
-          <div className="footer-bottom-left">
-            <div className="footer-contact">
-              <strong className="footer-section-title">{t.contact}</strong>
-              <div className="footer-email-item">
-                <strong>Business team:</strong><br />
-                contentdirector [at] student-b.com
-              </div>
+        <div className="footer-columns">
+          <div className="footer-col footer-col-brand">
+            <p className="footer-copyright-text">{t.copyright}</p>
+          </div>
+          <div className="footer-col footer-col-contact">
+            <strong className="footer-section-title">{t.contact}</strong>
+            <div className="footer-email-item">
+              <strong>Business team:</strong><br />
+              contentdirector [at] student-b.com
+            </div>
 
-              <div className="footer-email-item">
-                <strong>Creative Tech Lab:</strong><br />
-                techlab [at] student-b.com
-              </div>
+            <div className="footer-email-item">
+              <strong>Creative Tech Lab:</strong><br />
+              techlab [at] student-b.com
+            </div>
 
-              <div className="footer-email-item">
-                <strong>Our creators:</strong><br />
-                aliceshin [at] student-b.com<br />
-                willshin [at] student-b.com
-              </div>
+            <div className="footer-email-item">
+              <strong>Our creators:</strong><br />
+              aliceshin [at] student-b.com<br />
+              willshin [at] student-b.com
             </div>
           </div>
-          <div className="footer-bottom-right">
+          <div className="footer-col footer-col-sns">
             <strong className="footer-section-title">{t.connect}</strong>
             <div className="social-icons">
               <a href="https://www.facebook.com/studentbpress/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i className="fab fa-facebook"></i></a>
@@ -54,9 +54,6 @@ export default function Footer() {
               <a href="https://www.linkedin.com/company/animal-intelligence" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i className="fab fa-linkedin-in"></i></a>
             </div>
           </div>
-        </div>
-        <div className="footer-copyright">
-          <p>{t.copyright}</p>
         </div>
       </div>
     </footer>
