@@ -1,31 +1,28 @@
 {
-  "sectionTitle": "Knowledge Notes",
-  "sectionDescription": "동물들이 인간의 지식을 관찰하고 배운 내용을 담은 노트 시리즈",
+  "sectionTitle": "지식 노트",
+  "sectionDescription": "Why 'Animals Should Learn...' 시리즈로도 알려진 교육용 소책자로, 동물 요원들이 인간의 지식을 직관적이고 접근하기 쉬운 방식으로 재해석한 노트를 담았습니다.",
   "viewAllLink": "#knowledge-notes",
   "books": [
     {
       "id": 1,
-      "title": "Knowledge Book Vol.1",
-      "description": "인간 세계를 염탐한 고양이, 개, 새, 파충류들이 편찬한 20-21세기 인간 지식\n(2026년 여름 출간 예정)",
+      "title": "지식 노트 Vol.1\n(파이썬 북)",
+      "description": "고등학생이 이해할 수 있는 수준으로 AI, 로봇공학, AI 윤리를 소개합니다.\n(출간 예정)",
       "coverImage": "/images/books/Knowledge1.svg",
       "coverStyle": "background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"
     },
     {
       "id": 2,
-      "title": "Knowledge Book Vol.2",
-      "description": "동물의 관점에서 설명하는 인간의 공학 안내서\n(2026년 가을 출간 예정)",
+      "title": "지식 노트 Vol.2\n(고양이 북)",
+      "description": "고등학교에서 배우는 수학이 첨단 과학, 공학, 현대 기술에 어떻게 적용되는지 보여 줍니다.\n(출간 예정)",
       "coverImage": "/images/books/Knowledge2.svg",
       "coverStyle": "background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"
     },
     {
       "id": 3,
-      "title": "Knowledge Book Vol.3",
-      "description": "지구를 떠나려고 준비했던 유대류들이 들려주는 우주/미래 기술 설명서\n(2026년 가을 출간 예정)",
+      "title": "지식 노트 Vol.3\n(너구리 북)",
+      "description": "너구리 북 또는 Economics as Code로도 알려진 이 책은 AI가 미래 경제를 어떻게 바꿀 수 있는지 탐구합니다. 경제와 AI에 관심 있는 대학생과 일반 독자를 대상으로 합니다.\n(출간 예정)",
       "coverImage": "/images/books/Knowledge3.svg",
       "coverStyle": "background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"
     }
   ]
 }
-
-
-

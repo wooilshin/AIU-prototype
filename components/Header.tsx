@@ -10,7 +10,8 @@ export default function Header() {
   const pathname = usePathname()
   const router = useRouter()
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const [isEnglishDomain, setIsEnglishDomain] = useState(false)
+  const [isEnglishDomain, setIsEnglishDomain] = useState(true) // default hide KR-only items until domain is known
+  const [domainReady, setDomainReady] = useState(false)
   
   const translations = {
     en: {
@@ -18,6 +19,7 @@ export default function Header() {
       aiuProject: 'AIU Project',
       creativeTechLab: 'Creative Tech Lab',
       music: 'Music',
+      store: 'Store',
       contact: 'Contact Us',
       newsletter: 'Newsletter'
     },
@@ -26,6 +28,7 @@ export default function Header() {
       aiuProject: 'AIU 프로젝트',
       creativeTechLab: 'Creative Tech Lab',
       music: 'Music',
+      store: '스토어',
       contact: '문의하기',
       newsletter: '뉴스레터'
     }
@@ -38,6 +41,7 @@ export default function Header() {
     if (typeof window !== 'undefined') {
       const hostname = window.location.hostname
       setIsEnglishDomain(!hostname.includes('student-b.co.kr'))
+      setDomainReady(true)
     }
   }, [])
 
@@ -108,6 +112,7 @@ export default function Header() {
             <Link href="/aiu-project">{t.aiuProject}</Link>
             <Link href="/creative-tech-lab">{t.creativeTechLab}</Link>
             <Link href="/music">{t.music}</Link>
+            {!isEnglishDomain && domainReady && <Link href="/store">{t.store}</Link>}
             <Link href="/contact">{t.contact}</Link>
           </nav>
           <div className="header-actions">
@@ -149,6 +154,9 @@ export default function Header() {
           <Link href="/aiu-project" onClick={handleMenuLinkClick}>{t.aiuProject}</Link>
           <Link href="/creative-tech-lab" onClick={handleMenuLinkClick}>{t.creativeTechLab}</Link>
           <Link href="/music" onClick={handleMenuLinkClick}>{t.music}</Link>
+          {!isEnglishDomain && domainReady && (
+            <Link href="/store" onClick={handleMenuLinkClick}>{t.store}</Link>
+          )}
           <Link href="/contact" onClick={handleMenuLinkClick}>{t.contact}</Link>
         </nav>
       </div>
