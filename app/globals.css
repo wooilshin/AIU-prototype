@@ -103,6 +103,42 @@ body {
     padding-top: var(--header-offset);
 }
 
+/* Home page: paw watermark on left, slightly cropped */
+.home-page {
+    position: relative;
+    overflow-x: hidden;
+    background-color: #fff;
+}
+
+.home-paw-bg {
+    position: absolute;
+    left: -90px;
+    top: 180px;
+    width: min(340px, 32vw);
+    pointer-events: none;
+    z-index: 0;
+    user-select: none;
+}
+
+.home-paw-bg img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.home-page > :not(.home-paw-bg) {
+    position: relative;
+    z-index: 1;
+}
+
+.home-page .stories-world-guide-section,
+.home-page .knowledge-notes-section,
+.home-page .stories-of-animal-characters-section,
+.home-page .newsupdate-section,
+.home-page .newsletter-section {
+    background-color: transparent;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-sans);
     font-weight: var(--font-weight-heading);
@@ -1688,6 +1724,12 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 768px) {
     :root {
         --header-offset: 88px;
+    }
+
+    .home-paw-bg {
+        left: -60px;
+        top: 120px;
+        width: min(220px, 42vw);
     }
 
     .header {

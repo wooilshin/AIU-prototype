@@ -22,7 +22,10 @@ export default function Home() {
   }, [])
 
   return (
-    <>
+    <div className="home-page">
+      <div className="home-paw-bg" aria-hidden="true">
+        <img src="/images/icon/발바닥.svg" alt="" />
+      </div>
       <Header />
       <HeroCarousel />
       <div id="store">
@@ -33,7 +36,7 @@ export default function Home() {
       <NewsUpdateSection />
       <NewsletterSection />
       <Footer />
-    </>
+    </div>
   )
 }
 
