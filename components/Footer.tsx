@@ -1,6 +1,5 @@
 'use client'
 
-import Link from 'next/link'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function Footer() {
@@ -8,6 +7,7 @@ export default function Footer() {
   
   const translations = {
     en: {
+      brandTitle: 'Student B',
       contact: 'Contact',
       connect: 'SNS',
       businessTeam: 'Business team:',
@@ -16,6 +16,7 @@ export default function Footer() {
       copyright: 'All content copyright © 2026 Student B or its respective owners. Student B® and its logos are registered trademarks of Student B. All rights reserved.'
     },
     ko: {
+      brandTitle: '스튜던트 비',
       contact: '연락처',
       connect: 'SNS',
       businessTeam: '사업팀:',
@@ -32,6 +33,7 @@ export default function Footer() {
       <div className="container">
         <div className="footer-columns">
           <div className="footer-col footer-col-brand">
+            <strong className="footer-section-title">{t.brandTitle}</strong>
             <p className="footer-copyright-text">{t.copyright}</p>
           </div>
           <div className="footer-col footer-col-contact">

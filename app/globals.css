@@ -915,13 +915,15 @@ h1, h2, h3, h4, h5, h6 {
 /* 푸터 3열 레이아웃: 저작권 | Contact | SNS (동일 너비 + 세로 구분선) */
 .footer-columns {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    align-items: stretch;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: start;
+    width: 100%;
 }
 
 .footer-col {
     padding: 10px 32px;
     min-width: 0;
+    width: 100%;
 }
 
 .footer-col + .footer-col {
