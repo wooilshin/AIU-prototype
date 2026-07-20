@@ -25,7 +25,7 @@ She studied design and art at the undergraduate level before pursuing applied li
 
 Will Shin is trained in artificial intelligence at the University of Pennsylvania and public policy at Harvard University. At Student B's Tech Lab, he works on character-based learning concepts and the integration of generative AI into the Animal Intelligence Universe.`,
       bizTitle: 'Biz Team',
-      bizDesc: `Jin holds an MBA from Northwestern and works on IP planning. Soy graduated from Seoul National University’s Business School and manages entertainment rights. Guinea handles publishing and publicity.`,
+      bizDesc: `Jin holds an MBA from Northwestern and works on IP planning. Soy graduated from Seoul National University's Business School and manages entertainment rights. Guinea handles publishing and publicity.`,
       studentBTitle: 'About Student B',
       studentBDesc:
         'Student B is a startup built around original IP and founded to explore new standards in edutainment. The company is currently focused on publishing AIU-related books, music, videos, and other content works, while also developing AI-driven character toys.',
@@ -56,22 +56,22 @@ AIU의 중심에는 간단한 질문이 있습니다. 동물들이 인간이 아
       visionDesc: `AIU는 단순히 동물에 관한 이야기가 아닙니다. 지식을 캐릭터, 이야기, 세계로 바꾸는 새로운 방식입니다.
 
 학습을 감정적이고, 시각적이며, 스토리 중심으로 만들어, AIU는 모든 연령의 독자·학습자·관객을 위한 글로벌 지식 기반 캐릭터 IP가 되는 것을 목표로 합니다.`,
-      staffTitle: '스태프',
+      staffTitle: '스튜던트 비 팀소개',
       ceoTitle: '크리에이티브 리드',
       ceoDesc: `Alice는 스튜던트 비의 CEO이자 크리에이티브 리드입니다.
 
-학부에서 디자인과 미술을 공부한 뒤 조지타운 대학교에서 언어학을 전공했습니다. 동물지능의 전체 디자인을 이끌고 있습니다.`,
+Alice는 학부에서 디자인과 미술을 공부한 뒤 조지타운 대학교에서 언어학을 전공하였으며 현재 동물지능 IP의 전체 디자인을 이끌고 있습니다.`,
       techLabTitle: '테크랩 엔지니어',
-      techLabDesc: `Joseph SH는 메릴랜드 대학교에서 전기공학 박사 학위를 취득했으며, 통신 및 임베디드 시스템 전문가입니다. 스튜던트 비 테크랩랩에서 다음 세대를 위한 교육적으로 의미 있는 동물 캐릭터 기반 물리적 디바이스 설계에 집중합니다.
+      techLabDesc: `Joseph SH는 메릴랜드 대학교에서 전기공학 박사 학위를 취득했으며, 통신 및 임베디드 시스템 전문가입니다. 스튜던트 비 테크랩에서 교육적으로 의미 있는 동물 캐릭터 기반 물리적 디바이스 설계에 전념하고 있습니다.
 
-Will은 펜실베이니아 대학교에서 인공지능을, 하버드 대학교에서 공공정책을 공부했습니다. 스튜던트 비 테크랩에서 캐릭터에 생성형 AI를 통합하는 작업을 담당하고 있습니니다.`,
+Will은 펜실베이니아 대학교에서 인공지능을, 하버드 대학교에서 공공정책을 공부했습니다. 스튜던트 비 테크랩에서 캐릭터에 생성형 AI를 통합하는 작업을 담당하고 있습니다.`,
       bizTitle: '비지니스 팀',
       bizDesc:
         'Jin은 노스웨스턴 MBA를 졸업했으며 IP 기획을 담당하고 있으며, Soy는 서울대 경영학과를 졸업하고 엔터테인먼트 판권 관리를 맡고 있습니다. Guinea는 출판 및 홍보를 담당하고 있습니다.',
       studentBTitle: '스튜던트 비에 대하여',
       studentBDesc:
         '스튜던트 비는 동물지능 IP를 중심으로 에듀테인먼트의 새로운 기준을 탐구하기 위해 만들어진 스타트업 IP 스튜디오이자 출판사입니다. 회사는 현재 동물지능 관련 도서, 음악, 및 AI 기반 캐릭터 장난감 개발에 집중하고 있습니다.',
-      whatWeMakeTitle: '동물지능 출판물',
+      whatWeMakeTitle: '스튜던트 비가 만드는 것들',
       bookStoryTitle: '도서 (내이름은 시리즈)',
       bookStoryDesc:
         '동물지능의 핵심 캐릭터 동물들의 서사를 담은 단편 소설 시리즈입니다. 나초, 헤일로, 흰기린 등 주요 동물 캐릭터가 각자의 동물세계 그리고 인간세계를 보며 느낀 점들을 기록하고 있습니다.',
