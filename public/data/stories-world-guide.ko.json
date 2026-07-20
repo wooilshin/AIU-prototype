@@ -1,28 +1,28 @@
 {
-  "sectionTitle": "Animal Intelligence\n스토리 & 세계관 가이드",
-  "sectionDescription": "Animal Intelligence 시리즈의 주요 이야기와 캐릭터, 역사, 세계관을 소개하는 가이드입니다.",
+  "sectionTitle": "동물지능 스토리 & 세계관 가이드",
+  "sectionDescription": "동물지능 출판물 시리즈의 세계관을 소개하는 설정 책자들입니다.",
   "viewAllLink": "#stories-world-guide",
   "books": [
     {
       "id": 1,
-      "title": "Animal Intelligence\n잊혀진 역사의 책",
-      "description": "멸종한 종을 포함해, 한때 세계를 형성했던 Animal Intelligence Universe 조상들의 눈으로 역사를 탐구하는 이야기 모음집입니다.",
+      "title": "동물지능 역사편\n잊혀진 역사의 기록들",
+      "description": "과거 지구를 제패했던 하지만 지금은 멸종된 동물 조상들의 눈으로 문명의 역사 그리고 인간 세상과의 관계를 담은 이야기 모음집입니다.",
       "coverImage": "/images/books/History.svg",
       "coverStyle": "background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);",
       "link": "https://www.amazon.com/Animal-Intelligence-Book-Forgotten-History-ebook/dp/B0F624S8B2/"
     },
     {
       "id": 2,
-      "title": "AIU 가이드북\n방주가 숨겨진 곳",
-      "description": "Animal Intelligence Universe의 일곱 문명에 대한 완전한 가이드북으로, 동물 캐릭터와 그들의 문화, 오늘날 세상에서 맡는 역할을 소개합니다.",
+      "title": "동물지능 세계관 가이드북",
+      "description": "지금 지구에 존재하는 일곱개의 동물 문명 그리고 그 곳의 대표 동물 캐릭터에 대한 완전한 가드북으로, 동물 캐릭터와 그들의 세상과 문화에 대해 소개합니다.",
       "coverImage": "/images/books/Guide.svg",
       "coverStyle": "background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);",
       "link": "https://www.amazon.com/gp/product/B0GBQKZHD5"
     },
     {
       "id": 3,
-      "title": "AI 시대, 인간을 관찰하다: Animal Intelligence 코믹스",
-      "description": "Animal Intelligence Universe 캐릭터들이 등장하는 가벼운 철학 코믹스로, AI 시대 인간 사회를 관찰하며 느끼는 감정을 탐구합니다.",
+      "title": "AI 시대 인간세상 관찰기: 만화 시리즈",
+      "description": "동물지능 캐릭터들이 등장하는 가벼운 철학 만화로, AI 시대 인간의 기술과 사회를 관찰하며 느낀 감정을 담고 있습니다.",
       "coverImage": "/images/books/Comic1.svg",
       "coverStyle": "background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);",
       "link": "https://www.amazon.com/Watching-Them-Humans-Age-Intelligence-ebook/dp/B0GX555DH9/"
