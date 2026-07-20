@@ -22,8 +22,8 @@ html.site-ko {
 /* Muted body copy + dark headings (EN & KO) */
 html:is(.site-en, .site-ko) {
     --text-heading: #111;
-    --text-body: #555;
-    --text-caption: #777;
+    --text-body: #6e6e6e;
+    --text-caption: #8c8c8c;
 }
 
 html:is(.site-en, .site-ko) body {
@@ -1273,6 +1273,18 @@ h1, h2, h3, h4, h5, h6 {
 .tech-lab-section {
     padding: 60px 0 80px;
     background-color: #fff;
+}
+
+.about-hero:has(+ .tech-lab-section) {
+    padding: 56px 0 20px;
+}
+
+.about-hero:has(+ .tech-lab-section) h1 {
+    margin-bottom: 0;
+}
+
+.about-hero + .tech-lab-section {
+    padding-top: 16px;
 }
 
 .tech-lab-layout {
