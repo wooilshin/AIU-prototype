@@ -10,11 +10,11 @@ export default function AIUProject() {
   const translations = {
     en: {
       introTitle: 'AIU Project',
-      introDesc: `AIU, short for Animal Intelligence Universe, is an original IP project about animals who observe humans, learn human knowledge, and begin to build their own civilization.
+      introDesc: `AIU, short for Animal Intelligence Universe, is an original IP project about secret animal agents who observe humans, learn human knowledge, and begin to build their own civilization.
 
 At the center of AIU is a simple question: What if animals learned everything humans know — and built a world of their own?`,
       visionTitle: 'Our Vision',
-      visionDesc: `AIU is not just a story about animals. It is a new way to turn knowledge into characters, stories, and worlds. By making learning emotional, visual, and story-driven, AIU aims to become a global knowledge-based character IP for readers, learners, and audiences of all ages.`,
+      visionDesc: `AIU is more than a story about animals. We are creating a new fable for the 21st century—one that blends philosophy, knowledge, and storytelling for readers, learners, and audiences of all ages.`,
       staffTitle: 'Staff',
       ceoTitle: 'CEO & Creative Lead',
       ceoDesc: `Alice Shin serves as the CEO and Creative Lead of Student B.
@@ -28,14 +28,14 @@ Will Shin is trained in artificial intelligence at the University of Pennsylvani
       bizDesc: `Jin holds an MBA from Northwestern and works on IP planning. Soy graduated from Seoul National University's Business School and manages entertainment rights. Guinea handles publishing and publicity.`,
       studentBTitle: 'About Student B',
       studentBDesc:
-        'Student B is a startup built around original IP and founded to explore new standards in edutainment. The company is currently focused on publishing AIU-related books, music, videos, and other content works, while also developing AI-driven character toys.',
+        'Student B is a startup built around original IP and founded to explore new standards in edutainment. The company is currently focused on publishing AIU-related books, while also developing AI-driven character toys.',
       whatWeMakeTitle: 'What We Make',
       bookStoryTitle: 'Book (The Animal Intelligence Story)',
       bookStoryDesc:
-        'Student B creates a long-form narrative fantasy centered on animals who travel across the world to study human knowledge. While presented as an animal-driven epic, the story functions as an allegory for the civilization in the post–AI era.',
+        'Student B creates a short and long-form narrative fantasy centered on animals who infiltrate into human world to study their knowledge. While presented as an animal-driven epic, the story functions as an allegory for the civilization in the post–AI era.',
       bookKnowledgeTitle: 'Book (Knowledge Era Series)',
       bookKnowledgeDesc:
-        'Student B also produces a nonfiction book series that explores science, social science, and philosophy before and after the emergence of AI. These volumes serve as accessible companion books to the narrative series, intuitively introducing the knowledge and ideas that the animal characters encounter.',
+        'Student B also produces a nonfiction book series that explores science, social science, and philosophy. These volumes serve as accessible companion books to the narrative series, intuitively introducing the knowledge and ideas that the animal characters encounter.',
       comicsTitle: 'Comic (Watching them Humans Series)',
       comicsDesc:
         "As Student B's flagship and entry point, the comic series consists of short-form illustrated works that reflect on human life in the age of AI. Through satire and observation, these comics invite readers to pause and reconsider everyday assumptions.",
@@ -47,21 +47,19 @@ Will Shin is trained in artificial intelligence at the University of Pennsylvani
     },
     ko: {
       introTitle: '동물지능 프로젝트',
-      introDesc: `동물지능은 인간의 지식을 배우고 결국에는 스스로의 문명을 세워 가게되는 동물 문명에 관한 이야기입니다.
+      introDesc: `동물지능은 비밀리에 인간의 지식을 배우는 동물 요원들 그리고 그들이 세워가는 동물물 문명에 관한 이야기입니다.
 
 동 프로젝트는 동물들이 인간세계를 관찰하며 배운 내용과 그 서사를 풍자만화, 판타지 소설, 지식서 등으로 풀어낸 새로운 개념의 우화이자 스토리텔링 콘텐츠입니다.
 
-AIU의 중심에는 간단한 질문이 있습니다. 동물들이 인간이 아는 모든 것을 배우고, 그들만의 세계를 세운다면 어떻게 될까요?`,
+동물지능 시리즈의 중심에는 간단한 질문이 있습니다. 동물들이 인간이 아는 모든 것을 배우고, 그들만의 세계를 세운다면 어떻게 될까요?`,
       visionTitle: '비전',
-      visionDesc: `AIU는 단순히 동물에 관한 이야기가 아닙니다. 지식을 캐릭터, 이야기, 세계로 바꾸는 새로운 방식입니다.
-
-학습을 감정적이고, 시각적이며, 스토리 중심으로 만들어, AIU는 모든 연령의 독자·학습자·관객을 위한 글로벌 지식 기반 캐릭터 IP가 되는 것을 목표로 합니다.`,
+      visionDesc: `동물지능은 단순한 동물 이야기가 아닙니다. 지금 우리의 사회 그리고 지식을 동물 캐릭터와 세계관으로 재해석하는 새로운 형식의 우화이자 스토리텔링 IP입니다.`,
       staffTitle: '스튜던트 비 팀소개',
       ceoTitle: '크리에이티브 리드',
       ceoDesc: `Alice는 스튜던트 비의 CEO이자 크리에이티브 리드입니다.
 
 Alice는 학부에서 디자인과 미술을 공부한 뒤 조지타운 대학교에서 언어학을 전공하였으며 현재 동물지능 IP의 전체 디자인을 이끌고 있습니다.`,
-      techLabTitle: '테크랩 엔지니어',
+      techLabTitle: '스튜던트 비 테크랩',
       techLabDesc: `Joseph SH는 메릴랜드 대학교에서 전기공학 박사 학위를 취득했으며, 통신 및 임베디드 시스템 전문가입니다. 스튜던트 비 테크랩에서 교육적으로 의미 있는 동물 캐릭터 기반 물리적 디바이스 설계에 전념하고 있습니다.
 
 Will은 펜실베이니아 대학교에서 인공지능을, 하버드 대학교에서 공공정책을 공부했습니다. 스튜던트 비 테크랩에서 캐릭터에 생성형 AI를 통합하는 작업을 담당하고 있습니다.`,

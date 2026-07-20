@@ -918,7 +918,6 @@ h1, h2, h3, h4, h5, h6 {
     grid-template-columns: repeat(4, 1fr);
     align-items: stretch;
     width: 100%;
-    border-right: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 .footer-col {
@@ -935,7 +934,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px 24px;
+    padding: 10px 32px;
 }
 
 .footer-bear-image {
@@ -943,8 +942,6 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 150px;
     height: auto;
     object-fit: contain;
-    filter: brightness(0) invert(1);
-    opacity: 0.9;
 }
 
 .footer-copyright-text {
@@ -1806,7 +1803,6 @@ h1, h2, h3, h4, h5, h6 {
 
     .footer-columns {
         grid-template-columns: 1fr;
-        border-right: 1px solid rgba(255, 255, 255, 0.25);
     }
 
     .footer-col {
