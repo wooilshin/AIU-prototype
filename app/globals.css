@@ -915,7 +915,7 @@ h1, h2, h3, h4, h5, h6 {
 /* 푸터 4열: 브랜드 | Contact | SNS | 곰 (연락처·SNS 열 넓게) */
 .footer-columns {
     display: grid;
-    grid-template-columns: 1.1fr 2fr 1.6fr 0.9fr;
+    grid-template-columns: 1fr 1.5fr 1.5fr 1fr;
     align-items: stretch;
     width: 100%;
 }
@@ -939,7 +939,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer-bear-image {
     width: 100%;
-    max-width: 220px;
+    max-width: 260px;
     height: auto;
     object-fit: contain;
 }
@@ -1390,25 +1390,32 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ========================================
    Contact ???? ??????   ======================================== */
-/* Contact ???? ???????? - ???????+ ??? ??????????? ???????*/
+.contact-page {
+    min-height: 100vh;
+    background-color: #e8e7e9;
+    background-image: url('/images/skins/wallpaper.svg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+}
+
+/* Contact hero: wallpaper shows through; bear stays as corner accent */
 .contact-hero {
     padding: 80px 0 30px;
     text-align: center;
-    background-image:
-        url('/images/icon/bear.svg'),
-        linear-gradient(180deg, #eef1f6 0%, #f5f7fa 38%, #fafcfd 70%, #ffffff 100%);
-    background-repeat: no-repeat, no-repeat;
-    background-position: right 65%, 0 0;
-    background-size: auto 120px, 100% 100%;
+    background-image: url('/images/icon/bear.svg');
+    background-repeat: no-repeat;
+    background-position: right 65%;
+    background-size: auto 120px;
+    background-color: transparent;
     position: relative;
 }
 
-/* ????? ???????- ??????????????? */
 .contact-hero-bear-mobile {
     display: none;
     text-align: center;
     padding: 20px 0;
-    background: linear-gradient(180deg, #eef1f6 0%, #f5f7fa 38%, #fafcfd 70%, #ffffff 100%);
+    background: transparent;
 }
 
 .contact-hero-bear-mobile img {
@@ -1432,6 +1439,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Contact ??? */
 .contact-section {
     padding: 30px 0 60px;
+    background: transparent;
 }
 
 /* Contact ????- ?????????? ??? ???????? */
@@ -1884,7 +1892,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .contact-hero {
-        background-image: linear-gradient(180deg, #eef1f6 0%, #f5f7fa 38%, #fafcfd 70%, #ffffff 100%);
+        background-image: none;
     }
 
     .contact-hero-bear-mobile {
@@ -1933,7 +1941,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .contact-hero {
-        background-image: linear-gradient(180deg, #eef1f6 0%, #f5f7fa 38%, #fafcfd 70%, #ffffff 100%);
+        background-image: none;
     }
 
     .contact-hero-bear-mobile {
