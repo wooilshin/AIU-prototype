@@ -20,12 +20,13 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
       const hostname = window.location.hostname
       
       // www.student-b.co.kr 또는 student-b.co.kr이면 한글
-      if (hostname.includes('student-b.co.kr')) {
-        setLanguage('ko')
-      } else {
-        // www.student-b.com 또는 기타 도메인은 영어
-        setLanguage('en')
-      }
+      const isKoreanSite = hostname.includes('student-b.co.kr')
+      const nextLanguage: Language = isKoreanSite ? 'ko' : 'en'
+      setLanguage(nextLanguage)
+
+      document.documentElement.lang = nextLanguage
+      document.documentElement.classList.remove('site-ko', 'site-en')
+      document.documentElement.classList.add(isKoreanSite ? 'site-ko' : 'site-en')
     }
   }, [])
 

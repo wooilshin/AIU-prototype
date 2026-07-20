@@ -15,7 +15,7 @@ export default function Footer() {
     ko: {
       contact: '연락처',
       connect: 'SNS',
-      copyright: 'All content copyright © 2026 Student B or its respective owners. Student B® and its logos are registered trademarks of Student B. All rights reserved.'
+      copyright: '본 콘텐츠의 저작권은 Student B 또는 각 권리자에게 있습니다. Student B® 및 관련 로고는 Student B의 등록상표입니다. 무단 복제 및 배포를 금합니다.'
     }
   }
   

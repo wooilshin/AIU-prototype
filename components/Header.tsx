@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import { useState, useEffect } from 'react'
 import { useLanguage } from '@/contexts/LanguageContext'
+import { getStoreHref, isExternalStoreLink } from '@/lib/store-url'
 
 export default function Header() {
   const { language } = useLanguage()
@@ -35,6 +36,8 @@ export default function Header() {
   }
   
   const t = translations[language]
+  const storeHref = getStoreHref()
+  const storeIsExternal = isExternalStoreLink()
 
   // 도메인 확인
   useEffect(() => {
@@ -63,6 +66,14 @@ export default function Header() {
 
   const handleMenuLinkClick = () => {
     setIsMobileMenuOpen(false)
+  }
+
+  const handleStoreClick = () => {
+    setIsMobileMenuOpen(false)
+    if (storeIsExternal) return
+    if (pathname !== '/') {
+      router.push('/#store')
+    }
   }
 
   // 뉴스레터 클릭 핸들러 (데스크톱 메뉴용)
@@ -112,7 +123,13 @@ export default function Header() {
             <Link href="/aiu-project">{t.aiuProject}</Link>
             <Link href="/creative-tech-lab">{t.creativeTechLab}</Link>
             <Link href="/music">{t.music}</Link>
-            {!isEnglishDomain && domainReady && <Link href="/store">{t.store}</Link>}
+            {!isEnglishDomain && domainReady && (
+              storeIsExternal ? (
+                <a href={storeHref} target="_blank" rel="noopener noreferrer">{t.store}</a>
+              ) : (
+                <Link href={storeHref}>{t.store}</Link>
+              )
+            )}
             <Link href="/contact">{t.contact}</Link>
           </nav>
           <div className="header-actions">
@@ -155,7 +172,18 @@ export default function Header() {
           <Link href="/creative-tech-lab" onClick={handleMenuLinkClick}>{t.creativeTechLab}</Link>
           <Link href="/music" onClick={handleMenuLinkClick}>{t.music}</Link>
           {!isEnglishDomain && domainReady && (
-            <Link href="/store" onClick={handleMenuLinkClick}>{t.store}</Link>
+            storeIsExternal ? (
+              <a
+                href={storeHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={handleMenuLinkClick}
+              >
+                {t.store}
+              </a>
+            ) : (
+              <Link href={storeHref} onClick={handleStoreClick}>{t.store}</Link>
+            )
           )}
           <Link href="/contact" onClick={handleMenuLinkClick}>{t.contact}</Link>
         </nav>

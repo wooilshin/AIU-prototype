@@ -9,6 +9,11 @@
 
 :root {
     --header-offset: 100px;
+    --font-sans: 'Satoshi', 'Acumin Variable Concept', -apple-system, BlinkMacSystemFont, system-ui, 'Segoe UI', sans-serif;
+}
+
+html.site-ko {
+    --font-sans: 'Satoshi', 'Pretendard', 'Acumin Variable Concept', -apple-system, BlinkMacSystemFont, system-ui, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
 }
 
 /* HTML ??? - ?? ???????? (?????????? ??) */
@@ -20,8 +25,8 @@ html {
 
 /* Body ??????- ???, ???, ?? ???? ??? (?? ??? ????? ??? ???) */
 body {
-    /* Latin: Satoshi · Hangul body: IBM Plex Sans KR · Hangul titles: Hahmlet */
-    font-family: 'Satoshi', 'IBM Plex Sans KR', 'Acumin Variable Concept', -apple-system, BlinkMacSystemFont, system-ui, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+    /* English: Satoshi · Korean (.site-ko): Satoshi + Pretendard */
+    font-family: var(--font-sans);
     font-size: 21px;
     line-height: 1.52;
     letter-spacing: 0.025em;
@@ -34,9 +39,19 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Satoshi', 'Hahmlet', 'IBM Plex Sans KR', sans-serif;
+    font-family: var(--font-sans);
     font-weight: 700;
     letter-spacing: 0.025em;
+}
+
+html.site-ko h1,
+html.site-ko h2,
+html.site-ko h3,
+html.site-ko h4,
+html.site-ko h5,
+html.site-ko h6 {
+    font-weight: 600;
+    letter-spacing: 0.015em;
 }
 
 /* ?????Acumin Variable Concept ??? ??? ??? (0-9 ??? ???) */
@@ -465,7 +480,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 20px;
     line-height: 1.2;
     color: #000;
-    font-family: 'Satoshi', 'Hahmlet', 'IBM Plex Sans KR', sans-serif;
+    font-family: var(--font-sans);
     letter-spacing: 0.01em;
 }
 
@@ -549,7 +564,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ??? ??? (h2) */
 .section-header h2 {
-    font-family: 'Satoshi', 'Hahmlet', 'IBM Plex Sans KR', sans-serif;
+    font-family: var(--font-sans);
     font-size: 48px;
     font-weight: 700;
     color: #000;
@@ -848,7 +863,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Footer.tsx: Contact / SNS ??? (?????? strong, h4 ??????? ???) */
 .footer-section-title {
-    font-family: 'Satoshi', 'Hahmlet', 'IBM Plex Sans KR', sans-serif;
+    font-family: var(--font-sans);
     font-size: 18px;
     font-weight: 400;
     display: block;
@@ -992,7 +1007,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .about-staff .staff-role h3,
 .about-student-b .staff-role > h3 {
-    font-family: 'Satoshi', 'Hahmlet', 'IBM Plex Sans KR', sans-serif;
+    font-family: var(--font-sans);
     font-size: 22px;
     font-weight: 700;
     color: #111;
@@ -1862,7 +1877,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .music-lab-title {
     margin: 0 0 14px;
-    font-family: 'Satoshi', 'Hahmlet', 'IBM Plex Sans KR', sans-serif;
+    font-family: var(--font-sans);
     font-size: clamp(36px, 4.2vw, 52px);
     font-weight: 700;
     line-height: 1.15;
@@ -1908,7 +1923,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .music-lab-player-name {
     margin: 0 0 6px;
-    font-family: 'Satoshi', 'Hahmlet', 'IBM Plex Sans KR', sans-serif;
+    font-family: var(--font-sans);
     font-size: 30px;
     font-weight: 700;
     color: #111;
@@ -2029,7 +2044,7 @@ h1, h2, h3, h4, h5, h6 {
     gap: 8px;
     width: max-content;
     max-width: 90%;
-    font-family: 'Satoshi', 'Hahmlet', 'IBM Plex Sans KR', sans-serif;
+    font-family: var(--font-sans);
     font-size: 11px;
     color: rgba(0, 0, 0, 0.38);
     transform-origin: left center;
@@ -2049,7 +2064,7 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
     width: max-content;
     max-width: 92%;
-    font-family: 'Satoshi', 'Hahmlet', 'IBM Plex Sans KR', sans-serif;
+    font-family: var(--font-sans);
     font-weight: 600;
     letter-spacing: 0.025em;
     color: var(--chip-color, #e06b2c);
