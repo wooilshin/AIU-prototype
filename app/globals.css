@@ -19,6 +19,68 @@ html.site-ko {
     --font-sans: 'Satoshi', 'Pretendard', 'Acumin Variable Concept', -apple-system, BlinkMacSystemFont, system-ui, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
 }
 
+/* Muted body copy + dark headings (EN & KO) */
+html:is(.site-en, .site-ko) {
+    --text-heading: #111;
+    --text-body: #555;
+    --text-caption: #777;
+}
+
+html:is(.site-en, .site-ko) body {
+    color: var(--text-body);
+}
+
+html:is(.site-en, .site-ko) :is(h1, h2, h3, h4, h5, h6) {
+    color: var(--text-heading);
+}
+
+html:is(.site-en, .site-ko) :is(
+    .hero-text p,
+    .section-description,
+    .book-description,
+    .about-prose p,
+    .about-prose-page .about-section p,
+    .about-section > p,
+    .staff-role > p,
+    .key-area-card p,
+    .newsupdate-article p,
+    .newsletter-section p,
+    .hero-subtitle,
+    .contact-hero p,
+    .contact-text p,
+    .tech-lab-content p,
+    .music-lab-subtitle,
+    .music-lab-player-note,
+    .article-date
+) {
+    color: var(--text-body);
+}
+
+html:is(.site-en, .site-ko) :is(.book-description, .article-date) {
+    color: var(--text-caption);
+}
+
+html:is(.site-en, .site-ko) :is(
+    .section-header h2,
+    .hero-text h1,
+    .about-section h2,
+    .about-prose-page .about-section h2,
+    .book-info h3,
+    .newsupdate-article h3,
+    .newsletter-section h2,
+    .about-staff .staff-role h3,
+    .about-student-b .staff-role > h3,
+    .key-area-card h3,
+    .contact-hero h1,
+    .contact-text h3,
+    .contact-info h2,
+    .contact-form-wrapper h2,
+    .music-lab-title,
+    .music-lab-player-name
+) {
+    color: var(--text-heading);
+}
+
 /* HTML ??? - ?? ???????? (?????????? ??) */
 html {
     overflow-x: hidden;

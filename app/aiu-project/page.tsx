@@ -46,44 +46,44 @@ Will Shin is trained in artificial intelligence at the University of Pennsylvani
         'Animal Intelligence main characters: Red Fox, Blue Bird, Green Sea Turtle, Capybara, Beaglier, Bunny, Raccoon, White Giraffe, Korat Cat, Barbary Lion, Squirrel, and Black Panther',
     },
     ko: {
-      introTitle: 'AIU Project',
-      introDesc: `AIU는 Animal Intelligence Universe의 약자로, 인간을 관찰하고 인간의 지식을 배우며 스스로의 문명을 세워 가기 시작하는 동물들에 관한 오리지널 IP 프로젝트입니다.
+      introTitle: '동물지능 프로젝트',
+      introDesc: `동물지능은 인간의 지식을 배우고 결국에는 스스로의 문명을 세워 가게되는 동물 문명에 관한 이야기입니다.
 
-이 프로젝트는 만화, 판타지 소설, 그림 지식서, 캐릭터 굿즈, 음악, 숏폼 애니메이션, 교육 콘텐츠를 하나의 연결된 세계로 묶습니다.
+동 프로젝트는 동물들이 인간세계를 관찰하며 배운 내용과 그 서사를 풍자만화, 판타지 소설, 지식서 등으로 풀어낸 새로운 개념의 우화이자 스토리텔링 콘텐츠입니다.
 
 AIU의 중심에는 간단한 질문이 있습니다. 동물들이 인간이 아는 모든 것을 배우고, 그들만의 세계를 세운다면 어떻게 될까요?`,
-      visionTitle: 'Our Vision',
+      visionTitle: '비전',
       visionDesc: `AIU는 단순히 동물에 관한 이야기가 아닙니다. 지식을 캐릭터, 이야기, 세계로 바꾸는 새로운 방식입니다.
 
 학습을 감정적이고, 시각적이며, 스토리 중심으로 만들어, AIU는 모든 연령의 독자·학습자·관객을 위한 글로벌 지식 기반 캐릭터 IP가 되는 것을 목표로 합니다.`,
-      staffTitle: 'Staff',
-      ceoTitle: 'CEO & Creative Lead',
-      ceoDesc: `Alice Shin은 Student B의 CEO이자 Creative Lead입니다.
+      staffTitle: '스태프',
+      ceoTitle: '크리에이티브 리드',
+      ceoDesc: `Alice는 스튜던트 비의 CEO이자 크리에이티브 리드입니다.
 
-학부에서 디자인과 미술을 공부한 뒤 조지타운 대학교에서 응용언어학을 전공했습니다. Student B에서 Animal Intelligence Universe의 비주얼 스토리텔링과 전체 크리에이티브 방향을 이끕니다.`,
-      techLabTitle: 'Tech Lab Engineers',
-      techLabDesc: `Joseph SH Chun은 메릴랜드 대학교에서 전기공학 박사 학위를 취득했으며, 통신 및 임베디드 시스템 전문가입니다. Student B Tech Lab에서 다음 세대를 위한 안전하고, 유희적이며, 교육적으로 의미 있는 동물 캐릭터 기반 물리적 디바이스 설계에 집중합니다.
+학부에서 디자인과 미술을 공부한 뒤 조지타운 대학교에서 언어학을 전공했습니다. 동물지능의 전체 디자인을 이끌고 있습니다.`,
+      techLabTitle: '테크랩 엔지니어',
+      techLabDesc: `Joseph SH는 메릴랜드 대학교에서 전기공학 박사 학위를 취득했으며, 통신 및 임베디드 시스템 전문가입니다. 스튜던트 비 테크랩랩에서 다음 세대를 위한 교육적으로 의미 있는 동물 캐릭터 기반 물리적 디바이스 설계에 집중합니다.
 
-Will Shin은 펜실베이니아 대학교에서 인공지능을, 하버드 대학교에서 공공정책을 공부했습니다. Student B Tech Lab에서 캐릭터 기반 학습 개념과 Animal Intelligence Universe에 생성형 AI를 통합하는 작업을 담당합니다.`,
-      bizTitle: 'Biz Team',
+Will은 펜실베이니아 대학교에서 인공지능을, 하버드 대학교에서 공공정책을 공부했습니다. 스튜던트 비 테크랩에서 캐릭터에 생성형 AI를 통합하는 작업을 담당하고 있습니니다.`,
+      bizTitle: '비지니스 팀',
       bizDesc:
-        'Jin은 Northwestern MBA를 졸업했으며 IP 기획을 담당합니다. Soy는 서울대 경영학과를 졸업하고 엔터테인먼트 판권 관리를 맡습니다. Guinea는 출판 및 홍보를 담당합니다.',
-      studentBTitle: 'About Student B',
+        'Jin은 노스웨스턴 MBA를 졸업했으며 IP 기획을 담당하고 있으며, Soy는 서울대 경영학과를 졸업하고 엔터테인먼트 판권 관리를 맡고 있습니다. Guinea는 출판 및 홍보를 담당하고 있습니다.',
+      studentBTitle: '스튜던트 비에 대하여',
       studentBDesc:
-        'Student B는 오리지널 IP를 중심으로 설립된 스타트업으로, 에듀테인먼트의 새로운 기준을 탐구하기 위해 만들어졌습니다. 회사는 현재 AIU 관련 도서, 음악, 영상 및 기타 콘텐츠 작품 출판에 집중하면서, AI 기반 캐릭터 장난감 개발도 함께 진행하고 있습니다.',
-      whatWeMakeTitle: 'AIU의 출판물 및 미디어',
-      bookStoryTitle: '도서 (스토리)',
+        '스튜던트 비는 동물지능 IP를 중심으로 에듀테인먼트의 새로운 기준을 탐구하기 위해 만들어진 스타트업 IP 스튜디오이자 출판사입니다. 회사는 현재 동물지능 관련 도서, 음악, 및 AI 기반 캐릭터 장난감 개발에 집중하고 있습니다.',
+      whatWeMakeTitle: '동물지능 출판물',
+      bookStoryTitle: '도서 (내이름은 시리즈)',
       bookStoryDesc:
-        'Student B는 인간의 지식을 연구하기 위해 세계를 여행하는 동물들을 중심으로 한 장편 서사 판타지를 제작합니다. 동물 중심의 서사시로 제시되지만, 이 이야기는 AI 이후 시대의 문명에 대한 우화로 기능합니다.',
+        '동물지능의 핵심 캐릭터 동물들의 서사를 담은 단편 소설 시리즈입니다. 나초, 헤일로, 흰기린 등 주요 동물 캐릭터가 각자의 동물세계 그리고 인간세계를 보며 느낀 점들을 기록하고 있습니다.',
       bookKnowledgeTitle: '도서 (지식 시리즈)',
       bookKnowledgeDesc:
-        'Student B는 또한 AI의 등장 전후의 과학, 사회과학, 철학을 탐구하는 논픽션 도서 시리즈를 제작합니다. 이 권들은 서사 시리즈에 대한 접근 가능한 동반 도서 역할을 하며, 동물 캐릭터들이 만나는 지식과 아이디어를 직관적으로 소개합니다.',
-      comicsTitle: '만화',
+        '동물지능 스토리에 등장하는 동물요원들이 인간 세계를 염탐하며 배운 내용들을 담고 있습니다. 인간세계의 주요 지식, 즉 과학, 사회과학, 인문학의 내용을 직관적으로 정리한 내용들을 담고 있습니다.',
+      comicsTitle: '인간관찰기 (만화 시리즈)',
       comicsDesc:
-        'Student B의 플래그십이자 진입점인 만화 시리즈는 AI 시대의 인간의 삶을 반영하는 단편 삽화 작품들로 구성됩니다. 풍자와 관찰을 통해 이 만화들은 독자들이 일시 정지하고 일상적인 가정을 재고하도록 초대합니다.',
-      aiTitle: 'AI 시스템',
+        '동물지능의 진입점인 만화 시리즈입니다. 인간 세상관찰기 AI 시대의 인간의 사회 그리고 삶을 동물의 입장에서 바라보는 짧은 단편 만화들로 구성이 되어있습니다.',
+      aiTitle: '동물지능 AI 시스템',
       aiDesc:
-        'Student B는 만화 캐릭터를 생생하게 만드는 실험적 시스템을 개발하는 AI 기술 연구소를 운영합니다. 이 캐릭터들은 경량 스마트 장난감이나 피규어에 내장되도록 설계되어 사용자가 스토리텔링 기반 AI 경험을 통해 학습에 참여할 수 있도록 합니다.',
+        '스튜던트 비의 궁극적인 목표는 동물지능의 동물 캐릭터를 현실에서 재현하는 것입니다. 이를 위해 테크랩에서는 경량화한 AI를 장난감이나 피규어에 내장하도록 설계하고 있습니다.',
       charactersAlt:
         'Animal Intelligence 주요 캐릭터: Red Fox, Blue Bird, Green Sea Turtle, Capybara, Beaglier, Bunny, Raccoon, White Giraffe, Korat Cat, Barbary Lion, Squirrel, Black Panther',
     },
