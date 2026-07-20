@@ -89,7 +89,7 @@ Will은 펜실베이니아 대학교에서 인공지능을, 하버드 대학교�
 
   return (
     <div className="aiu-page">
-      {[1, 2, 3, 4, 5].map((n) => (
+      {[1, 2, 3, 4, 5, 6, 7].map((n) => (
         <div key={n} className={`aiu-paw-bg aiu-paw-bg--${n}`} aria-hidden="true">
           <img src="/images/icon/paw.svg" alt="" />
         </div>
