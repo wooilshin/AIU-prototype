@@ -10,14 +10,22 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
 
-export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguage] = useState<Language>(() => detectLanguageFromHostname())
+export function LanguageProvider({
+  children,
+  initialLanguage,
+}: {
+  children: ReactNode
+  initialLanguage?: Language
+}) {
+  const [language, setLanguage] = useState<Language>(
+    () => initialLanguage ?? detectLanguageFromHostname()
+  )
 
   useEffect(() => {
     const nextLanguage = detectLanguageFromHostname()
     setLanguage(nextLanguage)
     applyDocumentLanguage(nextLanguage)
-  }, [])
+  }, [initialLanguage])
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage }}>
