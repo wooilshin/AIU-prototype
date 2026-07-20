@@ -24,18 +24,20 @@ export default function Home() {
   return (
     <div className="home-page">
       <div className="home-paw-bg" aria-hidden="true">
-        <img src="/images/icon/발바닥.svg" alt="" />
+        <img src="/images/icon/paw.svg" alt="" />
       </div>
       <Header />
-      <HeroCarousel />
-      <div id="store">
-        <BookSection dataFile="stories-world-guide.json" sectionClass="stories-world-guide-section" />
-        <BookSection dataFile="knowledge-notes.json" sectionClass="knowledge-notes-section" />
-        <BookSection dataFile="stories-of-animal-characters.json" sectionClass="stories-of-animal-characters-section" />
+      <div className="home-main">
+        <HeroCarousel />
+        <div id="store">
+          <BookSection dataFile="stories-world-guide.json" sectionClass="stories-world-guide-section" />
+          <BookSection dataFile="knowledge-notes.json" sectionClass="knowledge-notes-section" />
+          <BookSection dataFile="stories-of-animal-characters.json" sectionClass="stories-of-animal-characters-section" />
+        </div>
+        <NewsUpdateSection />
+        <NewsletterSection />
+        <Footer />
       </div>
-      <NewsUpdateSection />
-      <NewsletterSection />
-      <Footer />
     </div>
   )
 }
