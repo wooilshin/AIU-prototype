@@ -25,13 +25,23 @@ export default function HeroCarousel() {
   const [currentSlide, setCurrentSlide] = useState(0)
 
   useEffect(() => {
+    let cancelled = false
+    setSlides([])
+
     const dataFile = language === 'ko' ? '/data/carousel.ko.json' : '/data/carousel.json'
     fetch(dataFile)
-      .then(res => res.json())
-      .then((data: CarouselData) => {
-        setSlides(data.slides)
+      .then((res) => {
+        if (!res.ok) throw new Error(`Failed to load ${dataFile}: ${res.status}`)
+        return res.json()
       })
-      .catch(err => console.error('Error loading carousel:', err))
+      .then((data: CarouselData) => {
+        if (!cancelled) setSlides(data.slides)
+      })
+      .catch((err) => console.error('Error loading carousel:', err))
+
+    return () => {
+      cancelled = true
+    }
   }, [language])
 
   useEffect(() => {

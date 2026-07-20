@@ -1,8 +1,7 @@
 'use client'
 
 import { createContext, useContext, useEffect, useState, ReactNode } from 'react'
-
-type Language = 'en' | 'ko'
+import { applyDocumentLanguage, detectLanguageFromHostname, type Language } from '@/lib/language'
 
 interface LanguageContextType {
   language: Language
@@ -12,22 +11,12 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguage] = useState<Language>('en')
+  const [language, setLanguage] = useState<Language>(() => detectLanguageFromHostname())
 
   useEffect(() => {
-    // 도메인 기반 언어 감지
-    if (typeof window !== 'undefined') {
-      const hostname = window.location.hostname
-      
-      // www.student-b.co.kr 또는 student-b.co.kr이면 한글
-      const isKoreanSite = hostname.includes('student-b.co.kr')
-      const nextLanguage: Language = isKoreanSite ? 'ko' : 'en'
-      setLanguage(nextLanguage)
-
-      document.documentElement.lang = nextLanguage
-      document.documentElement.classList.remove('site-ko', 'site-en')
-      document.documentElement.classList.add(isKoreanSite ? 'site-ko' : 'site-en')
-    }
+    const nextLanguage = detectLanguageFromHostname()
+    setLanguage(nextLanguage)
+    applyDocumentLanguage(nextLanguage)
   }, [])
 
   return (
@@ -44,6 +33,3 @@ export function useLanguage() {
   }
   return context
 }
-
-
-

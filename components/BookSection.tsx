@@ -29,13 +29,25 @@ export default function BookSection({ dataFile, sectionClass }: BookSectionProps
   const [data, setData] = useState<BookSectionData | null>(null)
 
   useEffect(() => {
-    // dataFile이 "stories-world-guide.json" 형식이면 baseFileName은 "stories-world-guide"
+    let cancelled = false
+    setData(null)
+
     const baseFileName = dataFile.endsWith('.json') ? dataFile.replace('.json', '') : dataFile
     const langFile = language === 'ko' ? `${baseFileName}.ko.json` : `${baseFileName}.json`
+
     fetch(`/data/${langFile}`)
-      .then(res => res.json())
-      .then((jsonData: BookSectionData) => setData(jsonData))
-      .catch(err => console.error(`Error loading ${langFile}:`, err))
+      .then((res) => {
+        if (!res.ok) throw new Error(`Failed to load ${langFile}: ${res.status}`)
+        return res.json()
+      })
+      .then((jsonData: BookSectionData) => {
+        if (!cancelled) setData(jsonData)
+      })
+      .catch((err) => console.error(`Error loading ${langFile}:`, err))
+
+    return () => {
+      cancelled = true
+    }
   }, [dataFile, language])
 
   if (!data) return null

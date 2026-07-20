@@ -22,11 +22,23 @@ export default function NewsUpdateSection() {
   const [data, setData] = useState<NewsUpdateData | null>(null)
 
   useEffect(() => {
+    let cancelled = false
+    setData(null)
+
     const dataFile = language === 'ko' ? '/data/newsupdate.ko.json' : '/data/newsupdate.json'
     fetch(dataFile)
-      .then(res => res.json())
-      .then((jsonData: NewsUpdateData) => setData(jsonData))
-      .catch(err => console.error('Error loading news update data:', err))
+      .then((res) => {
+        if (!res.ok) throw new Error(`Failed to load ${dataFile}: ${res.status}`)
+        return res.json()
+      })
+      .then((jsonData: NewsUpdateData) => {
+        if (!cancelled) setData(jsonData)
+      })
+      .catch((err) => console.error('Error loading news update data:', err))
+
+    return () => {
+      cancelled = true
+    }
   }, [language])
 
   if (!data) return null

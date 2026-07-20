@@ -5,14 +5,14 @@ import { usePathname, useRouter } from 'next/navigation'
 import { useState, useEffect } from 'react'
 import { useLanguage } from '@/contexts/LanguageContext'
 import { getStoreHref, isExternalStoreLink } from '@/lib/store-url'
+import { isKoreanHostname } from '@/lib/language'
 
 export default function Header() {
   const { language } = useLanguage()
   const pathname = usePathname()
   const router = useRouter()
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const [isEnglishDomain, setIsEnglishDomain] = useState(true) // default hide KR-only items until domain is known
-  const [domainReady, setDomainReady] = useState(false)
+  const isEnglishDomain = language === 'en'
   
   const translations = {
     en: {
@@ -25,10 +25,10 @@ export default function Header() {
       newsletter: 'Newsletter'
     },
     ko: {
-      home: '홈',
-      aiuProject: 'AIU 프로젝트',
-      creativeTechLab: 'Creative Tech Lab',
-      music: 'Music',
+      home: '출판물',
+      aiuProject: '동물지능',
+      creativeTechLab: '테크랩',
+      music: '음악',
       store: '스토어',
       contact: '문의하기',
       newsletter: '뉴스레터'
@@ -39,16 +39,7 @@ export default function Header() {
   const storeHref = getStoreHref()
   const storeIsExternal = isExternalStoreLink()
 
-  // 도메인 확인
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const hostname = window.location.hostname
-      setIsEnglishDomain(!hostname.includes('student-b.co.kr'))
-      setDomainReady(true)
-    }
-  }, [])
-
-  // 모바일 메뉴가 열릴 때 body 스크롤 방지
+  // 언어 변환 핸들러 - student-b.co.kr에서만 작동
   useEffect(() => {
     if (isMobileMenuOpen) {
       document.body.style.overflow = 'hidden'
@@ -100,7 +91,7 @@ export default function Header() {
 
   // 언어 변환 핸들러 - student-b.co.kr에서만 작동
   const handleLanguageSwitch = () => {
-    if (typeof window !== 'undefined' && !isEnglishDomain) {
+    if (typeof window !== 'undefined' && isKoreanHostname(window.location.hostname)) {
       const currentPath = window.location.pathname
       const currentSearch = window.location.search
       const currentHash = window.location.hash
@@ -123,7 +114,7 @@ export default function Header() {
             <Link href="/aiu-project">{t.aiuProject}</Link>
             <Link href="/creative-tech-lab">{t.creativeTechLab}</Link>
             <Link href="/music">{t.music}</Link>
-            {!isEnglishDomain && domainReady && (
+            {language === 'ko' && (
               storeIsExternal ? (
                 <a href={storeHref} target="_blank" rel="noopener noreferrer">{t.store}</a>
               ) : (
@@ -171,7 +162,7 @@ export default function Header() {
           <Link href="/aiu-project" onClick={handleMenuLinkClick}>{t.aiuProject}</Link>
           <Link href="/creative-tech-lab" onClick={handleMenuLinkClick}>{t.creativeTechLab}</Link>
           <Link href="/music" onClick={handleMenuLinkClick}>{t.music}</Link>
-          {!isEnglishDomain && domainReady && (
+          {language === 'ko' && (
             storeIsExternal ? (
               <a
                 href={storeHref}

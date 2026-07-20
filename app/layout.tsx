@@ -15,6 +15,11 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){var k=location.hostname.indexOf('student-b.co.kr')!==-1;var r=document.documentElement;r.lang=k?'ko':'en';r.classList.add(k?'site-ko':'site-en');})();`,
+          }}
+        />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
         <link rel="preconnect" href="https://api.fontshare.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
