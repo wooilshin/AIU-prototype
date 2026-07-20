@@ -218,6 +218,17 @@ body {
     opacity: 0.24;
 }
 
+.home-paw-bg--10 {
+    left: 50%;
+    top: 52vh;
+    width: min(540px, 46vw);
+    transform: translateX(-50%) rotate(-4deg);
+}
+
+.home-paw-bg--10 img {
+    opacity: 0.78;
+}
+
 .home-main {
     position: relative;
     z-index: 1;
@@ -337,7 +348,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-sans);
     font-weight: var(--font-weight-heading);
     letter-spacing: 0.01em;
-    transform: scaleY(1.07);
+    transform: scaleY(1.08);
     transform-origin: center;
 }
 
@@ -1992,6 +2003,13 @@ h1, h2, h3, h4, h5, h6 {
         left: 18%;
         top: 1300px;
         width: min(130px, 26vw);
+    }
+
+    .home-paw-bg--10 {
+        left: 50%;
+        top: 48vh;
+        width: min(320px, 58vw);
+        transform: translateX(-50%) rotate(-4deg);
     }
 
     .aiu-paw-bg--1 {
