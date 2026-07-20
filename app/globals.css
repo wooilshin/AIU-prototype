@@ -10,6 +10,9 @@
 :root {
     --header-offset: 100px;
     --font-sans: 'Satoshi', 'Acumin Variable Concept', -apple-system, BlinkMacSystemFont, system-ui, 'Segoe UI', sans-serif;
+    --font-weight-body: 600;
+    --font-weight-heading: 700;
+    --font-weight-ui: 600;
 }
 
 html.site-ko {
@@ -25,11 +28,11 @@ html {
 
 /* Body ??????- ???, ???, ?? ???? ??? (?? ??? ????? ??? ???) */
 body {
-    /* English: Satoshi · Korean (.site-ko): Satoshi + Pretendard */
     font-family: var(--font-sans);
     font-size: 21px;
+    font-weight: var(--font-weight-body);
     line-height: 1.52;
-    letter-spacing: 0.025em;
+    letter-spacing: 0.02em;
     color: #222;
     background-color: #fff;
     overflow-x: hidden;
@@ -40,18 +43,31 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-sans);
-    font-weight: 700;
-    letter-spacing: 0.025em;
+    font-weight: var(--font-weight-heading);
+    letter-spacing: 0.01em;
 }
 
-html.site-ko h1,
-html.site-ko h2,
-html.site-ko h3,
-html.site-ko h4,
-html.site-ko h5,
-html.site-ko h6 {
-    font-weight: 600;
-    letter-spacing: 0.015em;
+/* Site-wide bold museum-style typography */
+.nav-menu a,
+.mobile-menu-nav a,
+.newsletter-btn,
+.view-all-link,
+.section-description,
+.book-description,
+.book-info h3,
+.hero-text p,
+.footer-section-title,
+.footer-email-item,
+.footer-copyright-text,
+.newsupdate-article h3,
+.newsupdate-article p,
+.about-prose p,
+.newsletter-section p,
+.newsletter-form input,
+.cta-button,
+.submit-btn,
+.image-label {
+    font-weight: var(--font-weight-ui);
 }
 
 /* ?????Acumin Variable Concept ??? ??? ??? (0-9 ??? ???) */
@@ -157,7 +173,7 @@ html.site-ko h6 {
     text-decoration: none;
     color: #333;
     font-size: 17px;
-    font-weight: 500;
+    font-weight: var(--font-weight-ui);
     transition: color 0.3s;
     cursor: pointer;
 }
@@ -470,7 +486,7 @@ html.site-ko h6 {
     right: 20px;
     font-size: 13px;
     color: #666;
-    font-weight: 500;
+    font-weight: var(--font-weight-ui);
 }
 
 /* ??????????- ??? ??????*/
@@ -586,7 +602,7 @@ html.site-ko h6 {
     color: #4a90e2;
     text-decoration: none;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: var(--font-weight-ui);
     transition: color 0.3s;
 }
 
@@ -834,19 +850,16 @@ html.site-ko h6 {
     padding: 30px 0 20px;
 }
 
-/* 푸터 3열 레이아웃: 저작권 | Contact | SNS (섹션 사이 세로줄) */
+/* 푸터 3열 레이아웃: 저작권 | Contact | SNS (동일 너비 + 세로 구분선) */
 .footer-columns {
     display: grid;
-    grid-template-columns: 1.2fr 1fr 1fr;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     align-items: stretch;
 }
 
 .footer-col {
-    padding: 10px 40px;
-}
-
-.footer-col:first-child {
-    padding-left: 0;
+    padding: 10px 32px;
+    min-width: 0;
 }
 
 .footer-col + .footer-col {
@@ -858,14 +871,14 @@ html.site-ko h6 {
     color: #999;
     line-height: 1.7;
     margin: 0;
-    max-width: 320px;
+    max-width: none;
 }
 
 /* Footer.tsx: Contact / SNS ??? (?????? strong, h4 ??????? ???) */
 .footer-section-title {
     font-family: var(--font-sans);
     font-size: 18px;
-    font-weight: 400;
+    font-weight: var(--font-weight-ui);
     display: block;
     margin-bottom: 15px;
     color: #fff;
@@ -1723,7 +1736,7 @@ html.site-ko h6 {
         width: 40px;
         height: 40px;
         font-size: 22px;
-        font-weight: 400;
+        font-weight: var(--font-weight-ui);
     }
 
     .carousel-btn.prev {

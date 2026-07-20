@@ -4,29 +4,29 @@
   "articles": [
     {
       "id": 1,
-      "title": "미국 Kirkus Reviews, AI 동물지능 강력 추천",
-      "description": "Kirkus Reviews는 AI 동물지능에 'Get It' 추천 의견을 내며\"역사를 대안적으로 바라보는 풍부하고 놀라운 이야기\"라고 극찬하였였습니다.",
+      "title": "미국 커커스 리뷰, 동물지능 출판물 강력 추천",
+      "description": "커커사는 동물지능에 추천 의견을 내며\"역사를 대안적으로 바라보는 풍부하고 놀라운 이야기\"라고 극찬하였습니다.",
       "date": "2025-12-22",
       "link": "https://www.kirkusreviews.com/book-reviews/will-shin/animal-intelligence-2/"
     },
     {
       "id": 2,
-      "title": "AI 동물지능, 유럽의 The European지에 소개",
-      "description": "유럽의 The European지는 신간 소개 코너에 AI 동물지능을 철학, 일러스트레이션, 동물 스토리텔링이 어우러진 지식 중심의 프로젝트로 소개하였습니다.",
+      "title": "동물지능 출판물, 더 유러피언지에 소개",
+      "description": "유럽의 더 유로피언지는 신간 소개 코너에 동물지능을 철학, 일러스트레이션, 동물 스토리텔링이 어우러진 지식 중심의 프로젝트로 소개하였습니다.",
       "date": "2025-12-17",
       "link": "https://the-european.eu/story-54107/book-review-a-history-of-the-world-told-by-animals-and-it-changes-everything.html"
     },
     {
       "id": 3,
-      "title": "보도자료: AI 시대, 동물 우화와 편집 만화의 귀환",
-      "description": "Student B Press가 AI 시대를 다룬 신간 'Watching Them Humans in the AI Age'와 만화에 등장하는 동물들의 역사적 서사를 탐구한 'The Book of Forgotten History'를 소개하는 공식 보도자료를 발표했습니다.",
+      "title": "보도자료: AI 시대, 동물 우화와 풍자 만화의 귀환",
+      "description": "스튜던트 비 출판사는 AI 시대를 다룬 풍자만화 '인간세상 관찰기(Watching Them Humans in the AI Age)'를 공개하며 이를 소개하는 공식 보도자료를 발표했습니다.",
       "date": "2026-02-17",
       "link": "https://www.prnewswire.com/news-releases/in-the-age-of-ai-animal-fables-and-editorial-cartoons-return-302682329.html"
     },
     {
       "id": 4,
-      "title": "만화, BookLife 인디 스포트라이트에 소개",
-      "description": "5월 1일 출간 예정인 Watching Them Humans in the AI Age가 BookLife의 풍자·유머(Satire & Humor) 코너에 간략히 소개되었습니다. 귀여운 그림체와 사회·기술에 대한 날카로운 풍자를 함께 담은 만화입니다.",
+      "title": "북 라이프 인디 스포트라이트에 소개",
+      "description": "스튜던트 비의 풍자만화인 '인간세상 관찰기(Watching Them Humans in the AI Age)'가 북라이프의 풍자·유머 코너에 간략히 소개되었습니다. 귀여운 그림체와 사회·기술에 대한 날카로운 풍자를 함께 담은 만화로 언급되었습니다.",
       "date": "2026-04-24",
       "link": "https://booklife.com/authors/04/24/2026/indie-spotlight-humor-and-satire.html?oly_enc_id=7009J6462478D6B"
     }
