@@ -103,7 +103,7 @@ body {
     padding-top: var(--header-offset);
 }
 
-/* Home page: paw watermark on left, slightly cropped */
+/* Home page: paw watermarks (3), slightly cropped at edges */
 .home-page {
     position: relative;
     overflow-x: clip;
@@ -112,9 +112,6 @@ body {
 
 .home-paw-bg {
     position: absolute;
-    left: -110px;
-    top: 220px;
-    width: min(480px, 42vw);
     pointer-events: none;
     z-index: 0;
     user-select: none;
@@ -124,7 +121,35 @@ body {
     display: block;
     width: 100%;
     height: auto;
-    opacity: 0.55;
+    opacity: 0.5;
+}
+
+.home-paw-bg--1 {
+    left: -110px;
+    top: 520px;
+    width: min(480px, 42vw);
+}
+
+.home-paw-bg--2 {
+    right: -100px;
+    top: 1100px;
+    width: min(360px, 34vw);
+    transform: rotate(18deg);
+}
+
+.home-paw-bg--2 img {
+    opacity: 0.4;
+}
+
+.home-paw-bg--3 {
+    left: -80px;
+    top: 1950px;
+    width: min(400px, 38vw);
+    transform: rotate(-12deg);
+}
+
+.home-paw-bg--3 img {
+    opacity: 0.45;
 }
 
 .home-main {
@@ -1733,10 +1758,22 @@ h1, h2, h3, h4, h5, h6 {
         --header-offset: 88px;
     }
 
-    .home-paw-bg {
+    .home-paw-bg--1 {
         left: -70px;
-        top: 160px;
+        top: 380px;
         width: min(300px, 48vw);
+    }
+
+    .home-paw-bg--2 {
+        right: -70px;
+        top: 900px;
+        width: min(240px, 40vw);
+    }
+
+    .home-paw-bg--3 {
+        left: -60px;
+        top: 1500px;
+        width: min(260px, 44vw);
     }
 
     .header {

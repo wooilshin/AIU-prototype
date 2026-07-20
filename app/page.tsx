@@ -23,7 +23,13 @@ export default function Home() {
 
   return (
     <div className="home-page">
-      <div className="home-paw-bg" aria-hidden="true">
+      <div className="home-paw-bg home-paw-bg--1" aria-hidden="true">
+        <img src="/images/icon/paw.svg" alt="" />
+      </div>
+      <div className="home-paw-bg home-paw-bg--2" aria-hidden="true">
+        <img src="/images/icon/paw.svg" alt="" />
+      </div>
+      <div className="home-paw-bg home-paw-bg--3" aria-hidden="true">
         <img src="/images/icon/paw.svg" alt="" />
       </div>
       <Header />
