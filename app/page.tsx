@@ -23,15 +23,11 @@ export default function Home() {
 
   return (
     <div className="home-page">
-      <div className="home-paw-bg home-paw-bg--1" aria-hidden="true">
-        <img src="/images/icon/paw.svg" alt="" />
-      </div>
-      <div className="home-paw-bg home-paw-bg--2" aria-hidden="true">
-        <img src="/images/icon/paw.svg" alt="" />
-      </div>
-      <div className="home-paw-bg home-paw-bg--3" aria-hidden="true">
-        <img src="/images/icon/paw.svg" alt="" />
-      </div>
+      {[1, 2, 3, 4, 5, 6, 7].map((n) => (
+        <div key={n} className={`home-paw-bg home-paw-bg--${n}`} aria-hidden="true">
+          <img src="/images/icon/paw.svg" alt="" />
+        </div>
+      ))}
       <Header />
       <div className="home-main">
         <HeroCarousel />

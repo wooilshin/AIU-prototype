@@ -103,7 +103,7 @@ body {
     padding-top: var(--header-offset);
 }
 
-/* Home page: paw watermarks (3), slightly cropped at edges */
+/* Home page: paw watermarks (7), larger, scattered */
 .home-page {
     position: relative;
     overflow-x: clip;
@@ -125,31 +125,75 @@ body {
 }
 
 .home-paw-bg--1 {
-    left: -110px;
-    top: 520px;
-    width: min(480px, 42vw);
+    left: -140px;
+    top: 480px;
+    width: min(620px, 52vw);
 }
 
 .home-paw-bg--2 {
-    right: -100px;
-    top: 1100px;
-    width: min(360px, 34vw);
+    right: -130px;
+    top: 900px;
+    width: min(540px, 46vw);
     transform: rotate(18deg);
 }
 
 .home-paw-bg--2 img {
-    opacity: 0.4;
+    opacity: 0.42;
 }
 
 .home-paw-bg--3 {
-    left: -80px;
-    top: 1950px;
-    width: min(400px, 38vw);
-    transform: rotate(-12deg);
+    left: -100px;
+    top: 1450px;
+    width: min(580px, 48vw);
+    transform: rotate(-14deg);
 }
 
 .home-paw-bg--3 img {
     opacity: 0.45;
+}
+
+.home-paw-bg--4 {
+    right: -120px;
+    top: 1750px;
+    width: min(560px, 48vw);
+    transform: rotate(-8deg);
+}
+
+.home-paw-bg--4 img {
+    opacity: 0.4;
+}
+
+.home-paw-bg--5 {
+    left: -150px;
+    top: 2200px;
+    width: min(640px, 54vw);
+    transform: rotate(10deg);
+}
+
+.home-paw-bg--5 img {
+    opacity: 0.48;
+}
+
+.home-paw-bg--6 {
+    right: -90px;
+    top: 2550px;
+    width: min(500px, 44vw);
+    transform: rotate(22deg);
+}
+
+.home-paw-bg--6 img {
+    opacity: 0.38;
+}
+
+.home-paw-bg--7 {
+    left: 18%;
+    top: 2800px;
+    width: min(520px, 42vw);
+    transform: rotate(-20deg);
+}
+
+.home-paw-bg--7 img {
+    opacity: 0.35;
 }
 
 .home-main {
@@ -162,6 +206,86 @@ body {
 .home-page .stories-of-animal-characters-section,
 .home-page .newsupdate-section,
 .home-page .newsletter-section {
+    background-color: transparent;
+}
+
+/* AIU Project page: paw watermarks (5) */
+.aiu-page {
+    position: relative;
+    overflow-x: clip;
+    background-color: #fff;
+}
+
+.aiu-paw-bg {
+    position: absolute;
+    pointer-events: none;
+    z-index: 0;
+    user-select: none;
+}
+
+.aiu-paw-bg img {
+    display: block;
+    width: 100%;
+    height: auto;
+    opacity: 0.48;
+}
+
+.aiu-paw-bg--1 {
+    left: -130px;
+    top: 280px;
+    width: min(560px, 48vw);
+}
+
+.aiu-paw-bg--2 {
+    right: -120px;
+    top: 780px;
+    width: min(500px, 44vw);
+    transform: rotate(16deg);
+}
+
+.aiu-paw-bg--2 img {
+    opacity: 0.4;
+}
+
+.aiu-paw-bg--3 {
+    left: -100px;
+    top: 1400px;
+    width: min(540px, 46vw);
+    transform: rotate(-12deg);
+}
+
+.aiu-paw-bg--3 img {
+    opacity: 0.44;
+}
+
+.aiu-paw-bg--4 {
+    right: -110px;
+    top: 2000px;
+    width: min(520px, 45vw);
+    transform: rotate(-8deg);
+}
+
+.aiu-paw-bg--4 img {
+    opacity: 0.38;
+}
+
+.aiu-paw-bg--5 {
+    left: 12%;
+    top: 2500px;
+    width: min(480px, 42vw);
+    transform: rotate(20deg);
+}
+
+.aiu-paw-bg--5 img {
+    opacity: 0.36;
+}
+
+.aiu-main {
+    position: relative;
+    z-index: 1;
+}
+
+.aiu-page .about-content-section {
     background-color: transparent;
 }
 
@@ -300,6 +424,9 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: var(--font-weight-ui);
     transition: color 0.3s;
     cursor: pointer;
+    display: inline-block;
+    transform: scaleY(1.08);
+    transform-origin: center;
 }
 
 .nav-menu a:hover {
@@ -342,6 +469,8 @@ h1, h2, h3, h4, h5, h6 {
     cursor: pointer;
     border-radius: 2px;
     transition: background-color 0.3s;
+    transform: scaleY(1.08);
+    transform-origin: center;
 }
 
 .newsletter-btn:hover {
@@ -476,6 +605,8 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
     transition: background-color 0.3s, color 0.3s;
     border-bottom: 1px solid #f0f0f0;
+    transform: scaleY(1.08);
+    transform-origin: center;
 }
 
 .mobile-menu-nav a:hover {
@@ -1759,21 +1890,75 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .home-paw-bg--1 {
-        left: -70px;
-        top: 380px;
-        width: min(300px, 48vw);
+        left: -90px;
+        top: 360px;
+        width: min(380px, 62vw);
     }
 
     .home-paw-bg--2 {
-        right: -70px;
-        top: 900px;
-        width: min(240px, 40vw);
+        right: -80px;
+        top: 720px;
+        width: min(320px, 55vw);
     }
 
     .home-paw-bg--3 {
-        left: -60px;
-        top: 1500px;
-        width: min(260px, 44vw);
+        left: -70px;
+        top: 1100px;
+        width: min(340px, 58vw);
+    }
+
+    .home-paw-bg--4 {
+        right: -75px;
+        top: 1450px;
+        width: min(330px, 56vw);
+    }
+
+    .home-paw-bg--5 {
+        left: -85px;
+        top: 1800px;
+        width: min(360px, 60vw);
+    }
+
+    .home-paw-bg--6 {
+        right: -70px;
+        top: 2100px;
+        width: min(300px, 52vw);
+    }
+
+    .home-paw-bg--7 {
+        left: 8%;
+        top: 2350px;
+        width: min(310px, 54vw);
+    }
+
+    .aiu-paw-bg--1 {
+        left: -80px;
+        top: 220px;
+        width: min(340px, 58vw);
+    }
+
+    .aiu-paw-bg--2 {
+        right: -70px;
+        top: 620px;
+        width: min(300px, 52vw);
+    }
+
+    .aiu-paw-bg--3 {
+        left: -70px;
+        top: 1100px;
+        width: min(320px, 55vw);
+    }
+
+    .aiu-paw-bg--4 {
+        right: -75px;
+        top: 1550px;
+        width: min(310px, 54vw);
+    }
+
+    .aiu-paw-bg--5 {
+        left: 6%;
+        top: 1950px;
+        width: min(300px, 52vw);
     }
 
     .header {

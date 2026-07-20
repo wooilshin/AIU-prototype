@@ -88,104 +88,111 @@ Will은 펜실베이니아 대학교에서 인공지능을, 하버드 대학교�
   const t = translations[language]
 
   return (
-    <>
-      <Header />
-      <section className="about-content-section about-prose-page">
-        <div className="container aiu-characters-wrap aiu-characters-wrap--lead">
-          <figure className="aiu-main-characters">
-            <img
-              src="/images/aiu-project/main-characters.png"
-              alt={t.charactersAlt}
-            />
-          </figure>
+    <div className="aiu-page">
+      {[1, 2, 3, 4, 5].map((n) => (
+        <div key={n} className={`aiu-paw-bg aiu-paw-bg--${n}`} aria-hidden="true">
+          <img src="/images/icon/paw.svg" alt="" />
         </div>
-
-        <div className="container about-prose">
-          <div className="about-section">
-            <h2>{t.introTitle}</h2>
-            {t.introDesc.split('\n\n').map(
-              (paragraph, index) =>
-                paragraph.trim() && <p key={index}>{paragraph.trim()}</p>
-            )}
+      ))}
+      <Header />
+      <div className="aiu-main">
+        <section className="about-content-section about-prose-page">
+          <div className="container aiu-characters-wrap aiu-characters-wrap--lead">
+            <figure className="aiu-main-characters">
+              <img
+                src="/images/aiu-project/main-characters.png"
+                alt={t.charactersAlt}
+              />
+            </figure>
           </div>
 
-          <div className="about-section about-staff">
-            <h2>{t.staffTitle}</h2>
-
-            <div className="staff-role">
-              <h3>{t.ceoTitle}</h3>
-              {t.ceoDesc.split('\n\n').map(
+          <div className="container about-prose">
+            <div className="about-section">
+              <h2>{t.introTitle}</h2>
+              {t.introDesc.split('\n\n').map(
                 (paragraph, index) =>
                   paragraph.trim() && <p key={index}>{paragraph.trim()}</p>
               )}
             </div>
 
-            <div className="staff-role">
-              <h3>{t.techLabTitle}</h3>
-              {t.techLabDesc.split('\n\n').map(
+            <div className="about-section about-staff">
+              <h2>{t.staffTitle}</h2>
+
+              <div className="staff-role">
+                <h3>{t.ceoTitle}</h3>
+                {t.ceoDesc.split('\n\n').map(
+                  (paragraph, index) =>
+                    paragraph.trim() && <p key={index}>{paragraph.trim()}</p>
+                )}
+              </div>
+
+              <div className="staff-role">
+                <h3>{t.techLabTitle}</h3>
+                {t.techLabDesc.split('\n\n').map(
+                  (paragraph, index) =>
+                    paragraph.trim() && <p key={index}>{paragraph.trim()}</p>
+                )}
+              </div>
+
+              <div className="staff-role">
+                <h3>{t.bizTitle}</h3>
+                <p>{t.bizDesc}</p>
+              </div>
+            </div>
+
+            <div className="about-section about-student-b">
+              <h2>{t.studentBTitle}</h2>
+              {t.studentBDesc.split('\n\n').map(
                 (paragraph, index) =>
                   paragraph.trim() && <p key={index}>{paragraph.trim()}</p>
               )}
-            </div>
 
-            <div className="staff-role">
-              <h3>{t.bizTitle}</h3>
-              <p>{t.bizDesc}</p>
-            </div>
-          </div>
+              <div className="staff-role">
+                <h3>{t.visionTitle}</h3>
+                {t.visionDesc.split('\n\n').map(
+                  (paragraph, index) =>
+                    paragraph.trim() && <p key={index}>{paragraph.trim()}</p>
+                )}
+              </div>
 
-          <div className="about-section about-student-b">
-            <h2>{t.studentBTitle}</h2>
-            {t.studentBDesc.split('\n\n').map(
-              (paragraph, index) =>
-                paragraph.trim() && <p key={index}>{paragraph.trim()}</p>
-            )}
-
-            <div className="staff-role">
-              <h3>{t.visionTitle}</h3>
-              {t.visionDesc.split('\n\n').map(
-                (paragraph, index) =>
-                  paragraph.trim() && <p key={index}>{paragraph.trim()}</p>
-              )}
-            </div>
-
-            <div className="staff-role what-we-make">
-              <h3>{t.whatWeMakeTitle}</h3>
-              <div className="key-areas-grid">
-                <div className="key-area-card">
-                  <div className="key-area-icon">
-                    <i className="fas fa-book"></i>
+              <div className="staff-role what-we-make">
+                <h3>{t.whatWeMakeTitle}</h3>
+                <div className="key-areas-grid">
+                  <div className="key-area-card">
+                    <div className="key-area-icon">
+                      <i className="fas fa-book"></i>
+                    </div>
+                    <h3>{t.bookStoryTitle}</h3>
+                    <p>{t.bookStoryDesc}</p>
                   </div>
-                  <h3>{t.bookStoryTitle}</h3>
-                  <p>{t.bookStoryDesc}</p>
-                </div>
-                <div className="key-area-card">
-                  <div className="key-area-icon">
-                    <i className="fas fa-book-open"></i>
+                  <div className="key-area-card">
+                    <div className="key-area-icon">
+                      <i className="fas fa-book-open"></i>
+                    </div>
+                    <h3>{t.bookKnowledgeTitle}</h3>
+                    <p>{t.bookKnowledgeDesc}</p>
                   </div>
-                  <h3>{t.bookKnowledgeTitle}</h3>
-                  <p>{t.bookKnowledgeDesc}</p>
-                </div>
-                <div className="key-area-card">
-                  <div className="key-area-icon">
-                    <i className="fas fa-comments"></i>
+                  <div className="key-area-card">
+                    <div className="key-area-icon">
+                      <i className="fas fa-comments"></i>
+                    </div>
+                    <h3>{t.comicsTitle}</h3>
+                    <p>{t.comicsDesc}</p>
                   </div>
-                  <h3>{t.comicsTitle}</h3>
-                  <p>{t.comicsDesc}</p>
-                </div>
-                <div className="key-area-card">
-                  <div className="key-area-icon">
-                    <i className="fas fa-laptop"></i>
+                  <div className="key-area-card">
+                    <div className="key-area-icon">
+                      <i className="fas fa-laptop"></i>
+                    </div>
+                    <h3>{t.aiTitle}</h3>
+                    <p>{t.aiDesc}</p>
                   </div>
-                  <h3>{t.aiTitle}</h3>
-                  <p>{t.aiDesc}</p>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <Footer />
-    </>
+        </section>
+        <Footer />
+      </div>
+    </div>
   )
 }
