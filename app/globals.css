@@ -19,6 +19,20 @@ html.site-ko {
     --font-sans: 'Satoshi', 'Pretendard', 'Acumin Variable Concept', -apple-system, BlinkMacSystemFont, system-ui, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
 }
 
+/* Korean header text: match EN stretch at 1.05 */
+html.site-ko .nav-menu a,
+html.site-ko .newsletter-btn,
+html.site-ko .mobile-menu-nav a,
+html.site-ko .mobile-menu-nav span {
+    transform: scaleY(1.05);
+    transform-origin: center;
+}
+
+html.site-ko .about-hero h1 {
+    transform: scaleY(1.05);
+    transform-origin: center;
+}
+
 /* Muted body copy + dark headings (EN & KO) */
 html:is(.site-en, .site-ko) {
     --text-heading: #111;
@@ -1193,14 +1207,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer-col {
-    padding: 10px 16px;
+    padding: 10px 1.5cm;
     min-width: 0;
     width: 100%;
 }
 
 .footer-col-brand {
     padding-left: 1.5cm;
-    padding-right: 8px;
+    padding-right: 1.5cm;
 }
 
 .footer-col + .footer-col {
@@ -1646,13 +1660,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .tech-lab-bg-photo--left {
-    left: -22%;
+    /* turtle(40% center) left edge ≈ 30%; overlap ~4% */
+    left: -8%;
     transform: translateY(-52%);
     z-index: 1;
 }
 
 .tech-lab-bg-photo--right {
-    right: -22%;
+    /* turtle right edge ≈ 70%; overlap ~4% */
+    right: -8%;
     transform: translateY(-48%);
     z-index: 1;
 }
@@ -2243,11 +2259,12 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .footer-col {
-        padding: 10px 12px;
+        padding: 1.5cm 1.5cm;
     }
 
     .footer-col-brand {
         padding-left: 1.5cm;
+        padding-right: 1.5cm;
     }
 
     .footer-col + .footer-col {
@@ -2304,11 +2321,11 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .tech-lab-bg-photo--left {
-        left: -16%;
+        left: -6%;
     }
 
     .tech-lab-bg-photo--right {
-        right: -16%;
+        right: -6%;
     }
 
     .tech-lab-figure .tech-lab-image {
