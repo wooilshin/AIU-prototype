@@ -1183,12 +1183,13 @@ h1, h2, h3, h4, h5, h6 {
     overflow-x: hidden;
 }
 
-/* 푸터 3열: 브랜드 | Contact | SNS (첫 섹션은 왼쪽에서 1.5cm) */
+/* 푸터 3열: 브랜드 | Contact | SNS (전체 폭의 60%, 오른쪽 여백 허용) */
 .footer-columns {
     display: grid;
     grid-template-columns: 1.4fr 1.4fr 1.4fr;
     align-items: stretch;
-    width: 100%;
+    width: 60%;
+    max-width: 60%;
 }
 
 .footer-col {
@@ -1606,11 +1607,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Tech Lab: stacked photos behind the device (no rotation) */
+.tech-lab-section .about-prose {
+    max-width: 56rem;
+    overflow: visible;
+}
+
+.tech-lab-section .about-section {
+    overflow: visible;
+}
+
 .tech-lab-figure {
     position: relative;
-    margin: 0 auto 40px;
-    padding: 36px 0;
-    max-width: 72%;
+    margin: 0 auto 48px;
+    padding: 40px 0;
+    max-width: 100%;
+    width: 100%;
     isolation: isolate;
     overflow: visible;
 }
@@ -1620,12 +1631,13 @@ h1, h2, h3, h4, h5, h6 {
     inset: 0;
     pointer-events: none;
     z-index: 0;
+    overflow: visible;
 }
 
 .tech-lab-bg-photo {
     position: absolute;
     top: 50%;
-    width: 48%;
+    width: 42%;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
@@ -1634,13 +1646,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .tech-lab-bg-photo--left {
-    left: 0;
+    left: -22%;
     transform: translateY(-52%);
     z-index: 1;
 }
 
 .tech-lab-bg-photo--right {
-    right: 0;
+    right: -22%;
     transform: translateY(-48%);
     z-index: 1;
 }
@@ -1648,7 +1660,7 @@ h1, h2, h3, h4, h5, h6 {
 .tech-lab-figure .tech-lab-image {
     position: relative;
     z-index: 2;
-    width: 52%;
+    width: 40%;
     height: auto;
     display: block;
     margin: 0 auto;
@@ -2226,6 +2238,8 @@ h1, h2, h3, h4, h5, h6 {
 
     .footer-columns {
         grid-template-columns: 1fr;
+        width: 60%;
+        max-width: 60%;
     }
 
     .footer-col {
@@ -2281,24 +2295,24 @@ h1, h2, h3, h4, h5, h6 {
 
     .tech-lab-figure {
         max-width: 100%;
-        padding: 24px 0;
+        padding: 28px 0;
         margin-bottom: 28px;
     }
 
     .tech-lab-bg-photo {
-        width: 44%;
+        width: 40%;
     }
 
     .tech-lab-bg-photo--left {
-        left: 0;
+        left: -16%;
     }
 
     .tech-lab-bg-photo--right {
-        right: 0;
+        right: -16%;
     }
 
     .tech-lab-figure .tech-lab-image {
-        width: 58%;
+        width: 48%;
     }
 
     .tech-lab-float-figure {
