@@ -22,9 +22,10 @@ interface BookSectionData {
 interface BookSectionProps {
   dataFile: string
   sectionClass: string
+  showCenteredPaw?: boolean
 }
 
-export default function BookSection({ dataFile, sectionClass }: BookSectionProps) {
+export default function BookSection({ dataFile, sectionClass, showCenteredPaw = false }: BookSectionProps) {
   const { language } = useLanguage()
   const [data, setData] = useState<BookSectionData | null>(null)
 
@@ -54,6 +55,11 @@ export default function BookSection({ dataFile, sectionClass }: BookSectionProps
 
   return (
     <section className={sectionClass}>
+      {showCenteredPaw && (
+        <div className="home-paw-bg home-paw-bg--stories-center" aria-hidden="true">
+          <img src="/images/icon/paw.svg" alt="" />
+        </div>
+      )}
       <div className="container">
         <div className="section-header">
           <div>

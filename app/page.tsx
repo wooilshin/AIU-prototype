@@ -23,7 +23,7 @@ export default function Home() {
 
   return (
     <div className="home-page">
-      {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((n) => (
+      {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((n) => (
         <div key={n} className={`home-paw-bg home-paw-bg--${n}`} aria-hidden="true">
           <img src="/images/icon/paw.svg" alt="" />
         </div>
@@ -34,7 +34,11 @@ export default function Home() {
         <div id="store">
           <BookSection dataFile="stories-world-guide.json" sectionClass="stories-world-guide-section" />
           <BookSection dataFile="knowledge-notes.json" sectionClass="knowledge-notes-section" />
-          <BookSection dataFile="stories-of-animal-characters.json" sectionClass="stories-of-animal-characters-section" />
+          <BookSection
+            dataFile="stories-of-animal-characters.json"
+            sectionClass="stories-of-animal-characters-section"
+            showCenteredPaw
+          />
         </div>
         <NewsUpdateSection />
         <NewsletterSection />

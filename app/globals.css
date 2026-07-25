@@ -218,14 +218,20 @@ body {
     opacity: 0.24;
 }
 
-.home-paw-bg--10 {
-    left: 50%;
-    top: 52vh;
-    width: min(540px, 46vw);
-    transform: translateX(-50%) rotate(-4deg);
+.stories-of-animal-characters-section .container {
+    position: relative;
+    z-index: 1;
 }
 
-.home-paw-bg--10 img {
+.home-paw-bg--stories-center {
+    left: 50%;
+    top: 50%;
+    width: min(540px, 46vw);
+    transform: translate(-50%, -50%) rotate(-4deg);
+    z-index: 0;
+}
+
+.home-paw-bg--stories-center img {
     opacity: 0.78;
 }
 
@@ -939,6 +945,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .stories-of-animal-characters-section {
+    position: relative;
+    overflow: visible;
     padding: 40px 0;
     background-color: #fff;
 }
@@ -1175,7 +1183,7 @@ h1, h2, h3, h4, h5, h6 {
     overflow-x: hidden;
 }
 
-/* 푸터 3열: 브랜드 | Contact | SNS (전체 너비, 첫 섹션은 화면 왼쪽 끝) */
+/* 푸터 3열: 브랜드 | Contact | SNS (첫 섹션은 왼쪽에서 1.5cm) */
 .footer-columns {
     display: grid;
     grid-template-columns: 1.4fr 1.4fr 1.4fr;
@@ -1184,14 +1192,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer-col {
-    padding: 10px 32px;
+    padding: 10px 16px;
     min-width: 0;
     width: 100%;
 }
 
 .footer-col-brand {
-    padding-left: 0;
-    padding-right: 16px;
+    padding-left: 1.5cm;
+    padding-right: 8px;
 }
 
 .footer-col + .footer-col {
@@ -1264,6 +1272,10 @@ h1, h2, h3, h4, h5, h6 {
     background: linear-gradient(180deg, #eef1f6 0%, #f5f7fa 38%, #fafcfd 70%, #ffffff 100%);
     padding: 80px 0 60px;
     text-align: center;
+}
+
+.about-hero .container {
+    overflow: visible;
 }
 
 .about-hero h1 {
@@ -1544,10 +1556,20 @@ h1, h2, h3, h4, h5, h6 {
 .tech-lab-section {
     padding: 60px 0 80px;
     background-color: #fff;
+    overflow: visible;
+}
+
+.tech-lab-section .container {
+    overflow: visible;
 }
 
 .about-hero:has(+ .tech-lab-section) {
     padding: 56px 0 20px;
+    overflow: visible;
+}
+
+.about-hero:has(+ .tech-lab-section) .container {
+    overflow: visible;
 }
 
 .about-hero:has(+ .tech-lab-section) h1 {
@@ -1587,9 +1609,10 @@ h1, h2, h3, h4, h5, h6 {
 .tech-lab-figure {
     position: relative;
     margin: 0 auto 40px;
-    padding: 28px 0;
-    max-width: 56%;
+    padding: 36px 0;
+    max-width: 72%;
     isolation: isolate;
+    overflow: visible;
 }
 
 .tech-lab-photo-stack {
@@ -1602,22 +1625,22 @@ h1, h2, h3, h4, h5, h6 {
 .tech-lab-bg-photo {
     position: absolute;
     top: 50%;
-    width: 58%;
+    width: 48%;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
     object-fit: cover;
-    opacity: 0.92;
+    opacity: 0.95;
 }
 
 .tech-lab-bg-photo--left {
-    left: -6%;
+    left: 0;
     transform: translateY(-52%);
     z-index: 1;
 }
 
 .tech-lab-bg-photo--right {
-    right: -6%;
+    right: 0;
     transform: translateY(-48%);
     z-index: 1;
 }
@@ -1625,9 +1648,10 @@ h1, h2, h3, h4, h5, h6 {
 .tech-lab-figure .tech-lab-image {
     position: relative;
     z-index: 2;
-    width: 100%;
+    width: 52%;
     height: auto;
     display: block;
+    margin: 0 auto;
     border-radius: 12px;
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
 }
@@ -2035,11 +2059,8 @@ h1, h2, h3, h4, h5, h6 {
         width: min(130px, 26vw);
     }
 
-    .home-paw-bg--10 {
-        left: 50%;
-        top: 48vh;
+    .home-paw-bg--stories-center {
         width: min(320px, 58vw);
-        transform: translateX(-50%) rotate(-4deg);
     }
 
     .aiu-paw-bg--1 {
@@ -2208,11 +2229,11 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .footer-col {
-        padding: 20px 24px;
+        padding: 10px 12px;
     }
 
     .footer-col-brand {
-        padding-left: 0;
+        padding-left: 1.5cm;
     }
 
     .footer-col + .footer-col {
@@ -2259,21 +2280,25 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .tech-lab-figure {
-        max-width: 85%;
-        padding: 20px 0;
+        max-width: 100%;
+        padding: 24px 0;
         margin-bottom: 28px;
     }
 
     .tech-lab-bg-photo {
-        width: 52%;
+        width: 44%;
     }
 
     .tech-lab-bg-photo--left {
-        left: -4%;
+        left: 0;
     }
 
     .tech-lab-bg-photo--right {
-        right: -4%;
+        right: 0;
+    }
+
+    .tech-lab-figure .tech-lab-image {
+        width: 58%;
     }
 
     .tech-lab-float-figure {
