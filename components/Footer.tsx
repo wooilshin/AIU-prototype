@@ -63,13 +63,6 @@ export default function Footer() {
               <a href="https://www.linkedin.com/company/animal-intelligence" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i className="fab fa-linkedin-in"></i></a>
             </div>
           </div>
-          <div className="footer-col footer-col-bear" aria-hidden="true">
-            <img
-              src="/images/icon/bear.svg"
-              alt=""
-              className="footer-bear-image"
-            />
-          </div>
         </div>
       </div>
     </footer>

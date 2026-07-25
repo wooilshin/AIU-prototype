@@ -50,6 +50,18 @@ export default function CreativeTechLabPage() {
         <div className="container about-prose">
           <div className="about-section">
             <figure className="tech-lab-figure">
+              <div className="tech-lab-photo-stack" aria-hidden="true">
+                <img
+                  src="/images/tech-lab/Techlab_1.jpg"
+                  alt=""
+                  className="tech-lab-bg-photo tech-lab-bg-photo--left"
+                />
+                <img
+                  src="/images/tech-lab/Techlab_2.png"
+                  alt=""
+                  className="tech-lab-bg-photo tech-lab-bg-photo--right"
+                />
+              </div>
               <img
                 src="/images/tech-lab/turtle-device.png"
                 alt={t.deviceImageAlt}
