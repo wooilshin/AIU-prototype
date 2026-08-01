@@ -33,12 +33,12 @@ export default function Home() {
         <HeroCarousel />
         <div id="store">
           <BookSection dataFile="stories-world-guide.json" sectionClass="stories-world-guide-section" />
-          <BookSection dataFile="knowledge-notes.json" sectionClass="knowledge-notes-section" />
           <BookSection
             dataFile="stories-of-animal-characters.json"
             sectionClass="stories-of-animal-characters-section"
             showCenteredPaw
           />
+          <BookSection dataFile="knowledge-notes.json" sectionClass="knowledge-notes-section" />
         </div>
         <NewsUpdateSection />
         <NewsletterSection />
