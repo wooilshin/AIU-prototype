@@ -1197,13 +1197,13 @@ h1, h2, h3, h4, h5, h6 {
     overflow-x: hidden;
 }
 
-/* 푸터 3열: 브랜드 | Contact | SNS (오른쪽 여백 허용) */
+/* 푸터 3열: 브랜드 | Contact | SNS — 이메일이 한 줄로 들어가도록 폭 확보 */
 .footer-columns {
     display: grid;
-    grid-template-columns: 1.4fr 1.4fr 1.4fr;
+    grid-template-columns: 1.2fr minmax(22rem, 1.6fr) 1fr;
     align-items: stretch;
-    width: calc(60% + 6cm);
-    max-width: calc(60% + 6cm);
+    width: min(90%, 78rem);
+    max-width: min(90%, 78rem);
 }
 
 .footer-col {
@@ -1252,6 +1252,7 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.8;
     margin-bottom: 14px;
     font-weight: var(--font-weight-ui);
+    white-space: nowrap;
 }
 
 .footer-email-item:last-child {
@@ -2260,8 +2261,8 @@ h1, h2, h3, h4, h5, h6 {
 
     .footer-columns {
         grid-template-columns: 1fr;
-        width: calc(60% + 6cm);
-        max-width: calc(60% + 6cm);
+        width: min(92%, 28rem);
+        max-width: min(92%, 28rem);
     }
 
     .footer-col {
@@ -2275,6 +2276,10 @@ h1, h2, h3, h4, h5, h6 {
 
     .footer-col-sns {
         border-right: none;
+    }
+
+    .footer-email-item {
+        white-space: normal;
     }
 
     .footer-col + .footer-col {
