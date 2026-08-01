@@ -21,9 +21,9 @@ At the center of AIU is a simple question: What if animals learned everything hu
 
 She studied design and art at the undergraduate level before pursuing applied linguistics at Georgetown University. At Student B, she leads the visual storytelling and overall creative direction of the Animal Intelligence Universe.`,
       techLabTitle: 'Tech Lab Engineers',
-      techLabDesc: `Joseph SH Chun holds a Ph.D. in Electrical Engineering from the University of Maryland and is a specialist in communications and embedded systems. At Student B's Tech Lab, he focuses on designing animal character–based physical devices that are safe and playful.
+      techLabDesc: `Joseph SH Chun holds a Ph.D. in Electrical Engineering from the University of Maryland and is a specialist in communications and embedded systems. He now focuses on designing character–based interactive toys that are safe and playful.
 
-Will Shin is trained in artificial intelligence at the University of Pennsylvania and public policy at Harvard University. At Student B's Tech Lab, he works on AI driven game-based learning concepts.`,
+Will Shin is trained in artificial intelligence at the University of Pennsylvania and public policy at Harvard University. At Student B's Tech Lab, he experiments and builds AI driven production pipelines.`,
       bizTitle: 'Biz Team',
       bizDesc: `Jin holds an MBA from Northwestern and works on IP planning. Soy graduated from Seoul National University's Business School and manages entertainment rights. Guinea handles publishing and publicity.`,
       studentBTitle: 'About Student B',

@@ -1197,13 +1197,13 @@ h1, h2, h3, h4, h5, h6 {
     overflow-x: hidden;
 }
 
-/* 푸터 3열: 브랜드 | Contact | SNS (오른쪽 여백 허용, 섹션당 +1.5cm) */
+/* 푸터 3열: 브랜드 | Contact | SNS (오른쪽 여백 허용) */
 .footer-columns {
     display: grid;
     grid-template-columns: 1.4fr 1.4fr 1.4fr;
     align-items: stretch;
-    width: calc(60% + 4.5cm);
-    max-width: calc(60% + 4.5cm);
+    width: calc(60% + 6cm);
+    max-width: calc(60% + 6cm);
 }
 
 .footer-col {
@@ -2260,8 +2260,8 @@ h1, h2, h3, h4, h5, h6 {
 
     .footer-columns {
         grid-template-columns: 1fr;
-        width: calc(60% + 4.5cm);
-        max-width: calc(60% + 4.5cm);
+        width: calc(60% + 6cm);
+        max-width: calc(60% + 6cm);
     }
 
     .footer-col {
