@@ -18,7 +18,6 @@ const translations: Record<
       'Conceptual visualization of the Animal Intelligence turtle device showing internal components',
     paragraphs: [
       'We are a small technology team working to bring the characters of Animal Intelligence into the real world. Our idea is simple: What if characters were not just something you watch, but something you could live with?',
-      'Using AI and robotics, we are exploring a new kind of character—one that can talk, think, learn, and grow alongside people.',
       'Our first step is creating AI-connected character figures. Over time, we hope to create characters that become part of everyday life—not just as companions, but as lifelong partners in learning.',
     ],
   },

@@ -10,25 +10,25 @@ export default function AIUProject() {
   const translations = {
     en: {
       introTitle: 'AIU Project',
-      introDesc: `AIU, short for Animal Intelligence Universe, is an original IP project about secret animal agents who observe humans, learn human knowledge, and begin to build their own civilization.
+      introDesc: `AIU, short for Animal Intelligence Universe, is an original IP project about secret animal agents who observe humans and learn human knowledge.
 
 At the center of AIU is a simple question: What if animals learned everything humans know — and built a world of their own?`,
       visionTitle: 'Our Vision',
-      visionDesc: `AIU is more than a story about animals. We are creating a new fable for the 21st century—one that blends philosophy, knowledge, and storytelling for readers, learners, and audiences of all ages.`,
+      visionDesc: `AIU is more than a story about animals. We are creating a new fable for the 21st century—one that blends philosophy, knowledge, and storytelling for audiences of all ages.`,
       staffTitle: 'Staff',
       ceoTitle: 'CEO & Creative Lead',
       ceoDesc: `Alice Shin serves as the CEO and Creative Lead of Student B.
 
 She studied design and art at the undergraduate level before pursuing applied linguistics at Georgetown University. At Student B, she leads the visual storytelling and overall creative direction of the Animal Intelligence Universe.`,
       techLabTitle: 'Tech Lab Engineers',
-      techLabDesc: `Joseph SH Chun holds a Ph.D. in Electrical Engineering from the University of Maryland and is a specialist in communications and embedded systems. At Student B's Tech Lab, he focuses on designing animal character–based physical devices that are safe, playful, and educationally meaningful.
+      techLabDesc: `Joseph SH Chun holds a Ph.D. in Electrical Engineering from the University of Maryland and is a specialist in communications and embedded systems. At Student B's Tech Lab, he focuses on designing animal character–based physical devices that are safe and playful.
 
-Will Shin is trained in artificial intelligence at the University of Pennsylvania and public policy at Harvard University. At Student B's Tech Lab, he works on character-based learning concepts and the integration of generative AI into the Animal Intelligence Universe.`,
+Will Shin is trained in artificial intelligence at the University of Pennsylvania and public policy at Harvard University. At Student B's Tech Lab, he works on AI driven game-based learning concepts.`,
       bizTitle: 'Biz Team',
       bizDesc: `Jin holds an MBA from Northwestern and works on IP planning. Soy graduated from Seoul National University's Business School and manages entertainment rights. Guinea handles publishing and publicity.`,
       studentBTitle: 'About Student B',
       studentBDesc:
-        'Student B is a startup built around original IP and founded to explore new standards in edutainment. The company is currently focused on publishing AIU-related books, while also developing AI-driven character toys.',
+        'Student B is a startup built around original IP and founded to explore new standards in edutainment. The company is currently focused on publishing AIU-related books, contents, and AI-driven character toys.',
       whatWeMakeTitle: 'What We Make',
       bookStoryTitle: 'Book (The Animal Intelligence Story)',
       bookStoryDesc:

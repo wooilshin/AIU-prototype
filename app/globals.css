@@ -1226,12 +1226,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer-copyright-text {
-    font-size: 14px;
-    color: #999;
-    line-height: 1.7;
+    font-size: 15px;
+    color: #ccc;
+    line-height: 1.8;
     margin: 0;
     max-width: none;
     width: 100%;
+    font-weight: var(--font-weight-ui);
 }
 
 /* Footer.tsx: Contact / SNS ??? (?????? strong, h4 ??????? ???) */
@@ -1250,6 +1251,7 @@ h1, h2, h3, h4, h5, h6 {
     color: #ccc;
     line-height: 1.8;
     margin-bottom: 14px;
+    font-weight: var(--font-weight-ui);
 }
 
 .footer-email-item:last-child {
@@ -1258,8 +1260,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer-email-item strong {
     font-size: 15px;
-    font-weight: 600;
-    color: #e8e8e8;
+    font-weight: var(--font-weight-ui);
+    color: #ccc;
 }
 
 /* ??? ??????? - Facebook, Instagram ??*/

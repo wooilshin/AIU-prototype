@@ -12,7 +12,6 @@ export default function Footer() {
       connect: 'SNS',
       businessTeam: 'Business team:',
       techLab: 'Creative Tech Lab:',
-      creators: 'Our creators:',
       copyright: 'All content copyright © 2026 Student B or its respective owners. Student B® and its logos are registered trademarks of Student B. All rights reserved.'
     },
     ko: {
@@ -21,7 +20,6 @@ export default function Footer() {
       connect: 'SNS',
       businessTeam: '사업팀:',
       techLab: '테크랩:',
-      creators: '크리에이터:',
       copyright: '본 콘텐츠의 저작권은 Student B 또는 각 권리자에게 있습니다. Student B® 및 관련 로고는 Student B의 등록상표입니다. 무단 복제 및 배포를 금합니다.'
     }
   }
@@ -41,18 +39,13 @@ export default function Footer() {
             <div className="footer-email-item">
               <strong>{t.businessTeam}</strong><br />
               contentdirector [at] student-b.com<br />
-              ipbusiness [at] student-b.com
+              ipbusiness [at] student-b.com<br />
+              sns [at] student-b.com
             </div>
 
             <div className="footer-email-item">
               <strong>{t.techLab}</strong><br />
               techlab [at] student-b.com
-            </div>
-
-            <div className="footer-email-item">
-              <strong>{t.creators}</strong><br />
-              aliceshin [at] student-b.com<br />
-              willshin [at] student-b.com
             </div>
           </div>
           <div className="footer-col footer-col-sns">
