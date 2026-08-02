@@ -28,7 +28,7 @@ Will Shin is trained in artificial intelligence at the University of Pennsylvani
       bizDesc: `Jin holds an MBA from Northwestern and works on IP planning. Soy graduated from Seoul National University's Business School and manages entertainment rights. Guinea handles publishing and publicity.`,
       studentBTitle: 'About Student B',
       studentBDesc:
-        'Student B is a startup built around original IP and founded to explore new standards in edutainment. The company is currently focused on publishing AIU-related books, contents, and AI-driven character toys.',
+        'Student B is a startup built around original IP and founded to explore new standards in edutainment. The company is currently focused on publishing AIU-related books and contents.',
       whatWeMakeTitle: 'What We Make',
       bookStoryTitle: 'Book (The Animal Intelligence Story)',
       bookStoryDesc:
@@ -66,7 +66,7 @@ Will은 펜실베이니아 대학교에서 인공지능을, 하버드 대학교�
         'Jin은 노스웨스턴 MBA를 졸업했으며 IP 기획을 담당하고 있으며, Soy는 서울대 경영학과를 졸업하고 엔터테인먼트 판권 관리를 맡고 있습니다. 그리고 Guinea는 출판 및 홍보를 담당하고 있습니다.',
       studentBTitle: '스튜던트 비에 대하여',
       studentBDesc:
-        '스튜던트 비는 동물지능 IP를 중심으로 에듀테인먼트의 새로운 기준을 탐구하기 위해 만든 스타트업 IP 스튜디오이자 출판사입니다. 회사는 현재 동물지능 관련 도서 및 AI 기반 캐릭터 장난감을 제작하고 있습니다.',
+        '스튜던트 비는 오리지널 IP를 중심으로 에듀테인먼트의 새로운 기준을 탐구하기 위해 설립된 스타트업입니다. 회사는 현재 동물지능 관련 도서와 콘텐츠 출판에 집중하고 있습니다.',
       whatWeMakeTitle: '스튜던트 비가 만드는 것들',
       bookStoryTitle: '도서 (내이름은 시리즈)',
       bookStoryDesc:
