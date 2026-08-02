@@ -18,7 +18,7 @@ export default function Header() {
     en: {
       home: 'Home',
       aiuProject: 'AIU',
-      creativeTechLab: 'Creative Tech Lab',
+      creativeTechLab: 'Tech Lab',
       music: 'Music',
       store: 'Store',
       contact: 'Contact Us',

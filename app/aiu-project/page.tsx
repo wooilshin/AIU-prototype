@@ -10,9 +10,7 @@ export default function AIUProject() {
   const translations = {
     en: {
       introTitle: 'AIU Project',
-      introDesc: `AIU, short for Animal Intelligence Universe, is an original IP project about secret animal agents who observe humans and learn human knowledge.
-
-At the center of AIU is a simple question: What if animals learned everything humans know — and built a world of their own?`,
+      introDesc: `AIU, short for Animal Intelligence Universe, is an original IP project about secret animal agents who observe humans and learn human knowledge. At the center of AIU is a simple question: What if animals learned everything humans know?`,
       visionTitle: 'Our Vision',
       visionDesc: `AIU is more than a story about animals. We are creating a new fable for the 21st century—one that blends philosophy, knowledge, and storytelling for audiences of all ages.`,
       staffTitle: 'Staff',
@@ -23,7 +21,7 @@ She studied design and art at the undergraduate level before pursuing applied li
       techLabTitle: 'Tech Lab Engineers',
       techLabDesc: `Joseph SH Chun holds a Ph.D. in Electrical Engineering from the University of Maryland and is a specialist in communications and embedded systems. He now focuses on designing character–based interactive toys that are safe and playful.
 
-Will Shin is trained in artificial intelligence at the University of Pennsylvania and public policy at Harvard University. At Student B's Tech Lab, he experiments and builds AI driven production pipelines.`,
+Will Shin studied artificial intelligence at the University of Pennsylvania and public policy at Harvard University. At Student B's Tech Lab, his work focuses on developing AI-powered character toys.`,
       bizTitle: 'Biz Team',
       bizDesc: `Jin holds an MBA from Northwestern and works on IP planning. Soy graduated from Seoul National University's Business School and manages entertainment rights. Guinea handles publishing and publicity.`,
       studentBTitle: 'About Student B',
