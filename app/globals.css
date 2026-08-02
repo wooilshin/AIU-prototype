@@ -1197,10 +1197,10 @@ h1, h2, h3, h4, h5, h6 {
     overflow-x: hidden;
 }
 
-/* 푸터 3열: 브랜드 | Contact | SNS — 이메일이 한 줄로 들어가도록 폭 확보 */
+/* 푸터 3열: 브랜드 | Contact | SNS — 동일 너비 */
 .footer-columns {
     display: grid;
-    grid-template-columns: 1.2fr minmax(22rem, 1.6fr) 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     align-items: stretch;
     width: min(90%, 78rem);
     max-width: min(90%, 78rem);
