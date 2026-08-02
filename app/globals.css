@@ -1202,8 +1202,8 @@ h1, h2, h3, h4, h5, h6 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: stretch;
-    width: min(90%, 78rem);
-    max-width: min(90%, 78rem);
+    width: min(84%, 72rem);
+    max-width: min(84%, 72rem);
 }
 
 .footer-col {
