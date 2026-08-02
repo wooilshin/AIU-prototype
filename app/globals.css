@@ -492,7 +492,7 @@ h1, h2, h3, h4, h5, h6 {
 /* ????? ?? - ?? */
 .nav-menu {
     display: flex;
-    gap: 36px;
+    gap: 48px;
     justify-content: center;
     flex-wrap: nowrap;
     min-width: 0;
@@ -2741,7 +2741,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 1024px) {
     .nav-menu {
-        gap: 22px;
+        gap: 32px;
     }
 }
 

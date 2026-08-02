@@ -30,16 +30,16 @@ Will Shin studied artificial intelligence at the University of Pennsylvania and 
       whatWeMakeTitle: 'What We Make',
       bookStoryTitle: 'Book (The Animal Intelligence Story)',
       bookStoryDesc:
-        'Student B creates a short and long-form narrative fantasy centered on animals who infiltrate into human world to study their knowledge. While presented as an animal-driven epic, the story functions as an allegory for the civilization in the post–AI era.',
+        'Student B creates short- and long-form fantasy narratives centered on animal agents who infiltrate the human world to study human knowledge. While presented as the story of animal agents, the series also serves as an allegory for a post-AI world.',
       bookKnowledgeTitle: 'Book (Knowledge Era Series)',
       bookKnowledgeDesc:
         'Student B also produces a nonfiction book series that explores science, social science, and philosophy. These volumes serve as accessible companion books to the narrative series, intuitively introducing the knowledge and ideas that the animal characters encounter.',
       comicsTitle: 'Comic (Watching them Humans Series)',
       comicsDesc:
-        "As Student B's flagship and entry point, the comic series consists of short-form illustrated works that reflect on human life in the age of AI. Through satire and observation, these comics invite readers to pause and reconsider everyday assumptions.",
+        "As Student B's flagship series and the entry point to its universe, the comic series presents short-form illustrated stories that explore human life in the age of AI through satire and humor.",
       aiTitle: 'AI-driven toys',
       aiDesc:
-        'Student B operates an AI tech lab where we develop experimental systems that bring comic characters to life. These characters are designed to be embedded in lightweight smart toys or figurines, allowing users to engage in learning through storytelling-driven AI experiences.',
+        'Student B operates an AI tech lab that develops experimental systems to bring comic characters to life. Designed for lightweight smart toys and figurines, these AI-powered characters can hold conversations with readers.',
       charactersAlt:
         'Animal Intelligence main characters: Red Fox, Blue Bird, Green Sea Turtle, Capybara, Beaglier, Bunny, Raccoon, White Giraffe, Korat Cat, Barbary Lion, Squirrel, and Black Panther',
     },
@@ -68,16 +68,16 @@ Will은 펜실베이니아 대학교에서 인공지능을, 하버드 대학교�
       whatWeMakeTitle: '스튜던트 비가 만드는 것들',
       bookStoryTitle: '도서 (내이름은 시리즈)',
       bookStoryDesc:
-        '동물지능에 등장하는 핵심 동물들의 서사를 담은 단편 소설 시리즈입니다. 나초, 헤일로, 흰기린 등 주요 동물 캐릭터가 각자 동물세계 그리고 인간세계를 보며 느낀 점들을 기록하고 있습니다.',
+        '스튜던트 비는 인간 세계에 잠입해 인간의 지식을 배우는 동물 요원들을 중심으로 한 단편·장편 판타지 서사를 만듭니다. 동물 요원들의 이야기로 읽히지만, 이 시리즈는 포스트 AI 세계에 대한 우화이기도 합니다.',
       bookKnowledgeTitle: '도서 (지식 시리즈)',
       bookKnowledgeDesc:
         '동물지능 스토리에 등장하는 동물요원들이 인간 세계를 염탐하며 배운 내용들을 담고 있습니다. 인간세계의 주요 지식, 즉 과학, 사회과학, 인문학의 내용을 직관적으로 정리한 내용들을 담고 있습니다.',
       comicsTitle: '인간관찰기 (만화 시리즈)',
       comicsDesc:
-        '동물지능의 진입점인 만화 시리즈입니다. 인간 세상관찰기 AI 시대 인간의 사회 그리고 삶을 동물의 입장에서 바라보는 짧은 단편 만화들로 구성이 되어있습니다.',
+        '스튜던트 비의 플래그십 시리즈이자 세계관의 진입점인 만화 시리즈는, 풍자와 유머를 통해 AI 시대 인간의 삶을 탐구하는 짧은 일러스트 스토리로 구성되어 있습니다.',
       aiTitle: '동물지능 AI 시스템',
       aiDesc:
-        '스튜던트 비 테크랩의 궁극적인 목표는 동물지능의 동물 캐릭터를 현실에서 재현하는 것입니다. 이를 위해 저희는 경량화한 AI를 내장한 장난감을 설계하고 있습니다.',
+        '스튜던트 비는 만화 캐릭터를 현실로 불러오는 실험적 시스템을 개발하는 AI 테크랩을 운영합니다. 가벼운 스마트 토이와 피규어에 맞춰 설계된 이 AI 캐릭터들은 독자와 대화를 나눌 수 있습니다.',
       charactersAlt:
         'Animal Intelligence 주요 캐릭터: Red Fox, Blue Bird, Green Sea Turtle, Capybara, Beaglier, Bunny, Raccoon, White Giraffe, Korat Cat, Barbary Lion, Squirrel, Black Panther',
     },
