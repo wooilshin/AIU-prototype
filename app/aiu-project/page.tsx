@@ -37,9 +37,6 @@ Will Shin studied artificial intelligence at the University of Pennsylvania and 
       comicsTitle: 'Comic (Watching them Humans Series)',
       comicsDesc:
         "As Student B's flagship series and the entry point to its universe, the comic series presents short-form illustrated stories that explore human life in the age of AI through satire and humor.",
-      aiTitle: 'AI-driven toys',
-      aiDesc:
-        'Student B operates an AI tech lab that develops experimental systems to bring comic characters to life. Designed for lightweight smart toys and figurines, these AI-powered characters can hold conversations with readers.',
       charactersAlt:
         'Animal Intelligence main characters: Red Fox, Blue Bird, Green Sea Turtle, Capybara, Beaglier, Bunny, Raccoon, White Giraffe, Korat Cat, Barbary Lion, Squirrel, and Black Panther',
     },
@@ -75,9 +72,6 @@ Will은 펜실베이니아 대학교에서 인공지능을, 하버드 대학교�
       comicsTitle: '인간관찰기 (만화 시리즈)',
       comicsDesc:
         '스튜던트 비의 플래그십 시리즈이자 세계관의 진입점인 만화 시리즈는, 풍자와 유머를 통해 AI 시대 인간의 삶을 탐구하는 짧은 일러스트 스토리로 구성되어 있습니다.',
-      aiTitle: '동물지능 AI 시스템',
-      aiDesc:
-        '스튜던트 비는 만화 캐릭터를 현실로 불러오는 실험적 시스템을 개발하는 AI 테크랩을 운영합니다. 가벼운 스마트 토이와 피규어에 맞춰 설계된 이 AI 캐릭터들은 독자와 대화를 나눌 수 있습니다.',
       charactersAlt:
         'Animal Intelligence 주요 캐릭터: Red Fox, Blue Bird, Green Sea Turtle, Capybara, Beaglier, Bunny, Raccoon, White Giraffe, Korat Cat, Barbary Lion, Squirrel, Black Panther',
     },
@@ -176,13 +170,6 @@ Will은 펜실베이니아 대학교에서 인공지능을, 하버드 대학교�
                     </div>
                     <h3>{t.comicsTitle}</h3>
                     <p>{t.comicsDesc}</p>
-                  </div>
-                  <div className="key-area-card">
-                    <div className="key-area-icon">
-                      <i className="fas fa-laptop"></i>
-                    </div>
-                    <h3>{t.aiTitle}</h3>
-                    <p>{t.aiDesc}</p>
                   </div>
                 </div>
               </div>
