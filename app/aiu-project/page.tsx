@@ -33,7 +33,7 @@ Will Shin studied artificial intelligence at the University of Pennsylvania and 
         'Student B creates short- and long-form fantasy narratives centered on animal agents who infiltrate the human world to study human knowledge. While presented as the story of animal agents, the series also serves as an allegory for a post-AI world.',
       bookKnowledgeTitle: 'Book (Knowledge Era Series)',
       bookKnowledgeDesc:
-        'Student B also produces a nonfiction book series that explores science, social science, and philosophy. These volumes serve as accessible companion books to the narrative series, intuitively introducing the knowledge and ideas that the animal characters encounter.',
+        'Student B also produces short booklets that explore future science and philosophy. These volumes serve as accessible companion books to the narrative series, intuitively introducing the knowledge that the animal agents encounter.',
       comicsTitle: 'Comic (Watching them Humans Series)',
       comicsDesc:
         "As Student B's flagship series and the entry point to its universe, the comic series presents short-form illustrated stories that explore human life in the age of AI through satire and humor.",

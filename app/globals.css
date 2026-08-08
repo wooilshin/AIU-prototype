@@ -1356,6 +1356,10 @@ h1, h2, h3, h4, h5, h6 {
     margin-right: auto;
 }
 
+.aiu-page .about-prose {
+    max-width: 58rem;
+}
+
 .about-prose-page .about-section {
     margin-bottom: 48px;
 }
@@ -1421,9 +1425,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .about-prose-page .key-areas-grid {
     max-width: 100%;
+    width: 100%;
     margin-top: 24px;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
 }
 
 @media (max-width: 599px) {
@@ -1479,10 +1484,10 @@ h1, h2, h3, h4, h5, h6 {
 /* ?? ??? ????- 3??????? ?? ?? */
 .key-areas-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 30px;
     margin-top: 40px;
-    max-width: 900px;
+    max-width: 1100px;
     margin-left: auto;
     margin-right: auto;
 }
