@@ -19,9 +19,9 @@ export default function AIUProject() {
 
 She studied design and art at the undergraduate level before pursuing applied linguistics at Georgetown University. At Student B, she leads the visual storytelling and overall creative direction of the Animal Intelligence Universe.`,
       techLabTitle: 'Tech Lab Engineers',
-      techLabDesc: `Joseph SH Chun holds a Ph.D. in Electrical Engineering from the University of Maryland and is a specialist in communications and embedded systems. He now focuses on designing character–based interactive toys that are safe and playful.
+      techLabDesc: `Joseph SH Chun holds a Ph.D. in Electrical Engineering from the University of Maryland. He develops safe and playful interactive character toys.
 
-Will Shin studied artificial intelligence at the University of Pennsylvania and public policy at Harvard University. At Student B's Tech Lab, his work focuses on developing AI-powered character toys.`,
+Will Shin studied Artificial Intelligence at the University of Pennsylvania and public policy at Harvard. He develops AI-powered character games at Student B's Tech Lab.`,
       bizTitle: 'Biz Team',
       bizDesc: `Jin holds an MBA from Northwestern and works on IP planning. Soy graduated from Seoul National University's Business School and manages entertainment rights. Guinea handles publishing and publicity.`,
       studentBTitle: 'About Student B',
@@ -53,9 +53,9 @@ Will Shin studied artificial intelligence at the University of Pennsylvania and 
 
 Alice는 학부에서 디자인과 미술을 공부한 뒤 조지타운 대학교에서 언어학을 전공하였으며 현재 동물지능 IP의 전체 디자인을 이끌고 있습니다.`,
       techLabTitle: '스튜던트 비 테크랩',
-      techLabDesc: `Joseph SH는 메릴랜드 대학교에서 전기공학 박사 학위를 취득했으며, 통신 및 임베디드 시스템 전문가입니다. 스튜던트 비 테크랩에서 교육적으로 의미 있는 동물 캐릭터 기반 물리적 디바이스 설계에 전념하고 있습니다.
+      techLabDesc: `Joseph SH는 메릴랜드 대학교에서 전기공학 박사 학위를 취득했습니다. 안전하고 즐거운 인터랙티브 캐릭터 토이를 개발합니다.
 
-Will은 펜실베이니아 대학교에서 인공지능을, 하버드 대학교에서 공공정책을 공부했습니다. 스튜던트 비 테크랩에서 캐릭터에 생성형 AI를 통합하는 작업을 담당하고 있습니다.`,
+Will은 펜실베이니아 대학교에서 인공지능을, 하버드에서 공공정책을 공부했습니다. 스튜던트 비 테크랩에서 AI 기반 캐릭터 게임을 개발합니다.`,
       bizTitle: '비지니스 팀',
       bizDesc:
         'Jin은 노스웨스턴 MBA를 졸업했으며 IP 기획을 담당하고 있으며, Soy는 서울대 경영학과를 졸업하고 엔터테인먼트 판권 관리를 맡고 있습니다. 그리고 Guinea는 출판 및 홍보를 담당하고 있습니다.',

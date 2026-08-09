@@ -6,21 +6,21 @@
     {
       "id": 1,
       "title": "지식 노트 1권\n(흰기린 책)",
-      "description": "인류가 산업혁명 그리고 세계전쟁으로 거치며, 어떤 생각을 해왔는지 그들의 철학, 사회학, 심리학 지식이 어떻게 발전해왔는지 돌아봅니다.\n(출간 예정)",
+      "description": "비전공 학생도 이해할 수 있는 수준으로 AI와 AI 윤리를 소개하는 책입니다.\n(출간 예정)",
       "coverImage": "/images/books/Knowledge1.svg",
       "coverStyle": "background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"
     },
     {
       "id": 2,
       "title": "지식 노트 2권\n(고양이 책)",
-      "description": "고등학교에서 배우는 수학이 물리 그리고 현대 공학에 어떻게 적용되는지 직관적으로 설명하는 책입니다. 대학원 이상의 수학의 주제를 다루면서도 그 내용을 청소년들이 읽을 수 있도록 풀어서 설명하고 있습니다.\n(출간 예정)",
+      "description": "고등학교에서 배우는 수학이 첨단 과학과 현대 공학에 어떻게 적용되는지 직관적으로 설명하는 책입니다. 대학원 이상의 수학의 주제를 다루면서도 그 내용을 청소년들이 읽을 수 있도록 풀어서 설명하고 있습니다.\n(출간 예정)",
       "coverImage": "/images/books/Knowledge2.svg",
       "coverStyle": "background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"
     },
     {
       "id": 3,
       "title": "지식 노트 Vol.3\n(너구리 북)",
-      "description": "너구리 북 또는 '코드로 재구성하는 경제학'으로도 알려진 이 책은 AI가 미래 경제를 어떻게 바꿀 수 있는지 탐구합니다. 경제와 AI에 관심 있는 대학생과 일반 독자를 대상으로 합니다.\n(출간 예정)",
+      "description": "너구리 북 또는 '코드로 재구성하는 경제학'으로도 알려진 이 책은 AI가 미래 경제를 어떻게 바꿀 수 있는지 탐구합니다. 경제와 AI에 관심 있는 일반 독자를 대상으로 합니다.\n(출간 예정)",
       "coverImage": "/images/books/Knowledge3.svg",
       "coverStyle": "background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"
     }
