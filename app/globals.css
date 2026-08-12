@@ -1038,12 +1038,23 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #fff;
 }
 
-/* ??? ?? ????- ????????? ????4??(????? 1200px ??? minmax(300px)??4?????) */
+/* ??? ?? ????- 5 cards in one row on desktop */
+.newsupdate-section .container {
+    max-width: 1400px;
+}
+
 .newsupdate-articles {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 16px;
     margin-top: 40px;
+}
+
+@media (max-width: 1199px) {
+    .newsupdate-articles {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+    }
 }
 
 @media (max-width: 991px) {
@@ -1061,10 +1072,11 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ??? ?? ?? - ?????? ??? ?? ?????*/
 .newsupdate-article {
-    padding: 20px;
+    padding: 16px;
     border: 2px solid #c0c0c0;
     border-radius: 12px;
     transition: transform 0.3s, box-shadow 0.3s;
+    min-width: 0;
 }
 
 .newsupdate-article.clickable {
@@ -1078,17 +1090,18 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ?? ??? */
 .newsupdate-article h3 {
-    font-size: 17px;
+    font-size: 15px;
     font-weight: 700;
     color: #000;
     margin-bottom: 10px;
+    line-height: 1.35;
 }
 
 /* ?? ?? */
 .newsupdate-article p {
-    font-size: 14px;
+    font-size: 13px;
     color: #222;
-    line-height: 1.52;
+    line-height: 1.5;
     margin-bottom: 10px;
 }
 

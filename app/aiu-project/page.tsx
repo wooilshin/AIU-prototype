@@ -15,13 +15,13 @@ export default function AIUProject() {
       visionDesc: `AIU is more than a story about animals. We are creating a new fable for the 21st century—one that blends philosophy, knowledge, and storytelling for audiences of all ages.`,
       staffTitle: 'Staff',
       ceoTitle: 'CEO & Creative Lead',
-      ceoDesc: `Alice Shin serves as the CEO and Creative Lead of Student B.
+      ceoDesc: `Alice serves as the CEO and Creative Lead of Student B.
 
 She studied design and art at the undergraduate level before pursuing applied linguistics at Georgetown University. At Student B, she leads the visual storytelling and overall creative direction of the Animal Intelligence Universe.`,
       techLabTitle: 'Tech Lab Engineers',
-      techLabDesc: `Joseph SH Chun holds a Ph.D. in Electrical Engineering from the University of Maryland. He develops safe and playful interactive character toys.
+      techLabDesc: `Joseph SH holds a Ph.D. in Electrical Engineering from the University of Maryland. He develops safe and playful interactive character toys.
 
-Will Shin studied Artificial Intelligence at the University of Pennsylvania and public policy at Harvard. He develops AI-powered character games at Student B's Tech Lab.`,
+Will studied Artificial Intelligence at the University of Pennsylvania and public policy at Harvard. He develops AI-powered character games at Student B's Tech Lab.`,
       bizTitle: 'Biz Team',
       bizDesc: `Jin holds an MBA from Northwestern and works on IP planning. Soy graduated from Seoul National University's Business School and manages entertainment rights. Guinea handles publishing and publicity.`,
       studentBTitle: 'About Student B',
