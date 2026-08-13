@@ -107,30 +107,32 @@ Will은 펜실베이니아 대학교에서 인공지능을, 하버드에서 공�
               )}
             </div>
 
-            <div className="about-section about-staff">
-              <h2>{t.staffTitle}</h2>
+            {language === 'en' && (
+              <div className="about-section about-staff">
+                <h2>{t.staffTitle}</h2>
 
-              <div className="staff-role">
-                <h3>{t.ceoTitle}</h3>
-                {t.ceoDesc.split('\n\n').map(
-                  (paragraph, index) =>
-                    paragraph.trim() && <p key={index}>{paragraph.trim()}</p>
-                )}
-              </div>
+                <div className="staff-role">
+                  <h3>{t.ceoTitle}</h3>
+                  {t.ceoDesc.split('\n\n').map(
+                    (paragraph, index) =>
+                      paragraph.trim() && <p key={index}>{paragraph.trim()}</p>
+                  )}
+                </div>
 
-              <div className="staff-role">
-                <h3>{t.techLabTitle}</h3>
-                {t.techLabDesc.split('\n\n').map(
-                  (paragraph, index) =>
-                    paragraph.trim() && <p key={index}>{paragraph.trim()}</p>
-                )}
-              </div>
+                <div className="staff-role">
+                  <h3>{t.techLabTitle}</h3>
+                  {t.techLabDesc.split('\n\n').map(
+                    (paragraph, index) =>
+                      paragraph.trim() && <p key={index}>{paragraph.trim()}</p>
+                  )}
+                </div>
 
-              <div className="staff-role">
-                <h3>{t.bizTitle}</h3>
-                <p>{t.bizDesc}</p>
+                <div className="staff-role">
+                  <h3>{t.bizTitle}</h3>
+                  <p>{t.bizDesc}</p>
+                </div>
               </div>
-            </div>
+            )}
 
             <div className="about-section about-student-b">
               <h2>{t.studentBTitle}</h2>

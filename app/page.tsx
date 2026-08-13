@@ -7,8 +7,11 @@ import HeroCarousel from '@/components/HeroCarousel'
 import BookSection from '@/components/BookSection'
 import NewsletterSection from '@/components/NewsletterSection'
 import NewsUpdateSection from '@/components/NewsUpdateSection'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function Home() {
+  const { language } = useLanguage()
+
   useEffect(() => {
     const hash = window.location.hash
     if (hash === '#newsletter' || hash === '#store') {
@@ -32,7 +35,9 @@ export default function Home() {
       <div className="home-main">
         <HeroCarousel />
         <div id="store">
-          <BookSection dataFile="stories-world-guide.json" sectionClass="stories-world-guide-section" />
+          {language === 'en' && (
+            <BookSection dataFile="stories-world-guide.json" sectionClass="stories-world-guide-section" />
+          )}
           <BookSection
             dataFile="stories-of-animal-characters.json"
             sectionClass="stories-of-animal-characters-section"
