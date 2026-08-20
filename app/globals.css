@@ -265,7 +265,7 @@ body {
 /* AIU Project page: paw watermarks (5) */
 .aiu-page {
     position: relative;
-    overflow-x: clip;
+    overflow: clip;
     background-color: #fff;
 }
 
@@ -949,6 +949,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ????? ??????*/
 .stories-world-guide-section {
+    position: relative;
+    overflow: visible;
     padding: 40px 0;
     background-color: #fff;
 }
@@ -1422,9 +1424,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .about-staff .staff-contact-email {
     margin-top: 0.75em;
-    color: #2563eb;
+    color: #4a90e2;
     font-size: 15px;
     line-height: 1.6;
+}
+
+html:is(.site-en, .site-ko) .about-staff .staff-role > p.staff-contact-email {
+    color: #4a90e2;
 }
 
 .about-student-b > .staff-role.what-we-make {

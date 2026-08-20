@@ -32,7 +32,14 @@ export default function NewsUpdateSection() {
         return res.json()
       })
       .then((jsonData: NewsUpdateData) => {
-        if (!cancelled) setData(jsonData)
+        if (!cancelled) {
+          setData({
+            ...jsonData,
+            articles: [...jsonData.articles].sort(
+              (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+            ),
+          })
+        }
       })
       .catch((err) => console.error('Error loading news update data:', err))
 

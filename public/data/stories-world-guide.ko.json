@@ -1,5 +1,5 @@
 {
-  "sectionTitle": "동물지능 세계관 가이드",
+  "sectionTitle": "동물지능 도서",
   "sectionDescription": "동물 문명의 역사, 잠입 요원들의 프로필, 그리고 유머로 AIU 세계관을 생생하게 그려 내는 만화 모음을 통해 동물지능의 세계를 탐험합니다.",
   "viewAllLink": "#stories-world-guide",
   "books": [
@@ -26,6 +26,13 @@
       "coverImage": "/images/books/Comic1.svg",
       "coverStyle": "background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);",
       "link": "https://www.amazon.com/Watching-Them-Humans-Age-Intelligence-ebook/dp/B0GX555DH9/"
+    },
+    {
+      "id": 4,
+      "title": "내 이름은 나초",
+      "description": "2세대 요원인 나초가 인간 사회에 나아가 겪은 이야기를 담은 첫 번째 책입니다.\n(9월 출간 예정)",
+      "coverImage": "/images/books/Story1.svg",
+      "coverStyle": "background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);"
     }
   ]
 }
