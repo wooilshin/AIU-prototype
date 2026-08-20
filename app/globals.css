@@ -754,13 +754,13 @@ h1, h2, h3, h4, h5, h6 {
 .hero-left-bg {
     position: absolute;
     left: max(-40px, calc(50% - 560px));
-    top: 72%;
-    transform: translateY(-40%);
+    top: 38%;
+    transform: translateY(-20%);
     width: min(560px, 52vw);
     max-width: 560px;
     pointer-events: none;
     z-index: 0;
-    opacity: 0.38;
+    opacity: 1;
     user-select: none;
 }
 
@@ -1411,7 +1411,7 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .footer-col-brand {
