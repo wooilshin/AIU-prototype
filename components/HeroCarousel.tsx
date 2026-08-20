@@ -76,10 +76,7 @@ export default function HeroCarousel() {
           >
             <div className="container">
               <div className="hero-content">
-                <div className="hero-stage">
-                  <div className="hero-left-bg" aria-hidden="true">
-                    <img src="/images/hero/fireplace.png" alt="" />
-                  </div>
+                <div className="hero-left">
                   <div className="hero-text">
                     {slide.imageLabel && (
                       <p className="hero-status">{slide.imageLabel}</p>
@@ -94,42 +91,46 @@ export default function HeroCarousel() {
                     </h1>
                     <p>{slide.description}</p>
                   </div>
-                  <div className="hero-panel">
-                    <div className="hero-image">
-                      {slide.imagePath ? (
-                        <div className="hero-image-placeholder">
-                          <img
-                            src={slide.imagePath}
-                            alt={slide.title}
-                            className="hero-image-content"
-                          />
-                        </div>
-                      ) : (
-                        <div
-                          className="hero-image-placeholder"
-                          style={{ background: slide.imageStyle }}
+                  <div className="hero-left-bg" aria-hidden="true">
+                    <img src="/images/hero/fireplace.png" alt="" />
+                  </div>
+                </div>
+
+                <div className="hero-panel">
+                  <div className="hero-image">
+                    {slide.imagePath ? (
+                      <div className="hero-image-placeholder">
+                        <img
+                          src={slide.imagePath}
+                          alt={slide.title}
+                          className="hero-image-content"
                         />
-                      )}
-                    </div>
-                    <div className="hero-panel-actions">
-                      {slide.buttonLink.startsWith('http') ? (
-                        <a
-                          href={slide.buttonLink}
-                          className="cta-button"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          {slide.buttonText}
-                        </a>
-                      ) : (
-                        <Link href={slide.buttonLink} className="cta-button">
-                          {slide.buttonText}
-                        </Link>
-                      )}
-                      <a href="#store" className="hero-secondary-button">
-                        {storeLabel}
+                      </div>
+                    ) : (
+                      <div
+                        className="hero-image-placeholder"
+                        style={{ background: slide.imageStyle }}
+                      />
+                    )}
+                  </div>
+                  <div className="hero-panel-actions">
+                    {slide.buttonLink.startsWith('http') ? (
+                      <a
+                        href={slide.buttonLink}
+                        className="cta-button"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {slide.buttonText}
                       </a>
-                    </div>
+                    ) : (
+                      <Link href={slide.buttonLink} className="cta-button">
+                        {slide.buttonText}
+                      </Link>
+                    )}
+                    <a href="#store" className="hero-secondary-button">
+                      {storeLabel}
+                    </a>
                   </div>
                 </div>
               </div>
