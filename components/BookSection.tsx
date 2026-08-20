@@ -54,8 +54,8 @@ export default function BookSection({ dataFile, sectionClass, showCenteredPaw = 
   if (!data) return null
 
   const footerLabel = language === 'ko'
-    ? (bookHasLink: boolean) => (bookHasLink ? '스토어 둘러보기 →' : 'Coming soon')
-    : (bookHasLink: boolean) => (bookHasLink ? 'Browse store →' : 'Coming soon')
+    ? (bookHasLink: boolean) => (bookHasLink ? 'Buy on Amazon →' : 'Coming soon')
+    : (bookHasLink: boolean) => (bookHasLink ? 'Buy on Amazon →' : 'Coming soon')
 
   return (
     <section className={sectionClass}>

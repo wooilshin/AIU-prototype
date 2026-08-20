@@ -17,13 +17,26 @@ interface NewsUpdateData {
   articles: Article[]
 }
 
+const DESKTOP_PAGE_SIZE = 3
+
 export default function NewsUpdateSection() {
   const { language } = useLanguage()
   const [data, setData] = useState<NewsUpdateData | null>(null)
+  const [page, setPage] = useState(0)
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const media = window.matchMedia('(max-width: 768px)')
+    const update = () => setIsMobile(media.matches)
+    update()
+    media.addEventListener('change', update)
+    return () => media.removeEventListener('change', update)
+  }, [])
 
   useEffect(() => {
     let cancelled = false
     setData(null)
+    setPage(0)
 
     const dataFile = language === 'ko' ? '/data/newsupdate.ko.json' : '/data/newsupdate.json'
     fetch(dataFile)
@@ -50,14 +63,42 @@ export default function NewsUpdateSection() {
 
   if (!data) return null
 
+  const totalPages = Math.max(1, Math.ceil(data.articles.length / DESKTOP_PAGE_SIZE))
+  const visibleArticles = isMobile
+    ? data.articles
+    : data.articles.slice(page * DESKTOP_PAGE_SIZE, page * DESKTOP_PAGE_SIZE + DESKTOP_PAGE_SIZE)
+  const showDesktopArrows = !isMobile && totalPages > 1
+
   return (
     <section className="newsupdate-section">
       <div className="container newsupdate-container">
         <div className="newsupdate-header">
           <h2>{data.sectionTitle}</h2>
+          {showDesktopArrows && (
+            <div className="newsupdate-nav">
+              <button
+                type="button"
+                className="newsupdate-nav-btn"
+                aria-label={language === 'ko' ? '이전 뉴스' : 'Previous news'}
+                disabled={page === 0}
+                onClick={() => setPage((prev) => Math.max(0, prev - 1))}
+              >
+                <i className="fas fa-chevron-left" aria-hidden="true"></i>
+              </button>
+              <button
+                type="button"
+                className="newsupdate-nav-btn"
+                aria-label={language === 'ko' ? '다음 뉴스' : 'Next news'}
+                disabled={page >= totalPages - 1}
+                onClick={() => setPage((prev) => Math.min(totalPages - 1, prev + 1))}
+              >
+                <i className="fas fa-chevron-right" aria-hidden="true"></i>
+              </button>
+            </div>
+          )}
         </div>
         <div className="newsupdate-list">
-          {data.articles.map((article) => (
+          {visibleArticles.map((article) => (
             <article
               key={article.id}
               className={`newsupdate-item ${article.link ? 'clickable' : ''}`}

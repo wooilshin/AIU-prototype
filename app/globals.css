@@ -754,13 +754,13 @@ h1, h2, h3, h4, h5, h6 {
 .hero-left-bg {
     position: absolute;
     left: max(-40px, calc(50% - 560px));
-    top: 52%;
-    transform: translateY(-50%);
+    top: 72%;
+    transform: translateY(-40%);
     width: min(560px, 52vw);
     max-width: 560px;
     pointer-events: none;
     z-index: 0;
-    opacity: 0.22;
+    opacity: 0.38;
     user-select: none;
 }
 
@@ -808,11 +808,17 @@ h1, h2, h3, h4, h5, h6 {
     display: grid;
     grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
     gap: 48px;
-    align-items: center;
+    align-items: start;
     max-width: 1100px;
     margin: 0 auto;
     width: 100%;
     overflow: visible;
+}
+
+.hero-text {
+    padding-top: 8px;
+    position: relative;
+    z-index: 1;
 }
 
 .hero-status {
@@ -824,6 +830,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-panel {
+    margin-top: 12px;
     background: #fff;
     border-radius: 20px;
     box-shadow: 0 12px 36px rgba(0, 0, 0, 0.08);
@@ -1185,10 +1192,49 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
 .newsupdate-header {
     text-align: center;
     margin-bottom: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    position: relative;
 }
 
 .newsupdate-header h2 {
     margin-bottom: 0;
+}
+
+.newsupdate-nav {
+    display: flex;
+    gap: 8px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.newsupdate-nav-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid #d0d0d0;
+    background: #fff;
+    color: #333;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.newsupdate-nav-btn:hover:not(:disabled) {
+    background: #f5f5f5;
+    border-color: #4a90e2;
+    color: #4a90e2;
+}
+
+.newsupdate-nav-btn:disabled {
+    opacity: 0.35;
+    cursor: default;
 }
 
 .newsupdate-list {
@@ -1343,18 +1389,18 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
     overflow-x: hidden;
 }
 
-/* 푸터 3열: 동일 너비, 각 섹션 내용 중앙 정렬 */
+/* 푸터 3열: 동일 너비, 각 섹션 내용 정중앙 */
 .footer-columns {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     align-items: stretch;
-    width: min(90%, 72rem);
-    max-width: min(90%, 72rem);
-    margin: 0 auto;
+    width: 100%;
+    max-width: none;
+    margin: 0;
 }
 
 .footer-col {
-    padding: 10px 1.25cm;
+    padding: 24px 32px;
     min-width: 0;
     width: 100%;
     border: none;
@@ -1362,11 +1408,12 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .footer-col-brand {
-    padding-left: 1.25cm;
-    padding-right: 1.25cm;
+    padding-left: 32px;
+    padding-right: 32px;
 }
 
 .footer-col + .footer-col {
@@ -1381,9 +1428,9 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
     font-size: 15px;
     color: #ccc;
     line-height: 1.8;
-    margin: 0;
+    margin: 0 auto;
     max-width: 22em;
-    width: 100%;
+    width: auto;
     font-weight: var(--font-weight-ui);
     text-align: center;
 }
@@ -1397,6 +1444,7 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
     margin-bottom: 15px;
     color: #fff;
     text-align: center;
+    width: 100%;
 }
 
 /* Footer.tsx: ??????? ??body 19px ??? ???, ?? .footer-contact p?? ??? ??*/
@@ -1408,6 +1456,7 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
     font-weight: var(--font-weight-ui);
     white-space: normal;
     text-align: center;
+    width: 100%;
 }
 
 .footer-email-item:last-child {
@@ -1425,6 +1474,8 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
     display: flex;
     gap: 15px;
     justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 .social-icons a {
@@ -2321,7 +2372,7 @@ html:is(.site-en, .site-ko) .about-staff .staff-role > p.staff-contact-email {
     }
 
     .header-content {
-        grid-template-columns: 150px auto;
+        grid-template-columns: 1fr auto;
         gap: 12px;
         overflow: clip;
         min-height: 44px;
@@ -2333,6 +2384,13 @@ html:is(.site-en, .site-ko) .about-staff .staff-role > p.staff-contact-email {
         height: 44px;
         overflow: clip;
         contain: paint;
+        justify-self: start;
+    }
+
+    .header-actions {
+        gap: 10px;
+        justify-self: end;
+        margin-left: auto;
     }
 
     .logo-image {
@@ -2360,10 +2418,6 @@ html:is(.site-en, .site-ko) .about-staff .staff-role > p.staff-contact-email {
         display: block;
     }
 
-    .header-actions {
-        gap: 10px;
-    }
-
     .newsletter-btn {
         display: none;
     }
@@ -2380,8 +2434,9 @@ html:is(.site-en, .site-ko) .about-staff .staff-role > p.staff-contact-email {
     .hero-left-bg {
         left: -20px;
         width: min(320px, 70vw);
-        opacity: 0.14;
-        top: 42%;
+        opacity: 0.28;
+        top: 78%;
+        transform: translateY(-30%);
     }
 
     .hero-content {
@@ -2529,6 +2584,118 @@ html:is(.site-en, .site-ko) .about-staff .staff-role > p.staff-contact-email {
         -webkit-line-clamp: 5;
         -webkit-box-orient: vertical;
         overflow: hidden;
+    }
+
+    /* App/mobile only: News full-screen cards + horizontal swipe */
+    .newsupdate-section {
+        min-height: 100svh;
+        min-height: 100dvh;
+        box-sizing: border-box;
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: calc(var(--header-offset) + 8px) 0 28px;
+        overflow: hidden;
+    }
+
+    .newsupdate-section .newsupdate-container {
+        width: 100%;
+        max-width: none;
+        padding: 0;
+        overflow: visible;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        min-height: 0;
+    }
+
+    .newsupdate-section .newsupdate-header {
+        padding: 0 16px;
+        margin-bottom: 12px;
+        flex-shrink: 0;
+        text-align: left;
+        justify-content: flex-start;
+    }
+
+    .newsupdate-section .newsupdate-nav {
+        display: none;
+    }
+
+    .newsupdate-section .newsupdate-list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 12px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        overscroll-behavior-x: contain;
+        padding: 4px 16px 12px;
+        flex: 1;
+        align-items: stretch;
+        scrollbar-width: none;
+    }
+
+    .newsupdate-section .newsupdate-list::-webkit-scrollbar {
+        display: none;
+    }
+
+    .newsupdate-section .newsupdate-item {
+        flex: 0 0 calc(100vw - 32px);
+        width: calc(100vw - 32px);
+        max-width: calc(100vw - 32px);
+        scroll-snap-align: center;
+        scroll-snap-stop: always;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        min-height: calc(100svh - var(--header-offset) - 140px);
+        min-height: calc(100dvh - var(--header-offset) - 140px);
+        padding: 24px 20px;
+        border: 1px solid #e8e8e8;
+        border-radius: 18px;
+        border-top: 1px solid #e8e8e8;
+        border-bottom: 1px solid #e8e8e8;
+        background: #fff;
+        box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
+    }
+
+    .newsupdate-section .newsupdate-item:first-child {
+        border-top: 1px solid #e8e8e8;
+    }
+
+    .newsupdate-section .newsupdate-item-icon {
+        font-size: 22px;
+        padding-top: 0;
+        color: #4a90e2;
+    }
+
+    .newsupdate-section .newsupdate-item-body {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        min-height: 0;
+    }
+
+    .newsupdate-section .newsupdate-item-body h3 {
+        font-size: 22px;
+        margin-bottom: 14px;
+    }
+
+    .newsupdate-section .newsupdate-item-body p {
+        font-size: 16px;
+        line-height: 1.6;
+        flex: 1;
+    }
+
+    .newsupdate-section .article-date {
+        margin-top: auto;
+        padding-top: 16px;
+        font-size: 14px;
     }
 
     .section-header {
@@ -2713,6 +2880,12 @@ html:is(.site-en, .site-ko) .about-staff .staff-role > p.staff-contact-email {
     }
 
     .store-book-sections .book-card {
+        flex: 0 0 calc(100vw - 30px);
+        width: calc(100vw - 30px);
+        max-width: calc(100vw - 30px);
+    }
+
+    .newsupdate-section .newsupdate-item {
         flex: 0 0 calc(100vw - 30px);
         width: calc(100vw - 30px);
         max-width: calc(100vw - 30px);
