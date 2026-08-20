@@ -751,16 +751,25 @@ h1, h2, h3, h4, h5, h6 {
     overflow: clip;
 }
 
+.hero-left {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto 1fr;
+    min-width: 0;
+    min-height: 100%;
+}
+
 .hero-left-bg {
-    position: absolute;
-    left: max(-40px, calc(50% - 560px));
-    top: 38%;
-    transform: translateY(-20%);
-    width: min(560px, 52vw);
-    max-width: 560px;
-    pointer-events: none;
+    grid-row: 1 / -1;
+    grid-column: 1;
+    align-self: end;
+    justify-self: start;
     z-index: 0;
-    opacity: 1;
+    width: min(520px, 100%);
+    max-width: 520px;
+    margin-left: -12px;
+    pointer-events: none;
     user-select: none;
 }
 
@@ -808,7 +817,7 @@ h1, h2, h3, h4, h5, h6 {
     display: grid;
     grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
     gap: 48px;
-    align-items: start;
+    align-items: stretch;
     max-width: 1100px;
     margin: 0 auto;
     width: 100%;
@@ -816,6 +825,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-text {
+    grid-row: 1;
+    grid-column: 1;
     padding-top: 8px;
     position: relative;
     z-index: 1;
@@ -830,7 +841,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-panel {
-    margin-top: 12px;
+    margin-top: 0;
+    align-self: end;
+    height: fit-content;
     background: #fff;
     border-radius: 20px;
     box-shadow: 0 12px 36px rgba(0, 0, 0, 0.08);
@@ -2728,35 +2741,25 @@ html:is(.site-en, .site-ko) .about-staff .staff-role > p.staff-contact-email {
         margin: 0 auto;
     }
 
+    /* App/mobile: SNS only */
+    .footer-col-brand,
+    .footer-col-contact {
+        display: none;
+    }
+
     .footer-col {
-        padding: 1.5cm 1.5cm;
+        padding: 1.25rem 1.5cm;
         border: none;
         text-align: center;
         align-items: center;
     }
 
-    .footer-col-brand {
-        padding-left: 1.5cm;
-        padding-right: 1.5cm;
-    }
-
     .footer-col-sns {
-        border-right: none;
-    }
-
-    .footer-email-item {
-        white-space: normal;
-        text-align: center;
+        border: none;
     }
 
     .footer-col + .footer-col {
-        border-left: none;
-        border-top: 1px solid rgba(255, 255, 255, 0.25);
-    }
-
-    .footer-copyright-text {
-        max-width: none;
-        text-align: center;
+        border: none;
     }
 
     .social-icons {

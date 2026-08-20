@@ -68,9 +68,6 @@ export default function HeroCarousel() {
 
   return (
     <section className="hero-section">
-      <div className="hero-left-bg" aria-hidden="true">
-        <img src="/images/hero/fireplace.png" alt="" />
-      </div>
       <div className="hero-carousel">
         {slides.map((slide, index) => (
           <div
@@ -79,19 +76,24 @@ export default function HeroCarousel() {
           >
             <div className="container">
               <div className="hero-content">
-                <div className="hero-text">
-                  {slide.imageLabel && (
-                    <p className="hero-status">{slide.imageLabel}</p>
-                  )}
-                  <h1>
-                    {slide.title.split('\n').map((line, lineIndex, lines) => (
-                      <span key={lineIndex}>
-                        {line}
-                        {lineIndex < lines.length - 1 && <br />}
-                      </span>
-                    ))}
-                  </h1>
-                  <p>{slide.description}</p>
+                <div className="hero-left">
+                  <div className="hero-text">
+                    {slide.imageLabel && (
+                      <p className="hero-status">{slide.imageLabel}</p>
+                    )}
+                    <h1>
+                      {slide.title.split('\n').map((line, lineIndex, lines) => (
+                        <span key={lineIndex}>
+                          {line}
+                          {lineIndex < lines.length - 1 && <br />}
+                        </span>
+                      ))}
+                    </h1>
+                    <p>{slide.description}</p>
+                  </div>
+                  <div className="hero-left-bg" aria-hidden="true">
+                    <img src="/images/hero/fireplace.png" alt="" />
+                  </div>
                 </div>
 
                 <div className="hero-panel">

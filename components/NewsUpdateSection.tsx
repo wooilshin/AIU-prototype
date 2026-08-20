@@ -17,7 +17,7 @@ interface NewsUpdateData {
   articles: Article[]
 }
 
-const VISIBLE_COUNT = 3
+const VISIBLE_COUNT = 2
 
 export default function NewsUpdateSection() {
   const { language } = useLanguage()
