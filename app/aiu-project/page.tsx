@@ -10,9 +10,9 @@ export default function AIUProject() {
   const translations = {
     en: {
       introTitle: 'AIU Project',
-      introDesc: `AIU, short for Animal Intelligence Universe, is an original IP project about secret animal agents who observe humans and learn human knowledge. At the center of AIU is a simple question: What if animals learned everything humans know?`,
-      visionTitle: 'Our Vision',
-      visionDesc: `AIU is more than a story about animals. We are creating a new fable for the 21st century—one that blends philosophy, knowledge, and storytelling for audiences of all ages.`,
+      introDesc: `AIU, short for Animal Intelligence Universe, is an original IP project about secret animal agents who observe humans and learn human knowledge.
+
+AIU is more than a story about animal agents. It is a new fable for the 21st century—one that blends philosophy, knowledge, and storytelling for audiences of all ages.`,
       staffTitle: 'Staff',
       ceoTitle: 'CEO & Creative Lead',
       ceoDesc: `Alice serves as the CEO and Creative Lead of Student B.
@@ -45,8 +45,6 @@ Will studied Artificial Intelligence at the University of Pennsylvania and publi
       introDesc: `동물지능 IP는 비밀리에 인간의 지식을 배우는 동물 요원들 그리고 그들이 세워가는 문명에 관한 이야기이며, 그 내용들을 풍자만화, 판타지 소설, 지식서 등의 풀어내고 있는 콘텐츠입니다.
 
 동물지능 시리즈의 중심에는 간단한 질문이 있습니다. 동물들이 인간이 아는 모든 것을 배우고, 그들만의 세계를 세운다면 그들 그리고 우리의 미래는 어떻게 될까요?`,
-      visionTitle: '비전',
-      visionDesc: `동물지능은 단순한 동물 이야기가 아닙니다. 지금 우리의 사회 그리고 지식을 재해석하는 새로운 형식의 스토리텔링이자 우화입니다.`,
       staffTitle: '스튜던트 비 팀소개',
       ceoTitle: '크리에이티브 리드',
       ceoDesc: `Alice는 스튜던트 비의 CEO이자 크리에이티브 리드입니다.
@@ -125,11 +123,17 @@ Will은 펜실베이니아 대학교에서 인공지능을, 하버드에서 공�
                     (paragraph, index) =>
                       paragraph.trim() && <p key={index}>{paragraph.trim()}</p>
                   )}
+                  <p className="staff-contact-email">techlab [at] student-b.com</p>
                 </div>
 
                 <div className="staff-role">
                   <h3>{t.bizTitle}</h3>
                   <p>{t.bizDesc}</p>
+                  <p className="staff-contact-email">
+                    ipbusiness [at] student-b.com
+                    <br />
+                    sns [at] student-b.com
+                  </p>
                 </div>
               </div>
             )}
@@ -140,14 +144,6 @@ Will은 펜실베이니아 대학교에서 인공지능을, 하버드에서 공�
                 (paragraph, index) =>
                   paragraph.trim() && <p key={index}>{paragraph.trim()}</p>
               )}
-
-              <div className="staff-role">
-                <h3>{t.visionTitle}</h3>
-                {t.visionDesc.split('\n\n').map(
-                  (paragraph, index) =>
-                    paragraph.trim() && <p key={index}>{paragraph.trim()}</p>
-                )}
-              </div>
 
               <div className="staff-role what-we-make">
                 <h3>{t.whatWeMakeTitle}</h3>

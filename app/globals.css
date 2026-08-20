@@ -1420,6 +1420,13 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 0;
 }
 
+.about-staff .staff-contact-email {
+    margin-top: 0.75em;
+    color: #2563eb;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
 .about-student-b > .staff-role.what-we-make {
     margin-top: 32px;
 }

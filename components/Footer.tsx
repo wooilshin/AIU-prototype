@@ -38,9 +38,7 @@ export default function Footer() {
             <strong className="footer-section-title">{t.contact}</strong>
             <div className="footer-email-item">
               <strong>{t.businessTeam}</strong><br />
-              contentdirector [at] student-b.com<br />
-              ipbusiness [at] student-b.com<br />
-              sns [at] student-b.com
+              contentdirector [at] student-b.com
             </div>
 
             <div className="footer-email-item">
