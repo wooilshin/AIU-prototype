@@ -26,13 +26,6 @@
       "coverImage": "/images/books/Comic1.svg",
       "coverStyle": "background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);",
       "link": "https://www.amazon.com/Watching-Them-Humans-Age-Intelligence-ebook/dp/B0GX555DH9/"
-    },
-    {
-      "id": 4,
-      "title": "내 이름은 나초",
-      "description": "2세대 요원인 나초가 인간 사회에 나아가 겪은 이야기를 담은 첫 번째 책입니다.\n(9월 출간 예정)",
-      "coverImage": "/images/books/Story1.svg",
-      "coverStyle": "background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);"
     }
   ]
 }

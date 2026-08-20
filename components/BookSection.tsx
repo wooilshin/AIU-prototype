@@ -53,6 +53,10 @@ export default function BookSection({ dataFile, sectionClass, showCenteredPaw = 
 
   if (!data) return null
 
+  const footerLabel = language === 'ko'
+    ? (bookHasLink: boolean) => (bookHasLink ? '자세히 보기 →' : '출간 알림 받기 →')
+    : (bookHasLink: boolean) => (bookHasLink ? 'Learn more →' : 'Get notified →')
+
   return (
     <section className={sectionClass}>
       {showCenteredPaw && (
@@ -85,8 +89,8 @@ export default function BookSection({ dataFile, sectionClass, showCenteredPaw = 
               <>
                 {book.coverImage ? (
                   <div className="book-cover">
-                    <img 
-                      src={book.coverImage} 
+                    <img
+                      src={book.coverImage}
                       alt={book.title}
                       className="book-cover-image"
                     />
@@ -113,6 +117,7 @@ export default function BookSection({ dataFile, sectionClass, showCenteredPaw = 
                   {book.description && (
                     <p className="book-description">{book.description}</p>
                   )}
+                  <span className="book-card-footer">{footerLabel(!!book.link)}</span>
                 </div>
               </>
             )
@@ -124,7 +129,6 @@ export default function BookSection({ dataFile, sectionClass, showCenteredPaw = 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="book-card"
-                style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}
               >
                 {bookCardContent}
               </a>
@@ -139,4 +143,3 @@ export default function BookSection({ dataFile, sectionClass, showCenteredPaw = 
     </section>
   )
 }
-

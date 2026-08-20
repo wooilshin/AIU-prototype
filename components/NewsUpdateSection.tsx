@@ -52,23 +52,25 @@ export default function NewsUpdateSection() {
 
   return (
     <section className="newsupdate-section">
-      <div className="container">
-        <div className="section-header">
+      <div className="container newsupdate-container">
+        <div className="newsupdate-header">
           <h2>{data.sectionTitle}</h2>
-          <a href={data.viewAllLink} className="view-all-link">
-            {language === 'ko' ? '전체보기' : 'View all'}
-          </a>
         </div>
-        <div className="newsupdate-articles">
+        <div className="newsupdate-list">
           {data.articles.map((article) => (
-            <article 
-              key={article.id} 
-              className={`newsupdate-article ${article.link ? 'clickable' : ''}`}
+            <article
+              key={article.id}
+              className={`newsupdate-item ${article.link ? 'clickable' : ''}`}
               onClick={() => article.link && window.open(article.link, '_blank')}
             >
-              <h3>{article.title}</h3>
-              <p>{article.description}</p>
-              <span className="article-date">{article.date}</span>
+              <span className="newsupdate-item-icon" aria-hidden="true">
+                ✦
+              </span>
+              <div className="newsupdate-item-body">
+                <h3>{article.title}</h3>
+                <p>{article.description}</p>
+                <span className="article-date">{article.date}</span>
+              </div>
             </article>
           ))}
         </div>
@@ -76,4 +78,3 @@ export default function NewsUpdateSection() {
     </section>
   )
 }
-

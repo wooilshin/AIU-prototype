@@ -64,6 +64,8 @@ export default function HeroCarousel() {
     })
   }
 
+  const storeLabel = language === 'ko' ? '스토어 둘러보기' : 'Browse Store'
+
   return (
     <section className="hero-section">
       <div className="hero-carousel">
@@ -74,46 +76,57 @@ export default function HeroCarousel() {
           >
             <div className="container">
               <div className="hero-content">
-                <div className="hero-image">
-                  {slide.imagePath ? (
-                    <div className="hero-image-placeholder">
-                      <img
-                        src={slide.imagePath}
-                        alt={slide.title}
-                        className="hero-image-content"
-                      />
-                      {slide.imageLabel && (
-                        <span className="image-label">{slide.imageLabel}</span>
-                      )}
-                    </div>
-                  ) : (
-                    <div
-                      className="hero-image-placeholder"
-                      style={{ background: slide.imageStyle }}
-                    >
-                      {slide.imageLabel && (
-                        <span className="image-label">{slide.imageLabel}</span>
-                      )}
-                    </div>
-                  )}
-                </div>
                 <div className="hero-text">
-                  <h1>{slide.title}</h1>
-                  <p>{slide.description}</p>
-                  {slide.buttonLink.startsWith('http') ? (
-                    <a
-                      href={slide.buttonLink}
-                      className="cta-button"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {slide.buttonText}
-                    </a>
-                  ) : (
-                    <Link href={slide.buttonLink} className="cta-button">
-                      {slide.buttonText}
-                    </Link>
+                  {slide.imageLabel && (
+                    <p className="hero-status">{slide.imageLabel}</p>
                   )}
+                  <h1>
+                    {slide.title.split('\n').map((line, lineIndex, lines) => (
+                      <span key={lineIndex}>
+                        {line}
+                        {lineIndex < lines.length - 1 && <br />}
+                      </span>
+                    ))}
+                  </h1>
+                  <p>{slide.description}</p>
+                </div>
+
+                <div className="hero-panel">
+                  <div className="hero-image">
+                    {slide.imagePath ? (
+                      <div className="hero-image-placeholder">
+                        <img
+                          src={slide.imagePath}
+                          alt={slide.title}
+                          className="hero-image-content"
+                        />
+                      </div>
+                    ) : (
+                      <div
+                        className="hero-image-placeholder"
+                        style={{ background: slide.imageStyle }}
+                      />
+                    )}
+                  </div>
+                  <div className="hero-panel-actions">
+                    {slide.buttonLink.startsWith('http') ? (
+                      <a
+                        href={slide.buttonLink}
+                        className="cta-button"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {slide.buttonText}
+                      </a>
+                    ) : (
+                      <Link href={slide.buttonLink} className="cta-button">
+                        {slide.buttonText}
+                      </Link>
+                    )}
+                    <a href="#store" className="hero-secondary-button">
+                      {storeLabel}
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -129,4 +142,3 @@ export default function HeroCarousel() {
     </section>
   )
 }
-
