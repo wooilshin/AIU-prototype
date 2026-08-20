@@ -422,7 +422,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header .container {
-    overflow: visible;
+    overflow-x: clip;
     max-width: none;
     width: 100%;
     padding: 0 32px;
@@ -438,7 +438,7 @@ h1, h2, h3, h4, h5, h6 {
     border-bottom: 1px solid rgba(0, 0, 0, 0.06);
     padding: 22px 0;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-    overflow: visible;
+    overflow-x: clip;
 }
 
 /* ?? ?? - ??(?) / ??(?) / ??(?) */
@@ -448,31 +448,42 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     gap: 28px;
     position: relative;
-    overflow: visible;
+    overflow: clip;
     min-height: 56px;
 }
 
-/* ?? - ?? ? ??, ??? ??? ??? ? ?? */
+/* Logo: fixed box + clipped scale so iOS does not gain extra scroll width */
 .logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: block;
     position: relative;
-    overflow: hidden;
+    overflow: clip;
     width: 220px;
     max-width: 220px;
     height: 56px;
     flex-shrink: 0;
     z-index: 2;
+    contain: paint;
 }
 
-/* ?? ??? */
+.logo-link {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: clip;
+    text-decoration: none;
+}
+
 .logo-image {
+    position: absolute;
+    left: 50%;
+    top: 50%;
     height: 40px;
     width: auto;
-    max-width: 100%;
-    object-fit: contain;
-    display: block;
+    max-width: none;
+    transform: translate(-50%, -50%) scale(5.4);
+    transform-origin: center center;
+    pointer-events: none;
 }
 
 /* ?? ?? (?? ?? ???) - ?? ?? ????? ?? */
@@ -737,11 +748,32 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     margin-bottom: 60px;
     background-color: #fff;
+    overflow: clip;
+}
+
+.hero-left-bg {
+    position: absolute;
+    left: max(-40px, calc(50% - 560px));
+    top: 52%;
+    transform: translateY(-50%);
+    width: min(560px, 52vw);
+    max-width: 560px;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.22;
+    user-select: none;
+}
+
+.hero-left-bg img {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 /* ???? ????? - ??????? ????????? */
 .hero-carousel {
     position: relative;
+    z-index: 1;
     overflow: hidden;
     min-height: 500px; /* Reserve space for iOS layout calculation */
 }
@@ -1311,7 +1343,7 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
     overflow-x: hidden;
 }
 
-/* 푸터 3열: 왼쪽 | 가운데 | 오른쪽 — 동일 너비, 구분선 2개만 */
+/* 푸터 3열: 동일 너비, 각 섹션 내용 중앙 정렬 */
 .footer-columns {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1322,15 +1354,19 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
 }
 
 .footer-col {
-    padding: 10px 1.5cm;
+    padding: 10px 1.25cm;
     min-width: 0;
     width: 100%;
     border: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .footer-col-brand {
-    padding-left: 1.5cm;
-    padding-right: 1.5cm;
+    padding-left: 1.25cm;
+    padding-right: 1.25cm;
 }
 
 .footer-col + .footer-col {
@@ -1346,9 +1382,10 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
     color: #ccc;
     line-height: 1.8;
     margin: 0;
-    max-width: none;
+    max-width: 22em;
     width: 100%;
     font-weight: var(--font-weight-ui);
+    text-align: center;
 }
 
 /* Footer.tsx: Contact / SNS ??? (?????? strong, h4 ??????? ???) */
@@ -1359,6 +1396,7 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
     display: block;
     margin-bottom: 15px;
     color: #fff;
+    text-align: center;
 }
 
 /* Footer.tsx: ??????? ??body 19px ??? ???, ?? .footer-contact p?? ??? ??*/
@@ -1368,7 +1406,8 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
     line-height: 1.8;
     margin-bottom: 14px;
     font-weight: var(--font-weight-ui);
-    white-space: nowrap;
+    white-space: normal;
+    text-align: center;
 }
 
 .footer-email-item:last-child {
@@ -1385,6 +1424,7 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
 .social-icons {
     display: flex;
     gap: 15px;
+    justify-content: center;
 }
 
 .social-icons a {
@@ -2281,9 +2321,9 @@ html:is(.site-en, .site-ko) .about-staff .staff-role > p.staff-contact-email {
     }
 
     .header-content {
-        grid-template-columns: 1fr auto;
+        grid-template-columns: 150px auto;
         gap: 12px;
-        overflow: visible;
+        overflow: clip;
         min-height: 44px;
     }
 
@@ -2291,16 +2331,17 @@ html:is(.site-en, .site-ko) .about-staff .staff-role > p.staff-contact-email {
         width: 150px;
         max-width: 150px;
         height: 44px;
-        overflow: hidden;
-        justify-content: center;
+        overflow: clip;
+        contain: paint;
     }
 
     .logo-image {
         height: 34px;
         width: auto;
-        max-width: 100%;
-        object-fit: contain;
-        display: block;
+        max-width: none;
+        transform: translate(-50%, -50%) scale(4.4);
+        transform-origin: center center;
+        pointer-events: none;
     }
 
     .nav-menu {
@@ -2334,6 +2375,13 @@ html:is(.site-en, .site-ko) .about-staff .staff-role > p.staff-contact-email {
 
     .hero-carousel {
         min-height: 400px; /* Smaller min-height for mobile */
+    }
+
+    .hero-left-bg {
+        left: -20px;
+        width: min(320px, 70vw);
+        opacity: 0.14;
+        top: 42%;
     }
 
     .hero-content {
@@ -2379,6 +2427,110 @@ html:is(.site-en, .site-ko) .about-staff .staff-role > p.staff-contact-email {
         gap: 24px;
     }
 
+    /* App/mobile only: full-screen book sections + horizontal card swipe */
+    html {
+        scroll-snap-type: y proximity;
+    }
+
+    .store-book-sections .stories-world-guide-section,
+    .store-book-sections .knowledge-notes-section {
+        min-height: 100svh;
+        min-height: 100dvh;
+        box-sizing: border-box;
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: calc(var(--header-offset) + 8px) 0 28px;
+        overflow: hidden;
+    }
+
+    .store-book-sections .stories-world-guide-section .container,
+    .store-book-sections .knowledge-notes-section .container {
+        width: 100%;
+        max-width: none;
+        padding: 0;
+        overflow: visible;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        min-height: 0;
+    }
+
+    .store-book-sections .section-header {
+        padding: 0 16px;
+        margin-bottom: 12px;
+        flex-shrink: 0;
+    }
+
+    .store-book-sections .section-header .view-all-link {
+        display: none;
+    }
+
+    .store-book-sections .section-description {
+        font-size: 14px;
+        line-height: 1.45;
+        margin-top: 8px;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .store-book-sections .books-grid {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 12px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        overscroll-behavior-x: contain;
+        padding: 4px 16px 12px;
+        flex: 1;
+        align-items: stretch;
+        scrollbar-width: none;
+    }
+
+    .store-book-sections .books-grid::-webkit-scrollbar {
+        display: none;
+    }
+
+    .store-book-sections .book-card {
+        flex: 0 0 calc(100vw - 32px);
+        width: calc(100vw - 32px);
+        max-width: calc(100vw - 32px);
+        scroll-snap-align: center;
+        scroll-snap-stop: always;
+        min-height: calc(100svh - var(--header-offset) - 170px);
+        min-height: calc(100dvh - var(--header-offset) - 170px);
+        box-sizing: border-box;
+        transform: none;
+    }
+
+    .store-book-sections .book-card:hover {
+        transform: none;
+        box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
+    }
+
+    .store-book-sections .book-cover {
+        height: min(48vh, 320px);
+        flex-shrink: 0;
+    }
+
+    .store-book-sections .book-info {
+        min-height: 0;
+    }
+
+    .store-book-sections .book-description {
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
     .section-header {
         flex-direction: column;
         align-items: flex-start;
@@ -2408,6 +2560,8 @@ html:is(.site-en, .site-ko) .about-staff .staff-role > p.staff-contact-email {
     .footer-col {
         padding: 1.5cm 1.5cm;
         border: none;
+        text-align: center;
+        align-items: center;
     }
 
     .footer-col-brand {
@@ -2421,6 +2575,7 @@ html:is(.site-en, .site-ko) .about-staff .staff-role > p.staff-contact-email {
 
     .footer-email-item {
         white-space: normal;
+        text-align: center;
     }
 
     .footer-col + .footer-col {
@@ -2430,6 +2585,11 @@ html:is(.site-en, .site-ko) .about-staff .staff-role > p.staff-contact-email {
 
     .footer-copyright-text {
         max-width: none;
+        text-align: center;
+    }
+
+    .social-icons {
+        justify-content: center;
     }
 
     .footer-section-title {
@@ -2545,6 +2705,17 @@ html:is(.site-en, .site-ko) .about-staff .staff-role > p.staff-contact-email {
 
     .books-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .store-book-sections .books-grid {
+        display: flex;
+        grid-template-columns: none;
+    }
+
+    .store-book-sections .book-card {
+        flex: 0 0 calc(100vw - 30px);
+        width: calc(100vw - 30px);
+        max-width: calc(100vw - 30px);
     }
 
     .about-hero h1 {

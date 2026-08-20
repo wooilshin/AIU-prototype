@@ -26,6 +26,13 @@
       "coverImage": "/images/books/Comic1.svg",
       "coverStyle": "background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);",
       "link": "https://www.amazon.com/Watching-Them-Humans-Age-Intelligence-ebook/dp/B0GX555DH9/"
+    },
+    {
+      "id": 4,
+      "title": "My name is Nacho",
+      "description": "The first adventure of Nacho, a second-generation Animal Intelligence agent, exploring human society.\n(Coming Soon)",
+      "coverImage": "/images/books/Story1.svg",
+      "coverStyle": "background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);"
     }
   ]
 }

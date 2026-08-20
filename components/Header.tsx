@@ -105,8 +105,8 @@ export default function Header() {
       <div className="container">
         <div className="header-content">
           <div className="logo">
-            <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
-              <img src="/images/header/Logo.svg" alt="Logo" className="logo-image" />
+            <Link href="/" className="logo-link" aria-label="Student B Home">
+              <img src="/images/header/Logo.svg" alt="Student B" className="logo-image" />
             </Link>
           </div>
           <nav className="nav-menu">

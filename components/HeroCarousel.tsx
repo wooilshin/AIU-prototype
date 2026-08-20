@@ -68,6 +68,9 @@ export default function HeroCarousel() {
 
   return (
     <section className="hero-section">
+      <div className="hero-left-bg" aria-hidden="true">
+        <img src="/images/hero/fireplace.png" alt="" />
+      </div>
       <div className="hero-carousel">
         {slides.map((slide, index) => (
           <div
