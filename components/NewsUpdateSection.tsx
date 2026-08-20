@@ -17,12 +17,12 @@ interface NewsUpdateData {
   articles: Article[]
 }
 
-const DESKTOP_PAGE_SIZE = 3
+const VISIBLE_COUNT = 3
 
 export default function NewsUpdateSection() {
   const { language } = useLanguage()
   const [data, setData] = useState<NewsUpdateData | null>(null)
-  const [page, setPage] = useState(0)
+  const [startIndex, setStartIndex] = useState(0)
   const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
@@ -36,7 +36,7 @@ export default function NewsUpdateSection() {
   useEffect(() => {
     let cancelled = false
     setData(null)
-    setPage(0)
+    setStartIndex(0)
 
     const dataFile = language === 'ko' ? '/data/newsupdate.ko.json' : '/data/newsupdate.json'
     fetch(dataFile)
@@ -63,11 +63,11 @@ export default function NewsUpdateSection() {
 
   if (!data) return null
 
-  const totalPages = Math.max(1, Math.ceil(data.articles.length / DESKTOP_PAGE_SIZE))
+  const maxStart = Math.max(0, data.articles.length - VISIBLE_COUNT)
   const visibleArticles = isMobile
     ? data.articles
-    : data.articles.slice(page * DESKTOP_PAGE_SIZE, page * DESKTOP_PAGE_SIZE + DESKTOP_PAGE_SIZE)
-  const showDesktopArrows = !isMobile && totalPages > 1
+    : data.articles.slice(startIndex, startIndex + VISIBLE_COUNT)
+  const showDesktopArrows = !isMobile && data.articles.length > VISIBLE_COUNT
 
   return (
     <section className="newsupdate-section">
@@ -80,8 +80,8 @@ export default function NewsUpdateSection() {
                 type="button"
                 className="newsupdate-nav-btn"
                 aria-label={language === 'ko' ? '이전 뉴스' : 'Previous news'}
-                disabled={page === 0}
-                onClick={() => setPage((prev) => Math.max(0, prev - 1))}
+                disabled={startIndex === 0}
+                onClick={() => setStartIndex((prev) => Math.max(0, prev - 1))}
               >
                 <i className="fas fa-chevron-left" aria-hidden="true"></i>
               </button>
@@ -89,8 +89,8 @@ export default function NewsUpdateSection() {
                 type="button"
                 className="newsupdate-nav-btn"
                 aria-label={language === 'ko' ? '다음 뉴스' : 'Next news'}
-                disabled={page >= totalPages - 1}
-                onClick={() => setPage((prev) => Math.min(totalPages - 1, prev + 1))}
+                disabled={startIndex >= maxStart}
+                onClick={() => setStartIndex((prev) => Math.min(maxStart, prev + 1))}
               >
                 <i className="fas fa-chevron-right" aria-hidden="true"></i>
               </button>

@@ -148,14 +148,14 @@ body {
 }
 
 .home-paw-bg--2 {
-    right: -130px;
-    top: 900px;
+    right: -80px;
+    top: 720px;
     width: min(540px, 46vw);
     transform: rotate(18deg);
 }
 
 .home-paw-bg--2 img {
-    opacity: 0.56;
+    opacity: 0.78;
 }
 
 .home-paw-bg--3 {
@@ -214,14 +214,14 @@ body {
 }
 
 .home-paw-bg--8 {
-    right: 12%;
-    top: 680px;
-    width: min(220px, 18vw);
+    right: 8%;
+    top: 560px;
+    width: min(280px, 22vw);
     transform: rotate(-25deg);
 }
 
 .home-paw-bg--8 img {
-    opacity: 0.28;
+    opacity: 0.55;
 }
 
 .home-paw-bg--9 {
@@ -1201,6 +1201,9 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
 
 .newsupdate-header h2 {
     margin-bottom: 0;
+    font-size: 44px;
+    font-weight: 700;
+    color: #000;
 }
 
 .newsupdate-nav {
@@ -2270,8 +2273,8 @@ html:is(.site-en, .site-ko) .about-staff .staff-role > p.staff-contact-email {
     }
 
     .home-paw-bg--2 {
-        right: -80px;
-        top: 720px;
+        right: -50px;
+        top: 580px;
         width: min(320px, 55vw);
     }
 
@@ -2306,9 +2309,9 @@ html:is(.site-en, .site-ko) .about-staff .staff-role > p.staff-contact-email {
     }
 
     .home-paw-bg--8 {
-        right: 8%;
-        top: 520px;
-        width: min(140px, 28vw);
+        right: 6%;
+        top: 440px;
+        width: min(160px, 30vw);
     }
 
     .home-paw-bg--9 {
@@ -2431,12 +2434,12 @@ html:is(.site-en, .site-ko) .about-staff .staff-role > p.staff-contact-email {
         min-height: 400px; /* Smaller min-height for mobile */
     }
 
+    .hero-section {
+        margin-bottom: 24px;
+    }
+
     .hero-left-bg {
-        left: -20px;
-        width: min(320px, 70vw);
-        opacity: 0.28;
-        top: 78%;
-        transform: translateY(-30%);
+        display: none;
     }
 
     .hero-content {
@@ -2489,15 +2492,14 @@ html:is(.site-en, .site-ko) .about-staff .staff-role > p.staff-contact-email {
 
     .store-book-sections .stories-world-guide-section,
     .store-book-sections .knowledge-notes-section {
-        min-height: 100svh;
-        min-height: 100dvh;
+        min-height: 0;
         box-sizing: border-box;
         scroll-snap-align: start;
-        scroll-snap-stop: always;
+        scroll-snap-stop: normal;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        padding: calc(var(--header-offset) + 8px) 0 28px;
+        padding: 20px 0 12px;
         overflow: hidden;
     }
 
@@ -2515,7 +2517,7 @@ html:is(.site-en, .site-ko) .about-staff .staff-role > p.staff-contact-email {
 
     .store-book-sections .section-header {
         padding: 0 16px;
-        margin-bottom: 12px;
+        margin-bottom: 8px;
         flex-shrink: 0;
     }
 
@@ -2526,9 +2528,10 @@ html:is(.site-en, .site-ko) .about-staff .staff-role > p.staff-contact-email {
     .store-book-sections .section-description {
         font-size: 14px;
         line-height: 1.45;
-        margin-top: 8px;
+        margin-top: 6px;
+        margin-bottom: 0;
         display: -webkit-box;
-        -webkit-line-clamp: 3;
+        -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
         overflow: hidden;
     }
@@ -2543,8 +2546,8 @@ html:is(.site-en, .site-ko) .about-staff .staff-role > p.staff-contact-email {
         scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch;
         overscroll-behavior-x: contain;
-        padding: 4px 16px 12px;
-        flex: 1;
+        padding: 4px 16px 8px;
+        flex: 0 0 auto;
         align-items: stretch;
         scrollbar-width: none;
     }
@@ -2559,8 +2562,7 @@ html:is(.site-en, .site-ko) .about-staff .staff-role > p.staff-contact-email {
         max-width: calc(100vw - 32px);
         scroll-snap-align: center;
         scroll-snap-stop: always;
-        min-height: calc(100svh - var(--header-offset) - 170px);
-        min-height: calc(100dvh - var(--header-offset) - 170px);
+        min-height: 0;
         box-sizing: border-box;
         transform: none;
     }
@@ -2571,7 +2573,7 @@ html:is(.site-en, .site-ko) .about-staff .staff-role > p.staff-contact-email {
     }
 
     .store-book-sections .book-cover {
-        height: min(48vh, 320px);
+        height: min(42vw, 240px);
         flex-shrink: 0;
     }
 
@@ -2588,15 +2590,14 @@ html:is(.site-en, .site-ko) .about-staff .staff-role > p.staff-contact-email {
 
     /* App/mobile only: News full-screen cards + horizontal swipe */
     .newsupdate-section {
-        min-height: 100svh;
-        min-height: 100dvh;
+        min-height: 0;
         box-sizing: border-box;
         scroll-snap-align: start;
-        scroll-snap-stop: always;
+        scroll-snap-stop: normal;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        padding: calc(var(--header-offset) + 8px) 0 28px;
+        padding: 20px 0 12px;
         overflow: hidden;
     }
 
@@ -2613,7 +2614,7 @@ html:is(.site-en, .site-ko) .about-staff .staff-role > p.staff-contact-email {
 
     .newsupdate-section .newsupdate-header {
         padding: 0 16px;
-        margin-bottom: 12px;
+        margin-bottom: 8px;
         flex-shrink: 0;
         text-align: left;
         justify-content: flex-start;
@@ -2633,8 +2634,8 @@ html:is(.site-en, .site-ko) .about-staff .staff-role > p.staff-contact-email {
         scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch;
         overscroll-behavior-x: contain;
-        padding: 4px 16px 12px;
-        flex: 1;
+        padding: 4px 16px 8px;
+        flex: 0 0 auto;
         align-items: stretch;
         scrollbar-width: none;
     }
@@ -2652,10 +2653,9 @@ html:is(.site-en, .site-ko) .about-staff .staff-role > p.staff-contact-email {
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
-        gap: 16px;
-        min-height: calc(100svh - var(--header-offset) - 140px);
-        min-height: calc(100dvh - var(--header-offset) - 140px);
-        padding: 24px 20px;
+        gap: 12px;
+        min-height: 0;
+        padding: 20px 18px;
         border: 1px solid #e8e8e8;
         border-radius: 18px;
         border-top: 1px solid #e8e8e8;
@@ -2694,8 +2694,12 @@ html:is(.site-en, .site-ko) .about-staff .staff-role > p.staff-contact-email {
 
     .newsupdate-section .article-date {
         margin-top: auto;
-        padding-top: 16px;
-        font-size: 14px;
+        padding-top: 12px;
+        font-size: 13px;
+    }
+
+    .newsletter-section {
+        padding: 28px 0 24px;
     }
 
     .section-header {
