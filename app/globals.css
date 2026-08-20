@@ -748,7 +748,7 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     margin-bottom: 60px;
     background-color: #fff;
-    overflow: clip;
+    overflow: visible;
 }
 
 .hero-left {
@@ -758,32 +758,37 @@ h1, h2, h3, h4, h5, h6 {
     grid-template-rows: auto 1fr;
     min-width: 0;
     min-height: 100%;
+    overflow: visible;
 }
 
 .hero-left-bg {
     grid-row: 1 / -1;
     grid-column: 1;
-    align-self: end;
+    align-self: stretch;
     justify-self: start;
     z-index: 0;
-    width: min(520px, 100%);
-    max-width: 520px;
-    margin-left: -12px;
+    height: 100%;
+    width: auto;
+    max-width: none;
+    margin-left: -140px;
     pointer-events: none;
     user-select: none;
 }
 
 .hero-left-bg img {
     display: block;
-    width: 100%;
-    height: auto;
+    height: 100%;
+    width: auto;
+    max-width: none;
+    object-fit: contain;
+    object-position: left bottom;
 }
 
 /* ???? ????? - ??????? ????????? */
 .hero-carousel {
     position: relative;
     z-index: 1;
-    overflow: hidden;
+    overflow: visible;
     min-height: 500px; /* Reserve space for iOS layout calculation */
 }
 
@@ -799,7 +804,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 60px 0;
     transition: opacity 0.5s ease, visibility 0.5s ease;
     pointer-events: none;
-    overflow: hidden;
+    overflow: visible;
 }
 
 /* ?????? ?????? - ??? ?????????? */
@@ -809,7 +814,7 @@ h1, h2, h3, h4, h5, h6 {
     visibility: visible;
     pointer-events: auto;
     max-width: 100%;
-    overflow: hidden;
+    overflow: visible;
 }
 
 /* ?????????- ??????? ??????? ????? ?? (2?? */
