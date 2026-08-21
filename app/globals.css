@@ -103,9 +103,8 @@ html {
     overflow-x: hidden;
     width: 100%;
     scroll-padding-top: var(--header-offset);
-    /* Stop rubber-band overscroll revealing empty white gaps */
-    overscroll-behavior: none;
-    /* Fallback if bounce still appears: top matches header, bottom matches footer */
+    /* Allow rubber-band overscroll, but paint matching colors (not bare white) */
+    overscroll-behavior-y: auto;
     background-color: #fff;
     background-image: linear-gradient(#ffffff 50%, #1a1a1a 50%);
     background-attachment: fixed;
@@ -126,7 +125,7 @@ body {
     width: 100%;
     position: relative;
     padding-top: var(--header-offset);
-    overscroll-behavior: none;
+    overscroll-behavior-y: auto;
 }
 
 /* Home page: paw watermarks (7), larger, scattered */
@@ -764,19 +763,22 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     z-index: 1;
     overflow: visible;
-    min-height: 520px;
+    min-height: 0;
+    padding: 40px 0;
 }
 
-/* Fireplace art as a visible rectangle inside the hero (not full-bleed) */
+/* Beige artwork defines the stage; text + card sit inside that rectangle */
+.hero-stage {
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
 .hero-stage-bg {
-    position: absolute;
-    left: max(12px, calc(50% - 560px));
-    bottom: 20px;
-    top: auto;
-    right: auto;
+    position: relative;
     z-index: 0;
-    width: min(680px, 62vw);
-    height: auto;
+    width: 100%;
     pointer-events: none;
     user-select: none;
 }
@@ -785,19 +787,16 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
     width: 100%;
     height: auto;
-    object-fit: contain;
-    object-position: left bottom;
 }
 
 .hero-slide {
     position: absolute;
-    top: 0;
-    left: 0;
+    inset: 0;
     width: 100%;
     max-width: 100%;
     opacity: 0;
     visibility: hidden;
-    padding: 56px 0;
+    padding: 0;
     transition: opacity 0.5s ease, visibility 0.5s ease;
     pointer-events: none;
     overflow: visible;
@@ -805,33 +804,30 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-slide.active {
-    position: relative;
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
-    max-width: 100%;
-    overflow: visible;
 }
 
 .hero-content {
     display: grid;
-    grid-template-columns: minmax(0, 1.2fr) minmax(260px, 340px);
-    gap: 40px;
+    grid-template-columns: minmax(0, 1.15fr) minmax(240px, 300px);
+    gap: 28px 36px;
     align-items: start;
-    max-width: 1100px;
-    margin: 0 auto;
     width: 100%;
+    height: 100%;
+    padding: 36px 40px 32px;
+    box-sizing: border-box;
     overflow: visible;
     position: relative;
     z-index: 1;
-    min-height: 480px;
 }
 
 .hero-text {
-    padding-top: 12px;
+    padding-top: 4px;
     position: relative;
     z-index: 1;
-    max-width: 34rem;
+    max-width: 28rem;
 }
 
 .hero-status {
@@ -843,15 +839,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-panel {
-    margin-top: 8px;
+    margin-top: 0;
     justify-self: end;
     align-self: center;
     width: 100%;
-    max-width: 340px;
+    max-width: 300px;
     background: #fff;
     border-radius: 20px;
-    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.12);
+    padding: 16px;
     border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
@@ -872,12 +868,13 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     justify-content: center;
     border-radius: 12px;
-    background-color: #2f5f9f;
+    background-color: #87CEEB;
+    color: #fff;
     padding: 14px 20px;
 }
 
 .hero-panel-actions .cta-button:hover {
-    background-color: #254c80;
+    background-color: #6BB6D6;
 }
 
 .hero-secondary-button {
@@ -2451,6 +2448,7 @@ html:is(.site-en, .site-ko) .about-staff .staff-role > p.staff-contact-email {
         min-height: 0;
         overflow: visible;
         background-color: #fff;
+        padding: 24px 0;
     }
 
     .hero-section {
@@ -2462,12 +2460,36 @@ html:is(.site-en, .site-ko) .about-staff .staff-role > p.staff-contact-email {
         display: none;
     }
 
+    .hero-stage {
+        max-width: 100%;
+    }
+
+    .hero-slide {
+        position: relative;
+        inset: auto;
+        opacity: 0;
+        visibility: hidden;
+        height: 0;
+        overflow: hidden;
+        pointer-events: none;
+    }
+
+    .hero-slide.active {
+        height: auto;
+        overflow: visible;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
     .hero-content {
         grid-template-columns: 1fr;
         gap: 28px;
         width: 100%;
         max-width: 100%;
+        height: auto;
         min-height: 0;
+        padding: 0;
         overflow: visible;
     }
 
