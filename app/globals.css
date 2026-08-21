@@ -1401,6 +1401,34 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
     background-color: #6BB6D6;
 }
 
+.under-construction-page {
+    flex: 1 0 auto;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - var(--header-offset) - 220px);
+    padding: 80px 20px;
+}
+
+.under-construction-content {
+    text-align: center;
+}
+
+.under-construction-content h1 {
+    font-size: 44px;
+    font-weight: 700;
+    color: #111;
+    margin: 0 0 16px;
+}
+
+.under-construction-content p {
+    font-size: 18px;
+    color: #666;
+    margin: 0;
+}
+
 /* ========================================
    ??? (Footer) ??????   ======================================== */
 /* ??? ????? - ?????????*/
@@ -1701,6 +1729,16 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
     font-size: 44px;
     font-weight: 700;
     margin-bottom: 20px;
+}
+
+.tech-lab-music-link {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.tech-lab-music-link:hover {
+    color: #4a90e2;
 }
 
 .about-prose-page .about-section p {
