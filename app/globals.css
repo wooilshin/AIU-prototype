@@ -1233,18 +1233,26 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
 
 .newsupdate-layout {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
-    gap: 40px 40px;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 40px;
     align-items: start;
+}
+
+.newsupdate-left-pane {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    column-gap: 40px;
+    align-items: stretch;
+    min-width: 0;
 }
 
 .newsupdate-divider {
     width: 0;
-    height: 6.5rem;
+    height: auto;
+    min-height: 100%;
     border-left: var(--news-rule-width) solid var(--news-rule-color);
     background-color: transparent;
-    align-self: start;
-    margin-top: 0.35em;
+    align-self: stretch;
 }
 
 .newsupdate-left {
@@ -1798,6 +1806,11 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
     .newsupdate-layout {
         grid-template-columns: 1fr;
         gap: 36px;
+    }
+
+    .newsupdate-left-pane {
+        grid-template-columns: 1fr;
+        column-gap: 0;
     }
 
     .newsupdate-divider {
