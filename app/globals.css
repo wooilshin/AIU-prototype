@@ -747,52 +747,34 @@ h1, h2, h3, h4, h5, h6 {
 .hero-section {
     position: relative;
     margin-bottom: 60px;
-    background-color: #fff;
+    background-color: #f5f4f0;
     overflow: visible;
 }
 
-.hero-left {
+.hero-carousel {
     position: relative;
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    grid-template-rows: auto 1fr;
-    min-width: 0;
-    min-height: 100%;
-    overflow: visible;
+    z-index: 1;
+    overflow: hidden;
+    min-height: 560px;
 }
 
-.hero-left-bg {
-    grid-row: 1 / -1;
-    grid-column: 1;
-    align-self: stretch;
-    justify-self: start;
+/* Full-bleed fireplace artwork behind text + book card */
+.hero-stage-bg {
+    position: absolute;
+    inset: 0;
     z-index: 0;
-    height: 100%;
-    width: auto;
-    max-width: none;
-    margin-left: -140px;
     pointer-events: none;
     user-select: none;
 }
 
-.hero-left-bg img {
+.hero-stage-bg img {
     display: block;
+    width: 100%;
     height: 100%;
-    width: auto;
-    max-width: none;
-    object-fit: contain;
+    object-fit: cover;
     object-position: left bottom;
 }
 
-/* ???? ????? - ??????? ????????? */
-.hero-carousel {
-    position: relative;
-    z-index: 1;
-    overflow: visible;
-    min-height: 500px; /* Reserve space for iOS layout calculation */
-}
-
-/* ?? ?????? - ???????????, active ??????? ??????? */
 .hero-slide {
     position: absolute;
     top: 0;
@@ -801,13 +783,13 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 100%;
     opacity: 0;
     visibility: hidden;
-    padding: 60px 0;
+    padding: 56px 0;
     transition: opacity 0.5s ease, visibility 0.5s ease;
     pointer-events: none;
     overflow: visible;
+    z-index: 1;
 }
 
-/* ?????? ?????? - ??? ?????????? */
 .hero-slide.active {
     position: relative;
     opacity: 1;
@@ -817,24 +799,25 @@ h1, h2, h3, h4, h5, h6 {
     overflow: visible;
 }
 
-/* ?????????- ??????? ??????? ????? ?? (2?? */
 .hero-content {
     display: grid;
-    grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
-    gap: 48px;
-    align-items: stretch;
+    grid-template-columns: minmax(0, 1.2fr) minmax(260px, 340px);
+    gap: 40px;
+    align-items: start;
     max-width: 1100px;
     margin: 0 auto;
     width: 100%;
     overflow: visible;
+    position: relative;
+    z-index: 1;
+    min-height: 480px;
 }
 
 .hero-text {
-    grid-row: 1;
-    grid-column: 1;
-    padding-top: 8px;
+    padding-top: 12px;
     position: relative;
     z-index: 1;
+    max-width: 34rem;
 }
 
 .hero-status {
@@ -846,14 +829,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-panel {
-    margin-top: 0;
-    align-self: end;
-    height: fit-content;
+    margin-top: 8px;
+    justify-self: end;
+    align-self: center;
+    width: 100%;
+    max-width: 340px;
     background: #fff;
     border-radius: 20px;
-    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.08);
-    padding: 22px;
-    border: 1px solid #ececec;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .hero-panel .hero-image-placeholder {
@@ -2449,14 +2434,17 @@ html:is(.site-en, .site-ko) .about-staff .staff-role > p.staff-contact-email {
     }
 
     .hero-carousel {
-        min-height: 400px; /* Smaller min-height for mobile */
+        min-height: 0;
+        overflow: visible;
+        background-color: #fff;
     }
 
     .hero-section {
         margin-bottom: 24px;
+        background-color: #fff;
     }
 
-    .hero-left-bg {
+    .hero-stage-bg {
         display: none;
     }
 
@@ -2465,13 +2453,20 @@ html:is(.site-en, .site-ko) .about-staff .staff-role > p.staff-contact-email {
         gap: 28px;
         width: 100%;
         max-width: 100%;
+        min-height: 0;
         overflow: visible;
+    }
+
+    .hero-text {
+        max-width: none;
     }
 
     .hero-panel {
         max-width: 420px;
         margin: 0 auto;
         width: 100%;
+        justify-self: center;
+        align-self: start;
     }
 
     .hero-image {
