@@ -1238,7 +1238,7 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
 
 .newsupdate-divider {
     width: 1px;
-    height: 4.75rem;
+    height: 6.5rem;
     background-color: #d8d8d8;
     align-self: start;
     margin-top: 0.35em;
@@ -1382,11 +1382,12 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
 }
 
 .aiu-news-line1,
-.aiu-news-line2-text {
+.aiu-news-line2,
+.aiu-news-line3-text {
     display: block;
 }
 
-.aiu-news-line2 {
+.aiu-news-line3 {
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
