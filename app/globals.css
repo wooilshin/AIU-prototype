@@ -1222,37 +1222,55 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
 /* ??? ?????? ??? ????? */
 .newsupdate-section {
     padding: 60px 0;
-    background-color: #fff;
+    background-color: transparent;
 }
 
 .newsupdate-container {
-    max-width: 820px;
+    max-width: 1200px;
+}
+
+.newsupdate-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 40px 56px;
+    align-items: start;
+}
+
+.newsupdate-left {
+    min-width: 0;
 }
 
 .newsupdate-header {
-    text-align: center;
-    margin-bottom: 36px;
+    text-align: left;
+    margin-bottom: 28px;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: space-between;
     gap: 16px;
     position: relative;
 }
 
 .newsupdate-header h2 {
-    margin-bottom: 0;
-    font-size: 44px;
+    margin: 0;
+    font-size: clamp(28px, 3.2vw, 40px);
     font-weight: 700;
     color: #000;
+    line-height: 1.15;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.newsupdate-header-brand,
+.newsupdate-header-rest {
+    display: block;
 }
 
 .newsupdate-nav {
     display: flex;
     gap: 8px;
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
+    flex-shrink: 0;
+    margin-top: 6px;
 }
 
 .newsupdate-nav-btn {
@@ -1331,6 +1349,83 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
 .article-date {
     font-size: 13px;
     color: #999;
+}
+
+.newsupdate-right {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.aiu-news-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 12px 16px;
+}
+
+.aiu-news-title {
+    margin: 0;
+    font-size: clamp(28px, 3.2vw, 40px);
+    font-weight: 700;
+    color: #000;
+    line-height: 1.15;
+}
+
+.aiu-news-follow {
+    font-size: 15px;
+    font-weight: 700;
+    color: #4a90e2;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+}
+
+.aiu-news-social {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.aiu-news-social a {
+    color: #111;
+    font-size: 18px;
+    line-height: 1;
+    transition: opacity 0.2s, color 0.2s;
+}
+
+.aiu-news-social a:hover {
+    color: #4a90e2;
+    opacity: 0.85;
+}
+
+.aiu-news-panel {
+    background: #ececec;
+    border-radius: 18px;
+    padding: 28px 24px;
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.aiu-news-blurb {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.55;
+    color: #333;
+    font-weight: var(--font-weight-ui);
+    max-width: 18em;
+}
+
+.aiu-news-coming-soon {
+    margin: 0;
+    font-size: clamp(28px, 3.5vw, 42px);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: #111;
+    line-height: 1.1;
 }
 
 /* ========================================
@@ -1666,6 +1761,11 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
 }
 
 @media (max-width: 900px) {
+    .newsupdate-layout {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+
     .footer {
         padding: 40px 0 36px;
     }
@@ -2938,12 +3038,22 @@ html:is(.site-en, .site-ko) .about-staff .staff-role > p.staff-contact-email {
         min-height: 0;
     }
 
+    .newsupdate-section .newsupdate-layout {
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+    }
+
     .newsupdate-section .newsupdate-header {
         padding: 0 16px;
         margin-bottom: 8px;
         flex-shrink: 0;
         text-align: left;
         justify-content: flex-start;
+    }
+
+    .newsupdate-section .newsupdate-header h2 {
+        font-size: 28px;
     }
 
     .newsupdate-section .newsupdate-nav {
@@ -3005,6 +3115,23 @@ html:is(.site-en, .site-ko) .about-staff .staff-role > p.staff-contact-email {
         flex-direction: column;
         flex: 1;
         min-height: 0;
+    }
+
+    .newsupdate-section .newsupdate-right {
+        padding: 0 16px 8px;
+    }
+
+    .newsupdate-section .aiu-news-header {
+        gap: 10px 14px;
+    }
+
+    .newsupdate-section .aiu-news-title {
+        font-size: 28px;
+    }
+
+    .newsupdate-section .aiu-news-panel {
+        min-height: 180px;
+        padding: 24px 20px;
     }
 
     .newsupdate-section .newsupdate-item-body h3 {
