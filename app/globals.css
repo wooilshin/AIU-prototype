@@ -135,7 +135,7 @@ body {
     position: relative;
     /* Clip absolute paw watermarks so they cannot extend scroll past the footer */
     overflow: hidden;
-    background-color: transparent;
+    background-color: #fff;
     flex: 1 0 auto;
     display: flex;
     flex-direction: column;
@@ -274,7 +274,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
-    background-color: #fff;
+    background-color: transparent;
 }
 
 .home-page .stories-world-guide-section,
@@ -290,7 +290,7 @@ body {
     position: relative;
     /* Clip absolute paw watermarks so they cannot extend scroll past the footer */
     overflow: hidden;
-    background-color: transparent;
+    background-color: #fff;
     flex: 1 0 auto;
     display: flex;
     flex-direction: column;
@@ -390,7 +390,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
-    background-color: #fff;
+    background-color: transparent;
 }
 
 .aiu-page .about-content-section {
