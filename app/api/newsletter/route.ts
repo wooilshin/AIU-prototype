@@ -35,17 +35,12 @@ const createTransporter = () => {
 }
 
 // 이메일 발송 함수
-async function sendNewsletterEmails(
-  firstName: string,
-  lastName: string,
-  email: string
-) {
+async function sendNewsletterEmails(name: string, email: string) {
   const transporter = createTransporter()
   if (!transporter) {
     return // SMTP 설정이 없으면 이메일 발송 건너뛰기
   }
 
-  const fullName = `${firstName} ${lastName}`
   const adminEmail = process.env.NEWSLETTER_ADMIN_EMAIL || process.env.CONTACT_RECIPIENT_EMAIL || 'contentdirector@student-b.com'
   const smtpUser = process.env.SMTP_USER
 
@@ -69,7 +64,7 @@ async function sendNewsletterEmails(
           
           <div style="background-color: #f9f9f9; padding: 30px; border-radius: 5px; margin-bottom: 20px;">
             <p style="font-size: 16px; line-height: 1.6; color: #333;">
-              Dear ${firstName},
+              Dear ${name},
             </p>
             <p style="font-size: 16px; line-height: 1.6; color: #333;">
               Thank you for subscribing to our newsletter! We're thrilled to have you join our community.
@@ -99,7 +94,7 @@ async function sendNewsletterEmails(
       text: `
 Welcome to Student B Press!
 
-Dear ${firstName},
+Dear ${name},
 
 Thank you for subscribing to our newsletter! We're thrilled to have you join our community.
 
@@ -120,7 +115,7 @@ The Student B Press Team
     await transporter.sendMail({
       from: `"Newsletter System" <${smtpUser}>`,
       to: adminEmail,
-      subject: `[Newsletter] New Subscriber: ${fullName}`,
+      subject: `[Newsletter] New Subscriber: ${name}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
           <h2 style="color: #333; border-bottom: 2px solid #87CEEB; padding-bottom: 10px;">
@@ -128,7 +123,7 @@ The Student B Press Team
           </h2>
           
           <div style="background-color: #f9f9f9; padding: 20px; border-radius: 5px; margin: 20px 0;">
-            <p><strong>Name:</strong> ${fullName}</p>
+            <p><strong>Name:</strong> ${name}</p>
             <p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
             <p><strong>Subscribed At:</strong> ${new Date().toLocaleString('en-US')}</p>
           </div>
@@ -141,7 +136,7 @@ The Student B Press Team
       text: `
 New Newsletter Subscriber
 
-Name: ${fullName}
+Name: ${name}
 Email: ${email}
 Subscribed At: ${new Date().toLocaleString('en-US')}
 
@@ -149,7 +144,7 @@ This is an automated notification from the newsletter subscription system.
       `.trim(),
     })
 
-    console.log('Newsletter subscription emails sent successfully:', { email, fullName })
+    console.log('Newsletter subscription emails sent successfully:', { email, name })
   } catch (error) {
     // 이메일 발송 실패해도 DB 저장은 성공한 것으로 처리
     console.error('Error sending newsletter emails:', error)
@@ -171,12 +166,11 @@ export async function POST(request: NextRequest) {
     }
 
     const formData = await request.formData()
-    const firstName = formData.get('firstName') as string
-    const lastName = formData.get('lastName') as string
-    const email = formData.get('email') as string
+    const name = ((formData.get('name') as string) || '').trim()
+    const email = ((formData.get('email') as string) || '').trim()
 
     // 입력 검증
-    if (!firstName || !lastName || !email) {
+    if (!name || !email) {
       return NextResponse.json(
         {
           success: false,
@@ -215,13 +209,13 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // DB에 저장
+    // DB에 저장 (기존 first_name / last_name 컬럼 유지)
     const { data, error } = await supabase
       .from('newsletter_subscribers')
       .insert([
         {
-          first_name: firstName,
-          last_name: lastName,
+          first_name: name,
+          last_name: '',
           email: email,
           subscribed_at: new Date().toISOString(),
         },
@@ -242,14 +236,12 @@ export async function POST(request: NextRequest) {
     // DB 저장이 성공했으므로 성공 응답 반환
     const response = NextResponse.json({
       success: true,
-      message: `Thank you for subscribing, ${firstName} ${lastName}! We'll send updates to ${email}.`,
+      message: `Thank you for subscribing, ${name}! We'll send updates to ${email}.`,
     })
 
     // DB 저장 성공 후 이메일 발송 (비동기, 실패해도 구독은 성공 처리)
-    // 이메일 발송은 응답 반환 후 백그라운드에서 실행되며, 실패해도 구독은 성공한 것으로 처리
-    // setTimeout을 사용하여 응답 반환 후 실행되도록 보장
     setTimeout(() => {
-      sendNewsletterEmails(firstName, lastName, email).catch((err) => {
+      sendNewsletterEmails(name, email).catch((err) => {
         console.error('Newsletter email sending failed (non-blocking):', err)
       })
     }, 0)

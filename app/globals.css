@@ -103,13 +103,14 @@ html {
     overflow-x: hidden;
     width: 100%;
     scroll-padding-top: var(--header-offset);
-    /* Allow rubber-band overscroll, but paint matching colors (not bare white) */
     overscroll-behavior-y: auto;
-    background-color: #fff;
-    background-image: linear-gradient(#ffffff 50%, #1a1a1a 50%);
-    background-attachment: fixed;
+    /* Bottom overscroll continues footer black; top stays white */
+    background-color: #1a1a1a;
+    background-image: linear-gradient(#ffffff, #ffffff);
+    background-size: 100% 70%;
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-position: top center;
+    background-attachment: fixed;
 }
 
 /* Body ??????- ???, ???, ?? ???? ??? (?? ??? ????? ??? ???) */
@@ -462,7 +463,10 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Logo: fixed box + clipped scale so iOS does not gain extra scroll width */
 .logo {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    align-self: center;
     position: relative;
     overflow: clip;
     width: 220px;
@@ -471,6 +475,7 @@ h1, h2, h3, h4, h5, h6 {
     flex-shrink: 0;
     z-index: 2;
     contain: paint;
+    margin-left: 6px;
 }
 
 .logo-link {
@@ -484,7 +489,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .logo-image {
     position: absolute;
-    left: 50%;
+    left: calc(50% + 6px);
     top: 50%;
     height: 40px;
     width: auto;
@@ -1336,19 +1341,10 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
 .newsletter-form {
     max-width: 500px;
     margin: 0 auto;
-}
-
-/* ????(??? ??? ???????? ??) */
-.form-row {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     gap: 15px;
-    margin-bottom: 15px;
-}
-
-.form-row input {
-    flex: 0 0 auto;
-    width: 160px;
 }
 
 /* ?????? ????? ??? */
@@ -1358,15 +1354,10 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
     border: 1px solid #ddd;
     border-radius: 4px;
     font-family: inherit;
-}
-
-/* ???????? ??? - ??? ??? */
-.newsletter-form input[type="email"] {
-    margin-bottom: 20px;
-    width: 335px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+    max-width: 335px;
     display: block;
+    box-sizing: border-box;
 }
 
 /* ??? ?? */
@@ -1396,6 +1387,8 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
     background-color: #1a1a1a;
     color: #fff;
     padding: 30px 0 20px;
+    /* Extend black below the footer so bottom rubber-band stays continuous */
+    box-shadow: 0 100vh 0 0 #1a1a1a;
 }
 
 .footer .container {
@@ -1406,10 +1399,10 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
     overflow-x: hidden;
 }
 
-/* 푸터 3열: 동일 너비, 각 섹션 내용 정중앙 */
+/* 푸터 4열: Student B / Contact / Newsletter / SNS */
 .footer-columns {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     align-items: stretch;
     width: 100%;
     max-width: none;
@@ -1417,7 +1410,7 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
 }
 
 .footer-col {
-    padding: 24px 32px;
+    padding: 24px 28px;
     min-width: 0;
     width: 100%;
     border: none;
@@ -1430,7 +1423,7 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
 
 .footer-col-brand {
     padding-left: 32px;
-    padding-right: 32px;
+    padding-right: 28px;
 }
 
 .footer-col + .footer-col {
@@ -1441,15 +1434,94 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
     border-right: none;
 }
 
-.footer-copyright-text {
-    font-size: 15px;
+.footer-brand-blurb {
+    font-size: 14px;
     color: #ccc;
-    line-height: 1.8;
+    line-height: 1.7;
+    margin: 0 auto 14px;
+    max-width: 22em;
+    text-align: center;
+    font-weight: var(--font-weight-ui);
+}
+
+.footer-copyright-text {
+    font-size: 13px;
+    color: #aaa;
+    line-height: 1.7;
     margin: 0 auto;
     max-width: 22em;
     width: auto;
     font-weight: var(--font-weight-ui);
     text-align: center;
+}
+
+.footer-newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 220px;
+}
+
+.footer-newsletter-form input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 12px;
+    font-size: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    font-family: inherit;
+}
+
+.footer-newsletter-form input::placeholder {
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.footer-newsletter-submit {
+    width: 100%;
+    padding: 10px 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: #87CEEB;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background-color 0.2s;
+}
+
+.footer-newsletter-submit:hover:not(:disabled) {
+    background-color: #6BB6D6;
+}
+
+.footer-newsletter-submit:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.footer-newsletter-message {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #ccc;
+    text-align: center;
+}
+
+@media (max-width: 1100px) {
+    .footer-columns {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .footer-col:nth-child(3) {
+        border-left: none;
+    }
+
+    .footer-col:nth-child(n + 3) {
+        border-top: 1px solid rgba(255, 255, 255, 0.25);
+    }
 }
 
 /* Footer.tsx: Contact / SNS ??? (?????? strong, h4 ??????? ???) */
@@ -2402,6 +2474,8 @@ html:is(.site-en, .site-ko) .about-staff .staff-role > p.staff-contact-email {
         overflow: clip;
         contain: paint;
         justify-self: start;
+        align-self: center;
+        margin-left: 4px;
     }
 
     .header-actions {
@@ -2411,6 +2485,7 @@ html:is(.site-en, .site-ko) .about-staff .staff-role > p.staff-contact-email {
     }
 
     .logo-image {
+        left: calc(50% + 4px);
         height: 34px;
         width: auto;
         max-width: none;
@@ -2777,10 +2852,10 @@ html:is(.site-en, .site-ko) .about-staff .staff-role > p.staff-contact-email {
         margin: 0 auto;
     }
 
-    /* App/mobile: SNS only */
+    /* App/mobile: Newsletter + SNS only */
     .footer-col-brand,
     .footer-col-contact {
-        display: none;
+        display: none !important;
     }
 
     .footer-col {
@@ -2790,12 +2865,29 @@ html:is(.site-en, .site-ko) .about-staff .staff-role > p.staff-contact-email {
         align-items: center;
     }
 
+    .footer-col-newsletter,
     .footer-col-sns {
-        border: none;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .footer-col-newsletter {
+        padding-bottom: 0.75rem;
+    }
+
+    .footer-col-sns {
+        border-top: 1px solid rgba(255, 255, 255, 0.25);
+        padding-top: 1.25rem;
     }
 
     .footer-col + .footer-col {
-        border: none;
+        border-left: none;
+    }
+
+    .footer-newsletter-form {
+        max-width: 260px;
+        margin: 0 auto;
     }
 
     .social-icons {

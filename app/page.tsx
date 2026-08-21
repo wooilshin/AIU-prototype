@@ -5,7 +5,6 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import HeroCarousel from '@/components/HeroCarousel'
 import BookSection from '@/components/BookSection'
-import NewsletterSection from '@/components/NewsletterSection'
 import NewsUpdateSection from '@/components/NewsUpdateSection'
 
 export default function Home() {
@@ -39,7 +38,6 @@ export default function Home() {
           <BookSection dataFile="knowledge-notes.json" sectionClass="knowledge-notes-section" />
         </div>
         <NewsUpdateSection />
-        <NewsletterSection />
         <Footer />
       </div>
     </div>
