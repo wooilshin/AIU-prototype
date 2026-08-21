@@ -1447,17 +1447,17 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
 }
 
 .footer-shell {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 40px;
+    max-width: none;
+    margin: 0;
+    padding: 0 40px 0 24px;
     width: 100%;
     box-sizing: border-box;
 }
 
 .footer-layout {
     display: grid;
-    grid-template-columns: minmax(220px, 0.9fr) minmax(0, 1.4fr);
-    gap: 48px 64px;
+    grid-template-columns: minmax(240px, 0.85fr) minmax(0, 1.45fr);
+    gap: 48px 56px;
     align-items: start;
 }
 
@@ -1467,12 +1467,13 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
     align-items: flex-start;
     gap: 20px;
     min-width: 0;
+    padding-left: 0;
 }
 
 .footer-brand-mark {
     margin: 0;
     font-family: var(--font-sans);
-    font-size: clamp(42px, 6vw, 72px);
+    font-size: clamp(32px, 4.5vw, 52px);
     font-weight: 700;
     line-height: 0.95;
     letter-spacing: -0.02em;
@@ -1521,7 +1522,7 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
 
 .footer-newsletter-fields {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr) auto;
+    grid-template-columns: minmax(0, 1fr) auto;
     gap: 0;
     align-items: stretch;
     border-bottom: 1px solid #111;
@@ -1649,7 +1650,7 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
     }
 
     .footer-shell {
-        padding: 0 20px;
+        padding: 0 20px 0 16px;
     }
 
     .footer-layout {
@@ -1658,7 +1659,7 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
     }
 
     .footer-brand-mark {
-        font-size: clamp(36px, 12vw, 52px);
+        font-size: clamp(28px, 9vw, 40px);
     }
 
     .footer-newsletter-fields {
@@ -3004,7 +3005,7 @@ html:is(.site-en, .site-ko) .about-staff .staff-role > p.staff-contact-email {
     }
 
     .footer-shell {
-        padding: 0 16px;
+        padding: 0 16px 0 12px;
     }
 
     .carousel-btn {

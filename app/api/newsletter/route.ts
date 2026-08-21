@@ -169,12 +169,12 @@ export async function POST(request: NextRequest) {
     const name = ((formData.get('name') as string) || '').trim()
     const email = ((formData.get('email') as string) || '').trim()
 
-    // 입력 검증
-    if (!name || !email) {
+    // 입력 검증 (이메일은 필수, 이름은 선택)
+    if (!email) {
       return NextResponse.json(
         {
           success: false,
-          message: 'Please fill in all fields.',
+          message: 'Please enter a valid email address.',
         },
         { status: 400 }
       )
@@ -209,12 +209,14 @@ export async function POST(request: NextRequest) {
       )
     }
 
+    const displayName = name || 'Subscriber'
+
     // DB에 저장 (기존 first_name / last_name 컬럼 유지)
     const { data, error } = await supabase
       .from('newsletter_subscribers')
       .insert([
         {
-          first_name: name,
+          first_name: displayName,
           last_name: '',
           email: email,
           subscribed_at: new Date().toISOString(),
@@ -236,12 +238,14 @@ export async function POST(request: NextRequest) {
     // DB 저장이 성공했으므로 성공 응답 반환
     const response = NextResponse.json({
       success: true,
-      message: `Thank you for subscribing, ${name}! We'll send updates to ${email}.`,
+      message: name
+        ? `Thank you for subscribing, ${name}! We'll send updates to ${email}.`
+        : `Thank you for subscribing! We'll send updates to ${email}.`,
     })
 
     // DB 저장 성공 후 이메일 발송 (비동기, 실패해도 구독은 성공 처리)
     setTimeout(() => {
-      sendNewsletterEmails(name, email).catch((err) => {
+      sendNewsletterEmails(displayName, email).catch((err) => {
         console.error('Newsletter email sending failed (non-blocking):', err)
       })
     }, 0)

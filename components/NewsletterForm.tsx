@@ -83,7 +83,6 @@ export default function NewsletterForm({ variant = 'page' }: NewsletterFormProps
     >
       {isFooter ? (
         <div className="footer-newsletter-fields">
-          <input type="text" name="name" placeholder={t.name} required />
           <input type="email" name="email" placeholder={t.email} required />
           <button
             type="submit"
