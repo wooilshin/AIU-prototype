@@ -103,6 +103,14 @@ html {
     overflow-x: hidden;
     width: 100%;
     scroll-padding-top: var(--header-offset);
+    /* Stop rubber-band overscroll revealing empty white gaps */
+    overscroll-behavior: none;
+    /* Fallback if bounce still appears: top matches header, bottom matches footer */
+    background-color: #fff;
+    background-image: linear-gradient(#ffffff 50%, #1a1a1a 50%);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
 /* Body ??????- ???, ???, ?? ???? ??? (?? ??? ????? ??? ???) */
@@ -118,6 +126,7 @@ body {
     width: 100%;
     position: relative;
     padding-top: var(--header-offset);
+    overscroll-behavior: none;
 }
 
 /* Home page: paw watermarks (7), larger, scattered */
@@ -747,34 +756,37 @@ h1, h2, h3, h4, h5, h6 {
 .hero-section {
     position: relative;
     margin-bottom: 60px;
-    background-color: #f5f4f0;
+    background-color: #fff;
     overflow: visible;
 }
 
 .hero-carousel {
     position: relative;
     z-index: 1;
-    overflow: hidden;
-    min-height: 560px;
+    overflow: visible;
+    min-height: 520px;
 }
 
-/* Full-bleed fireplace artwork behind text + book card */
+/* Fireplace art as a visible rectangle inside the hero (not full-bleed) */
 .hero-stage-bg {
     position: absolute;
-    inset: 0;
+    left: max(12px, calc(50% - 560px));
+    bottom: 20px;
+    top: auto;
+    right: auto;
     z-index: 0;
+    width: min(680px, 62vw);
+    height: auto;
     pointer-events: none;
     user-select: none;
 }
 
 .hero-stage-bg img {
     display: block;
-    width: 110%;
-    max-width: none;
-    height: calc(100% + 160px);
-    object-fit: cover;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
     object-position: left bottom;
-    transform: translateY(96px);
 }
 
 .hero-slide {
