@@ -81,16 +81,28 @@ export default function NewsletterForm({ variant = 'page' }: NewsletterFormProps
       className={isFooter ? 'footer-newsletter-form' : 'newsletter-form'}
       onSubmit={handleSubmit}
     >
-      {isFooter && <p className="footer-newsletter-blurb">{t.blurb}</p>}
-      <input type="text" name="name" placeholder={t.name} required />
-      <input type="email" name="email" placeholder={t.email} required />
-      <button
-        type="submit"
-        className={isFooter ? 'footer-newsletter-submit' : 'submit-btn'}
-        disabled={isSubmitting}
-      >
-        {isSubmitting ? t.processing : t.signUp}
-      </button>
+      {isFooter ? (
+        <div className="footer-newsletter-fields">
+          <input type="text" name="name" placeholder={t.name} required />
+          <input type="email" name="email" placeholder={t.email} required />
+          <button
+            type="submit"
+            className="footer-newsletter-submit"
+            disabled={isSubmitting}
+            aria-label={t.signUp}
+          >
+            {isSubmitting ? '…' : <i className="fas fa-arrow-right" aria-hidden="true"></i>}
+          </button>
+        </div>
+      ) : (
+        <>
+          <input type="text" name="name" placeholder={t.name} required />
+          <input type="email" name="email" placeholder={t.email} required />
+          <button type="submit" className="submit-btn" disabled={isSubmitting}>
+            {isSubmitting ? t.processing : t.signUp}
+          </button>
+        </>
+      )}
       {message && (
         <p
           className={isFooter ? 'footer-newsletter-message' : undefined}
