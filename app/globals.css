@@ -133,7 +133,8 @@ body {
 /* Home page: paw watermarks (7), larger, scattered */
 .home-page {
     position: relative;
-    overflow-x: hidden;
+    /* Clip absolute paw watermarks so they cannot extend scroll past the footer */
+    overflow: hidden;
     background-color: transparent;
     flex: 1 0 auto;
     display: flex;
@@ -287,8 +288,8 @@ body {
 /* AIU Project page: paw watermarks (5) */
 .aiu-page {
     position: relative;
-    overflow-x: hidden;
-    overflow-y: visible;
+    /* Clip absolute paw watermarks so they cannot extend scroll past the footer */
+    overflow: hidden;
     background-color: transparent;
     flex: 1 0 auto;
     display: flex;
