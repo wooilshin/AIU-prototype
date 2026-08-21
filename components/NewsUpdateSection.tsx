@@ -147,23 +147,30 @@ export default function NewsUpdateSection() {
             </div>
           </div>
 
+          <div className="newsupdate-divider" aria-hidden="true" />
+
           <aside className="newsupdate-right" aria-label="AIU News">
             <div className="aiu-news-header">
-              <h2 className="aiu-news-title">AIU News</h2>
-              <span className="aiu-news-follow">Follow Us</span>
-              <div className="aiu-news-social">
-                {SNS_LINKS.map((item) => (
-                  <a
-                    key={item.label}
-                    href={item.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={item.label}
-                  >
-                    <i className={item.icon} aria-hidden="true"></i>
-                  </a>
-                ))}
-              </div>
+              <h2 className="aiu-news-title">
+                <span className="aiu-news-line1">AIU News &</span>
+                <span className="aiu-news-line2">
+                  <span className="aiu-news-line2-text">Animal Agent Reports</span>
+                  <span className="aiu-news-follow">Follow Us</span>
+                  <span className="aiu-news-social">
+                    {SNS_LINKS.map((item) => (
+                      <a
+                        key={item.label}
+                        href={item.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={item.label}
+                      >
+                        <i className={item.icon} aria-hidden="true"></i>
+                      </a>
+                    ))}
+                  </span>
+                </span>
+              </h2>
             </div>
 
             <div className="aiu-news-panel">
