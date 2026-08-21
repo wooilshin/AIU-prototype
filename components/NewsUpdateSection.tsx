@@ -156,19 +156,21 @@ export default function NewsUpdateSection() {
                 <span className="aiu-news-line2">News &</span>
                 <span className="aiu-news-line3">
                   <span className="aiu-news-line3-text">Animal Agent Reports</span>
-                  <span className="aiu-news-follow">Follow Us</span>
-                  <span className="aiu-news-social">
-                    {SNS_LINKS.map((item) => (
-                      <a
-                        key={item.label}
-                        href={item.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label={item.label}
-                      >
-                        <i className={item.icon} aria-hidden="true"></i>
-                      </a>
-                    ))}
+                  <span className="aiu-news-follow-group">
+                    <span className="aiu-news-follow">Follow Us</span>
+                    <span className="aiu-news-social">
+                      {SNS_LINKS.map((item) => (
+                        <a
+                          key={item.label}
+                          href={item.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={item.label}
+                        >
+                          <i className={item.icon} aria-hidden="true"></i>
+                        </a>
+                      ))}
+                    </span>
                   </span>
                 </span>
               </h2>
