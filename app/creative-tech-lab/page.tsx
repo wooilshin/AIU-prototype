@@ -10,12 +10,12 @@ const translations: Record<
   {
     title: string
     deviceImageAlt: string
-    techLabTitle: string
     techLabBody: string
     musicTitle: string
     musicBody: string
     postsTitle: string
     postsBody: string
+    clickHint: string
     noteTitle: string
     noteBody: string[]
   }
@@ -24,7 +24,6 @@ const translations: Record<
     title: 'Creative Tech Lab',
     deviceImageAlt:
       'Conceptual visualization of the Animal Intelligence turtle device showing internal components',
-    techLabTitle: 'AIU Tech Lab',
     techLabBody:
       'We are laying the foundation for knowledge-based animal companion toys while building the technology needed to grow the Animal Intelligence Universe into a large-scale edutainment IP.',
     musicTitle: 'Music',
@@ -33,6 +32,7 @@ const translations: Record<
     postsTitle: 'AIU Tech Posts',
     postsBody:
       'We plan to share short Tech Notes and Commentaries on this page. These posts will cover topics such as our Python-based production pipeline, experiments with game engines and our work with ROS and knowledge-based databases for interactive toys.',
+    clickHint: '<- Click to find out',
     noteTitle: 'A Note on AI and the Original Works',
     noteBody: [
       'Although the Tech Lab explores AI and emerging technologies, the original Animal Intelligence stories and artwork are created entirely by hand. We chose not to use AI to create the original works because we want to preserve the artistic direction and human authorship.',
@@ -43,7 +43,6 @@ const translations: Record<
     title: '스튜던트 비 테크랩',
     deviceImageAlt:
       '거북이 캐릭터를 기반으로 한 Ai 피규어 개념도',
-    techLabTitle: 'AIU 테크랩',
     techLabBody:
       '지식 기반 동물 컴패니언 토이의 기반을 다지면서, 동물지능 유니버스를 대규모 에듀테인먼트 IP로 성장시키는 데 필요한 기술을 함께 만들어가고 있습니다.',
     musicTitle: 'Music',
@@ -52,6 +51,7 @@ const translations: Record<
     postsTitle: 'AIU Tech Posts',
     postsBody:
       '이 페이지에서 짧은 Tech Notes와 Commentaries를 공유할 예정입니다. Python 기반 제작 파이프라인, 게임 엔진 실험, 인터랙티브 토이를 위한 ROS와 지식 기반 데이터베이스 작업 등을 다룰 예정입니다.',
+    clickHint: '<- 클릭해서 보기',
     noteTitle: '원작과 AI에 대하여',
     noteBody: [
       '테크랩은 AI와 새로운 기술을 탐구하지만, 동물지능의 원작 스토리와 아트워크는 모두 손으로 직접 만듭니다. 예술적 방향과 인간 창작의 주체성을 지키기 위해 원작 제작에는 AI를 사용하지 않았습니다.',
@@ -96,25 +96,28 @@ export default function CreativeTechLabPage() {
               />
             </figure>
 
-            <h2>{t.techLabTitle}</h2>
             <p>{t.techLabBody}</p>
           </div>
 
           <div className="about-section">
-            <h2>
+            <h2 className="tech-lab-heading-with-hint">
               <Link href="/music" className="tech-lab-music-link">
                 {t.musicTitle}
               </Link>
+              <span className="tech-lab-click-hint">{t.clickHint}</span>
             </h2>
             <p>{t.musicBody}</p>
           </div>
 
           <div className="about-section">
-            <h2>{t.postsTitle}</h2>
+            <h2 className="tech-lab-heading-with-hint">
+              <span className="tech-lab-posts-title">{t.postsTitle}</span>
+              <span className="tech-lab-click-hint">{t.clickHint}</span>
+            </h2>
             <p>{t.postsBody}</p>
           </div>
 
-          <div className="about-section">
+          <div className="about-section tech-lab-footnote">
             <h2>{t.noteTitle}</h2>
             {t.noteBody.map((paragraph, index) => (
               <p key={index}>{paragraph}</p>
