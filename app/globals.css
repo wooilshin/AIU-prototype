@@ -1468,7 +1468,7 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
     align-items: flex-start;
     gap: 20px;
     min-width: 0;
-    padding-left: 4cm;
+    padding-left: 7cm;
 }
 
 .footer-brand-mark {
