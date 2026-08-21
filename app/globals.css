@@ -1221,6 +1221,8 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
    ======================================== */
 /* ??? ?????? ??? ????? */
 .newsupdate-section {
+    --news-rule-color: #d8d8d8;
+    --news-rule-width: 1px;
     padding: 60px 0;
     background-color: transparent;
 }
@@ -1237,9 +1239,10 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
 }
 
 .newsupdate-divider {
-    width: 1px;
+    width: 0;
     height: 6.5rem;
-    background-color: #d8d8d8;
+    border-left: var(--news-rule-width) solid var(--news-rule-color);
+    background-color: transparent;
     align-self: start;
     margin-top: 0.35em;
 }
@@ -1316,11 +1319,11 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
     grid-template-columns: 28px minmax(0, 1fr);
     gap: 14px;
     padding: 22px 4px;
-    border-bottom: 1px solid #d8d8d8;
+    border-bottom: var(--news-rule-width) solid var(--news-rule-color);
 }
 
 .newsupdate-item:first-child {
-    border-top: 1px solid #d8d8d8;
+    border-top: var(--news-rule-width) solid var(--news-rule-color);
 }
 
 .newsupdate-item.clickable {
