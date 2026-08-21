@@ -102,15 +102,11 @@ html:is(.site-en, .site-ko) :is(
 html {
     overflow-x: hidden;
     width: 100%;
+    height: 100%;
     scroll-padding-top: var(--header-offset);
     overscroll-behavior-y: auto;
-    /* Bottom overscroll continues footer black; top stays white */
+    /* Below the footer / bottom overscroll stays footer black */
     background-color: #1a1a1a;
-    background-image: linear-gradient(#ffffff, #ffffff);
-    background-size: 100% 70%;
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-attachment: fixed;
 }
 
 /* Body ??????- ???, ???, ?? ???? ??? (?? ??? ????? ??? ???) */
@@ -124,9 +120,13 @@ body {
     background-color: #fff;
     overflow-x: hidden;
     width: 100%;
+    min-height: 100%;
+    min-height: 100vh;
     position: relative;
     padding-top: var(--header-offset);
     overscroll-behavior-y: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Home page: paw watermarks (7), larger, scattered */
@@ -134,6 +134,10 @@ body {
     position: relative;
     overflow-x: clip;
     background-color: #fff;
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 .home-paw-bg {
@@ -264,6 +268,10 @@ body {
 .home-main {
     position: relative;
     z-index: 1;
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 .home-page .stories-world-guide-section,
@@ -277,8 +285,13 @@ body {
 /* AIU Project page: paw watermarks (5) */
 .aiu-page {
     position: relative;
-    overflow: clip;
+    overflow-x: clip;
+    overflow-y: visible;
     background-color: #fff;
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 .aiu-paw-bg {
@@ -370,6 +383,10 @@ body {
 .aiu-main {
     position: relative;
     z-index: 1;
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 .aiu-page .about-content-section {
@@ -494,7 +511,7 @@ h1, h2, h3, h4, h5, h6 {
     height: 40px;
     width: auto;
     max-width: none;
-    transform: translate(-50%, -50%) scale(5.4);
+    transform: translate(-50%, calc(-50% - 3px)) scale(5.4);
     transform-origin: center center;
     pointer-events: none;
 }
@@ -1387,7 +1404,10 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
     background-color: #1a1a1a;
     color: #fff;
     padding: 30px 0 20px;
-    /* Extend black below the footer so bottom rubber-band stays continuous */
+    margin-top: auto;
+    flex-shrink: 0;
+    width: 100%;
+    /* Extend black below the footer for bottom rubber-band */
     box-shadow: 0 100vh 0 0 #1a1a1a;
 }
 
@@ -1477,6 +1497,15 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
 
 .footer-newsletter-form input::placeholder {
     color: rgba(255, 255, 255, 0.55);
+}
+
+.footer-newsletter-blurb {
+    margin: 2px 0 0;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #ccc;
+    text-align: center;
+    font-weight: var(--font-weight-ui);
 }
 
 .footer-newsletter-submit {
@@ -2059,6 +2088,10 @@ html:is(.site-en, .site-ko) .about-staff .staff-role > p.staff-contact-email {
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 /* Contact hero: wallpaper shows through; bear stays as corner accent */
@@ -2489,7 +2522,7 @@ html:is(.site-en, .site-ko) .about-staff .staff-role > p.staff-contact-email {
         height: 34px;
         width: auto;
         max-width: none;
-        transform: translate(-50%, -50%) scale(4.4);
+        transform: translate(-50%, calc(-50% - 2px)) scale(4.4);
         transform-origin: center center;
         pointer-events: none;
     }

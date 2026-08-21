@@ -9,8 +9,6 @@ export default function Footer() {
   const translations = {
     en: {
       brandTitle: 'Student B',
-      brandBlurb:
-        'Student B publishes Animal Intelligence books, stories, and creative projects that reframe knowledge through non-human perspectives.',
       contact: 'Contact',
       newsletter: 'Newsletter',
       connect: 'SNS',
@@ -21,8 +19,6 @@ export default function Footer() {
     },
     ko: {
       brandTitle: '스튜던트 비',
-      brandBlurb:
-        '스튜던트 비는 비인간적 시선으로 지식을 다시 읽는 동물지능 도서·이야기·크리에이티브 프로젝트를 만듭니다.',
       contact: '연락처',
       newsletter: '뉴스레터',
       connect: 'SNS',
@@ -41,7 +37,6 @@ export default function Footer() {
         <div className="footer-columns">
           <div className="footer-col footer-col-brand">
             <strong className="footer-section-title">{t.brandTitle}</strong>
-            <p className="footer-brand-blurb">{t.brandBlurb}</p>
             <p className="footer-copyright-text">{t.copyright}</p>
           </div>
 

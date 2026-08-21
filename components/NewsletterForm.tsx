@@ -18,6 +18,7 @@ export default function NewsletterForm({ variant = 'page' }: NewsletterFormProps
     en: {
       name: 'Name',
       email: 'Email',
+      blurb: 'Sign up for the latest news from AIU.',
       processing: 'Processing...',
       signUp: 'Sign up',
       error: 'An error occurred while processing your subscription. Please try again later.',
@@ -26,6 +27,7 @@ export default function NewsletterForm({ variant = 'page' }: NewsletterFormProps
     ko: {
       name: '이름',
       email: '이메일',
+      blurb: 'AIU의 최신 소식을 받아보세요.',
       processing: '처리 중...',
       signUp: '구독하기',
       error: '구독 처리 중 오류가 발생했습니다. 나중에 다시 시도해주세요.',
@@ -81,6 +83,7 @@ export default function NewsletterForm({ variant = 'page' }: NewsletterFormProps
     >
       <input type="text" name="name" placeholder={t.name} required />
       <input type="email" name="email" placeholder={t.email} required />
+      {isFooter && <p className="footer-newsletter-blurb">{t.blurb}</p>}
       <button
         type="submit"
         className={isFooter ? 'footer-newsletter-submit' : 'submit-btn'}
