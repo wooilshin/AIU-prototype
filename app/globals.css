@@ -1456,7 +1456,7 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
 
 .footer-layout {
     display: grid;
-    grid-template-columns: minmax(200px, 1fr) minmax(240px, 340px);
+    grid-template-columns: minmax(200px, 1fr) minmax(280px, 480px);
     gap: 48px 40px;
     align-items: start;
     justify-content: space-between;
@@ -1468,7 +1468,7 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
     align-items: flex-start;
     gap: 20px;
     min-width: 0;
-    padding-left: 0;
+    padding-left: 4cm;
 }
 
 .footer-brand-mark {
@@ -1499,10 +1499,11 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
     gap: 28px;
     min-width: 0;
     width: 100%;
-    max-width: 320px;
+    max-width: 480px;
     justify-self: end;
     padding-top: 8px;
     padding-right: 8px;
+    margin-right: 5cm;
 }
 
 .footer-newsletter-block {
@@ -1590,11 +1591,21 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
     text-align: left;
 }
 
+.footer-contact-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 16px 28px;
+    width: 100%;
+}
+
 .footer-emails-row {
     display: flex;
     flex-wrap: wrap;
     gap: 12px 40px;
     align-items: flex-start;
+    min-width: 0;
 }
 
 .footer-email-item {
@@ -1626,8 +1637,10 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
     gap: 18px;
     justify-content: flex-end;
     align-items: center;
-    width: 100%;
-    margin-top: 8px;
+    width: auto;
+    flex-shrink: 0;
+    margin-top: 0;
+    padding-bottom: 2px;
 }
 
 .social-icons a {
@@ -1666,6 +1679,10 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
         gap: 36px;
     }
 
+    .footer-left {
+        padding-left: 0;
+    }
+
     .footer-brand-mark {
         font-size: clamp(22px, 7vw, 30px);
     }
@@ -1674,6 +1691,7 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
         justify-self: stretch;
         max-width: none;
         padding-right: 0;
+        margin-right: 0;
     }
 
     .footer-newsletter-block,
@@ -1697,6 +1715,11 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
     .footer-newsletter-submit {
         justify-self: end;
         padding: 8px 0;
+    }
+
+    .footer-contact-row {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .footer-emails-row {

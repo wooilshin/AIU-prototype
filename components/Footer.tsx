@@ -42,50 +42,52 @@ export default function Footer() {
               <NewsletterForm variant="footer" />
             </div>
 
-            <div className="footer-emails-row">
-              <div className="footer-email-item">
-                <strong>{t.businessTeam}</strong>
-                <span>contentdirector [at] student-b.com</span>
+            <div className="footer-contact-row">
+              <div className="footer-emails-row">
+                <div className="footer-email-item">
+                  <strong>{t.businessTeam}</strong>
+                  <span>contentdirector [at] student-b.com</span>
+                </div>
+                <div className="footer-email-item">
+                  <strong>{t.techLab}</strong>
+                  <span>techlab [at] student-b.com</span>
+                </div>
               </div>
-              <div className="footer-email-item">
-                <strong>{t.techLab}</strong>
-                <span>techlab [at] student-b.com</span>
-              </div>
-            </div>
 
-            <div className="social-icons">
-              <a
-                href="https://www.instagram.com/studentbpress/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-              >
-                <i className="fab fa-instagram"></i>
-              </a>
-              <a
-                href="https://www.facebook.com/studentbpress/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Facebook"
-              >
-                <i className="fab fa-facebook-f"></i>
-              </a>
-              <a
-                href="https://www.linkedin.com/company/animal-intelligence"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-              >
-                <i className="fab fa-linkedin-in"></i>
-              </a>
-              <a
-                href="https://www.youtube.com/@studentbpress"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="YouTube"
-              >
-                <i className="fab fa-youtube"></i>
-              </a>
+              <div className="social-icons">
+                <a
+                  href="https://www.instagram.com/studentbpress/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                >
+                  <i className="fab fa-instagram"></i>
+                </a>
+                <a
+                  href="https://www.facebook.com/studentbpress/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook"
+                >
+                  <i className="fab fa-facebook-f"></i>
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/animal-intelligence"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                >
+                  <i className="fab fa-linkedin-in"></i>
+                </a>
+                <a
+                  href="https://www.youtube.com/@studentbpress"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="YouTube"
+                >
+                  <i className="fab fa-youtube"></i>
+                </a>
+              </div>
             </div>
           </div>
         </div>
