@@ -38,8 +38,8 @@ export default function Home() {
           <BookSection dataFile="knowledge-notes.json" sectionClass="knowledge-notes-section" />
         </div>
         <NewsUpdateSection />
-        <Footer />
       </div>
+      <Footer />
     </div>
   )
 }

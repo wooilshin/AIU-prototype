@@ -174,8 +174,8 @@ Will은 펜실베이니아 대학교에서 인공지능을, 하버드에서 공�
             </div>
           </div>
         </section>
-        <Footer />
       </div>
+      <Footer />
     </div>
   )
 }

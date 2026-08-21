@@ -81,9 +81,9 @@ export default function NewsletterForm({ variant = 'page' }: NewsletterFormProps
       className={isFooter ? 'footer-newsletter-form' : 'newsletter-form'}
       onSubmit={handleSubmit}
     >
+      {isFooter && <p className="footer-newsletter-blurb">{t.blurb}</p>}
       <input type="text" name="name" placeholder={t.name} required />
       <input type="email" name="email" placeholder={t.email} required />
-      {isFooter && <p className="footer-newsletter-blurb">{t.blurb}</p>}
       <button
         type="submit"
         className={isFooter ? 'footer-newsletter-submit' : 'submit-btn'}

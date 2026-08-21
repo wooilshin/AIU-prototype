@@ -90,6 +90,7 @@ export default function Contact() {
   }
 
   return (
+    <>
     <div className="contact-page">
       <Header />
       <section className="contact-hero">
@@ -137,8 +138,9 @@ export default function Contact() {
           </div>
         </div>
       </section>
-      <Footer />
     </div>
+    <Footer />
+    </>
   )
 }
 
