@@ -32,7 +32,7 @@ const translations: Record<
     postsTitle: 'AIU Tech Posts',
     postsBody:
       'We plan to share short Tech Notes and Commentaries on this page. These posts will cover topics such as our Python-based production pipeline, experiments with game engines and our work with ROS and knowledge-based databases for interactive toys.',
-    clickHint: '<- Click to find out',
+    clickHint: '← Click to find out',
     noteTitle: 'A Note on AI and the Original Works',
     noteBody: [
       'Although the Tech Lab explores AI and emerging technologies, the original Animal Intelligence stories and artwork are created entirely by hand. We chose not to use AI to create the original works because we want to preserve the artistic direction and human authorship.',
@@ -51,7 +51,7 @@ const translations: Record<
     postsTitle: 'AIU Tech Posts',
     postsBody:
       '이 페이지에서 짧은 Tech Notes와 Commentaries를 공유할 예정입니다. Python 기반 제작 파이프라인, 게임 엔진 실험, 인터랙티브 토이를 위한 ROS와 지식 기반 데이터베이스 작업 등을 다룰 예정입니다.',
-    clickHint: '<- 클릭해서 보기',
+    clickHint: '← 클릭해서 보기',
     noteTitle: '원작과 AI에 대하여',
     noteBody: [
       '테크랩은 AI와 새로운 기술을 탐구하지만, 동물지능의 원작 스토리와 아트워크는 모두 손으로 직접 만듭니다. 예술적 방향과 인간 창작의 주체성을 지키기 위해 원작 제작에는 AI를 사용하지 않았습니다.',
