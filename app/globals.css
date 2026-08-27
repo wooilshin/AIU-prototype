@@ -1852,20 +1852,19 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
     }
 
     .footer-newsletter-fields {
-        grid-template-columns: 1fr;
-        border-bottom: none;
-        gap: 10px;
+        grid-template-columns: minmax(0, 1fr) auto;
+        border-bottom: 1px solid #111;
+        gap: 0;
     }
 
     .footer-newsletter-form input {
         font-size: 18px;
-        padding: 10px 0;
-        border-bottom: 1px solid #111;
+        padding: 10px 14px 10px 0;
+        border-bottom: none;
     }
 
     .footer-newsletter-submit {
-        justify-self: end;
-        padding: 8px 0;
+        padding: 8px 4px 8px 12px;
     }
 
     .footer-contact-row {

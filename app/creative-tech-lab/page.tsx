@@ -11,6 +11,8 @@ const translations: Record<
     title: string
     deviceImageAlt: string
     techLabBody: string
+    knowledgeNoteTitle: string
+    knowledgeNoteBody: string
     musicTitle: string
     musicBody: string
     postsTitle: string
@@ -25,7 +27,9 @@ const translations: Record<
     deviceImageAlt:
       'Conceptual visualization of the Animal Intelligence turtle device showing internal components',
     techLabBody:
-      'We are laying the foundation for knowledge-based animal companion toys while building the technology needed to grow the Animal Intelligence Universe into a large-scale edutainment IP.',
+      'TECH LAB is currently preparing content for KNOWLEDGE NOTE, an AIU book series. We also develop various technologies to grow the Animal Intelligence Universe into a large-scale edutainment IP.',
+    knowledgeNoteTitle: 'Knowledge Note',
+    knowledgeNoteBody: 'Coming Soon',
     musicTitle: 'Music',
     musicBody:
       "Listen to the theme songs of AIU's animal agents. Our agents have their own musical tastes, ranging from Trap and Dubstep to Bubble Pop and R&B.",
@@ -44,7 +48,9 @@ const translations: Record<
     deviceImageAlt:
       '거북이 캐릭터를 기반으로 한 Ai 피규어 개념도',
     techLabBody:
-      '지식 기반 동물 컴패니언 토이의 기반을 다지면서, 동물지능 유니버스를 대규모 에듀테인먼트 IP로 성장시키는 데 필요한 기술을 함께 만들어가고 있습니다.',
+      'TECH LAB은 AIU 북 시리즈인 KNOWLEDGE NOTE 콘텐츠를 준비하고 있습니다. 또한 동물지능 유니버스를 대규모 에듀테인먼트 IP로 성장시키기 위한 다양한 기술을 개발하고 있습니다.',
+    knowledgeNoteTitle: 'Knowledge Note',
+    knowledgeNoteBody: 'Coming Soon',
     musicTitle: 'Music',
     musicBody:
       'AIU 동물 에이전트들의 테마곡을 들어보세요. 에이전트마다 Trap, Dubstep부터 Bubble Pop, R&B까지 각자의 음악 취향이 있습니다.',
@@ -97,6 +103,12 @@ export default function CreativeTechLabPage() {
             </figure>
 
             <p>{t.techLabBody}</p>
+
+            <h2 className="tech-lab-heading-with-hint">
+              <span className="tech-lab-posts-title">{t.knowledgeNoteTitle}</span>
+              <span className="tech-lab-click-hint">{t.clickHint}</span>
+            </h2>
+            <p>{t.knowledgeNoteBody}</p>
           </div>
 
           <div className="about-section">
