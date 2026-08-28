@@ -1978,6 +1978,10 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
     gap: 10px 14px;
 }
 
+.tech-lab-section .about-section > p + .tech-lab-heading-with-hint {
+    margin-top: 56px;
+}
+
 .tech-lab-music-link {
     color: inherit;
     text-decoration: none;

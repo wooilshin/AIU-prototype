@@ -27,15 +27,16 @@ const translations: Record<
     deviceImageAlt:
       'Conceptual visualization of the Animal Intelligence turtle device showing internal components',
     techLabBody:
-      'TECH LAB is currently preparing content for KNOWLEDGE NOTE, an AIU book series. We also develop various technologies to grow the Animal Intelligence Universe into a large-scale edutainment IP.',
+      'TECH LAB is currently preparing content for Knowledge Note, an AIU book series that brings together the human knowledge learned by animal agents. We also research technologies to grow the Animal Intelligence Universe into a large-scale edutainment IP.',
     knowledgeNoteTitle: 'Knowledge Note',
-    knowledgeNoteBody: 'Coming Soon',
+    knowledgeNoteBody:
+      'Explore Four Key Topics and the Philosophy Behind Knowledge Note, Currently Being Developed by TECH LAB',
     musicTitle: 'Music',
     musicBody:
       "Listen to the theme songs of AIU's animal agents. Our agents have their own musical tastes, ranging from Trap and Dubstep to Bubble Pop and R&B.",
     postsTitle: 'AIU Tech Posts',
     postsBody:
-      'We plan to share short Tech Notes and Commentaries on this page. These posts will cover topics such as our Python-based production pipeline, experiments with game engines and our work with ROS and knowledge-based databases for interactive toys.',
+      'We plan to share short Tech Notes and Commentaries on this page. These posts will cover topics such as our Python-based production pipeline, experiments with game engines, and our work with knowledge-based databases for interactive toys.',
     clickHint: '← Click to find out',
     noteTitle: 'A Note on AI and the Original Works',
     noteBody: [
@@ -48,15 +49,16 @@ const translations: Record<
     deviceImageAlt:
       '거북이 캐릭터를 기반으로 한 Ai 피규어 개념도',
     techLabBody:
-      'TECH LAB은 AIU 북 시리즈인 KNOWLEDGE NOTE 콘텐츠를 준비하고 있습니다. 또한 동물지능 유니버스를 대규모 에듀테인먼트 IP로 성장시키기 위한 다양한 기술을 개발하고 있습니다.',
+      'TECH LAB은 동물 에이전트들이 배운 인간 세계의 지식을 모은 AIU 북 시리즈 Knowledge Note 콘텐츠를 준비하고 있습니다. 또한 동물지능 유니버스를 대규모 에듀테인먼트 IP로 성장시키기 위한 기술을 연구하고 있습니다.',
     knowledgeNoteTitle: 'Knowledge Note',
-    knowledgeNoteBody: 'Coming Soon',
+    knowledgeNoteBody:
+      'TECH LAB에서 현재 개발 중인 Knowledge Note의 네 가지 핵심 주제와 철학을 살펴보세요.',
     musicTitle: 'Music',
     musicBody:
       'AIU 동물 에이전트들의 테마곡을 들어보세요. 에이전트마다 Trap, Dubstep부터 Bubble Pop, R&B까지 각자의 음악 취향이 있습니다.',
     postsTitle: 'AIU Tech Posts',
     postsBody:
-      '이 페이지에서 짧은 Tech Notes와 Commentaries를 공유할 예정입니다. Python 기반 제작 파이프라인, 게임 엔진 실험, 인터랙티브 토이를 위한 ROS와 지식 기반 데이터베이스 작업 등을 다룰 예정입니다.',
+      '이 페이지에서 짧은 Tech Notes와 Commentaries를 공유할 예정입니다. Python 기반 제작 파이프라인, 게임 엔진 실험, 인터랙티브 토이를 위한 지식 기반 데이터베이스 작업 등의 주제를 다룰 예정입니다.',
     clickHint: '← 클릭해서 보기',
     noteTitle: '원작과 AI에 대하여',
     noteBody: [
