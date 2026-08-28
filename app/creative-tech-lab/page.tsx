@@ -107,7 +107,9 @@ export default function CreativeTechLabPage() {
             <p>{t.techLabBody}</p>
 
             <h2 className="tech-lab-heading-with-hint">
-              <span className="tech-lab-posts-title">{t.knowledgeNoteTitle}</span>
+              <Link href="/notes" className="tech-lab-music-link">
+                {t.knowledgeNoteTitle}
+              </Link>
               <span className="tech-lab-click-hint">{t.clickHint}</span>
             </h2>
             <p>{t.knowledgeNoteBody}</p>
