@@ -1917,6 +1917,10 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
     padding: 60px 0;
 }
 
+.notes-page-section {
+    background-color: #fff;
+}
+
 /* About ?? ??? */
 .about-section {
     margin-bottom: 80px;

@@ -9,15 +9,15 @@ const translations = {
     heading: 'What Is a Knowledge Note?',
     paragraphs: [
       'Animal Intelligence comics make fun of humans, AI, and animals alike. Our Short Stories follow animal agents as they grow, struggle, and go on adventures.',
-      'But we did not want to stop at satire or simply talk about the problems of our time. We wanted to create something that could give knowledge new meaning for the next generation.',
-      'AI can already answer most of questions we learn. As answers become easier to find, students may start to wonder why they need to spend years learning something from the ground up. Traditional textbooks and classes may also have a harder time motivating students who can get answers instantly from AI.',
-      'So we decided to try changing the order of learning. Instead of starting with the basics, we first show the big problems we may face in the future. Then we explain what knowledge we need to learn in order to solve them.',
-      'We also believe that the next generation may need to become Generalists who can solve problems across many different fields, while at the same time becoming Specialists who deeply understand their own field.',
+      'But we did not want to stop at satire or simply talk about the problems of our time. We wanted to create something that could give knowledge new meaning.',
+      'AI is changing our society in strange ways. As answers become easier to find, we may lose some of our motivation to learn step by step, explore things for ourselves, and try to understand more. Respect for books and teachers may also fade. And yet, we are entering a world where people without knowledge may eventually be left behind.',
+      'So we decided to try a different way of learning. From the perspective of our animal agents, we selected five areas of human knowledge worth “stealing.” Instead of always starting with the basics, we begin with the big problems we may face in the future. Then we explore what knowledge we need to understand and solve them.',
+      'We believe the next generation may need to become Generalists, learning across a much wider range of fields than today, while at the same time becoming Specialists who can creatively expand their own fields.',
+      'With this idea, we want to add Knowledge Notes—a companion for students and adults living in the age of AI, helping them understand what to learn and where to go next.',
     ],
-    subjectIntro: 'With this idea, we have started working on five subjects:',
-    subjects: 'Space & Environment / Engineering / AI / Philosophy / Economics',
-    finalNote:
-      'This does not mean that hard work or years of study are no longer important. We simply want to add a companion that shows students where that long journey can lead.',
+    subjectIntro: '',
+    subjects: '',
+    finalNote: '',
   },
   ko: {
     heading: 'Knowledge Note란 무엇인가',
@@ -42,7 +42,7 @@ export default function NotesPage() {
   return (
     <>
       <Header />
-      <section className="about-content-section about-prose-page">
+      <section className="about-content-section about-prose-page notes-page-section">
         <div className="container about-prose">
           <div className="about-section">
             <h2>{t.heading}</h2>
@@ -50,9 +50,9 @@ export default function NotesPage() {
               <p key={index}>{paragraph}</p>
             ))}
 
-            <p>{t.subjectIntro}</p>
-            <p>{t.subjects}</p>
-            <p>{t.finalNote}</p>
+            {t.subjectIntro && <p>{t.subjectIntro}</p>}
+            {t.subjects && <p>{t.subjects}</p>}
+            {t.finalNote && <p>{t.finalNote}</p>}
           </div>
         </div>
       </section>
