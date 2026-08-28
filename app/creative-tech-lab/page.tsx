@@ -36,7 +36,7 @@ const translations: Record<
       "Listen to the theme songs of AIU's animal agents. Our agents have their own musical tastes, ranging from Trap and Dubstep to Bubble Pop and R&B.",
     postsTitle: 'AIU Tech Posts',
     postsBody:
-      'We plan to share short Tech Notes and Commentaries on this page. These posts will cover topics such as our Python-based production pipeline, experiments with game engines, and our work with knowledge-based databases for interactive toys.',
+      'We plan to share short Tech Notes and Commentaries on this page. These posts will cover topics such as our Python-based production pipeline, experiments with game engines, and our work with knowledge-based databases.',
     clickHint: '← Click to find out',
     noteTitle: 'A Note on AI and the Original Works',
     noteBody: [
@@ -58,7 +58,7 @@ const translations: Record<
       'AIU 동물 에이전트들의 테마곡을 들어보세요. 에이전트마다 Trap, Dubstep부터 Bubble Pop, R&B까지 각자의 음악 취향이 있습니다.',
     postsTitle: 'AIU Tech Posts',
     postsBody:
-      '이 페이지에서 짧은 Tech Notes와 Commentaries를 공유할 예정입니다. Python 기반 제작 파이프라인, 게임 엔진 실험, 인터랙티브 토이를 위한 지식 기반 데이터베이스 작업 등의 주제를 다룰 예정입니다.',
+      '이 페이지에서 짧은 Tech Notes와 Commentaries를 공유할 예정입니다. Python 기반 제작 파이프라인, 게임 엔진 실험, 지식 기반 데이터베이스 작업 등의 주제를 다룰 예정입니다.',
     clickHint: '← 클릭해서 보기',
     noteTitle: '원작과 AI에 대하여',
     noteBody: [
