@@ -8,12 +8,11 @@ const translations = {
   en: {
     heading: 'What Is a Knowledge Note?',
     paragraphs: [
-      'Animal Intelligence comics make fun of humans, AI, and animals alike. Our Short Stories follow animal agents as they grow, struggle, and go on adventures.',
-      'But we did not want to stop at satire or simply talk about the problems of our time. We wanted to create something that could give new meaning.',
-      'AI is changing our society in strange ways. As answers become easier to find, we may lose some of our motivation to learn step by step, explore things for ourselves, and try to understand more. Respect for books and teachers may also fade. And yet, we are entering a world where people without knowledge may eventually be left behind.',
-      'So we decided to try a different way of learning. From the perspective of our animal agents, we selected five areas of human knowledge worth “stealing.” Instead of always starting with the basics, we begin with the big problems we may face in the future. Then we explore what knowledge we need to understand and solve them.',
-      'We believe the next generation may need to become Generalists, learning across a much wider range of fields than today, while at the same time becoming Specialists who can creatively expand their own fields.',
-      'With this idea, we want to add Knowledge Notes—a companion for students and adults living in the age of AI, helping them understand what to learn and where to go next.',
+      'Animal Intelligence comics make fun of humans, AI, and animals, while our Short Stories follow the adventures of animal agents as they grow and struggle.',
+      'But we did not want to stop at satire or simply tell stories about animals. We wanted to create something that could offer a new direction.',
+      'AI is changing our society in strange ways. As answers become easier to find, we may lose some of our motivation to explore and understand things for ourselves. Respect for books and teachers may also fade. And yet, we are entering a world where people without knowledge may eventually be left behind.',
+      'So we decided to introduce a different way of learning. From the perspective of our animal agents, we selected five areas of human knowledge worth “stealing.” And instead of always starting with the basics, we begin with the big problems we may face in the future, and explore the knowledge we need to understand them.',
+      'With this idea, we are developing Knowledge Notes—a series of companion books for students and adults living in the age of AI, helping them understand what to learn and where to go next.',
     ],
     subjectIntro: '',
     subjects: '',
