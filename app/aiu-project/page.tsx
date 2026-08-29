@@ -23,7 +23,7 @@ She studied design and art at the undergraduate level before pursuing applied li
 
 Will studied Computer Science at the University of Pennsylvania and public policy at Harvard. He develops AI-powered character games at Student B's Tech Lab.`,
       bizTitle: 'Biz Team',
-      bizDesc: `Jin holds an MBA from Northwestern and works on IP planning. Soy graduated from Seoul National University's Business School and manages entertainment rights. Guinea handles publishing and publicity.`,
+      bizDesc: `Jin holds an MBA from Northwestern and works on IP planning. Guinea handles publishing and publicity.`,
       studentBTitle: 'About Student B',
       studentBDesc:
         'Student B is a startup built around original IP and founded to explore new standards in edutainment. The company is currently focused on publishing AIU-related books and contents.',
@@ -56,7 +56,7 @@ Alice는 학부에서 디자인과 미술을 공부한 뒤 조지타운 대학�
 Will은 펜실베이니아 대학교에서 인공지능을, 하버드에서 공공정책을 공부했습니다. 스튜던트 비 테크랩에서 AI 기반 캐릭터 게임을 개발합니다.`,
       bizTitle: '비지니스 팀',
       bizDesc:
-        'Jin은 노스웨스턴 MBA를 졸업했으며 IP 기획을 담당하고 있으며, Soy는 서울대 경영학과를 졸업하고 엔터테인먼트 판권 관리를 맡고 있습니다. 그리고 Guinea는 출판 및 홍보를 담당하고 있습니다.',
+        'Jin은 노스웨스턴 MBA를 졸업했으며 IP 기획을 담당하고 있습니다. Guinea는 출판 및 홍보를 담당하고 있습니다.',
       studentBTitle: '스튜던트 비에 대하여',
       studentBDesc:
         '스튜던트 비는 오리지널 IP를 중심으로 에듀테인먼트의 새로운 기준을 탐구하기 위해 설립된 스타트업입니다. 회사는 현재 동물지능 관련 도서와 콘텐츠 출판에 집중하고 있습니다.',
