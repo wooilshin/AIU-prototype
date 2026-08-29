@@ -31,9 +31,9 @@ Will studied Computer Science at the University of Pennsylvania and public polic
       bookStoryTitle: 'Book (The Animal Intelligence Story)',
       bookStoryDesc:
         'Student B creates short- and long-form fantasy narratives centered on animal agents who infiltrate the human world to study human knowledge. While presented as the story of animal agents, the series also serves as an allegory for a post-AI world.',
-      bookKnowledgeTitle: 'Book (Knowledge Era Series)',
+      bookKnowledgeTitle: 'Book (Knowledge Note Series)',
       bookKnowledgeDesc:
-        'Student B also produces short booklets that explore future science and philosophy. These volumes serve as accessible companion books to the narrative series, intuitively introducing the knowledge that the animal agents encounter.',
+        'Student B also produces short educational booklets. These volumes serve as accessible companion books to the narrative series, while organizing key areas of knowledge that animal agents need to navigate the age of AI.',
       comicsTitle: 'Comic (Watching them Humans Series)',
       comicsDesc:
         "As Student B's flagship series and the entry point to its universe, the comic series presents short-form illustrated stories that explore human life in the age of AI through satire and humor.",
@@ -64,7 +64,7 @@ Will은 펜실베이니아 대학교에서 인공지능을, 하버드에서 공�
       bookStoryTitle: '도서 (내이름은 시리즈)',
       bookStoryDesc:
         '스튜던트 비는 인간 세계에 잠입해 인간의 지식을 배우는 동물 요원들을 중심으로 한 단편·장편 판타지 서사를 만듭니다. 동물 요원들의 이야기로 읽히지만, 이 시리즈는 포스트 AI 세계에 대한 우화이기도 합니다.',
-      bookKnowledgeTitle: '도서 (지식 시리즈)',
+      bookKnowledgeTitle: '도서 (Knowledge Note 시리즈)',
       bookKnowledgeDesc:
         '동물지능 스토리에 등장하는 동물요원들이 인간 세계를 염탐하며 배운 내용들을 담고 있습니다. 인간세계의 주요 지식, 즉 과학, 사회과학, 인문학의 내용을 직관적으로 정리한 내용들을 담고 있습니다.',
       comicsTitle: '인간관찰기 (만화 시리즈)',
@@ -150,6 +150,13 @@ Will은 펜실베이니아 대학교에서 인공지능을, 하버드에서 공�
                 <div className="key-areas-grid">
                   <div className="key-area-card">
                     <div className="key-area-icon">
+                      <i className="fas fa-comments"></i>
+                    </div>
+                    <h3>{t.comicsTitle}</h3>
+                    <p>{t.comicsDesc}</p>
+                  </div>
+                  <div className="key-area-card">
+                    <div className="key-area-icon">
                       <i className="fas fa-book"></i>
                     </div>
                     <h3>{t.bookStoryTitle}</h3>
@@ -161,13 +168,6 @@ Will은 펜실베이니아 대학교에서 인공지능을, 하버드에서 공�
                     </div>
                     <h3>{t.bookKnowledgeTitle}</h3>
                     <p>{t.bookKnowledgeDesc}</p>
-                  </div>
-                  <div className="key-area-card">
-                    <div className="key-area-icon">
-                      <i className="fas fa-comments"></i>
-                    </div>
-                    <h3>{t.comicsTitle}</h3>
-                    <p>{t.comicsDesc}</p>
                   </div>
                 </div>
               </div>
