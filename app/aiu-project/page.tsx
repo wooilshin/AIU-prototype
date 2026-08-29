@@ -21,7 +21,7 @@ She studied design and art at the undergraduate level before pursuing applied li
       techLabTitle: 'Tech Lab Engineers',
       techLabDesc: `Joseph SH holds a Ph.D. in Electrical Engineering from the University of Maryland. He develops safe and playful interactive character toys.
 
-Will studied Artificial Intelligence at the University of Pennsylvania and public policy at Harvard. He develops AI-powered character games at Student B's Tech Lab.`,
+Will studied Computer Science at the University of Pennsylvania and public policy at Harvard. He develops AI-powered character games at Student B's Tech Lab.`,
       bizTitle: 'Biz Team',
       bizDesc: `Jin holds an MBA from Northwestern and works on IP planning. Soy graduated from Seoul National University's Business School and manages entertainment rights. Guinea handles publishing and publicity.`,
       studentBTitle: 'About Student B',
