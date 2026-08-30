@@ -13,8 +13,7 @@ export default function TechPostPage() {
             <p className="techpost-description">
               Animal Intelligence Universe - Why build another world and how to make it
             </p>
-            <p>Technology Note / Long-Term R&amp;D Blueprint · Version 1.0 · 2026 Fall</p>
-            <p>
+            <p className="techpost-download-row">
               <a
                 href="/documents/Animal_Intelligence_Universe_Why_Build_Another_World_V1.0_2026.pdf"
                 target="_blank"
@@ -22,6 +21,14 @@ export default function TechPostPage() {
                 className="techpost-pdf-link"
               >
                 Technology Blueprint
+              </a>
+              <a
+                href="/documents/Animal_Intelligence_Universe_Why_Build_Another_World_V1.0_2026.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="tech-lab-click-hint"
+              >
+                ← Download PDF File
               </a>
             </p>
           </div>

@@ -1941,6 +1941,13 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
     margin-bottom: 28px !important;
 }
 
+.techpost-download-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 8px 16px;
+}
+
 /* About ?? ??? */
 .about-section {
     margin-bottom: 80px;
