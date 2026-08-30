@@ -26,7 +26,7 @@ Will studied Computer Science at the University of Pennsylvania and public polic
       bizDesc: `Jin holds an MBA from Northwestern and works on IP planning. Guinea handles publishing and publicity.`,
       studentBTitle: 'About Student B',
       studentBDesc:
-        'Student B is a startup built around original IP and founded to explore new standards in edutainment. The company is currently focused on publishing AIU-related books and contents.',
+        'Student B is an independent IP studio exploring new standards in edutainment. The company is currently focused on publishing AIU-related books and contents.',
       whatWeMakeTitle: 'What We Make',
       bookStoryTitle: 'Book (The Animal Intelligence Story)',
       bookStoryDesc:
@@ -59,7 +59,7 @@ Will은 펜실베이니아 대학교에서 인공지능을, 하버드에서 공�
         'Jin은 노스웨스턴 MBA를 졸업했으며 IP 기획을 담당하고 있습니다. Guinea는 출판 및 홍보를 담당하고 있습니다.',
       studentBTitle: '스튜던트 비에 대하여',
       studentBDesc:
-        '스튜던트 비는 오리지널 IP를 중심으로 에듀테인먼트의 새로운 기준을 탐구하기 위해 설립된 스타트업입니다. 회사는 현재 동물지능 관련 도서와 콘텐츠 출판에 집중하고 있습니다.',
+        '스튜던트 비는 에듀테인먼트의 새로운 기준을 탐구하는 독립 IP 스튜디오입니다. 회사는 현재 동물지능 관련 도서와 콘텐츠 출판에 집중하고 있습니다.',
       whatWeMakeTitle: '스튜던트 비가 만드는 것들',
       bookStoryTitle: '도서 (내이름은 시리즈)',
       bookStoryDesc:
