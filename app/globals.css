@@ -1925,6 +1925,22 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
     background-color: #fff;
 }
 
+.techpost-section-label {
+    font-size: 23px !important;
+    line-height: 1.35 !important;
+    font-weight: 500 !important;
+    color: #555 !important;
+    margin-top: 0 !important;
+    margin-bottom: 12px !important;
+}
+
+.techpost-description {
+    font-size: 17px !important;
+    line-height: 1.57 !important;
+    color: #222 !important;
+    margin-bottom: 28px !important;
+}
+
 /* About ?? ??? */
 .about-section {
     margin-bottom: 80px;

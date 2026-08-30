@@ -9,8 +9,10 @@ export default function TechPostPage() {
       <section className="about-content-section about-prose-page techpost-page-section">
         <div className="container about-prose">
           <div className="about-section">
-            <h2>Technology Blueprint : Animal Intelligence Universe -</h2>
-            <p>Why build another world and how to make it</p>
+            <h2 className="techpost-section-label">Technology Blueprint</h2>
+            <p className="techpost-description">
+              Animal Intelligence Universe - Why build another world and how to make it
+            </p>
             <p>Technology Note / Long-Term R&amp;D Blueprint · Version 1.0 · 2026 Fall</p>
             <p>
               <a
