@@ -6,16 +6,10 @@ export default function TechPostPage() {
   return (
     <>
       <Header />
-      <section className="about-hero">
-        <div className="container">
-          <h1>Technology Blueprint</h1>
-        </div>
-      </section>
-
-      <section className="about-content-section about-prose-page">
+      <section className="about-content-section about-prose-page techpost-page-section">
         <div className="container about-prose">
           <div className="about-section">
-            <h2>Animal Intelligence Universe</h2>
+            <h2>Technology Blueprint : Animal Intelligence Universe -</h2>
             <p>Why build another world and how to make it</p>
             <p>Technology Note / Long-Term R&amp;D Blueprint · Version 1.0 · 2026 Fall</p>
             <p>

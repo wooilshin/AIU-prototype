@@ -1921,6 +1921,10 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
     background-color: #fff;
 }
 
+.techpost-page-section {
+    background-color: #fff;
+}
+
 /* About ?? ??? */
 .about-section {
     margin-bottom: 80px;
