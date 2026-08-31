@@ -17,7 +17,7 @@ AIU is more than a story about animal agents. It is a new fable for the 21st cen
       ceoTitle: 'CEO & Creative Lead',
       ceoDesc: `Alice serves as the CEO and Creative Lead of Student B.
 
-She studied design and art at the undergraduate level before pursuing applied linguistics at Georgetown University. At Student B, she leads the visual storytelling and overall creative direction of the Animal Intelligence Universe.`,
+She studied design and art at the undergraduate level before pursuing applied linguistics at Georgetown University. At Student B, she leads the overall creative direction of the Animal Intelligence Universe.`,
       techLabTitle: 'Tech Lab Engineers',
       techLabDesc: `Joseph SH holds a Ph.D. in Electrical Engineering from the University of Maryland. He develops safe and playful interactive character toys.
 
