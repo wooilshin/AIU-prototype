@@ -115,6 +115,7 @@ Wooil은 펜실베이니아 대학교에서 컴퓨터 과학을 공부했습니�
                     (paragraph, index) =>
                       paragraph.trim() && <p key={index}>{paragraph.trim()}</p>
                   )}
+                  <p className="staff-contact-email">artdirector [at] student-b.com</p>
                 </div>
 
                 <div className="staff-role">
