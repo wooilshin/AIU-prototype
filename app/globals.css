@@ -1948,6 +1948,10 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
     gap: 8px 16px;
 }
 
+.techpost-download-row .tech-lab-click-hint {
+    font-size: 12px;
+}
+
 /* About ?? ??? */
 .about-section {
     margin-bottom: 80px;

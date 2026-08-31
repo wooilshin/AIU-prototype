@@ -22,14 +22,9 @@ export default function TechPostPage() {
               >
                 Technology Blueprint
               </a>
-              <a
-                href="/documents/Animal_Intelligence_Universe_Why_Build_Another_World_V1.0_2026.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="tech-lab-click-hint"
-              >
+              <span className="tech-lab-click-hint">
                 ← Download PDF File
-              </a>
+              </span>
             </p>
           </div>
           <p>
