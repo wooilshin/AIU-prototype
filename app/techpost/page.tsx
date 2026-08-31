@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
@@ -27,9 +26,6 @@ export default function TechPostPage() {
               </span>
             </p>
           </div>
-          <p>
-            <Link href="/creative-tech-lab">← Back to Creative Tech Lab</Link>
-          </p>
         </div>
       </section>
 
