@@ -27,10 +27,10 @@ const translations: Record<
     deviceImageAlt:
       'Conceptual visualization of the Animal Intelligence turtle device showing internal components',
     techLabBody:
-      'TECH LAB is currently preparing content for Knowledge Note, an AIU book series that brings together the human knowledge learned by animal agents. We also research technologies to grow the Animal Intelligence Universe into a large-scale edutainment IP.',
+      'Creative Tech Lab is currently preparing content for Knowledge Note, an AIU book series that brings together the human knowledge learned by animal agents. We also research technologies to grow the Animal Intelligence Universe into a large-scale edutainment IP.',
     knowledgeNoteTitle: 'Knowledge Note',
     knowledgeNoteBody:
-      'Explore key topics and the philosophy behind Knowledge Note, currently being developed by TECH LAB',
+      'Explore the key topics and philosophy behind Knowledge Notes, a new series currently being developed by our Creative Tech Lab.',
     musicTitle: 'Music',
     musicBody:
       "Listen to the theme songs of AIU's animal agents. Our agents have their own musical tastes, ranging from Trap and Dubstep to Bubble Pop and R&B.",

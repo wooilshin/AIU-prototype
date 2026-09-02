@@ -16,7 +16,7 @@ export default function Header() {
     en: {
       home: 'Home',
       aiuProject: 'AIU',
-      creativeTechLab: 'Tech Lab',
+      creativeTechLab: 'Creative Lab',
       store: 'Store',
       contact: 'Contact Us',
       newsletter: 'Newsletter',
@@ -24,7 +24,7 @@ export default function Header() {
     ko: {
       home: '출판물',
       aiuProject: '동물지능',
-      creativeTechLab: '테크랩',
+      creativeTechLab: '크리에이티브랩',
       store: '스토어',
       contact: '문의하기',
       newsletter: '뉴스레터',

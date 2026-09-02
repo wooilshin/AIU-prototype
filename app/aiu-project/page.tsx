@@ -10,9 +10,9 @@ export default function AIUProject() {
   const translations = {
     en: {
       introTitle: 'AIU Project',
-      introDesc: `AIU, short for Animal Intelligence Universe, is an original IP project about secret animal agents who observe humans and learn human knowledge.
+      introDesc: `AIU, short for Animal Intelligence Universe, is an original IP project about secret animal agents who observe humans and learn from human knowledge.
 
-AIU is more than a story about animal agents. It is a new fable for the 21st century—one that blends philosophy, knowledge, and storytelling for audiences of all ages.`,
+But AIU is more than a story about animal agents. It aims to be a new fable for the 21st century—one that invites us to imagine the future together with hope in these unsettled times.`,
       staffTitle: 'Staff',
       ceoTitle: 'CEO & Creative Lead',
       ceoDesc: `Alice serves as the CEO and Creative Lead of Student B.
@@ -42,9 +42,9 @@ Wooil studied Computer Science at the University of Pennsylvania. He develops AI
     },
     ko: {
       introTitle: '동물지능 프로젝트',
-      introDesc: `동물지능 IP는 비밀리에 인간의 지식을 배우는 동물 요원들 그리고 그들이 세워가는 문명에 관한 이야기이며, 그 내용들을 풍자만화, 판타지 소설, 지식서 등의 풀어내고 있는 콘텐츠입니다.
+      introDesc: `AIU, Animal Intelligence Universe의 약자로, 인간을 관찰하며 인간의 지식에서 배우는 비밀 동물 요원들에 관한 오리지널 IP 프로젝트입니다.
 
-동물지능 시리즈의 중심에는 간단한 질문이 있습니다. 동물들이 인간이 아는 모든 것을 배우고, 그들만의 세계를 세운다면 그들 그리고 우리의 미래는 어떻게 될까요?`,
+하지만 AIU는 단순히 동물 요원들의 이야기 그 이상입니다. AIU는 불안정한 이 시대에 희망을 품고 함께 미래를 상상하게 하는 21세기의 새로운 우화가 되고자 합니다.`,
       staffTitle: '스튜던트 비 팀소개',
       ceoTitle: '크리에이티브 리드',
       ceoDesc: `Alice는 스튜던트 비의 CEO이자 크리에이티브 리드입니다.
