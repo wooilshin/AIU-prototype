@@ -33,7 +33,7 @@ Wooil studied Computer Science at the University of Pennsylvania. He develops AI
         'Student B creates short- and long-form fantasy narratives centered on animal agents who infiltrate the human world to study human knowledge. While presented as the story of animal agents, the series also serves as an allegory for a post-AI world.',
       bookKnowledgeTitle: 'Book (Knowledge Note Series)',
       bookKnowledgeDesc:
-        'Student B also produces short educational booklets. These volumes serve as accessible companion books to the narrative series, while organizing key areas of knowledge that animal agents need to navigate the age of AI.',
+        'Student B also produces short educational booklets that serve as companion books to the narrative series. These booklets are Student B’s attempt to imagine what textbooks might look like in the AI age.',
       comicsTitle: 'Comic (Watching them Humans Series)',
       comicsDesc:
         "As Student B's flagship series and the entry point to its universe, the comic series presents short-form illustrated stories that explore human life in the age of AI through satire and humor.",
@@ -66,7 +66,7 @@ Wooil은 펜실베이니아 대학교에서 컴퓨터 과학을 공부했습니�
         '스튜던트 비는 인간 세계에 잠입해 인간의 지식을 배우는 동물 요원들을 중심으로 한 단편·장편 판타지 서사를 만듭니다. 동물 요원들의 이야기로 읽히지만, 이 시리즈는 포스트 AI 세계에 대한 우화이기도 합니다.',
       bookKnowledgeTitle: '도서 (Knowledge Note 시리즈)',
       bookKnowledgeDesc:
-        '동물지능 스토리에 등장하는 동물요원들이 인간 세계를 염탐하며 배운 내용들을 담고 있습니다. 인간세계의 주요 지식, 즉 과학, 사회과학, 인문학의 내용을 직관적으로 정리한 내용들을 담고 있습니다.',
+        '스튜던트 비는 또한 서사 시리즈의 동반자 역할을 하는 짧은 교육용 책자를 만듭니다. 이 책자들은 AI 시대의 교과서가 어떤 모습일지 상상해 보려는 스튜던트 비의 시도입니다.',
       comicsTitle: '인간관찰기 (만화 시리즈)',
       comicsDesc:
         '스튜던트 비의 플래그십 시리즈이자 세계관의 진입점인 만화 시리즈는, 풍자와 유머를 통해 AI 시대 인간의 삶을 탐구하는 짧은 일러스트 스토리로 구성되어 있습니다.',

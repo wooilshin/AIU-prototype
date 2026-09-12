@@ -27,7 +27,7 @@ const translations: Record<
     deviceImageAlt:
       'Conceptual visualization of the Animal Intelligence turtle device showing internal components',
     techLabBody:
-      'Creative Tech Lab is currently preparing content for Knowledge Note, an AIU book series that brings together the human knowledge learned by animal agents. We also research technologies to grow the Animal Intelligence Universe into a large-scale edutainment IP.',
+      'Creative Tech Lab is currently developing content for Knowledge Note, an AIU book series that explores what our educational textbooks might look like in the future. We also plan to share our journey—and the technologies behind it—as we transform the AIU universe into a large-scale, interactive edutainment world.',
     knowledgeNoteTitle: 'Knowledge Note',
     knowledgeNoteBody:
       'Explore the key topics and philosophy behind Knowledge Notes, a new series currently being developed by our Creative Tech Lab.',
@@ -49,7 +49,7 @@ const translations: Record<
     deviceImageAlt:
       '거북이 캐릭터를 기반으로 한 Ai 피규어 개념도',
     techLabBody:
-      'TECH LAB은 동물 에이전트들이 배운 인간 세계의 지식을 모은 AIU 북 시리즈 Knowledge Note 콘텐츠를 준비하고 있습니다. 또한 동물지능 유니버스를 대규모 에듀테인먼트 IP로 성장시키기 위한 기술을 연구하고 있습니다.',
+      'Creative Tech Lab은 미래의 교육용 교과서가 어떤 모습일지 탐구하는 AIU 북 시리즈 Knowledge Note 콘텐츠를 개발하고 있습니다. 또한 AIU 유니버스를 대규모 인터랙티브 에듀테인먼트 세계로 만들어 가는 여정과, 그 뒤에 있는 기술을 함께 나누어 갈 계획입니다.',
     knowledgeNoteTitle: 'Knowledge Note',
     knowledgeNoteBody:
       'TECH LAB에서 현재 개발 중인 Knowledge Note의 네 가지 핵심 주제와 철학을 살펴보세요.',
