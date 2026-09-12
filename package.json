@@ -3,8 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "npm run build:news && next dev",
+    "build:news": "node scripts/build-news.mjs",
+    "build": "npm run build:news && next build",
+    "publish:social": "node scripts/publish-social.mjs",
     "start": "next start",
     "lint": "next lint"
   },

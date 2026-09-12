@@ -1,0 +1,65 @@
+name: Publish news to social
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'news/**/*.md'
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-post:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Rebuild news JSON
+        run: node scripts/build-news.mjs
+
+      - name: Detect newly added markdown
+        id: news
+        shell: bash
+        run: |
+          BEFORE="${{ github.event.before }}"
+          if [[ -z "$BEFORE" || "$BEFORE" =~ ^0+$ ]]; then
+            echo "files=" >> "$GITHUB_OUTPUT"
+            echo "No previous commit range; skipping social publish for safety."
+            exit 0
+          fi
+          mapfile -t ADDED < <(git diff --name-only --diff-filter=A "$BEFORE" "${{ github.sha }}" -- 'news/**/*.md' || true)
+          if [[ ${#ADDED[@]} -eq 0 ]]; then
+            echo "files=" >> "$GITHUB_OUTPUT"
+            echo "No newly added news markdown files."
+            exit 0
+          fi
+          {
+            echo "files<<EOF"
+            printf '%s\n' "${ADDED[@]}"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+          printf 'New news files:\n%s\n' "${ADDED[*]}"
+
+      - name: Post to X / Facebook / LinkedIn
+        if: steps.news.outputs.files != ''
+        env:
+          SITE_URL: https://www.student-b.com
+          X_API_KEY: ${{ secrets.X_API_KEY }}
+          X_API_SECRET: ${{ secrets.X_API_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
+          FACEBOOK_PAGE_ID: ${{ secrets.FACEBOOK_PAGE_ID }}
+          FACEBOOK_PAGE_ACCESS_TOKEN: ${{ secrets.FACEBOOK_PAGE_ACCESS_TOKEN }}
+          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          LINKEDIN_ORGANIZATION_URN: ${{ secrets.LINKEDIN_ORGANIZATION_URN }}
+          NEWS_FILES: ${{ steps.news.outputs.files }}
+        run: node scripts/publish-social.mjs

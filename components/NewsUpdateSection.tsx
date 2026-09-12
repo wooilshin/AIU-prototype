@@ -17,6 +17,12 @@ interface NewsUpdateData {
   articles: Article[]
 }
 
+interface AiuNewsData {
+  sectionTitle: string
+  blurb: string
+  articles: Article[]
+}
+
 const VISIBLE_COUNT = 2
 
 const SNS_LINKS = [
@@ -45,6 +51,7 @@ const SNS_LINKS = [
 export default function NewsUpdateSection() {
   const { language } = useLanguage()
   const [data, setData] = useState<NewsUpdateData | null>(null)
+  const [aiuData, setAiuData] = useState<AiuNewsData | null>(null)
   const [startIndex, setStartIndex] = useState(0)
   const [isMobile, setIsMobile] = useState(false)
 
@@ -59,25 +66,38 @@ export default function NewsUpdateSection() {
   useEffect(() => {
     let cancelled = false
     setData(null)
+    setAiuData(null)
     setStartIndex(0)
 
-    const dataFile = language === 'ko' ? '/data/newsupdate.ko.json' : '/data/newsupdate.json'
-    fetch(dataFile)
-      .then((res) => {
-        if (!res.ok) throw new Error(`Failed to load ${dataFile}: ${res.status}`)
+    const studentBFile = language === 'ko' ? '/data/newsupdate.ko.json' : '/data/newsupdate.json'
+    const aiuFile = language === 'ko' ? '/data/aiu-news.ko.json' : '/data/aiu-news.json'
+
+    Promise.all([
+      fetch(studentBFile).then((res) => {
+        if (!res.ok) throw new Error(`Failed to load ${studentBFile}: ${res.status}`)
         return res.json()
+      }),
+      fetch(aiuFile).then((res) => {
+        if (!res.ok) throw new Error(`Failed to load ${aiuFile}: ${res.status}`)
+        return res.json()
+      }),
+    ])
+      .then(([studentBJson, aiuJson]: [NewsUpdateData, AiuNewsData]) => {
+        if (cancelled) return
+        setData({
+          ...studentBJson,
+          articles: [...studentBJson.articles].sort(
+            (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+          ),
+        })
+        setAiuData({
+          ...aiuJson,
+          articles: [...(aiuJson.articles || [])].sort(
+            (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+          ),
+        })
       })
-      .then((jsonData: NewsUpdateData) => {
-        if (!cancelled) {
-          setData({
-            ...jsonData,
-            articles: [...jsonData.articles].sort(
-              (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
-            ),
-          })
-        }
-      })
-      .catch((err) => console.error('Error loading news update data:', err))
+      .catch((err) => console.error('Error loading news data:', err))
 
     return () => {
       cancelled = true
@@ -91,6 +111,8 @@ export default function NewsUpdateSection() {
     ? data.articles
     : data.articles.slice(startIndex, startIndex + VISIBLE_COUNT)
   const showDesktopArrows = !isMobile && data.articles.length > VISIBLE_COUNT
+  const aiuArticles = aiuData?.articles ?? []
+  const hasAiuArticles = aiuArticles.length > 0
 
   return (
     <section className="newsupdate-section">
@@ -151,7 +173,7 @@ export default function NewsUpdateSection() {
             <div className="newsupdate-divider" aria-hidden="true" />
           </div>
 
-          <aside className="newsupdate-right" aria-label="AIU News">
+          <aside className="newsupdate-right" id="aiu-news" aria-label="AIU News">
             <div className="aiu-news-header">
               <h2 className="aiu-news-title">
                 <span className="aiu-news-line1">AIU</span>
@@ -177,11 +199,31 @@ export default function NewsUpdateSection() {
               </h2>
             </div>
 
-            <div className="aiu-news-panel">
+            <div className={`aiu-news-panel ${hasAiuArticles ? 'has-articles' : ''}`}>
               <p className="aiu-news-blurb">
-                Human-world news delivered by our agents
+                {aiuData?.blurb ||
+                  (language === 'ko'
+                    ? '요원들이 전하는 인간 세상 소식'
+                    : 'Human-world news delivered by our agents')}
               </p>
-              <p className="aiu-news-coming-soon">COMING SOON</p>
+
+              {hasAiuArticles ? (
+                <div className="aiu-news-list">
+                  {aiuArticles.map((article) => (
+                    <article
+                      key={article.id}
+                      className={`aiu-news-item ${article.link ? 'clickable' : ''}`}
+                      onClick={() => article.link && window.open(article.link, '_blank')}
+                    >
+                      <h3>{article.title}</h3>
+                      <p>{article.description}</p>
+                      <span className="article-date">{article.date}</span>
+                    </article>
+                  ))}
+                </div>
+              ) : (
+                <p className="aiu-news-coming-soon">COMING SOON</p>
+              )}
             </div>
           </aside>
         </div>
