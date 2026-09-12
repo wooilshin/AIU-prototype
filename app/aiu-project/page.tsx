@@ -105,71 +105,69 @@ Wooil은 펜실베이니아 대학교에서 컴퓨터 과학을 공부했습니�
               )}
             </div>
 
-            {language === 'en' && (
-              <div className="about-section about-staff">
-                <h2>{t.staffTitle}</h2>
-
-                <div className="staff-role">
-                  <h3>{t.ceoTitle}</h3>
-                  {t.ceoDesc.split('\n\n').map(
-                    (paragraph, index) =>
-                      paragraph.trim() && <p key={index}>{paragraph.trim()}</p>
-                  )}
-                  <p className="staff-contact-email">artdirector [at] student-b.com</p>
-                </div>
-
-                <div className="staff-role">
-                  <h3>{t.techLabTitle}</h3>
-                  {t.techLabDesc.split('\n\n').map(
-                    (paragraph, index) =>
-                      paragraph.trim() && <p key={index}>{paragraph.trim()}</p>
-                  )}
-                  <p className="staff-contact-email">techlab [at] student-b.com</p>
-                </div>
-
-                <div className="staff-role">
-                  <h3>{t.bizTitle}</h3>
-                  <p>{t.bizDesc}</p>
-                  <p className="staff-contact-email">
-                    ipbusiness [at] student-b.com
-                    <br />
-                    sns [at] student-b.com
-                  </p>
-                </div>
-              </div>
-            )}
-
             <div className="about-section about-student-b">
               <h2>{t.studentBTitle}</h2>
               {t.studentBDesc.split('\n\n').map(
                 (paragraph, index) =>
                   paragraph.trim() && <p key={index}>{paragraph.trim()}</p>
               )}
+            </div>
 
-              <div className="staff-role what-we-make">
-                <h3>{t.whatWeMakeTitle}</h3>
-                <div className="key-areas-grid">
-                  <div className="key-area-card">
-                    <div className="key-area-icon">
-                      <i className="fas fa-comments"></i>
-                    </div>
-                    <h3>{t.comicsTitle}</h3>
-                    <p>{t.comicsDesc}</p>
+            <div className="about-section about-staff">
+              <h2>{t.staffTitle}</h2>
+
+              <div className="staff-role">
+                <h3>{t.ceoTitle}</h3>
+                {t.ceoDesc.split('\n\n').map(
+                  (paragraph, index) =>
+                    paragraph.trim() && <p key={index}>{paragraph.trim()}</p>
+                )}
+                <p className="staff-contact-email">artdirector [at] student-b.com</p>
+              </div>
+
+              <div className="staff-role">
+                <h3>{t.techLabTitle}</h3>
+                {t.techLabDesc.split('\n\n').map(
+                  (paragraph, index) =>
+                    paragraph.trim() && <p key={index}>{paragraph.trim()}</p>
+                )}
+                <p className="staff-contact-email">techlab [at] student-b.com</p>
+              </div>
+
+              <div className="staff-role">
+                <h3>{t.bizTitle}</h3>
+                <p>{t.bizDesc}</p>
+                <p className="staff-contact-email">
+                  ipbusiness [at] student-b.com
+                  <br />
+                  sns [at] student-b.com
+                </p>
+              </div>
+            </div>
+
+            <div className="about-section what-we-make">
+              <h2>{t.whatWeMakeTitle}</h2>
+              <div className="key-areas-grid">
+                <div className="key-area-card">
+                  <div className="key-area-icon">
+                    <i className="fas fa-comments"></i>
                   </div>
-                  <div className="key-area-card">
-                    <div className="key-area-icon">
-                      <i className="fas fa-book"></i>
-                    </div>
-                    <h3>{t.bookStoryTitle}</h3>
-                    <p>{t.bookStoryDesc}</p>
+                  <h3>{t.comicsTitle}</h3>
+                  <p>{t.comicsDesc}</p>
+                </div>
+                <div className="key-area-card">
+                  <div className="key-area-icon">
+                    <i className="fas fa-book"></i>
                   </div>
-                  <div className="key-area-card">
-                    <div className="key-area-icon">
-                      <i className="fas fa-book-open"></i>
-                    </div>
-                    <h3>{t.bookKnowledgeTitle}</h3>
-                    <p>{t.bookKnowledgeDesc}</p>
+                  <h3>{t.bookStoryTitle}</h3>
+                  <p>{t.bookStoryDesc}</p>
+                </div>
+                <div className="key-area-card">
+                  <div className="key-area-icon">
+                    <i className="fas fa-book-open"></i>
                   </div>
+                  <h3>{t.bookKnowledgeTitle}</h3>
+                  <p>{t.bookKnowledgeDesc}</p>
                 </div>
               </div>
             </div>

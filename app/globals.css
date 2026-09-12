@@ -86,7 +86,6 @@ html:is(.site-en, .site-ko) :is(
     .newsupdate-header h2,
     .newsletter-section h2,
     .about-staff .staff-role h3,
-    .about-student-b .staff-role > h3,
     .key-area-card h3,
     .contact-hero h1,
     .contact-text h3,
@@ -2269,8 +2268,7 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
     margin-top: 8px;
 }
 
-.about-staff .staff-role h3,
-.about-student-b .staff-role > h3 {
+.about-staff .staff-role h3 {
     font-family: var(--font-sans);
     font-size: 22px;
     font-weight: 700;
@@ -2298,15 +2296,11 @@ html:is(.site-en, .site-ko) .about-staff .staff-role > p.staff-contact-email {
     color: #4a90e2;
 }
 
-.about-student-b > .staff-role.what-we-make {
-    margin-top: 32px;
-}
-
-.about-student-b .what-we-make .key-areas-grid {
+.about-section.what-we-make .key-areas-grid {
     margin-top: 16px;
 }
 
-.about-student-b .what-we-make .key-area-card h3 {
+.about-section.what-we-make .key-area-card h3 {
     font-size: 17px;
 }
 
