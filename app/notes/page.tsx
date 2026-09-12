@@ -75,7 +75,7 @@ const translations = {
         title: 'Where Is Knowledge Note Going?',
         paragraphs: [
           'Knowledge Note is closely connected to the world of AIU. The knowledge they study is also connected to the individual agents, their missions, and their stories throughout the Animal Intelligence Universe.',
-          'Ultimately, we want this knowledge to move beyond books and become part of an interactive world. We will explore that next step in Technology Note.',
+          'Ultimately, we want this knowledge to move beyond books and become part of an interactive world. We will explore that next step in Tech Posts.',
         ],
       },
     },
@@ -138,7 +138,7 @@ const translations = {
         title: 'Knowledge Note는 어디로 가는가?',
         paragraphs: [
           'Knowledge Note는 AIU의 세계와 깊게 연결되어 있습니다. 그들이 배우는 지식은 개별 요원들, 그들의 임무, 그리고 동물지능 유니버스 전반의 이야기와도 연결되어 있습니다.',
-          '궁극적으로 우리는 이 지식이 책을 넘어 인터랙티브한 세계의 일부가 되기를 바랍니다. 그 다음 단계는 Technology Note에서 살펴볼 예정입니다.',
+          '궁극적으로 우리는 이 지식이 책을 넘어 인터랙티브한 세계의 일부가 되기를 바랍니다. 그 다음 단계는 Tech Posts에서 살펴볼 예정입니다.',
         ],
       },
     },
