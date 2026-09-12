@@ -19,7 +19,7 @@ But AIU is more than a story about animal agents. It aims to be a new fable for 
 
 She studied design and art at the undergraduate level before pursuing applied linguistics at Georgetown University. At Student B, she leads the overall creative direction of the Animal Intelligence Universe.`,
       techLabTitle: 'Creative Tech Lab',
-      techLabDesc: `Joseph SH holds a Ph.D. in Electrical Engineering from the University of Maryland. He develops safe and playful interactive character toys.
+      techLabDesc: `Joseph SH holds a Ph.D. in Electrical Engineering from the University of Maryland. He develops safe and playful interactive character systems.
 
 Wooil studied Computer Science at the University of Pennsylvania. He develops AI-powered character games at Student B's Tech Lab.`,
       bizTitle: 'Biz Team',
@@ -51,7 +51,7 @@ Wooil studied Computer Science at the University of Pennsylvania. He develops AI
 
 Alice는 학부에서 디자인과 미술을 공부한 뒤 조지타운 대학교에서 언어학을 전공하였으며 현재 동물지능 IP의 전체 디자인을 이끌고 있습니다.`,
       techLabTitle: '크리에이티브 테크랩',
-      techLabDesc: `Joseph SH는 메릴랜드 대학교에서 전기공학 박사 학위를 취득했습니다. 안전하고 즐거운 인터랙티브 캐릭터 토이를 개발합니다.
+      techLabDesc: `Joseph SH는 메릴랜드 대학교에서 전기공학 박사 학위를 취득했습니다. 안전하고 즐거운 인터랙티브 캐릭터 시스템을 개발합니다.
 
 Wooil은 펜실베이니아 대학교에서 컴퓨터 과학을 공부했습니다. 스튜던트 비 테크랩에서 AI 기반 캐릭터 게임을 개발합니다.`,
       bizTitle: '비지니스 팀',

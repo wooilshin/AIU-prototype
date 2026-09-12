@@ -1280,9 +1280,13 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
     gap: 2px;
 }
 
-.newsupdate-header-brand,
+.newsupdate-header-brand {
+    display: block;
+}
+
 .newsupdate-header-rest {
     display: block;
+    white-space: nowrap;
 }
 
 .newsupdate-nav {
@@ -1392,17 +1396,20 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
     gap: 2px;
 }
 
-.aiu-news-line1,
-.aiu-news-line2,
-.aiu-news-line3-text {
+.aiu-news-line1 {
     display: block;
 }
 
-.aiu-news-line3 {
+.aiu-news-line2 {
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
     gap: 10px 18px;
+}
+
+.aiu-news-line2-text {
+    display: block;
+    white-space: nowrap;
 }
 
 .aiu-news-follow-group {

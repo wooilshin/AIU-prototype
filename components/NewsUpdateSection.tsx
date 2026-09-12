@@ -155,9 +155,8 @@ export default function NewsUpdateSection() {
             <div className="aiu-news-header">
               <h2 className="aiu-news-title">
                 <span className="aiu-news-line1">AIU</span>
-                <span className="aiu-news-line2">News &</span>
-                <span className="aiu-news-line3">
-                  <span className="aiu-news-line3-text">Animal Agent Reports</span>
+                <span className="aiu-news-line2">
+                  <span className="aiu-news-line2-text">News & Agent Reports</span>
                   <span className="aiu-news-follow-group">
                     <span className="aiu-news-follow">Follow Us</span>
                     <span className="aiu-news-social">
