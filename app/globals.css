@@ -2064,6 +2064,55 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
     background-color: #fff;
 }
 
+.techpost-system-list {
+    list-style: none;
+    margin: 0 0 1em;
+    padding: 0;
+}
+
+.techpost-system-list li {
+    margin: 0 0 0.85em;
+    line-height: 1.57;
+    letter-spacing: 0.025em;
+    color: #222;
+}
+
+.techpost-system-list li:last-child {
+    margin-bottom: 0;
+}
+
+.techpost-system-list strong {
+    font-weight: 700;
+    color: #111;
+}
+
+.techpost-loop {
+    font-weight: 600;
+    color: #111 !important;
+}
+
+.techpost-topic {
+    margin-top: 28px;
+}
+
+.techpost-topic h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #111;
+    margin: 0 0 12px;
+    letter-spacing: 0.01em;
+}
+
+.techpost-inline-link {
+    color: #4a90e2;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.techpost-inline-link:hover {
+    color: #2f6fbe;
+}
+
 .techpost-section-label {
     font-size: 23px !important;
     line-height: 1.35 !important;
