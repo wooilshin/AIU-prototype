@@ -2072,9 +2072,10 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
 
 .techpost-system-list li {
     margin: 0 0 0.85em;
+    font-size: 15px;
     line-height: 1.57;
     letter-spacing: 0.025em;
-    color: #222;
+    color: #666;
 }
 
 .techpost-system-list li:last-child {
@@ -2083,7 +2084,7 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
 
 .techpost-system-list strong {
     font-weight: 700;
-    color: #111;
+    color: #555;
 }
 
 .techpost-loop {

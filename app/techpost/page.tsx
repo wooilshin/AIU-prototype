@@ -22,7 +22,7 @@ const translations = {
   en: {
     tocLabel: 'Contents',
     toc: [
-      { id: 'why-building-virtual-world', label: 'Why Are We Building a Virtual World?', level: 1 },
+      { id: 'why-building-virtual-world', label: 'Why Build a Virtual World?', level: 1 },
       { id: 'what-working-on-now', label: 'What Are We Working on Now?', level: 1 },
       { id: 'what-building-first', label: 'What Are We Building First?', level: 1 },
       { id: 'where-do-we-use-ai', label: 'Where Do We Use AI?', level: 1 },
@@ -35,7 +35,7 @@ const translations = {
       },
     ] as { id: TocId; label: string; level: 1 | 2 }[],
     why: {
-      title: 'Why Are We Building a Virtual World?',
+      title: 'Why Build a Virtual World?',
       paragraphs: [
         'As AI advances, building virtual worlds filled with characters, environments, stories, and interactions will become dramatically easier. But just because we can create more worlds does not mean that every world deserves to exist. Virtual worlds still consume electricity, computing resources, hardware, and, perhaps most importantly, human attention.',
         'As the number of worlds we can create approaches abundance, choosing which worlds are worth building becomes even more important. Eventually, we will have to ask ourselves: “Why should we spend all these resources to create yet another virtual world?”',
@@ -68,13 +68,12 @@ const translations = {
     first: {
       title: 'What Are We Building First?',
       paragraphs: [
-        'Our long-term dream is to develop AIU into a large-scale virtual world and, eventually, to build technologies—and perhaps even an engine—designed specifically for that world.',
+        'Our long-term dream is to develop AIU into a large-scale virtual world and, eventually, to build an engine designed specifically for that world.',
         'But we are still at a very early stage. For now, we are focused on building a small prototype in which players talk with an Animal Agent, teach it, and help its knowledge and abilities grow.',
         'The immediate goal is to prove the core game loop:',
       ],
       loop: 'Learn → Teach the Agent → The Agent remembers and applies what it learned → New problems and quests emerge',
       closing: [
-        'Before building a massive world, we want to answer a much simpler and more important question: Is this experience itself fun?',
         'We plan to share the prototype and what we learn from developing it on this page.',
       ],
     },
@@ -84,9 +83,8 @@ const translations = {
         title: '1. Level AI — Letting the World Change',
         paragraphs: [
           'One area we consider particularly important is Level AI. We are exploring how AI can be connected to Level Design and Procedural Content Generation (PCG), allowing the world to change in response to the actions of players and Animal Agents.',
-          'We are especially interested in emergence.',
-          'AIU does have a clear long-term objective. Animal Agents must eventually save their world, and the world has a World Countdown Clock marking the time remaining before its end. But we do not want to predetermine every path that leads toward that goal.',
-          'We want to experiment with what happens when different knowledge is learned and taught, when different intermediate goals are chosen, and when differently developed Animal Agents begin interacting with one another. Could these choices lead the Agents—and eventually the world itself—in directions that even we did not anticipate?',
+          'AIU game does have a clear long-term objective. Animal Agents must eventually save their world, and the world has a World Countdown Clock marking the time remaining before its end. But we do not want to predetermine every path that leads toward that goal.',
+          'But we are especially interested in emergence. We want to experiment with what happens when different knowledge is learned and taught, when different intermediate goals are chosen, and when differently developed Animal Agents begin interacting with one another. Could these choices lead the Agents—and eventually the world itself—in directions that even we did not anticipate?',
           'AIU could become an experimental space for studying this kind of emergent learning and behavior.',
         ],
       },
@@ -95,20 +93,17 @@ const translations = {
         paragraphs: [
           'AI is used first and foremost to enable conversations with Animal Agents and to evaluate what they learn. But conversation is only part of the experience.',
           'We also plan to use AI to explore how characters move, make decisions, and respond to the world around them. We will begin with traditional Game AI techniques such as A* and FSMs, while also experimenting over time with how learning-based approaches such as Reinforcement Learning might be incorporated.',
-          'Ultimately, one of the questions we want to investigate is simple: Can what an Agent learns through conversation actually change how it behaves?',
         ],
       },
       generative: {
         title: '3. Generative AI — Reducing the Time It Takes to Build',
         intro:
-          'We also plan to use Generative AI extensively to reduce repetitive and time-consuming parts of game production.',
+          'We use Generative AI extensively to reduce repetitive and time-consuming parts of game production.',
         assets: {
           title: '3D Assets',
           paragraphs: [
             'When turning our original character designs into 3D assets, we plan to use AI-assisted tools for processes such as mesh generation and rigging—tasks that traditionally required substantial manual work in tools such as Blender.',
-            'However, the original character artwork itself is drawn by us, not generated by AI.',
-            'As we have emphasized throughout the project, we prefer to create the fundamental parts of the work—the stories, characters, and original artwork—by hand whenever possible. These are the things that determine the original creative direction of AIU.',
-            'For us, AI is less a tool for deciding that direction than a tool for bringing what we have created into the world faster.',
+            'However, the original character artwork itself is drawn by us, not generated by AI. As we have emphasized throughout the project, we prefer to create the fundamental parts of the work—the stories, characters, and original artwork—by hand whenever possible. These are the things that determine the original creative direction of AIU.',
           ],
         },
         music: {
@@ -173,12 +168,12 @@ const translations = {
     first: {
       title: '당장 무엇을 할 것인가',
       paragraphs: [
-        '장기적으로는 AIU를 대규모 가상세계로 발전시키고, 그 세계에 적합한 자체 기술과 엔진까지 구축하는 것이 우리의 꿈이다.',
+        '장기적으로는 AIU를 대규모 가상세계로 발전시키고, 결국 그 세계에 맞게 설계된 엔진을 구축하는 것이 우리의 꿈이다.',
         '하지만 우리는 아직 아주 초기 단계에 있다. 지금은 동물 요원과 대화하고, 요원을 가르치면서 지식과 능력을 성장시키는 설정이 구현된 작은 프로토타입을 만드는 것에 집중하고 있다.',
       ],
       loop: '사람이 배우고 → 요원에게 가르치고 → 요원이 그것을 기억하고 활용하며 → 새로운 문제와 퀘스트가 열린다',
       closing: [
-        '핵심 게임 루프를 증명하는 것이 목표다. 그리고 무엇보다 이 경험 자체가 재미있는지를 확인하려 한다.',
+        '핵심 게임 루프를 증명하는 것이 목표다.',
         '프로토타입의 개발 과정과 결과는 이 페이지를 통해 공개할 예정이다.',
       ],
     },
@@ -188,8 +183,9 @@ const translations = {
         title: '1. Level AI — 세계가 스스로 변화하게 만들기',
         paragraphs: [
           '우리가 특히 중요하게 생각하는 영역이 Level AI다. AI를 게임의 Level Design과 Procedural Content Generation(PCG)에 연결하여 플레이어와 동물요원의 행동에 따라 세계가 변화하도록 만드는 방법을 고민하고 있다.',
-          "우리는 특히 창발(Emergence)에 관심을 두고 있다. 동물지능 세계관에는 분명한 장기 목표가 있다. 요원들은 제한된 시간 안에 세상을 구해야 하며, 세계에는 종말까지 남은 시간을 나타내는 '종말 시계'도 존재한다. 하지만 그 목표에 도달하는 과정까지 미리 정해놓고 싶지는 않다.",
-          '어떤 지식을 배우고, 누구에게 가르치고, 어떤 중간 목표를 선택하느냐에 따라 동물요원들의 세계가 예상하지 못했던 새로운 방향으로 발전할 수 있는지를 실험하고 싶다.',
+          "AIU 게임에는 분명한 장기 목표가 있다. 요원들은 제한된 시간 안에 세상을 구해야 하며, 세계에는 종말까지 남은 시간을 나타내는 '종말 시계'도 존재한다. 하지만 그 목표에 도달하는 과정까지 미리 정해놓고 싶지는 않다.",
+          '하지만 우리는 특히 창발(Emergence)에 관심을 두고 있다. 어떤 지식을 배우고, 누구에게 가르치고, 어떤 중간 목표를 선택하느냐에 따라, 그리고 서로 다르게 성장한 Animal Agent들이 상호작용하기 시작할 때, 요원들과 세계가 우리조차 예상하지 못한 방향으로 나아갈 수 있는지를 실험하고 싶다.',
+          'AIU는 이런 종류의 창발적 학습과 행동을 연구하는 실험 공간이 될 수 있다.',
         ],
       },
       character: {
@@ -197,18 +193,17 @@ const translations = {
         paragraphs: [
           'AI는 기본적으로 Animal Agent와의 대화와 학습 평가에 사용된다. 하지만 그것만으로 끝나지 않는다. 캐릭터가 어떻게 움직이고, 판단하고, 주변 세계에 반응하는지에도 AI를 활용할 예정이다.',
           'A*, FSM과 같은 전통적인 Game AI 기법을 기본으로 활용하면서, 장기적으로는 Reinforcement Learning과 같은 학습 기반 접근법을 어디까지 적용할 수 있는지도 실험할 것이다.',
-          '궁극적으로 우리가 보고 싶은 것은 Agent가 대화를 통해 배운 것이 실제 행동의 변화로 이어지는가이다.',
         ],
       },
       generative: {
         title: '3. Generative AI — 제작 시간을 줄이는 도구',
         intro:
-          'Generative AI는 반복적이고 시간이 많이 드는 게임 제작 과정을 줄이는 데 적극적으로 활용할 것이다.',
+          'Generative AI는 반복적이고 시간이 많이 드는 게임 제작 과정을 줄이는 데 적극적으로 활용한다.',
         assets: {
           title: '3D Assets',
           paragraphs: [
             '캐릭터 원화를 기반으로 3D 에셋을 만들 때 Mesh 생성, Rigging 등 과거에는 Blender에서 많은 시간이 필요했던 작업에 AI 기반 도구를 적극 활용할 예정이다.',
-            '다만 캐릭터의 원화 자체는 AI가 아니라 우리가 손으로 직접 그린다. 계속 우리의 철학을 강조해왔듯이, 우리는 이야기와 캐릭터, 그림처럼 작품의 최초 방향을 결정하는 근원적인 창작은 가능한 한 사람이 직접 만드는 것을 선호한다. AI는 그 방향을 대신 결정하는 존재라기보다, 우리가 만든 것을 더 빠르게 세계 속에 구현하는 도구에 가깝다.',
+            '다만 캐릭터의 원화 자체는 AI가 아니라 우리가 손으로 직접 그린다. 계속 우리의 철학을 강조해왔듯이, 우리는 이야기와 캐릭터, 그림처럼 작품의 최초 방향을 결정하는 근원적인 창작은 가능한 한 사람이 직접 만드는 것을 선호한다.',
           ],
         },
         music: {

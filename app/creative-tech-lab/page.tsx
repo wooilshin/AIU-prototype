@@ -13,8 +13,6 @@ const translations: Record<
     techLabBody: string
     knowledgeNoteTitle: string
     knowledgeNoteBody: string
-    musicTitle: string
-    musicBody: string
     postsTitle: string
     postsBody: string
     clickHint: string
@@ -31,9 +29,6 @@ const translations: Record<
     knowledgeNoteTitle: 'Knowledge Note',
     knowledgeNoteBody:
       'Explore the key topics and philosophy behind Knowledge Notes, a new series currently being developed by our Creative Tech Lab.',
-    musicTitle: 'Music',
-    musicBody:
-      "Listen to the theme songs of AIU's animal agents. Our agents have their own musical tastes, ranging from Trap and Dubstep to Bubble Pop and R&B.",
     postsTitle: 'AIU Tech Posts',
     postsBody:
       'We plan to share short Tech Notes and Commentaries on this page. These posts will cover topics such as our experiments with game engines, content production pipelines, and our work with interactive character systems.',
@@ -53,9 +48,6 @@ const translations: Record<
     knowledgeNoteTitle: 'Knowledge Note',
     knowledgeNoteBody:
       'TECH LAB에서 현재 개발 중인 Knowledge Note의 네 가지 핵심 주제와 철학을 살펴보세요.',
-    musicTitle: 'Music',
-    musicBody:
-      'AIU 동물 에이전트들의 테마곡을 들어보세요. 에이전트마다 Trap, Dubstep부터 Bubble Pop, R&B까지 각자의 음악 취향이 있습니다.',
     postsTitle: 'AIU Tech Posts',
     postsBody:
       '이 페이지에서 짧은 Tech Notes와 Commentaries를 공유할 예정입니다. 게임 엔진 실험, 콘텐츠 제작 파이프라인, 인터랙티브 캐릭터 시스템 작업 등의 주제를 다룰 예정입니다.',
@@ -113,16 +105,6 @@ export default function CreativeTechLabPage() {
               <span className="tech-lab-click-hint">{t.clickHint}</span>
             </h2>
             <p>{t.knowledgeNoteBody}</p>
-          </div>
-
-          <div className="about-section">
-            <h2 className="tech-lab-heading-with-hint">
-              <Link href="/music" className="tech-lab-music-link">
-                {t.musicTitle}
-              </Link>
-              <span className="tech-lab-click-hint">{t.clickHint}</span>
-            </h2>
-            <p>{t.musicBody}</p>
           </div>
 
           <div className="about-section">
