@@ -21,7 +21,7 @@ const translations = {
     tocLabel: 'Contents',
     toc: [
       { id: 'what-is-knowledge-note', label: 'What Is Knowledge Note?', level: 1 },
-      { id: 'why-another-educational-booklet', label: 'Why another educational booklet?', level: 1 },
+      { id: 'why-another-educational-booklet', label: 'Why Add Something So Educational?', level: 1 },
       { id: 'what-is-inside', label: 'What Is Inside?', level: 1 },
       {
         id: 'learning-and-asking',
@@ -41,7 +41,7 @@ const translations = {
         ],
       },
       why: {
-        title: 'Why another educational booklet?',
+        title: 'Why Add Something So Educational?',
         paragraphs: [
           'The Animal Intelligence series includes comics and character-driven short stories. But we did not want to stop at satire or simply tell stories about animals. At a time when AI is changing the meaning and value of knowledge—and creating growing uncertainty about the future—we also wanted to suggest a possible direction forward.',
           'Education is one area where AI is already bringing strange changes. Think about studying. As answers become easier to find, we may lose some of our motivation to explore and understand things for ourselves. More fundamentally, young people may increasingly wonder whether the subjects they spend years studying are still worth learning at all. Respect for books, teachers, and traditional ways of learning may also begin to fade.',
@@ -84,7 +84,7 @@ const translations = {
     tocLabel: '목차',
     toc: [
       { id: 'what-is-knowledge-note', label: 'Knowledge Note란 무엇인가?', level: 1 },
-      { id: 'why-another-educational-booklet', label: '왜 또 다른 교육용 책자인가?', level: 1 },
+      { id: 'why-another-educational-booklet', label: '왜 이렇게 교육적인 것을 더할까?', level: 1 },
       { id: 'what-is-inside', label: '무엇이 담겨 있는가?', level: 1 },
       {
         id: 'learning-and-asking',
@@ -104,7 +104,7 @@ const translations = {
         ],
       },
       why: {
-        title: '왜 또 다른 교육용 책자인가?',
+        title: '왜 이렇게 교육적인 것을 더할까?',
         paragraphs: [
           '동물지능 시리즈에는 만화와 캐릭터 중심의 단편 소설이 있습니다. 하지만 우리는 풍자나 동물 이야기에만 머물고 싶지 않았습니다. AI가 지식의 의미와 가치를 바꾸고, 미래에 대한 불확실성이 커지는 시대에, 앞으로 나아갈 수 있는 하나의 방향을 제안하고 싶었습니다.',
           '교육은 AI가 이미 낯선 변화를 일으키고 있는 영역 중 하나입니다. 공부를 생각해 보세요. 답을 찾기 쉬워질수록, 스스로 탐구하고 이해하려는 동기를 잃을 수 있습니다. 더 근본적으로, 젊은 세대는 수년간 공부해 온 과목이 과연 여전히 배울 가치가 있는지 점점 더 자주 묻게 될 수 있습니다. 책과 선생님, 그리고 전통적인 배움의 방식에 대한 존중도 희미해질 수 있습니다.',
