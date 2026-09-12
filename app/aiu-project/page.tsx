@@ -26,7 +26,7 @@ Wooil studied Computer Science at the University of Pennsylvania. He develops AI
       bizDesc: `Jin holds an MBA from Northwestern and works on IP planning. Guinea handles publishing and publicity.`,
       studentBTitle: 'About Student B',
       studentBDesc:
-        'Student B is an independent IP studio exploring new standards in edutainment. The company is currently focused on publishing AIU-related books and contents.',
+        'Student B is an independent IP studio dedicated to publications from the Animal Intelligence Universe (AIU).\n\nWe are a small studio with a big dream: to create stories that offer people comfort and a sense of direction in this uncertain and rapidly changing age of AI—and, ultimately, to build a new kind of educational world.',
       whatWeMakeTitle: 'What We Make',
       bookStoryTitle: 'Book (The Animal Intelligence Story)',
       bookStoryDesc:
@@ -59,7 +59,7 @@ Wooil은 펜실베이니아 대학교에서 컴퓨터 과학을 공부했습니�
         'Jin은 노스웨스턴 MBA를 졸업했으며 IP 기획을 담당하고 있습니다. Guinea는 출판 및 홍보를 담당하고 있습니다.',
       studentBTitle: '스튜던트 비에 대하여',
       studentBDesc:
-        '스튜던트 비는 에듀테인먼트의 새로운 기준을 탐구하는 독립 IP 스튜디오입니다. 회사는 현재 동물지능 관련 도서와 콘텐츠 출판에 집중하고 있습니다.',
+        '스튜던트 비는 Animal Intelligence Universe(AIU)의 출판물에 전념하는 독립 IP 스튜디오입니다.\n\n우리는 작은 스튜디오이지만 큰 꿈을 갖고 있습니다. 불확실하고 빠르게 변하는 AI 시대에 사람들에게 위안과 방향감을 주는 이야기를 만들고, 궁극적으로는 새로운 종류의 교육 세계를 구축하는 것입니다.',
       whatWeMakeTitle: '스튜던트 비가 만드는 것들',
       bookStoryTitle: '도서 (내이름은 시리즈)',
       bookStoryDesc:
