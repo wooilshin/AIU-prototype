@@ -64,6 +64,14 @@ export default function Footer() {
                   <i className="fab fa-instagram"></i>
                 </a>
                 <a
+                  href="https://x.com/studentbpress"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="X"
+                >
+                  <i className="fab fa-x-twitter"></i>
+                </a>
+                <a
                   href="https://www.facebook.com/studentbpress/"
                   target="_blank"
                   rel="noopener noreferrer"

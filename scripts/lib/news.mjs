@@ -55,12 +55,14 @@ export function articlesFromMarkdown(files) {
       ).trim()
       const date = String(file.data.date || '1970-01-01').trim()
       const link = file.data.link ? String(file.data.link).trim() : undefined
+      const image = file.data.image ? String(file.data.image).trim() : undefined
       return {
         id: index + 1,
         title,
         description,
         date,
         ...(link ? { link } : {}),
+        ...(image ? { image } : {}),
         _slug: file.slug,
         _publishSocial: Boolean(file.data.publish_social),
         _relativePath: file.relativePath,

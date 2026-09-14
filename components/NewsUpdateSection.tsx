@@ -9,6 +9,7 @@ interface Article {
   description: string
   date: string
   link?: string
+  image?: string
 }
 
 interface NewsUpdateData {
@@ -32,6 +33,11 @@ const SNS_LINKS = [
     icon: 'fab fa-instagram',
   },
   {
+    href: 'https://x.com/studentbpress',
+    label: 'X',
+    icon: 'fab fa-x-twitter',
+  },
+  {
     href: 'https://www.facebook.com/studentbpress/',
     label: 'Facebook',
     icon: 'fab fa-facebook-f',
@@ -40,11 +46,6 @@ const SNS_LINKS = [
     href: 'https://www.linkedin.com/company/animal-intelligence',
     label: 'LinkedIn',
     icon: 'fab fa-linkedin-in',
-  },
-  {
-    href: 'https://www.youtube.com/@studentbpress',
-    label: 'YouTube',
-    icon: 'fab fa-youtube',
   },
 ] as const
 
@@ -215,9 +216,19 @@ export default function NewsUpdateSection() {
                       className={`aiu-news-item ${article.link ? 'clickable' : ''}`}
                       onClick={() => article.link && window.open(article.link, '_blank')}
                     >
-                      <h3>{article.title}</h3>
-                      <p>{article.description}</p>
-                      <span className="article-date">{article.date}</span>
+                      {article.image && (
+                        <img
+                          className="aiu-news-item-image"
+                          src={article.image}
+                          alt=""
+                          loading="lazy"
+                        />
+                      )}
+                      <div className="aiu-news-item-copy">
+                        <h3>{article.title}</h3>
+                        <p>{article.description}</p>
+                        <span className="article-date">{article.date}</span>
+                      </div>
                     </article>
                   ))}
                 </div>
