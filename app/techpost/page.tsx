@@ -30,7 +30,7 @@ const translations = {
       { id: 'character-ai', label: 'Character AI — Characters That Talk and Act', level: 2 },
       {
         id: 'generative-ai',
-        label: 'Generative AI — Reducing the Time It Takes to Build',
+        label: 'Workflow — Reducing the Time It Takes to Build',
         level: 2,
       },
     ] as { id: TocId; label: string; level: 1 | 2 }[],
@@ -96,7 +96,7 @@ const translations = {
         ],
       },
       generative: {
-        title: '3. Generative AI — Reducing the Time It Takes to Build',
+        title: '3. Workflow — Reducing the Time It Takes to Build',
         intro:
           'We use Generative AI extensively to reduce repetitive and time-consuming parts of game production.',
         assets: {
@@ -130,7 +130,7 @@ const translations = {
       { id: 'character-ai', label: 'Character AI — 말하고 행동하는 캐릭터 AI', level: 2 },
       {
         id: 'generative-ai',
-        label: 'Generative AI — 제작 시간을 줄이는 도구',
+        label: 'Workflow — 제작 시간을 줄이는 도구',
         level: 2,
       },
     ] as { id: TocId; label: string; level: 1 | 2 }[],
@@ -196,7 +196,7 @@ const translations = {
         ],
       },
       generative: {
-        title: '3. Generative AI — 제작 시간을 줄이는 도구',
+        title: '3. Workflow — 제작 시간을 줄이는 도구',
         intro:
           'Generative AI는 반복적이고 시간이 많이 드는 게임 제작 과정을 줄이는 데 적극적으로 활용한다.',
         assets: {
