@@ -28,24 +28,19 @@ const VISIBLE_COUNT = 2
 
 const SNS_LINKS = [
   {
-    href: 'https://www.instagram.com/studentbpress/',
-    label: 'Instagram',
-    icon: 'fab fa-instagram',
-  },
-  {
     href: 'https://x.com/studentbpress',
     label: 'X',
     icon: 'svg-x' as const,
   },
   {
-    href: 'https://www.facebook.com/studentbpress/',
-    label: 'Facebook',
-    icon: 'fab fa-facebook-f',
-  },
-  {
     href: 'https://www.linkedin.com/company/animal-intelligence',
     label: 'LinkedIn',
     icon: 'fab fa-linkedin-in',
+  },
+  {
+    href: 'https://www.facebook.com/studentbpress/',
+    label: 'Facebook',
+    icon: 'fab fa-facebook-f',
   },
 ] as const
 
@@ -178,40 +173,38 @@ export default function NewsUpdateSection() {
             <div className="aiu-news-header">
               <h2 className="aiu-news-title">
                 <span className="aiu-news-line1">AIU</span>
-                <span className="aiu-news-line2">
-                  <span className="aiu-news-line2-text">News & Agent Reports</span>
-                  <span className="aiu-news-follow-group">
-                    <span className="aiu-news-follow">Follow Us</span>
-                    <span className="aiu-news-social">
-                      {SNS_LINKS.map((item) => (
-                        <a
-                          key={item.label}
-                          href={item.href}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          aria-label={item.label}
-                        >
-                          {item.icon === 'svg-x' ? (
-                            <svg
-                              className="x-social-icon"
-                              viewBox="0 0 24 24"
-                              aria-hidden="true"
-                              focusable="false"
-                              fill="currentColor"
-                              width="1em"
-                              height="1em"
-                            >
-                              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                            </svg>
-                          ) : (
-                            <i className={item.icon} aria-hidden="true"></i>
-                          )}
-                        </a>
-                      ))}
-                    </span>
-                  </span>
-                </span>
+                <span className="aiu-news-line2-text">News & Agent Reports</span>
               </h2>
+              <div className="aiu-news-follow-group">
+                <span className="aiu-news-follow">Follow our news</span>
+                <span className="aiu-news-social">
+                  {SNS_LINKS.map((item) => (
+                    <a
+                      key={item.label}
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={item.label}
+                    >
+                      {item.icon === 'svg-x' ? (
+                        <svg
+                          className="x-social-icon"
+                          viewBox="0 0 24 24"
+                          aria-hidden="true"
+                          focusable="false"
+                          fill="currentColor"
+                          width="1em"
+                          height="1em"
+                        >
+                          <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                        </svg>
+                      ) : (
+                        <i className={item.icon} aria-hidden="true"></i>
+                      )}
+                    </a>
+                  ))}
+                </span>
+              </div>
             </div>
 
             <div className={`aiu-news-panel ${hasAiuArticles ? 'has-articles' : ''}`}>
