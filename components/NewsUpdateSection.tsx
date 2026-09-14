@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { useLanguage } from '@/contexts/LanguageContext'
+import XSocialIcon from '@/components/XSocialIcon'
 
 interface Article {
   id: number
@@ -35,7 +36,7 @@ const SNS_LINKS = [
   {
     href: 'https://x.com/studentbpress',
     label: 'X',
-    icon: 'fab fa-x-twitter',
+    icon: 'svg-x' as const,
   },
   {
     href: 'https://www.facebook.com/studentbpress/',
@@ -191,7 +192,11 @@ export default function NewsUpdateSection() {
                           rel="noopener noreferrer"
                           aria-label={item.label}
                         >
-                          <i className={item.icon} aria-hidden="true"></i>
+                          {item.icon === 'svg-x' ? (
+                            <XSocialIcon />
+                          ) : (
+                            <i className={item.icon} aria-hidden="true"></i>
+                          )}
                         </a>
                       ))}
                     </span>

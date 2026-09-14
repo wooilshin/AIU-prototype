@@ -1447,6 +1447,13 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
     opacity: 0.85;
 }
 
+.aiu-news-social .x-social-icon,
+.social-icons .x-social-icon {
+    display: block;
+    width: 1em;
+    height: 1em;
+}
+
 .aiu-news-panel {
     background: #ececec;
     border-radius: 18px;
@@ -1856,6 +1863,7 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
 .social-icons a {
     color: var(--footer-ink);
     font-size: 18px;
+    line-height: 1;
     transition: opacity 0.2s;
 }
 

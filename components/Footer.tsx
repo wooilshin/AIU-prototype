@@ -2,6 +2,7 @@
 
 import { useLanguage } from '@/contexts/LanguageContext'
 import NewsletterForm from '@/components/NewsletterForm'
+import XSocialIcon from '@/components/XSocialIcon'
 
 export default function Footer() {
   const { language } = useLanguage()
@@ -69,7 +70,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   aria-label="X"
                 >
-                  <i className="fab fa-x-twitter"></i>
+                  <XSocialIcon />
                 </a>
                 <a
                   href="https://www.facebook.com/studentbpress/"
