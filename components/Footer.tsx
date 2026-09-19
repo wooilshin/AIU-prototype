@@ -21,7 +21,7 @@ export default function Footer() {
       businessTeam: '사업',
       techLab: '테크랩',
       copyright:
-        '본 콘텐츠의 저작권은 Student B 또는 각 권리자에게 있습니다. Student B® 및 관련 로고는 Student B의 등록상표입니다. 무단 복제 및 배포를 금합니다.',
+        '본 콘텐츠의 저작권은 Student B에게 있습니다. Student B® 및 관련 로고는 Student B의 등록상표입니다. 무단 복제 및 배포를 금합니다.',
     },
   }
 

@@ -41,35 +41,29 @@ Wooil studied Computer Science at the University of Pennsylvania. He develops AI
         'Animal Intelligence main characters: Red Fox, Blue Bird, Green Sea Turtle, Capybara, Beaglier, Bunny, Raccoon, White Giraffe, Korat Cat, Barbary Lion, Squirrel, and Black Panther',
     },
     ko: {
-      introTitle: '동물지능 프로젝트',
-      introDesc: `AIU, Animal Intelligence Universe의 약자로, 인간을 관찰하며 인간의 지식에서 배우는 비밀 동물 요원들에 관한 오리지널 IP 프로젝트입니다.
-
-하지만 AIU는 단순히 동물 요원들의 이야기 그 이상입니다. AIU는 불안정한 이 시대에 희망을 품고 함께 미래를 상상하게 하는 21세기의 새로운 우화가 되고자 합니다.`,
-      staffTitle: '스튜던트 비 팀소개',
-      ceoTitle: '크리에이티브 리드',
-      ceoDesc: `Alice는 스튜던트 비의 CEO이자 크리에이티브 리드입니다.
-
-Alice는 학부에서 디자인과 미술을 공부한 뒤 조지타운 대학교에서 언어학을 전공하였으며 현재 동물지능 IP의 전체 디자인을 이끌고 있습니다.`,
-      techLabTitle: '크리에이티브 테크랩',
-      techLabDesc: `Joseph SH는 메릴랜드 대학교에서 전기공학 박사 학위를 취득했습니다. 안전하고 즐거운 인터랙티브 캐릭터 시스템을 개발합니다.
-
-Wooil은 펜실베이니아 대학교에서 컴퓨터 과학을 공부했습니다. 스튜던트 비 테크랩에서 AI 기반 캐릭터 게임을 개발합니다.`,
+      introTitle: '동물지능 시리즈',
+      introDesc: `동물지능은 인간 세상에서 지식을 빼오기 위해 파견된 동물 요원들의 이야기를 담은 출판물 시리즈입니다. 서로 다른 목적과 전문 분야를 지닌 동물 요원들이 인간의 지식을 염탐하며 모험하고, 갈등하고, 성장하는 이야기를 담고 있습니다. 청소년에게는 동물 요원들의 모험과 판타지로, 성인들에게는 AI 시대의 인간 사회를 바라보는 철학적·사회적 우화로 읽힐 수 있는 동물지능 시리즈는 ‘21세기의 새로운 우화’를 지향합니다.`,
+      staffTitle: '스튜던트 비 팀 소개',
+      ceoTitle: '창작팀',
+      ceoDesc: `Student B의 창작팀은 정책학과 인공지능을 전공한 글 작가 그리고 디자인과 언어교육학을 전공한 그림 작가 2인으로 이루어져있습니다. 지금 우리 시대에 가장 필요한 것은 인간다움과 미래를 이야기하는새로운 스토리텔링이라고 믿으며, ‘동물지능’ 시리즈를 만드는데 전념하고 있습니다.`,
+      techLabTitle: '크리에이티브 랩',
+      techLabDesc: `Student B 크리에이티브 랩은 동물지능 세계를 인터랙티브 콘텐츠로 확장을 준비하고 있습니다. 전자공학 박사 Joseph Sh와 컴퓨터공학 석사 Will이 다양한 콘텐츠와 캐릭터 기반 게임을 기획하고 있습니다.`,
       bizTitle: '비지니스 팀',
       bizDesc:
         'Jin은 노스웨스턴 MBA를 졸업했으며 IP 기획을 담당하고 있습니다. Guinea는 출판 및 홍보를 담당하고 있습니다.',
       studentBTitle: '스튜던트 비에 대하여',
       studentBDesc:
-        '스튜던트 비는 Animal Intelligence Universe(AIU)의 출판물에 전념하는 독립 IP 스튜디오입니다. 우리는 작은 스튜디오이지만 큰 꿈을 갖고 있습니다. 불확실하고 빠르게 변하는 AI 시대에 위안과 방향감을 주는, 다음 세대를 위한 이야기와 새로운 교육 세계를 만들고자 합니다.',
+        'Student B는 동물지능이라는 하나의 세계관을 중심으로, AI 시대에서 새로운 의미를 찾는 콘텐츠를 만드는데 전념하고 있는 출판사이자 IP 스튜디오입니다.',
       whatWeMakeTitle: '스튜던트 비가 만드는 것들',
-      bookStoryTitle: '도서 (내이름은 시리즈)',
+      bookStoryTitle: '소설 (내 이름은 시리즈)',
       bookStoryDesc:
-        '스튜던트 비는 인간 세계에 잠입해 인간의 지식을 배우는 동물 요원들을 중심으로 한 단편·장편 판타지 서사를 만듭니다. 동물 요원들의 이야기로 읽히지만, 이 시리즈는 포스트 AI 세계에 대한 우화이기도 합니다.',
-      bookKnowledgeTitle: '도서 (Knowledge Note 시리즈)',
+        '인간의 지식을 배우기 위해 인간 세상으로 파견된 동물 요원들의 사연과 모험, 성장을 담은 소설 시리즈입니다. 각 동물의 이야기를 통해 AI 시대의 인간과 사회를 은유적으로 그려냅니다.',
+      bookKnowledgeTitle: '지식서 (지식 노트 시리즈)',
       bookKnowledgeDesc:
-        '스튜던트 비는 또한 서사 시리즈의 동반자 역할을 하는 짧은 교육용 책자를 만듭니다. 이 책자들은 AI 시대의 교과서가 어떤 모습일지 상상해 보려는 스튜던트 비의 시도입니다.',
-      comicsTitle: '인간관찰기 (만화 시리즈)',
+        '동물지능 시리즈와 함께 읽을 수 있는 짧은 교육용 지식서 시리즈입니다. 동물 요원들이 인간에게서 배운 지식을 정리하는 동시에, AI 시대의 새로운 교과서와 배움은 어떤 모습이어야 할지 상상해 보는 Student B의 실험이기도 합니다.',
+      comicsTitle: '만화 (세상관찰기 시리즈)',
       comicsDesc:
-        '스튜던트 비의 플래그십 시리즈이자 세계관의 진입점인 만화 시리즈는, 풍자와 유머를 통해 AI 시대 인간의 삶을 탐구하는 짧은 일러스트 스토리로 구성되어 있습니다.',
+        '동물지능 캐릭터들의 시선을 통해 AI 시대 인간의 삶과 사회를 관찰하고, 그 속의 모순과 변화를 풍자와 유머로 풀어낸 만화 시리즈입니다.',
       charactersAlt:
         'Animal Intelligence 주요 캐릭터: Red Fox, Blue Bird, Green Sea Turtle, Capybara, Beaglier, Bunny, Raccoon, White Giraffe, Korat Cat, Barbary Lion, Squirrel, Black Panther',
     },
@@ -161,6 +155,7 @@ Wooil은 펜실베이니아 대학교에서 컴퓨터 과학을 공부했습니�
                 <p className="staff-contact-email">techlab [at] student-b.com</p>
               </div>
 
+              {language !== 'ko' && (
               <div className="staff-role">
                 <h3>{t.bizTitle}</h3>
                 <p>{t.bizDesc}</p>
@@ -170,6 +165,7 @@ Wooil은 펜실베이니아 대학교에서 컴퓨터 과학을 공부했습니�
                   sns [at] student-b.com
                 </p>
               </div>
+              )}
             </div>
           </div>
         </section>

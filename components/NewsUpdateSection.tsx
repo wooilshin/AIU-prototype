@@ -169,11 +169,17 @@ export default function NewsUpdateSection() {
             <div className="newsupdate-divider" aria-hidden="true" />
           </div>
 
-          <aside className="newsupdate-right" id="aiu-news" aria-label="AIU News">
+          <aside
+            className="newsupdate-right"
+            id="aiu-news"
+            aria-label={language === 'ko' ? '동물지능 뉴스' : 'AIU News'}
+          >
             <div className="aiu-news-header">
               <h2 className="aiu-news-title">
-                <span className="aiu-news-line1">AIU</span>
-                <span className="aiu-news-line2-text">News & Agent Reports</span>
+                <span className="aiu-news-line1">{language === 'ko' ? '동물지능' : 'AIU'}</span>
+                <span className="aiu-news-line2-text">
+                  {language === 'ko' ? '뉴스 & 요원 보고서' : 'News & Agent Reports'}
+                </span>
               </h2>
               <div className="aiu-news-follow-group">
                 <span className="aiu-news-follow">Follow our news</span>
