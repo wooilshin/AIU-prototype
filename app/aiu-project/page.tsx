@@ -99,6 +99,7 @@ Wooil studied Computer Science at the University of Pennsylvania. He develops AI
               )}
             </div>
 
+            {language !== 'ko' && (
             <div className="about-section about-student-b">
               <h2>{t.studentBTitle}</h2>
               {t.studentBDesc.split('\n\n').map(
@@ -106,6 +107,7 @@ Wooil studied Computer Science at the University of Pennsylvania. He develops AI
                   paragraph.trim() && <p key={index}>{paragraph.trim()}</p>
               )}
             </div>
+            )}
 
             <div className="about-section what-we-make">
               <h2>{t.whatWeMakeTitle}</h2>
@@ -136,6 +138,11 @@ Wooil studied Computer Science at the University of Pennsylvania. He develops AI
 
             <div className="about-section about-staff">
               <h2>{t.staffTitle}</h2>
+              {language === 'ko' &&
+                t.studentBDesc.split('\n\n').map(
+                  (paragraph, index) =>
+                    paragraph.trim() && <p key={`staff-intro-${index}`}>{paragraph.trim()}</p>
+                )}
 
               <div className="staff-role">
                 <h3>{t.ceoTitle}</h3>
