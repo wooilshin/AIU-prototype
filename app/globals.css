@@ -2299,6 +2299,18 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
     line-height: 1.3;
 }
 
+a.tech-lab-click-hint {
+    text-decoration: none;
+}
+
+a.tech-lab-click-hint:hover {
+    text-decoration: underline;
+}
+
+.tech-lab-footnote .tech-lab-nft-heading {
+    margin-top: 28px !important;
+}
+
 .tech-lab-footnote h2 {
     font-size: 18px !important;
     font-weight: 600 !important;

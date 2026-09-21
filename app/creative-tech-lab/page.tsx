@@ -18,6 +18,9 @@ const translations: Record<
     clickHint: string
     noteTitle: string
     noteBody: string[]
+    nftTitle: string
+    nftHint: string
+    nftBody: string
   }
 > = {
   en: {
@@ -38,6 +41,10 @@ const translations: Record<
       'Although the Tech Lab explores AI and emerging technologies, the original Animal Intelligence stories and artwork are created entirely by hand. We chose not to use AI to create the original works because we want to preserve the artistic direction and human authorship.',
       'This distinction is also important to the ideas behind Animal Intelligence itself. At its core, the project explores questions surrounding the responsible use of AI—what we choose to delegate to them and what we choose to keep human.',
     ],
+    nftTitle: 'Animal Intelligence NFTs',
+    nftHint: '→ View Collection on OpenSea',
+    nftBody:
+      'The inaugural digital collectibles of the Animal Intelligence Universe, created as tokens of remembrance.',
   },
   ko: {
     title: '크리에이티브 랩',
@@ -56,6 +63,10 @@ const translations: Record<
     noteBody: [
       'Student B는 콘텐츠의 의도 방향과 창작의 주체성을 지키기 위해 원작 제작에 AI를 사용하지 않습니다. 저희 크리에티브랩이 AI와 새로운 기술을 연구하고 있지만, 동물지능의 원작 스토리와 만화 그림은 모두 손으로 직접 제작하고 있습니다. 저희 제작 철학은 동물지능 출판물에서 다루는 기본 내용 AI를 어떻게 책임감 있게 쓸 것인가—무엇을 AI에 맡기고, 무엇을 인간의 영역으로 남길 것인가—에 대한 질문과도 맞닿아 있습니다.',
     ],
+    nftTitle: 'Animal Intelligence NFTs',
+    nftHint: '→ View Collection on OpenSea',
+    nftBody:
+      'The inaugural digital collectibles of the Animal Intelligence Universe, created as tokens of remembrance.',
   },
 }
 
@@ -121,6 +132,30 @@ export default function CreativeTechLabPage() {
             {t.noteBody.map((paragraph, index) => (
               <p key={index}>{paragraph}</p>
             ))}
+
+            {language === 'en' && (
+              <>
+                <h2 className="tech-lab-heading-with-hint tech-lab-nft-heading">
+                  <a
+                    href="https://opensea.io/collection/animalintelligence"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="tech-lab-music-link"
+                  >
+                    {t.nftTitle}
+                  </a>
+                  <a
+                    href="https://opensea.io/collection/animalintelligence"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="tech-lab-click-hint"
+                  >
+                    {t.nftHint}
+                  </a>
+                </h2>
+                <p>{t.nftBody}</p>
+              </>
+            )}
           </div>
         </div>
       </section>
