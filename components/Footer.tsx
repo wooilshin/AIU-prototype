@@ -13,7 +13,7 @@ export default function Footer() {
       businessTeam: 'Business',
       techLab: 'Creative Tech Lab',
       copyright:
-        'All content copyright © 2026 Student B or its respective owners. Student B® and its logos are registered trademarks of Student B. All rights reserved.',
+        'Copyright © 2026 Student B. All rights reserved. Student B® and its logos are registered trademarks of Student B.',
     },
     ko: {
       brandTitle: '스튜던트 비',
@@ -21,7 +21,7 @@ export default function Footer() {
       businessTeam: '사업',
       techLab: '테크랩',
       copyright:
-        '본 콘텐츠의 저작권은 Student B에게 있습니다. Student B® 및 관련 로고는 Student B의 등록상표입니다. 무단 복제 및 배포를 금합니다.',
+        'Copyright © 2026 Student B. All rights reserved. Student B® 및 관련 로고는 Student B의 등록상표입니다.',
     },
   }
 

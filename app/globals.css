@@ -2000,14 +2000,27 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
     grid-template-columns: minmax(200px, 240px) minmax(0, 1fr);
     gap: 48px 56px;
     align-items: start;
+    overflow: visible;
+}
+
+.container.notes-layout {
+    overflow: visible;
+}
+
+.notes-page-section,
+.notes-page-section.about-content-section {
+    overflow: visible;
 }
 
 .notes-toc {
     position: sticky;
     top: calc(var(--header-offset) + 24px);
+    align-self: start;
     max-height: calc(100vh - var(--header-offset) - 48px);
+    overflow-x: hidden;
     overflow-y: auto;
     padding-right: 8px;
+    z-index: 2;
 }
 
 .notes-toc-label {

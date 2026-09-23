@@ -11,6 +11,7 @@ const TOC_IDS = [
   'what-is-inside',
   'learning-and-asking',
   'starting-with-the-big-question',
+  'why-these-five-fields',
   'where-is-knowledge-note-going',
 ] as const
 
@@ -29,6 +30,7 @@ const translations = {
         level: 2,
       },
       { id: 'starting-with-the-big-question', label: 'Starting With the Big Question', level: 2 },
+      { id: 'why-these-five-fields', label: 'Why These Five Fields?', level: 1 },
       { id: 'where-is-knowledge-note-going', label: 'Where Is Knowledge Note Going?', level: 1 },
     ] as { id: TocId; label: string; level: 1 | 2 }[],
     sections: {
@@ -71,6 +73,19 @@ const translations = {
           ],
         },
       },
+      fiveFields: {
+        title: 'Why These Five Fields?',
+        fieldsLine: 'Space · Philosophy · Economics · Life & Environment · AI & Robotics',
+        paragraphs: [
+          'The five fields were chosen based on one assumption about the AI age. In the past, success often meant becoming an expert in a particular field. In the AI age, however, it may become possible—and increasingly important—for an individual to understand the broad structure of human knowledge and use that understanding to ask questions, make plans, and direct AI.',
+          'The series starts with Engineering. As people gain the ability to design not only the objects they use but also the environments and systems around them, understanding how systems work may become a basic form of literacy. This book therefore introduces ideas such as systems and control intuitively, along with the mathematical concepts behind them, before showing how these ideas lead naturally to AI and robotics.',
+          'Life & Environment matters because life itself is increasingly becoming something humans can understand, modify, and engineer. From biotechnology to ecosystems, questions about life may become some of the most consequential questions of the coming century.',
+          'Economics enters for a different reason. AI may give individuals and communities greater power to organize production and exchange, design institutions, and even experiment with new ways of organizing society. Understanding how economies and societies work may therefore become increasingly important.',
+          'Philosophy sits behind all of them. Greater technological power makes questions of purpose more important, not less: What should we build? What kind of society do we want? What does it mean to live well?',
+          "And finally, Space represents the larger stage on which the future may unfold. As humanity's technological reach expands beyond Earth, understanding the universe becomes not only a scientific question, but also part of understanding where humanity might go next.",
+          'Together, these five fields are meant to help learners see the larger picture, ask better questions, and understand the knowledge they may need to decide where to go next—and how to use AI to help them get there.',
+        ],
+      },
       going: {
         title: 'Where Is Knowledge Note Going?',
         paragraphs: [
@@ -92,6 +107,7 @@ const translations = {
         level: 2,
       },
       { id: 'starting-with-the-big-question', label: '큰 질문에서 시작하기', level: 2 },
+      { id: 'why-these-five-fields', label: '왜 이 다섯 분야인가?', level: 1 },
       { id: 'where-is-knowledge-note-going', label: 'Knowledge Note는 어디로 가는가?', level: 1 },
     ] as { id: TocId; label: string; level: 1 | 2 }[],
     sections: {
@@ -133,6 +149,19 @@ const translations = {
             '학습자는 이런 더 큰 질문에서 시작해, 필요한 개념을 거꾸로 배워 갈 수 있습니다. AI가 낯선 영역을 헤쳐 나가는 데 도움을 줄 수 있습니다. Knowledge Note는 이런 방식의 배움을 염두에 두고 쓰였습니다.',
           ],
         },
+      },
+      fiveFields: {
+        title: '왜 이 다섯 분야인가?',
+        fieldsLine: '우주 · 철학 · 경제 · 생명과 환경 · AI와 로보틱스',
+        paragraphs: [
+          '이 다섯 분야는 AI 시대에 대한 하나의 가정을 바탕으로 골랐습니다. 과거에는 특정 분야의 전문가가 되는 것이 성공의 길이었을 수 있습니다. 그러나 AI 시대에는, 한 개인이 인간 지식의 큰 구조를 이해하고, 그 이해를 바탕으로 질문을 던지고, 계획을 세우고, AI를 이끌어 가는 일이 가능해질 수 있으며, 점점 더 중요해질 수 있습니다.',
+          '시리즈는 Engineering에서 시작합니다. 사람들이 자신이 쓰는 사물뿐 아니라 주변의 환경과 시스템까지 설계할 수 있게 될수록, 시스템이 어떻게 작동하는지를 이해하는 일은 기본적인 문해력이 될 수 있습니다. 그래서 이 책은 시스템과 제어 같은 개념을 직관적으로 소개하고, 그 뒤에 있는 수학적 개념을 함께 다루며, 이 생각들이 자연스럽게 AI와 로보틱스로 이어지는 길을 보여 줍니다.',
+          '생명과 환경이 중요한 이유는, 생명 자체가 점점 더 인간이 이해하고, 바꾸고, 공학적으로 다룰 수 있는 대상이 되고 있기 때문입니다. 생명공학에서 생태계까지, 생명에 대한 질문은 다가올 세기의 가장 중대한 질문 중 하나가 될 수 있습니다.',
+          '경제는 다른 이유로 들어옵니다. AI는 개인과 공동체가 생산과 교환을 조직하고, 제도를 설계하며, 심지어 사회를 조직하는 새로운 방식을 실험할 수 있는 힘을 더 크게 줄 수 있습니다. 그래서 경제와 사회가 어떻게 작동하는지를 이해하는 일이 점점 더 중요해질 수 있습니다.',
+          '철학은 그 모든 것 뒤에 자리합니다. 기술적 힘이 커질수록 목적에 대한 질문은 덜 중요해지는 것이 아니라 더 중요해집니다. 우리는 무엇을 만들어야 하는가? 어떤 사회를 원하는가? 잘 산다는 것은 무엇을 의미하는가?',
+          '그리고 마지막으로 우주는, 미래가 펼쳐질 더 큰 무대를 나타냅니다. 인류의 기술적 도달 범위가 지구를 넘어 확장될수록, 우주를 이해하는 일은 과학적 질문일 뿐 아니라 인류가 다음에 어디로 갈 수 있는지를 이해하는 일의 일부가 됩니다.',
+          '이 다섯 분야는 함께, 학습자가 더 큰 그림을 보고, 더 나은 질문을 던지며, 다음에 어디로 갈지—그리고 그곳으로 가는 데 AI를 어떻게 활용할지—결정하는 데 필요한 지식을 이해하도록 돕기 위해 마련되었습니다.',
+        ],
       },
       going: {
         title: 'Knowledge Note는 어디로 가는가?',
@@ -245,6 +274,14 @@ export default function NotesPage() {
                   <p key={index}>{paragraph}</p>
                 ))}
               </div>
+            </article>
+
+            <article id="why-these-five-fields" className="about-section notes-article-section">
+              <h2>{t.sections.fiveFields.title}</h2>
+              <p>{t.sections.fiveFields.fieldsLine}</p>
+              {t.sections.fiveFields.paragraphs.map((paragraph, index) => (
+                <p key={index}>{paragraph}</p>
+              ))}
             </article>
 
             <article
