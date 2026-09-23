@@ -13,7 +13,8 @@ const TOC_IDS = [
   'where-do-we-use-ai',
   'level-ai',
   'character-ai',
-  'generative-ai',
+  'emergent-quests',
+  'workflow',
 ] as const
 
 type TocId = (typeof TOC_IDS)[number]
@@ -27,9 +28,14 @@ const translations = {
       { id: 'what-building-first', label: 'What Are We Building First?', level: 1 },
       { id: 'where-do-we-use-ai', label: 'Where Do We Use AI?', level: 1 },
       { id: 'level-ai', label: 'Level AI — Letting the World Change', level: 2 },
-      { id: 'character-ai', label: 'Character AI — Characters That Talk and Act', level: 2 },
+      { id: 'character-ai', label: 'Character AI — Characters That Learn and Evaluate', level: 2 },
       {
-        id: 'generative-ai',
+        id: 'emergent-quests',
+        label: 'AI-Generated Quests and Emergent Learning',
+        level: 2,
+      },
+      {
+        id: 'workflow',
         label: 'Workflow — Reducing the Time It Takes to Build',
         level: 2,
       },
@@ -84,19 +90,25 @@ const translations = {
         paragraphs: [
           'One area we consider particularly important is Level AI. We are exploring how AI can be connected to Level Design and Procedural Content Generation (PCG), allowing the world to change in response to the actions of players and Animal Agents.',
           'AIU game does have a clear long-term objective. Animal Agents must eventually save their world, and the world has a World Countdown Clock marking the time remaining before its end. But we do not want to predetermine every path that leads toward that goal.',
-          'But we are especially interested in emergence. We want to experiment with what happens when different knowledge is learned and taught, when different intermediate goals are chosen, and when differently developed Animal Agents begin interacting with one another. Could these choices lead the Agents—and eventually the world itself—in directions that even we did not anticipate?',
-          'AIU could become an experimental space for studying this kind of emergent learning and behavior.',
         ],
       },
       character: {
-        title: '2. Character AI — Characters That Talk and Act',
+        title: '2. Character AI — Characters That Learn and Evaluate',
         paragraphs: [
-          'AI is used first and foremost to enable conversations with Animal Agents and to evaluate what they learn. But conversation is only part of the experience.',
-          'We also plan to use AI to explore how characters move, make decisions, and respond to the world around them. We will begin with traditional Game AI techniques such as A* and FSMs, while also experimenting over time with how learning-based approaches such as Reinforcement Learning might be incorporated.',
+          'In conventional games, AI is often used to determine how characters move, make decisions, and respond to the world around them. In our case, the emphasis is different. We use AI first and foremost to enable conversations with Animal Agents and to evaluate what players learn through those interactions.',
+          'Our long-term goal is to embed an AI system designed specifically for learning directly into the game engine, rather than treating AI simply as an external feature. To explore this possibility, we are experimenting with open-source LLMs and testing different ways to integrate conversational and learning-oriented AI into the underlying game system.',
         ],
       },
-      generative: {
-        title: '3. Workflow — Reducing the Time It Takes to Build',
+      emergent: {
+        title: '3. AI-Generated Quests and Emergent Learning',
+        paragraphs: [
+          'We are especially interested in using AI to generate quests and intermediate goals. Rather than having every path predetermined by the game designer, we want to explore how AI can create new quests based on what Animal Agents have learned, what they still need to learn, and what is happening in the world around them.',
+          'This raises a question that particularly interests us: What happens when different knowledge is learned and taught, different intermediate goals are pursued, and Animal Agents begin interacting with one another in ways we did not explicitly design?',
+          'AIU could become an experimental space for studying this kind of emergent learning.',
+        ],
+      },
+      workflow: {
+        title: '4. Workflow — Reducing the Time It Takes to Build',
         intro:
           'We use Generative AI extensively to reduce repetitive and time-consuming parts of game production.',
         assets: {
@@ -127,9 +139,18 @@ const translations = {
       { id: 'what-building-first', label: '당장 무엇을 할 것인가', level: 1 },
       { id: 'where-do-we-use-ai', label: 'AI는 어디에 활용되는가', level: 1 },
       { id: 'level-ai', label: 'Level AI — 세계가 스스로 변화하게 만들기', level: 2 },
-      { id: 'character-ai', label: 'Character AI — 말하고 행동하는 캐릭터 AI', level: 2 },
       {
-        id: 'generative-ai',
+        id: 'character-ai',
+        label: 'Character AI — 배우고 평가하는 캐릭터',
+        level: 2,
+      },
+      {
+        id: 'emergent-quests',
+        label: 'AI-Generated Quests와 창발적 학습',
+        level: 2,
+      },
+      {
+        id: 'workflow',
         label: 'Workflow — 제작 시간을 줄이는 도구',
         level: 2,
       },
@@ -184,19 +205,25 @@ const translations = {
         paragraphs: [
           '우리가 특히 중요하게 생각하는 영역이 Level AI다. AI를 게임의 Level Design과 Procedural Content Generation(PCG)에 연결하여 플레이어와 동물요원의 행동에 따라 세계가 변화하도록 만드는 방법을 고민하고 있다.',
           "AIU 게임에는 분명한 장기 목표가 있다. 요원들은 제한된 시간 안에 세상을 구해야 하며, 세계에는 종말까지 남은 시간을 나타내는 '종말 시계'도 존재한다. 하지만 그 목표에 도달하는 과정까지 미리 정해놓고 싶지는 않다.",
-          '하지만 우리는 특히 창발(Emergence)에 관심을 두고 있다. 어떤 지식을 배우고, 누구에게 가르치고, 어떤 중간 목표를 선택하느냐에 따라, 그리고 서로 다르게 성장한 Animal Agent들이 상호작용하기 시작할 때, 요원들과 세계가 우리조차 예상하지 못한 방향으로 나아갈 수 있는지를 실험하고 싶다.',
-          'AIU는 이런 종류의 창발적 학습과 행동을 연구하는 실험 공간이 될 수 있다.',
         ],
       },
       character: {
-        title: '2. Character AI — 말하고 행동하는 캐릭터 AI',
+        title: '2. Character AI — 배우고 평가하는 캐릭터',
         paragraphs: [
-          'AI는 기본적으로 Animal Agent와의 대화와 학습 평가에 사용된다. 하지만 그것만으로 끝나지 않는다. 캐릭터가 어떻게 움직이고, 판단하고, 주변 세계에 반응하는지에도 AI를 활용할 예정이다.',
-          'A*, FSM과 같은 전통적인 Game AI 기법을 기본으로 활용하면서, 장기적으로는 Reinforcement Learning과 같은 학습 기반 접근법을 어디까지 적용할 수 있는지도 실험할 것이다.',
+          '기존 게임에서 AI는 종종 캐릭터가 어떻게 움직이고, 판단하고, 주변 세계에 반응하는지를 결정하는 데 쓰인다. 우리의 경우 강조점은 다르다. AI는 무엇보다 Animal Agent와의 대화를 가능하게 하고, 그 상호작용을 통해 플레이어가 무엇을 배우는지 평가하는 데 쓰인다.',
+          '장기적인 목표는 AI를 단순한 외부 기능이 아니라, 학습을 위해 특별히 설계된 AI 시스템을 게임 엔진 안에 직접 넣는 것이다. 이 가능성을 탐구하기 위해 우리는 오픈소스 LLM을 실험하고, 대화형·학습 지향 AI를 게임 시스템의 기반에 어떻게 통합할 수 있는지 다양한 방식을 시험하고 있다.',
         ],
       },
-      generative: {
-        title: '3. Workflow — 제작 시간을 줄이는 도구',
+      emergent: {
+        title: '3. AI-Generated Quests와 창발적 학습',
+        paragraphs: [
+          '우리는 특히 AI로 퀘스트와 중간 목표를 생성하는 데 관심이 있다. 모든 경로를 게임 디자이너가 미리 정해 두는 대신, Animal Agent가 무엇을 배웠는지, 아직 무엇을 배워야 하는지, 그리고 주변 세계에서 무슨 일이 일어나고 있는지에 따라 AI가 새로운 퀘스트를 만드는 방식을 탐구하고 싶다.',
+          '여기서 우리가 특히 관심 갖는 질문이 생긴다. 서로 다른 지식이 배우고 가르쳐지고, 서로 다른 중간 목표가 추구되며, Animal Agent들이 우리가 명시적으로 설계하지 않은 방식으로 상호작용하기 시작하면 어떤 일이 일어나는가?',
+          'AIU는 이런 종류의 창발적 학습을 연구하는 실험 공간이 될 수 있다.',
+        ],
+      },
+      workflow: {
+        title: '4. Workflow — 제작 시간을 줄이는 도구',
         intro:
           'Generative AI는 반복적이고 시간이 많이 드는 게임 제작 과정을 줄이는 데 적극적으로 활용한다.',
         assets: {
@@ -331,24 +358,31 @@ export default function TechPostPage() {
                 ))}
               </div>
 
-              <div id="generative-ai" className="notes-subsection">
-                <h3>{t.ai.generative.title}</h3>
-                <p>{t.ai.generative.intro}</p>
+              <div id="emergent-quests" className="notes-subsection">
+                <h3>{t.ai.emergent.title}</h3>
+                {t.ai.emergent.paragraphs.map((paragraph, index) => (
+                  <p key={index}>{paragraph}</p>
+                ))}
+              </div>
+
+              <div id="workflow" className="notes-subsection">
+                <h3>{t.ai.workflow.title}</h3>
+                <p>{t.ai.workflow.intro}</p>
 
                 <div className="techpost-topic">
-                  <h4>{t.ai.generative.assets.title}</h4>
-                  {t.ai.generative.assets.paragraphs.map((paragraph, index) => (
+                  <h4>{t.ai.workflow.assets.title}</h4>
+                  {t.ai.workflow.assets.paragraphs.map((paragraph, index) => (
                     <p key={index}>{paragraph}</p>
                   ))}
                 </div>
 
                 <div className="techpost-topic">
-                  <h4>{t.ai.generative.music.title}</h4>
+                  <h4>{t.ai.workflow.music.title}</h4>
                   <p>
                     <Link href="/music" className="techpost-inline-link">
-                      {t.ai.generative.music.linkText}
+                      {t.ai.workflow.music.linkText}
                     </Link>
-                    {t.ai.generative.music.afterLink}
+                    {t.ai.workflow.music.afterLink}
                   </p>
                 </div>
               </div>
