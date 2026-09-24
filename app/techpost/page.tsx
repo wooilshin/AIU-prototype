@@ -13,6 +13,7 @@ const TOC_IDS = [
   'where-do-we-use-ai',
   'level-ai',
   'character-ai',
+  'building-ai-conversations',
   'emergent-quests',
   'workflow',
 ] as const
@@ -29,6 +30,11 @@ const translations = {
       { id: 'where-do-we-use-ai', label: 'Where Do We Use AI?', level: 1 },
       { id: 'level-ai', label: 'Level AI — Letting the World Change', level: 2 },
       { id: 'character-ai', label: 'Character AI — Characters That Learn and Evaluate', level: 2 },
+      {
+        id: 'building-ai-conversations',
+        label: 'Note: Building AI Conversations Directly into the Game',
+        level: 2,
+      },
       {
         id: 'emergent-quests',
         label: 'AI-Generated Quests and Emergent Learning',
@@ -98,6 +104,25 @@ const translations = {
           'In conventional games, AI is often used to determine how characters move, make decisions, and respond to the world around them. In our case, the emphasis is different. We use AI first and foremost to enable conversations with Animal Agents and to evaluate what players learn through those interactions.',
           'Our long-term goal is to embed an AI system designed specifically for learning directly into the game engine, rather than treating AI simply as an external feature. To explore this possibility, we are experimenting with open-source LLMs and testing different ways to integrate conversational and learning-oriented AI into the underlying game system.',
         ],
+        note: {
+          title: 'Note: Building AI Conversations Directly into the Game',
+          paragraphsBefore: [
+            'Until recently, building AI-powered conversations into a game typically meant relying on an external AI service:',
+          ],
+          flowOld: 'Game → External AI such as ChatGPT → Game',
+          paragraphsMiddle: [
+            'Recently, NVIDIA has introduced a set of tools and Unreal Engine plugins that make it easier to integrate AI-powered character conversations. The basic idea is quite simple:',
+          ],
+          flowNew: 'Game → NVIDIA ACE → AI runs locally on the player’s GPU → NPC responds',
+          paragraphsAfter: [
+            'Technically, the system brings together several components needed for AI characters, including automatic speech recognition (ASR), local language models, text-to-speech (TTS), function calling, agent APIs, and RAG-based knowledge retrieval. NVIDIA also provides Unreal Engine 5 integration through Blueprint and C++.',
+          ],
+          nvidiaLabel: 'For more technical details, see NVIDIA post:',
+          nvidiaUrl:
+            'https://developer.nvidia.com/blog/build-on-device-ai-companions-with-the-nvidia-ace-game-agent-sdk-and-unreal-engine-5-plugins/',
+          githubLabel: 'GitHub:',
+          githubUrl: 'https://github.com/NVIDIA/game-agent-sdk',
+        },
       },
       emergent: {
         title: '3. AI-Generated Quests and Emergent Learning',
@@ -142,6 +167,11 @@ const translations = {
       {
         id: 'character-ai',
         label: 'Character AI — 배우고 평가하는 캐릭터',
+        level: 2,
+      },
+      {
+        id: 'building-ai-conversations',
+        label: '참고: Building AI Conversations Directly into the Game',
         level: 2,
       },
       {
@@ -213,6 +243,25 @@ const translations = {
           '기존 게임에서 AI는 종종 캐릭터가 어떻게 움직이고, 판단하고, 주변 세계에 반응하는지를 결정하는 데 쓰인다. 우리의 경우 강조점은 다르다. AI는 무엇보다 Animal Agent와의 대화를 가능하게 하고, 그 상호작용을 통해 플레이어가 무엇을 배우는지 평가하는 데 쓰인다.',
           '장기적인 목표는 AI를 단순한 외부 기능이 아니라, 학습을 위해 특별히 설계된 AI 시스템을 게임 엔진 안에 직접 넣는 것이다. 이 가능성을 탐구하기 위해 우리는 오픈소스 LLM을 실험하고, 대화형·학습 지향 AI를 게임 시스템의 기반에 어떻게 통합할 수 있는지 다양한 방식을 시험하고 있다.',
         ],
+        note: {
+          title: '참고: Building AI Conversations Directly into the Game',
+          paragraphsBefore: [
+            '최근까지 게임에 AI 기반 대화를 넣으려면 보통 외부 AI 서비스에 의존해야 했다.',
+          ],
+          flowOld: 'Game → External AI such as ChatGPT → Game',
+          paragraphsMiddle: [
+            '최근 NVIDIA는 AI 기반 캐릭터 대화를 더 쉽게 통합할 수 있도록 도구와 Unreal Engine 플러그인 세트를 선보였다. 기본 아이디어는 꽤 단순하다.',
+          ],
+          flowNew: 'Game → NVIDIA ACE → AI runs locally on the player’s GPU → NPC responds',
+          paragraphsAfter: [
+            '기술적으로 이 시스템은 ASR(자동 음성 인식), 로컬 언어 모델, TTS(음성 합성), function calling, agent API, RAG 기반 지식 검색 등 AI 캐릭터에 필요한 여러 구성 요소를 한데 모은다. NVIDIA는 또한 Blueprint와 C++를 통해 Unreal Engine 5 연동을 제공한다.',
+          ],
+          nvidiaLabel: '더 자세한 기술 내용은 NVIDIA 포스트를 참고하세요:',
+          nvidiaUrl:
+            'https://developer.nvidia.com/blog/build-on-device-ai-companions-with-the-nvidia-ace-game-agent-sdk-and-unreal-engine-5-plugins/',
+          githubLabel: 'GitHub:',
+          githubUrl: 'https://github.com/NVIDIA/game-agent-sdk',
+        },
       },
       emergent: {
         title: '3. AI-Generated Quests와 창발적 학습',
@@ -356,6 +405,43 @@ export default function TechPostPage() {
                 {t.ai.character.paragraphs.map((paragraph, index) => (
                   <p key={index}>{paragraph}</p>
                 ))}
+              </div>
+
+              <div id="building-ai-conversations" className="notes-subsection techpost-note">
+                <h3>{t.ai.character.note.title}</h3>
+                {t.ai.character.note.paragraphsBefore.map((paragraph, index) => (
+                  <p key={`before-${index}`}>{paragraph}</p>
+                ))}
+                <p className="techpost-loop">{t.ai.character.note.flowOld}</p>
+                {t.ai.character.note.paragraphsMiddle.map((paragraph, index) => (
+                  <p key={`middle-${index}`}>{paragraph}</p>
+                ))}
+                <p className="techpost-loop">{t.ai.character.note.flowNew}</p>
+                {t.ai.character.note.paragraphsAfter.map((paragraph, index) => (
+                  <p key={`after-${index}`}>{paragraph}</p>
+                ))}
+                <p>
+                  {t.ai.character.note.nvidiaLabel}{' '}
+                  <a
+                    href={t.ai.character.note.nvidiaUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="techpost-inline-link"
+                  >
+                    {t.ai.character.note.nvidiaUrl}
+                  </a>
+                </p>
+                <p>
+                  {t.ai.character.note.githubLabel}{' '}
+                  <a
+                    href={t.ai.character.note.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="techpost-inline-link"
+                  >
+                    {t.ai.character.note.githubUrl}
+                  </a>
+                </p>
               </div>
 
               <div id="emergent-quests" className="notes-subsection">
