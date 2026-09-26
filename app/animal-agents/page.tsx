@@ -27,7 +27,7 @@ const FIRST_GEN_AGENTS = [
     id: 'green-sea-turtle',
     image: '/images/animal-agents/green-sea-turtle.jpg',
     name: { en: 'Green Sea Turtle', ko: '바다거북' },
-    field: { en: 'Electronics', ko: '전자공학' },
+    field: { en: 'Electronic Engineering', ko: '전자공학' },
   },
   {
     id: 'korat-cat',
@@ -75,13 +75,8 @@ const translations = {
     sections: {
       first: {
         title: '1st Generation Agents',
-        body: 'Known as the “Magnificent Seven,” the first generation of animal agents played a pivotal role in bringing human knowledge into the animal world. Each agent ventured into a different field of human knowledge, laying the foundations for generations of animals to come.',
+        body: 'Known as the “Magnificent Seven,” the first generation of animal agents played a pivotal role in bringing human knowledge into the animal world. Together, they laid the foundation for generations of animals to come.',
       },
-      second: { title: '2nd Generation Agents' },
-      third: { title: '3rd Generation Agents' },
-      fourth: { title: '4th Generation Agents' },
-      fifth: { title: '5th Generation Agents' },
-      independent: { title: 'Independent Agents' },
     },
   },
   ko: {
@@ -97,13 +92,8 @@ const translations = {
     sections: {
       first: {
         title: '1세대 요원',
-        body: '“Magnificent Seven”으로 알려진 1세대 동물 요원들은 인간 지식을 동물 세계로 가져오는 데 결정적인 역할을 했습니다. 각 요원은 서로 다른 인간 지식 분야로 나아가, 이후 세대 동물들을 위한 토대를 마련했습니다.',
+        body: '“Magnificent Seven”으로 알려진 1세대 동물 요원들은 인간 지식을 동물 세계로 가져오는 데 결정적인 역할을 했습니다. 그들은 함께 이후 세대 동물들을 위한 토대를 마련했습니다.',
       },
-      second: { title: '2세대 요원' },
-      third: { title: '3세대 요원' },
-      fourth: { title: '4세대 요원' },
-      fifth: { title: '5세대 요원' },
-      independent: { title: '독립 요원' },
     },
   },
 } as const
@@ -200,40 +190,11 @@ export default function AnimalAgentsPage() {
               </ul>
             </article>
 
-            <article
-              id="second-generation-agents"
-              className="about-section notes-article-section"
-            >
-              <h2>{t.sections.second.title}</h2>
-            </article>
-
-            <article
-              id="third-generation-agents"
-              className="about-section notes-article-section"
-            >
-              <h2>{t.sections.third.title}</h2>
-            </article>
-
-            <article
-              id="fourth-generation-agents"
-              className="about-section notes-article-section"
-            >
-              <h2>{t.sections.fourth.title}</h2>
-            </article>
-
-            <article
-              id="fifth-generation-agents"
-              className="about-section notes-article-section"
-            >
-              <h2>{t.sections.fifth.title}</h2>
-            </article>
-
-            <article
-              id="independent-agents"
-              className="about-section notes-article-section"
-            >
-              <h2>{t.sections.independent.title}</h2>
-            </article>
+            <div id="second-generation-agents" className="agent-section-anchor" />
+            <div id="third-generation-agents" className="agent-section-anchor" />
+            <div id="fourth-generation-agents" className="agent-section-anchor" />
+            <div id="fifth-generation-agents" className="agent-section-anchor" />
+            <div id="independent-agents" className="agent-section-anchor" />
           </div>
         </div>
       </section>

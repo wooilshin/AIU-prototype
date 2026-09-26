@@ -2106,7 +2106,7 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
 }
 
 .animal-agents-page .notes-article-section {
-    min-height: 42vh;
+    min-height: 0;
 }
 
 .animal-agents-page .notes-content {
@@ -2115,6 +2115,10 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
 
 .animal-agents-page #first-generation-agents {
     min-height: 0;
+}
+
+.agent-section-anchor {
+    scroll-margin-top: calc(var(--header-offset) + 20px);
 }
 
 .agent-row {
