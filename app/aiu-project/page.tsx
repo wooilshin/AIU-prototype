@@ -40,7 +40,7 @@ Wooil studied Computer Science at the University of Pennsylvania. He develops AI
         "As Student B's flagship series and the entry point to its universe, the comic series presents short-form illustrated stories that explore human life in the age of AI through satire and humor.",
       agentsTitle: 'Meet the Animal Agents',
       agentsBody:
-        'Meet our animal agents, each with their own field of knowledge, personality, and reason for studying humans. Some observe us. Some learn from us. And some have begun to imagine a future beyond us.',
+        "Meet AIU's animal agents, each with their own field of knowledge, personality, and reason for studying humans. Some observe us. Some learn from us. And some have begun to imagine a future beyond us.",
       clickHint: '← Click to find out',
       charactersAlt:
         'Animal Intelligence main characters: Red Fox, Blue Bird, Green Sea Turtle, Capybara, Beaglier, Bunny, Raccoon, White Giraffe, Korat Cat, Barbary Lion, Squirrel, and Black Panther',
@@ -108,6 +108,16 @@ Wooil studied Computer Science at the University of Pennsylvania. He develops AI
               )}
             </div>
 
+            <div className="about-section">
+              <h2 className="tech-lab-heading-with-hint">
+                <Link href="/animal-agents" className="tech-lab-music-link">
+                  {t.agentsTitle}
+                </Link>
+                <span className="tech-lab-click-hint">{t.clickHint}</span>
+              </h2>
+              <p>{t.agentsBody}</p>
+            </div>
+
             {language !== 'ko' && (
             <div className="about-section about-student-b">
               <h2>{t.studentBTitle}</h2>
@@ -143,16 +153,6 @@ Wooil studied Computer Science at the University of Pennsylvania. He develops AI
                   <p>{t.bookKnowledgeDesc}</p>
                 </div>
               </div>
-            </div>
-
-            <div className="about-section">
-              <h2 className="tech-lab-heading-with-hint">
-                <Link href="/animal-agents" className="tech-lab-music-link">
-                  {t.agentsTitle}
-                </Link>
-                <span className="tech-lab-click-hint">{t.clickHint}</span>
-              </h2>
-              <p>{t.agentsBody}</p>
             </div>
 
             <div className="about-section about-staff">

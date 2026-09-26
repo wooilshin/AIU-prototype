@@ -99,7 +99,7 @@ html:is(.site-en, .site-ko) :is(
 
 /* HTML ??? - ?? ???????? (?????????? ??) */
 html {
-    overflow-x: hidden;
+    overflow-x: clip;
     width: 100%;
     height: 100%;
     scroll-padding-top: var(--header-offset);
@@ -118,7 +118,7 @@ body {
     color: #222;
     /* Match footer so no white band can show below it */
     background-color: #ececec;
-    overflow-x: hidden;
+    overflow-x: clip;
     width: 100%;
     min-height: 100%;
     min-height: 100vh;
@@ -2133,7 +2133,7 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: flex-start;
     gap: 12px;
     list-style: none;
     margin: 36px 0 0;
@@ -2145,12 +2145,16 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
     flex: 1 1 0;
     min-width: 0;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .agent-row-image-wrap {
     display: flex;
     align-items: flex-end;
     justify-content: center;
+    width: 100%;
     height: 112px;
     margin-bottom: 12px;
 }
@@ -2162,6 +2166,7 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
     width: auto;
     height: auto;
     object-fit: contain;
+    object-position: bottom center;
 }
 
 .agent-row-image-placeholder {
@@ -2171,6 +2176,7 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
 
 .agent-row-name {
     margin: 0 0 4px !important;
+    min-height: calc(1.3em * 2);
     font-size: 14px !important;
     font-weight: 600 !important;
     line-height: 1.3 !important;
