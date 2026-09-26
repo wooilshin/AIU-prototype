@@ -2023,6 +2023,14 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
     z-index: 2;
 }
 
+.notes-page-section,
+.notes-page-section.about-content-section,
+.notes-page-section .container,
+.animal-agents-page,
+.animal-agents-page .container {
+    overflow: visible;
+}
+
 .notes-toc-label {
     font-size: 12px;
     font-weight: 600;
@@ -2210,12 +2218,17 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
     }
 
     .notes-toc {
-        position: static;
+        position: sticky;
+        top: var(--header-offset);
         max-height: none;
         overflow: visible;
-        padding-right: 0;
-        padding-bottom: 8px;
+        padding: 12px 0 10px;
+        margin: 0 -20px;
+        padding-left: 20px;
+        padding-right: 20px;
         border-bottom: 1px solid #eee;
+        background-color: #fff;
+        z-index: 5;
     }
 
     .notes-toc-nav ul {
