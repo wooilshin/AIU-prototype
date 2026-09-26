@@ -2105,6 +2105,10 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
     letter-spacing: 0.01em;
 }
 
+.animal-agents-page .notes-article-section {
+    min-height: 42vh;
+}
+
 @media (max-width: 899px) {
     .notes-layout {
         grid-template-columns: 1fr;
