@@ -16,6 +16,51 @@ const TOC_IDS = [
 
 type TocId = (typeof TOC_IDS)[number]
 
+const FIRST_GEN_AGENTS = [
+  {
+    id: 'red-fox',
+    image: '/images/animal-agents/red-fox.jpg',
+    name: { en: 'Red Fox', ko: '여우' },
+    field: { en: 'Cryptography', ko: '암호학' },
+  },
+  {
+    id: 'green-sea-turtle',
+    image: '/images/animal-agents/green-sea-turtle.jpg',
+    name: { en: 'Green Sea Turtle', ko: '바다거북' },
+    field: { en: 'Electronics', ko: '전자공학' },
+  },
+  {
+    id: 'korat-cat',
+    image: '/images/animal-agents/korat-cat.jpg',
+    name: { en: 'Korat Cat', ko: '코랏 고양이' },
+    field: { en: 'Physics', ko: '물리학' },
+  },
+  {
+    id: 'capybara',
+    image: '/images/animal-agents/capybara.jpg',
+    name: { en: 'Capybara', ko: '카피바라' },
+    field: { en: 'Chemical Engineering', ko: '화학공학' },
+  },
+  {
+    id: 'raccoon',
+    image: '/images/animal-agents/raccoon.jpg',
+    name: { en: 'Raccoon', ko: '너구리' },
+    field: { en: 'Economics', ko: '경제학' },
+  },
+  {
+    id: 'bluebird',
+    image: '/images/animal-agents/bluebird.jpg',
+    name: { en: 'Bluebird', ko: '파랑새' },
+    field: { en: 'Business', ko: '경영' },
+  },
+  {
+    id: 'bunny',
+    image: null as string | null,
+    name: { en: 'Bunny', ko: '토끼' },
+    field: { en: 'Art', ko: '미술' },
+  },
+] as const
+
 const translations = {
   en: {
     tocLabel: 'Contents',
@@ -28,7 +73,10 @@ const translations = {
       { id: 'independent-agents', label: 'Independent Agents' },
     ] as { id: TocId; label: string }[],
     sections: {
-      first: { title: '1st Generation Agents' },
+      first: {
+        title: '1st Generation Agents',
+        body: 'Known as the “Magnificent Seven,” the first generation of animal agents played a pivotal role in bringing human knowledge into the animal world. Each agent ventured into a different field of human knowledge, laying the foundations for generations of animals to come.',
+      },
       second: { title: '2nd Generation Agents' },
       third: { title: '3rd Generation Agents' },
       fourth: { title: '4th Generation Agents' },
@@ -47,7 +95,10 @@ const translations = {
       { id: 'independent-agents', label: '독립 요원' },
     ] as { id: TocId; label: string }[],
     sections: {
-      first: { title: '1세대 요원' },
+      first: {
+        title: '1세대 요원',
+        body: '“Magnificent Seven”으로 알려진 1세대 동물 요원들은 인간 지식을 동물 세계로 가져오는 데 결정적인 역할을 했습니다. 각 요원은 서로 다른 인간 지식 분야로 나아가, 이후 세대 동물들을 위한 토대를 마련했습니다.',
+      },
       second: { title: '2세대 요원' },
       third: { title: '3세대 요원' },
       fourth: { title: '4세대 요원' },
@@ -96,15 +147,6 @@ export default function AnimalAgentsPage() {
     window.history.replaceState(null, '', `#${id}`)
   }
 
-  const sectionEntries = [
-    { id: 'first-generation-agents' as const, title: t.sections.first.title },
-    { id: 'second-generation-agents' as const, title: t.sections.second.title },
-    { id: 'third-generation-agents' as const, title: t.sections.third.title },
-    { id: 'fourth-generation-agents' as const, title: t.sections.fourth.title },
-    { id: 'fifth-generation-agents' as const, title: t.sections.fifth.title },
-    { id: 'independent-agents' as const, title: t.sections.independent.title },
-  ]
-
   return (
     <>
       <Header />
@@ -130,15 +172,68 @@ export default function AnimalAgentsPage() {
           </aside>
 
           <div className="notes-content about-prose">
-            {sectionEntries.map((section) => (
-              <article
-                key={section.id}
-                id={section.id}
-                className="about-section notes-article-section"
-              >
-                <h2>{section.title}</h2>
-              </article>
-            ))}
+            <article
+              id="first-generation-agents"
+              className="about-section notes-article-section"
+            >
+              <h2>{t.sections.first.title}</h2>
+              <p>{t.sections.first.body}</p>
+
+              <ul className="agent-row">
+                {FIRST_GEN_AGENTS.map((agent) => (
+                  <li key={agent.id} className="agent-row-item">
+                    <div className="agent-row-image-wrap">
+                      {agent.image ? (
+                        <img
+                          src={agent.image}
+                          alt={agent.name[language]}
+                          className="agent-row-image"
+                        />
+                      ) : (
+                        <div className="agent-row-image-placeholder" aria-hidden="true" />
+                      )}
+                    </div>
+                    <p className="agent-row-name">{agent.name[language]}</p>
+                    <p className="agent-row-field">{agent.field[language]}</p>
+                  </li>
+                ))}
+              </ul>
+            </article>
+
+            <article
+              id="second-generation-agents"
+              className="about-section notes-article-section"
+            >
+              <h2>{t.sections.second.title}</h2>
+            </article>
+
+            <article
+              id="third-generation-agents"
+              className="about-section notes-article-section"
+            >
+              <h2>{t.sections.third.title}</h2>
+            </article>
+
+            <article
+              id="fourth-generation-agents"
+              className="about-section notes-article-section"
+            >
+              <h2>{t.sections.fourth.title}</h2>
+            </article>
+
+            <article
+              id="fifth-generation-agents"
+              className="about-section notes-article-section"
+            >
+              <h2>{t.sections.fifth.title}</h2>
+            </article>
+
+            <article
+              id="independent-agents"
+              className="about-section notes-article-section"
+            >
+              <h2>{t.sections.independent.title}</h2>
+            </article>
           </div>
         </div>
       </section>
