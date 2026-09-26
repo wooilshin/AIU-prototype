@@ -13,6 +13,7 @@ const translations: Record<
     techLabBody: string
     knowledgeNoteTitle: string
     knowledgeNoteBody: string
+    bridgeImageAlt: string
     postsTitle: string
     postsBody: string
     clickHint: string
@@ -32,6 +33,8 @@ const translations: Record<
     knowledgeNoteTitle: 'Knowledge Note',
     knowledgeNoteBody:
       'Explore the key topics and philosophy behind Knowledge Notes, a new series currently being developed by our Creative Tech Lab.',
+    bridgeImageAlt:
+      'Illustration of Student B characters coding, reading, and drawing',
     postsTitle: 'AIU Tech Posts',
     postsBody:
       'We plan to share short Tech Notes and Commentaries on this page. These posts will cover topics such as our experiments with game engines, content production pipelines, and our work with interactive character systems.',
@@ -55,6 +58,8 @@ const translations: Record<
     knowledgeNoteTitle: '지식노트',
     knowledgeNoteBody:
       '미래의 교과서는 어떤 모습이어야 할까요? 스튜던트 비가 현재 제작하고 있는 지식노트의 다섯 가지 핵심 주제와 그 안에 담긴 지식과 이야기를 소개합니다.',
+    bridgeImageAlt:
+      '코딩하고, 책을 읽고, 그림을 그리는 스튜던트 비 캐릭터 일러스트',
     postsTitle: '동물지능 Tech 포스트',
     postsBody:
       '동물지능 세계를 새로운 게임의 세계로 확장해 가는 과정과 그 뒤의 기술을 기록합니다. 게임 엔진 실험, 에셋 제작 파이프라인, AI 기반 대화 시스템 등 현재 진행 중인 다양한 개발 과정과 아이디어를 공유합니다.',
@@ -116,6 +121,14 @@ export default function CreativeTechLabPage() {
             </h2>
             <p>{t.knowledgeNoteBody}</p>
           </div>
+
+          <figure className="tech-lab-bridge-figure">
+            <img
+              src="/images/tech-lab/knowledge-tech-illustration.jpg"
+              alt={t.bridgeImageAlt}
+              className="tech-lab-bridge-image"
+            />
+          </figure>
 
           <div className="about-section">
             <h2 className="tech-lab-heading-with-hint">

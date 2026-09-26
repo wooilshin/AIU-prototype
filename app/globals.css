@@ -2290,6 +2290,20 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
     margin-bottom: 24px;
 }
 
+.tech-lab-bridge-figure {
+    margin: 40px 0 48px;
+    padding: 0;
+    text-align: center;
+}
+
+.tech-lab-bridge-image {
+    display: block;
+    width: 100%;
+    max-width: 920px;
+    height: auto;
+    margin: 0 auto;
+}
+
 .tech-lab-music-link {
     color: inherit;
     text-decoration: none;
@@ -3585,6 +3599,10 @@ html:is(.site-en, .site-ko) .about-staff .staff-role > p.staff-contact-email {
         max-width: 100%;
         padding: 28px 0;
         margin-bottom: 28px;
+    }
+
+    .tech-lab-bridge-figure {
+        margin: 28px 0 36px;
     }
 
     .tech-lab-bg-photo {
