@@ -16,6 +16,7 @@ const translations: Record<
     bridgeImageAlt: string
     postsTitle: string
     postsBody: string
+    postsImageAlt: string
     clickHint: string
     noteTitle: string
     noteBody: string[]
@@ -38,6 +39,8 @@ const translations: Record<
     postsTitle: 'AIU Tech Posts',
     postsBody:
       'We plan to share short Tech Notes and Commentaries on this page. These posts will cover topics such as our experiments with game engines, content production pipelines, and our work with interactive character systems.',
+    postsImageAlt:
+      'Illustration of the turtle agent taking notes, wiring a server, and designing a circuit board in VR',
     clickHint: '← Click to find out',
     noteTitle: 'A Note on AI and the Original Works',
     noteBody: [
@@ -63,6 +66,8 @@ const translations: Record<
     postsTitle: '동물지능 Tech 포스트',
     postsBody:
       '동물지능 세계를 새로운 게임의 세계로 확장해 가는 과정과 그 뒤의 기술을 기록합니다. 게임 엔진 실험, 에셋 제작 파이프라인, AI 기반 대화 시스템 등 현재 진행 중인 다양한 개발 과정과 아이디어를 공유합니다.',
+    postsImageAlt:
+      '메모하고, 서버에 선을 연결하고, VR로 회로기판을 설계하는 거북이 요원 일러스트',
     clickHint: '← 클릭해서 보기',
     noteTitle: 'AI 사용에 대하여',
     noteBody: [
@@ -139,6 +144,14 @@ export default function CreativeTechLabPage() {
             </h2>
             <p>{t.postsBody}</p>
           </div>
+
+          <figure className="tech-lab-bridge-figure">
+            <img
+              src="/images/tech-lab/tech-note-illustration.jpg"
+              alt={t.postsImageAlt}
+              className="tech-lab-bridge-image"
+            />
+          </figure>
 
           <div className="about-section tech-lab-footnote">
             <h2>{t.noteTitle}</h2>
