@@ -6,6 +6,7 @@ import Footer from '@/components/Footer'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 const TOC_IDS = [
+  'the-oracles',
   'first-generation-agents',
   'second-generation-agents',
   'third-generation-agents',
@@ -16,7 +17,29 @@ const TOC_IDS = [
 
 type TocId = (typeof TOC_IDS)[number]
 
-const FIRST_GEN_AGENTS = [
+type Agent = {
+  id: string
+  image: string | null
+  name: { en: string; ko: string }
+  field: { en: string; ko: string }
+}
+
+const ORACLES: Agent[] = [
+  {
+    id: 'white-giraffe',
+    image: '/images/animal-agents/white-giraffe.jpg',
+    name: { en: 'White Giraffe', ko: '흰 기린' },
+    field: { en: 'History', ko: '역사' },
+  },
+  {
+    id: 'black-panther',
+    image: '/images/animal-agents/black-panther.jpg',
+    name: { en: 'Black Panther', ko: '흑표범' },
+    field: { en: 'Philosophy', ko: '철학' },
+  },
+]
+
+const FIRST_GEN_AGENTS: Agent[] = [
   {
     id: 'red-fox',
     image: '/images/animal-agents/red-fox.jpg',
@@ -55,16 +78,17 @@ const FIRST_GEN_AGENTS = [
   },
   {
     id: 'bunny',
-    image: null as string | null,
+    image: null,
     name: { en: 'Bunny', ko: '토끼' },
     field: { en: 'Art', ko: '미술' },
   },
-] as const
+]
 
 const translations = {
   en: {
     tocLabel: 'Contents',
     toc: [
+      { id: 'the-oracles', label: 'The Oracles' },
       { id: 'first-generation-agents', label: '1st Generation Agents' },
       { id: 'second-generation-agents', label: '2nd Generation Agents' },
       { id: 'third-generation-agents', label: '3rd Generation Agents' },
@@ -73,6 +97,10 @@ const translations = {
       { id: 'independent-agents', label: 'Independent Agents' },
     ] as { id: TocId; label: string }[],
     sections: {
+      oracles: {
+        title: 'The Oracles',
+        body: 'The Oracles are the guardians of the animal world. The White Oracles foresee the future, while the Black Oracles preserve order in the animal world.',
+      },
       first: {
         title: '1st Generation Agents',
         body: 'Known as the “Magnificent Seven,” the first generation of animal agents played a pivotal role in bringing human knowledge into the animal world. Together, they laid the foundation for generations of animals to come.',
@@ -82,6 +110,7 @@ const translations = {
   ko: {
     tocLabel: '목차',
     toc: [
+      { id: 'the-oracles', label: '오라클' },
       { id: 'first-generation-agents', label: '1세대 요원' },
       { id: 'second-generation-agents', label: '2세대 요원' },
       { id: 'third-generation-agents', label: '3세대 요원' },
@@ -90,6 +119,10 @@ const translations = {
       { id: 'independent-agents', label: '독립 요원' },
     ] as { id: TocId; label: string }[],
     sections: {
+      oracles: {
+        title: '오라클',
+        body: '오라클은 동물 세계의 수호자입니다. 하얀 오라클은 미래를 내다보고, 검은 오라클은 동물 세계의 질서를 지킵니다.',
+      },
       first: {
         title: '1세대 요원',
         body: '“Magnificent Seven”으로 알려진 1세대 동물 요원들은 인간 지식을 동물 세계로 가져오는 데 결정적인 역할을 했습니다. 그들은 함께 이후 세대 동물들을 위한 토대를 마련했습니다.',
@@ -97,6 +130,34 @@ const translations = {
     },
   },
 } as const
+
+function AgentRow({
+  agents,
+  language,
+  className = 'agent-row',
+}: {
+  agents: Agent[]
+  language: 'en' | 'ko'
+  className?: string
+}) {
+  return (
+    <ul className={className}>
+      {agents.map((agent) => (
+        <li key={agent.id} className="agent-row-item">
+          <div className="agent-row-image-wrap">
+            {agent.image ? (
+              <img src={agent.image} alt={agent.name[language]} className="agent-row-image" />
+            ) : (
+              <div className="agent-row-image-placeholder" aria-hidden="true" />
+            )}
+          </div>
+          <p className="agent-row-name">{agent.name[language]}</p>
+          <p className="agent-row-field">{agent.field[language]}</p>
+        </li>
+      ))}
+    </ul>
+  )
+}
 
 export default function AnimalAgentsPage() {
   const { language } = useLanguage()
@@ -162,32 +223,23 @@ export default function AnimalAgentsPage() {
           </aside>
 
           <div className="notes-content about-prose">
+            <article id="the-oracles" className="about-section notes-article-section">
+              <h2>{t.sections.oracles.title}</h2>
+              <p>{t.sections.oracles.body}</p>
+              <AgentRow
+                agents={ORACLES}
+                language={language}
+                className="agent-row agent-row--compact"
+              />
+            </article>
+
             <article
               id="first-generation-agents"
               className="about-section notes-article-section"
             >
               <h2>{t.sections.first.title}</h2>
               <p>{t.sections.first.body}</p>
-
-              <ul className="agent-row">
-                {FIRST_GEN_AGENTS.map((agent) => (
-                  <li key={agent.id} className="agent-row-item">
-                    <div className="agent-row-image-wrap">
-                      {agent.image ? (
-                        <img
-                          src={agent.image}
-                          alt={agent.name[language]}
-                          className="agent-row-image"
-                        />
-                      ) : (
-                        <div className="agent-row-image-placeholder" aria-hidden="true" />
-                      )}
-                    </div>
-                    <p className="agent-row-name">{agent.name[language]}</p>
-                    <p className="agent-row-field">{agent.field[language]}</p>
-                  </li>
-                ))}
-              </ul>
+              <AgentRow agents={FIRST_GEN_AGENTS} language={language} />
             </article>
 
             <div id="second-generation-agents" className="agent-section-anchor" />

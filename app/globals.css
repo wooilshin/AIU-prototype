@@ -2141,6 +2141,16 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
     width: 100%;
 }
 
+.agent-row--compact {
+    justify-content: flex-start;
+}
+
+@media (min-width: 900px) {
+    .agent-row--compact .agent-row-item {
+        flex: 0 0 calc((100% - 72px) / 7);
+    }
+}
+
 .agent-row-item {
     flex: 1 1 0;
     min-width: 0;
