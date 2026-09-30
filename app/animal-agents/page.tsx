@@ -78,9 +78,30 @@ const FIRST_GEN_AGENTS: Agent[] = [
   },
   {
     id: 'bunny',
-    image: null,
+    image: '/images/animal-agents/bunny.jpg',
     name: { en: 'Bunny', ko: '토끼' },
     field: { en: 'Art', ko: '미술' },
+  },
+]
+
+const SECOND_GEN_AGENTS: Agent[] = [
+  {
+    id: 'nacho',
+    image: '/images/animal-agents/nacho.jpg',
+    name: { en: 'Nacho', ko: '나초' },
+    field: { en: 'Psychology', ko: '심리학' },
+  },
+  {
+    id: 'dachshund',
+    image: '/images/animal-agents/dachshund.jpg',
+    name: { en: 'Dachshund', ko: '닥스훈트' },
+    field: { en: 'Electronic Music', ko: '전자음악' },
+  },
+  {
+    id: 'retriever',
+    image: '/images/animal-agents/retriever.jpg',
+    name: { en: 'Retriever', ko: '리트리버' },
+    field: { en: 'Nursing', ko: '간호' },
   },
 ]
 
@@ -105,6 +126,10 @@ const translations = {
         title: '1st Generation Agents',
         body: 'Known as the “Magnificent Seven,” the first generation of animal agents played a pivotal role in bringing human knowledge into the animal world. Together, they laid the foundation for generations of animals to come.',
       },
+      second: {
+        title: '2nd Generation Agents',
+        body: 'The second-generation agents are primarily companion animals that can naturally blend into human living environments. Cats and dogs, who live in closest proximity to humans, form the core of this generation.',
+      },
     },
   },
   ko: {
@@ -126,6 +151,10 @@ const translations = {
       first: {
         title: '1세대 요원',
         body: '“Magnificent Seven”으로 알려진 1세대 동물 요원들은 인간 지식을 동물 세계로 가져오는 데 결정적인 역할을 했습니다. 그들은 함께 이후 세대 동물들을 위한 토대를 마련했습니다.',
+      },
+      second: {
+        title: '2세대 요원',
+        body: '2세대 요원은 사람의 생활 환경에 자연스럽게 섞여 들 수 있는 반려동물이 중심입니다. 사람과 가장 가까이 지내는 고양이와 개가 이 세대의 핵심입니다.',
       },
     },
   },
@@ -242,7 +271,14 @@ export default function AnimalAgentsPage() {
               <AgentRow agents={FIRST_GEN_AGENTS} language={language} />
             </article>
 
-            <div id="second-generation-agents" className="agent-section-anchor" />
+            <article
+              id="second-generation-agents"
+              className="about-section notes-article-section"
+            >
+              <h2>{t.sections.second.title}</h2>
+              <p>{t.sections.second.body}</p>
+              <AgentRow agents={SECOND_GEN_AGENTS} language={language} />
+            </article>
             <div id="third-generation-agents" className="agent-section-anchor" />
             <div id="fourth-generation-agents" className="agent-section-anchor" />
             <div id="fifth-generation-agents" className="agent-section-anchor" />
