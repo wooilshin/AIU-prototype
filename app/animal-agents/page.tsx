@@ -277,7 +277,11 @@ export default function AnimalAgentsPage() {
             >
               <h2>{t.sections.second.title}</h2>
               <p>{t.sections.second.body}</p>
-              <AgentRow agents={SECOND_GEN_AGENTS} language={language} />
+              <AgentRow
+                agents={SECOND_GEN_AGENTS}
+                language={language}
+                className="agent-row agent-row--compact"
+              />
             </article>
             <div id="third-generation-agents" className="agent-section-anchor" />
             <div id="fourth-generation-agents" className="agent-section-anchor" />
