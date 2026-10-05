@@ -1167,6 +1167,17 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
     display: block;
 }
 
+/* Animal Intelligence Books: match the Guidebook cover (viewBox 621.98 × 814.03) */
+.stories-world-guide-section .book-cover-image {
+    height: 100%;
+    width: auto;
+    aspect-ratio: 621.98 / 814.03;
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center;
+    flex: 0 0 auto;
+}
+
 /* ????? (???? ????? ???????? ?????? ??) */
 .book-title-small {
     font-size: 12px;
