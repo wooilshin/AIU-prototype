@@ -5,7 +5,7 @@
   "books": [
     {
       "id": 1,
-      "title": "Animal Intelligence\nThe Book of Forgotten History",
+      "title": "Animal Intelligence History:\nThe Book of Forgotten Animals",
       "description": "A story collection exploring history through the eyes of the ancestors of the Animal Intelligence Universe, including extinct species that once shaped the world.",
       "coverImage": "/images/books/History.jpg",
       "coverStyle": "background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);",
@@ -13,7 +13,7 @@
     },
     {
       "id": 2,
-      "title": "Guidebook to the AIU\nWhere the Ark lies Hidden",
+      "title": "Guidebook to the\nAnimal Intelligence Universe",
       "description": "A complete guidebook to the seven civilizations of the Animal Intelligence Universe, introducing the animal characters, their cultures, and the roles they play in today's world.",
       "coverImage": "/images/books/Guide.svg",
       "coverStyle": "background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);",
