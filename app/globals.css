@@ -1167,7 +1167,7 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
     display: block;
 }
 
-/* Animal Intelligence Books: match the Guidebook cover (viewBox 621.98 × 814.03) */
+/* Animal Intelligence Books: same frame as the guidebook cover */
 .stories-world-guide-section .book-cover-image {
     height: 100%;
     width: auto;
@@ -1176,6 +1176,22 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
     object-fit: cover;
     object-position: center;
     flex: 0 0 auto;
+    transform-origin: center center;
+}
+
+/* SVG covers include transparent padding, so the artwork looks smaller than History.jpg.
+   Scale each file until the painted cover fills the same height. */
+.stories-world-guide-section .book-cover-image[src*="Guide.svg"],
+.stories-world-guide-section .book-cover-image[src*="History.svg"] {
+    transform: scale(1.26);
+}
+
+.stories-world-guide-section .book-cover-image[src*="Comic1.svg"] {
+    transform: scale(1.22);
+}
+
+.stories-world-guide-section .book-cover-image[src*="Story1.svg"] {
+    transform: scale(1.29);
 }
 
 /* ????? (???? ????? ???????? ?????? ??) */
