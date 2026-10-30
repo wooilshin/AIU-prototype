@@ -1155,7 +1155,7 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
     justify-content: center;
     border: none;
     box-shadow: none;
-    background: #f5f5f5;
+    background: transparent;
     overflow: hidden;
 }
 
@@ -1188,6 +1188,12 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
 
 .stories-world-guide-section .book-cover-image[src*="Comic1.svg"] {
     transform: scale(1.22);
+}
+
+/* SVG covers carry their own drop shadow; give raster covers the same one. */
+.stories-world-guide-section .book-cover-image:is([src$=".jpg"], [src$=".png"]) {
+    height: 88%;
+    filter: drop-shadow(3px 5px 6px rgba(0, 0, 0, 0.28));
 }
 
 /* ????? (???? ????? ???????? ?????? ??) */
