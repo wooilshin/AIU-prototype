@@ -30,8 +30,8 @@
     {
       "id": 4,
       "title": "My name is Nacho",
-      "description": "The first adventure of Nacho, a second-generation Animal Intelligence agent, exploring human society.\n(Coming Soon)",
-      "coverImage": "/images/books/Story1.svg",
+      "description": "A novel about the first mission of Nacho, a second-generation secret animal agent. Through Nacho’s journey, we explore what it means to be human and the relationships that shape us.\n\nComing in early December!",
+      "coverImage": "/images/books/MyNameIsNacho.png",
       "coverStyle": "background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);"
     }
   ]

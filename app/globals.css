@@ -1190,10 +1190,6 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
     transform: scale(1.22);
 }
 
-.stories-world-guide-section .book-cover-image[src*="Story1.svg"] {
-    transform: scale(1.29);
-}
-
 /* ????? (???? ????? ???????? ?????? ??) */
 .book-title-small {
     font-size: 12px;
