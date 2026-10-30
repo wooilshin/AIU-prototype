@@ -1232,8 +1232,6 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
     color: #555;
     line-height: 1.55;
     margin: 0;
-    padding-left: 12px;
-    border-left: 3px solid #4a90e2;
 }
 
 .book-card-footer {
