@@ -1581,8 +1581,21 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
 }
 
 .aiu-news-item .article-date {
+    display: block;
+    margin-bottom: 4px;
     font-size: 12px;
     color: #888;
+}
+
+.aiu-news-item-link {
+    font-size: 13px;
+    font-weight: 600;
+    color: #4a90e2;
+    text-decoration: none;
+}
+
+.aiu-news-item-link:hover {
+    text-decoration: underline;
 }
 
 /* ========================================

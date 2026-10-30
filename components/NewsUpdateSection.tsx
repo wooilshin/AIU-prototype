@@ -238,9 +238,20 @@ export default function NewsUpdateSection() {
                         />
                       )}
                       <div className="aiu-news-item-copy">
+                        <span className="article-date">{article.date}</span>
                         <h3>{article.title}</h3>
                         <p>{article.description}</p>
-                        <span className="article-date">{article.date}</span>
+                        {article.link && (
+                          <a
+                            className="aiu-news-item-link"
+                            href={article.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={(e) => e.stopPropagation()}
+                          >
+                            {language === 'ko' ? '기사 보기 →' : 'See news →'}
+                          </a>
+                        )}
                       </div>
                     </article>
                   ))}
