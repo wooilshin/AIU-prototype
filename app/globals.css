@@ -1510,7 +1510,6 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
     line-height: 1.55;
     color: #333;
     font-weight: var(--font-weight-ui);
-    max-width: 18em;
 }
 
 .aiu-news-coming-soon {
