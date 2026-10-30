@@ -1179,21 +1179,35 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
     transform-origin: center center;
 }
 
-/* SVG covers include transparent padding, so the artwork looks smaller than History.jpg.
-   Scale each file until the painted cover fills the same height. */
-.stories-world-guide-section .book-cover-image[src*="Guide.svg"],
+/* Every cover's painted area is 88% of the frame height. SVG covers include
+   transparent padding (and their own shadow), so each is enlarged by
+   88% / painted-height-fraction and shifted so the painted area is centered. */
+.stories-world-guide-section .book-cover-image:is([src$=".jpg"], [src$=".png"]) {
+    height: 88%;
+    aspect-ratio: auto;
+    filter: drop-shadow(3px 5px 6px rgba(0, 0, 0, 0.28));
+}
+
+.stories-world-guide-section .book-cover-image[src$=".svg"] {
+    width: auto;
+    max-width: none;
+    aspect-ratio: auto;
+    object-fit: contain;
+}
+
+.stories-world-guide-section .book-cover-image[src*="Guide.svg"] {
+    height: 120%;
+    transform: translate(0.2%, 2.7%);
+}
+
 .stories-world-guide-section .book-cover-image[src*="History.svg"] {
-    transform: scale(1.26);
+    height: 120%;
+    transform: translate(1.1%, 6%);
 }
 
 .stories-world-guide-section .book-cover-image[src*="Comic1.svg"] {
-    transform: scale(1.22);
-}
-
-/* SVG covers carry their own drop shadow; give raster covers the same one. */
-.stories-world-guide-section .book-cover-image:is([src$=".jpg"], [src$=".png"]) {
-    height: 88%;
-    filter: drop-shadow(3px 5px 6px rgba(0, 0, 0, 0.28));
+    height: 108.6%;
+    transform: translate(-0.7%, 2.2%);
 }
 
 /* ????? (???? ????? ???????? ?????? ??) */
@@ -1232,6 +1246,7 @@ html:is(.site-en, .site-ko) .hero-text p.hero-status {
     color: #555;
     line-height: 1.55;
     margin: 0;
+    white-space: pre-line;
 }
 
 .book-card-footer {
