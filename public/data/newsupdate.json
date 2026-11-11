@@ -43,6 +43,12 @@
       "description": "Student B will participate in the 2026 World Webtoon Festival, where it will unveil its latest book releases and officially launch its new product series. The festival will take place December 2–6, 2026, at Starfield COEX Mall in Seoul, South Korea. For more information, www.wefe.kr.",
       "date": "2026-10-15",
       "link": "https://www.wefe.kr"
+    },
+    {
+      "id": 7,
+      "title": "Watching Them Humans in the AI Age Now Available Through U.S. Public Libraries",
+      "description": "Student B’s Watching Them Humans in the AI Age has been added to Indie Massachusetts, a digital collection on BiblioBoard Library. The book is now available for free to readers through participating public libraries across Massachusetts.",
+      "date": "2026-11-12"
     }
   ]
 }
