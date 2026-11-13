@@ -75,8 +75,10 @@ export default function Home() {
               <p className="home-hero-agents-text">{t.agentsBody}</p>
             </div>
           </div>
+          <div className="home-hero-news">
+            <NewsUpdateSection compact />
+          </div>
         </section>
-        <NewsUpdateSection />
       </div>
       <Footer />
     </div>

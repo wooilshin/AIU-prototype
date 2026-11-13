@@ -44,7 +44,7 @@ const SNS_LINKS = [
   },
 ] as const
 
-export default function NewsUpdateSection() {
+export default function NewsUpdateSection({ compact = false }: { compact?: boolean }) {
   const { language } = useLanguage()
   const [data, setData] = useState<NewsUpdateData | null>(null)
   const [aiuData, setAiuData] = useState<AiuNewsData | null>(null)
@@ -102,16 +102,17 @@ export default function NewsUpdateSection() {
 
   if (!data) return null
 
-  const maxStart = Math.max(0, data.articles.length - VISIBLE_COUNT)
+  const visibleCount = compact ? 1 : VISIBLE_COUNT
+  const maxStart = Math.max(0, data.articles.length - visibleCount)
   const visibleArticles = isMobile
     ? data.articles
-    : data.articles.slice(startIndex, startIndex + VISIBLE_COUNT)
-  const showDesktopArrows = !isMobile && data.articles.length > VISIBLE_COUNT
+    : data.articles.slice(startIndex, startIndex + visibleCount)
+  const showDesktopArrows = !isMobile && data.articles.length > visibleCount
   const aiuArticles = aiuData?.articles ?? []
   const hasAiuArticles = aiuArticles.length > 0
 
   return (
-    <section className="newsupdate-section">
+    <section className={`newsupdate-section${compact ? ' newsupdate-section--compact' : ''}`}>
       <div className="container newsupdate-container">
         <div className="newsupdate-layout">
           <div className="newsupdate-left-pane">

@@ -5,8 +5,6 @@ import { useLanguage } from '@/contexts/LanguageContext'
 
 const translations = {
   en: {
-    title: 'Contact Us',
-    subtitle: 'We\'d love to hear from you. Get in touch with us.',
     formTitle: 'Send us a Message',
     name: 'Name',
     email: 'Email',
@@ -21,8 +19,6 @@ const translations = {
     error: 'Sorry, there was an error sending your message. Please try again later or contact us directly at sns@student-b.com'
   },
   ko: {
-    title: '문의하기',
-    subtitle: '문의사항이 있으시면 언제든지 연락주세요.',
     formTitle: '메시지 보내기',
     name: '이름',
     email: '이메일',
@@ -85,17 +81,6 @@ export default function ContactSection() {
 
   return (
     <div id="contact">
-      <section className="contact-hero">
-        <div className="container">
-          <h1>{t.title}</h1>
-          <p>{t.subtitle}</p>
-        </div>
-      </section>
-
-      <div className="contact-hero-bear-mobile">
-        <img src="/images/icon/bear.svg" alt="Bear" />
-      </div>
-
       <section className="contact-section">
         <div className="container">
           <div className="contact-content">
