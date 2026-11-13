@@ -21,10 +21,11 @@ const translations = {
       "Meet AIU's animal agents, each with their own field of knowledge, personality, and reason for studying humans. Some observe us. Some learn from us. And some have begun to imagine a future beyond us.",
   },
   ko: {
-    title: '동물지능',
+    title: '동물지능 유니버스 (AIU)',
     paragraphs: [
-      '동물지능은 인간을 관찰하기 위해 파견된 비밀 동물 요원들의 이야기입니다. 동물지능 유니버스 속 동물들의 삶과 모험을 통해 인간의 상실과 희망, 그리고 지식의 의미를 탐구합니다.',
-      '21세기를 위한 현대의 우화입니다.',
+      '동물지능 유니버스(AIU)는 인간을 관찰하고 그들의 삶을 이해하기 위해 비밀 동물 요원들이 파견된 가상의 세계입니다.',
+      '이 동물들의 모험을 통해 AIU는 빠르게 변하는 세상 속 인간의 고군분투와 상실, 희망, 그리고 지식의 의미를 탐구합니다.',
+      '유머와 모험, 철학을 함께 담아 21세기를 위한 현대의 우화를 만드는 것이 AIU의 목표입니다.',
     ],
     agentsTitle: '동물 요원 소개',
     clickHint: '← 클릭해서 보기',
