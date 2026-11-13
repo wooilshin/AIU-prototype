@@ -11,13 +11,12 @@ const translations = {
   en: {
     title: 'Animal Intelligence',
     paragraphs: [
-      'Animal Intelligence is a story about secret animal agents sent to observe humans. Through the adventures of these animals, Animal Intelligence Universe (AIU) explores human struggles, loss, hope, and the meaning of knowledge in a rapidly changing world.',
-      'Combining humor, adventure, and philosophy, AIU aims to create a modern fable for the 21st century.',
+      'Animal Intelligence is a story about secret animal agents sent to observe humans. Through their adventures, the Animal Intelligence Universe (AIU) explores loss, hope, and the meaning of life in our rapidly changing world. It aims to become a modern fable for the 21st century.',
     ],
     agentsTitle: 'Meet the Animal Agents',
     clickHint: '← Click to find out',
     agentsBody:
-      "Meet AIU's animal agents, each with their own field of knowledge, personality, and reason for studying humans. Some observe us. Some learn from us. And some have begun to imagine a future beyond us.",
+      "Meet AIU's animal agents, each with their own field of knowledge, personality, and reason for studying humans.",
   },
   ko: {
     title: '동물지능 유니버스 (AIU)',
