@@ -9,7 +9,7 @@ import { useLanguage } from '@/contexts/LanguageContext'
 
 const translations = {
   en: {
-    title: 'Animal Intelligence Universe (AIU)',
+    title: 'Animal Intelligence',
     paragraphs: [
       'Animal Intelligence Universe (AIU) is a fictional world where secret animal agents are sent to observe humans and understand their lives.',
       'Through the adventures of these animals, AIU explores human struggles, loss, hope, and the meaning of knowledge in a rapidly changing world.',
