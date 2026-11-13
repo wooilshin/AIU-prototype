@@ -81,7 +81,7 @@ const SHOWCASES: Showcase[] = [
       {
         image: '/images/books/MyNameIsNacho.jpg',
         alt: 'My Name Is Nacho',
-        link: 'https://www.amazon.com/stores/author/B0FLCCNGG7',
+        link: 'https://www.amazon.com/My-Name-Nacho-Observation-Intelligence-ebook/dp/B0HPRZ7M6K',
       },
     ],
     highlights: [
