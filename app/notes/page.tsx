@@ -3,6 +3,7 @@
 import { useEffect, useState, type MouseEvent } from 'react'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import BookSection from '@/components/BookSection'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 const TOC_IDS = [
@@ -243,6 +244,11 @@ export default function NotesPage() {
               {t.sections.whatIs.paragraphs.map((paragraph, index) => (
                 <p key={index}>{paragraph}</p>
               ))}
+              <BookSection
+                dataFile="knowledge-notes.json"
+                sectionClass="knowledge-notes-section notes-books"
+                embedded
+              />
             </article>
 
             <article

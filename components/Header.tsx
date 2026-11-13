@@ -14,7 +14,7 @@ export default function Header() {
 
   const translations = {
     en: {
-      home: 'Home',
+      home: 'Books',
       aiuProject: 'AIU',
       creativeTechLab: 'Creative Lab',
       store: 'Store',

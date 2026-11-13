@@ -23,9 +23,15 @@ interface BookSectionProps {
   dataFile: string
   sectionClass: string
   showCenteredPaw?: boolean
+  embedded?: boolean
 }
 
-export default function BookSection({ dataFile, sectionClass, showCenteredPaw = false }: BookSectionProps) {
+export default function BookSection({
+  dataFile,
+  sectionClass,
+  showCenteredPaw = false,
+  embedded = false,
+}: BookSectionProps) {
   const { language } = useLanguage()
   const [data, setData] = useState<BookSectionData | null>(null)
 
@@ -57,6 +63,58 @@ export default function BookSection({ dataFile, sectionClass, showCenteredPaw = 
     ? (bookHasLink: boolean) => (bookHasLink ? 'Buy on Amazon →' : 'Coming soon')
     : (bookHasLink: boolean) => (bookHasLink ? 'Buy on Amazon →' : 'Coming soon')
 
+  const booksGrid = (
+    <div className="books-grid">
+      {data.books.map((book) => {
+        const bookCardContent = (
+          <>
+            {book.coverImage ? (
+              <div className="book-cover">
+                <img src={book.coverImage} alt={book.title} className="book-cover-image" />
+              </div>
+            ) : (
+              <div className="book-cover" style={{ background: book.coverStyle }}>
+                {book.description && <div className="book-title-small">{book.description}</div>}
+              </div>
+            )}
+            <div className="book-info">
+              <h3>
+                {book.title.split('\n').map((line, index, lines) => (
+                  <span key={index}>
+                    {line}
+                    {index < lines.length - 1 && <br />}
+                  </span>
+                ))}
+              </h3>
+              {book.description && <p className="book-description">{book.description}</p>}
+              <span className="book-card-footer">{footerLabel(!!book.link)}</span>
+            </div>
+          </>
+        )
+
+        return book.link ? (
+          <a
+            key={book.id}
+            href={book.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="book-card"
+          >
+            {bookCardContent}
+          </a>
+        ) : (
+          <div key={book.id} className="book-card">
+            {bookCardContent}
+          </div>
+        )
+      })}
+    </div>
+  )
+
+  if (embedded) {
+    return <div className={sectionClass}>{booksGrid}</div>
+  }
+
   return (
     <section className={sectionClass}>
       {showCenteredPaw && (
@@ -83,62 +141,7 @@ export default function BookSection({ dataFile, sectionClass, showCenteredPaw = 
             {language === 'ko' ? '전체보기' : 'View all'}
           </a>
         </div>
-        <div className="books-grid">
-          {data.books.map((book) => {
-            const bookCardContent = (
-              <>
-                {book.coverImage ? (
-                  <div className="book-cover">
-                    <img
-                      src={book.coverImage}
-                      alt={book.title}
-                      className="book-cover-image"
-                    />
-                  </div>
-                ) : (
-                  <div
-                    className="book-cover"
-                    style={{ background: book.coverStyle }}
-                  >
-                    {book.description && (
-                      <div className="book-title-small">{book.description}</div>
-                    )}
-                  </div>
-                )}
-                <div className="book-info">
-                  <h3>
-                    {book.title.split('\n').map((line, index) => (
-                      <span key={index}>
-                        {line}
-                        {index < book.title.split('\n').length - 1 && <br />}
-                      </span>
-                    ))}
-                  </h3>
-                  {book.description && (
-                    <p className="book-description">{book.description}</p>
-                  )}
-                  <span className="book-card-footer">{footerLabel(!!book.link)}</span>
-                </div>
-              </>
-            )
-
-            return book.link ? (
-              <a
-                key={book.id}
-                href={book.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="book-card"
-              >
-                {bookCardContent}
-              </a>
-            ) : (
-              <div key={book.id} className="book-card">
-                {bookCardContent}
-              </div>
-            )
-          })}
-        </div>
+        {booksGrid}
       </div>
     </section>
   )
