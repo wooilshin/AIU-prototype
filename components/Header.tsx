@@ -14,16 +14,18 @@ export default function Header() {
 
   const translations = {
     en: {
-      home: 'Books',
-      aiuProject: 'AIU',
+      home: 'Home',
+      books: 'Books',
+      aiuProject: 'About',
       creativeTechLab: 'Creative Lab',
       store: 'Store',
       contact: 'Contact Us',
       newsletter: 'Newsletter',
     },
     ko: {
-      home: '출판물',
-      aiuProject: '동물지능',
+      home: '홈',
+      books: '출판물',
+      aiuProject: '소개',
       creativeTechLab: '크리에이티브랩',
       store: '스토어',
       contact: '문의하기',
@@ -81,6 +83,7 @@ export default function Header() {
           </div>
           <nav className="nav-menu">
             <Link href="/">{t.home}</Link>
+            <Link href="/books">{t.books}</Link>
             <Link href="/aiu-project">{t.aiuProject}</Link>
             <Link href="/creative-tech-lab">{t.creativeTechLab}</Link>
             <Link href="/store">{t.store}</Link>
@@ -133,6 +136,9 @@ export default function Header() {
         <nav className="mobile-menu-nav">
           <Link href="/" onClick={handleMenuLinkClick}>
             {t.home}
+          </Link>
+          <Link href="/books" onClick={handleMenuLinkClick}>
+            {t.books}
           </Link>
           <Link href="/aiu-project" onClick={handleMenuLinkClick}>
             {t.aiuProject}

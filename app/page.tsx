@@ -4,7 +4,6 @@ import { useEffect } from 'react'
 import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import PublicationShowcase from '@/components/PublicationShowcase'
 import NewsUpdateSection from '@/components/NewsUpdateSection'
 import { useLanguage } from '@/contexts/LanguageContext'
 
@@ -39,7 +38,7 @@ export default function Home() {
 
   useEffect(() => {
     const hash = window.location.hash
-    if (hash === '#newsletter' || hash === '#store') {
+    if (hash === '#newsletter') {
       setTimeout(() => {
         const target = document.getElementById(hash.slice(1))
         if (target) {
@@ -80,9 +79,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <div id="store">
-          <PublicationShowcase />
-        </div>
         <NewsUpdateSection />
       </div>
       <Footer />

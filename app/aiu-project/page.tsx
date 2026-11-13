@@ -2,6 +2,7 @@
 
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import ContactSection from '@/components/ContactSection'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function AIUProject() {
@@ -173,6 +174,7 @@ Wooil studied Computer Science at the University of Pennsylvania. He develops AI
             </div>
           </div>
         </section>
+        <ContactSection />
       </div>
       <Footer />
     </div>
