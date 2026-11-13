@@ -102,12 +102,11 @@ export default function NewsUpdateSection({ compact = false }: { compact?: boole
 
   if (!data) return null
 
-  const visibleCount = compact ? 1 : VISIBLE_COUNT
-  const maxStart = Math.max(0, data.articles.length - visibleCount)
+  const maxStart = Math.max(0, data.articles.length - VISIBLE_COUNT)
   const visibleArticles = isMobile
     ? data.articles
-    : data.articles.slice(startIndex, startIndex + visibleCount)
-  const showDesktopArrows = !isMobile && data.articles.length > visibleCount
+    : data.articles.slice(startIndex, startIndex + VISIBLE_COUNT)
+  const showDesktopArrows = !isMobile && data.articles.length > VISIBLE_COUNT
   const aiuArticles = aiuData?.articles ?? []
   const hasAiuArticles = aiuArticles.length > 0
 
@@ -121,7 +120,7 @@ export default function NewsUpdateSection({ compact = false }: { compact?: boole
                 <h2>
                   <span className="newsupdate-header-brand">Student B</span>
                   <span className="newsupdate-header-rest">
-                    {language === 'ko' ? '뉴스 & 공지' : 'News & Announcements'}
+                    {language === 'ko' ? '뉴스' : 'News'}
                   </span>
                 </h2>
                 {showDesktopArrows && (
@@ -179,7 +178,7 @@ export default function NewsUpdateSection({ compact = false }: { compact?: boole
               <h2 className="aiu-news-title">
                 <span className="aiu-news-line1">{language === 'ko' ? '동물지능' : 'AIU'}</span>
                 <span className="aiu-news-line2-text">
-                  {language === 'ko' ? '뉴스 & 요원 보고서' : 'News & Agent Reports'}
+                  {language === 'ko' ? '요원 보고서' : 'Agent Reports'}
                 </span>
               </h2>
               <div className="aiu-news-follow-group">

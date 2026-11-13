@@ -4310,12 +4310,13 @@ html:is(.site-en, .site-ko) .home-hero-agents-title {
     .home-hero {
         justify-content: space-between;
         gap: 48px;
+        padding-right: 40px;
     }
 
     .home-hero-news {
-        flex: 0 1 600px;
+        flex: 0 1 900px;
         min-width: 0;
-        max-width: 600px;
+        max-width: 900px;
         margin-bottom: -40px;
     }
 
@@ -4329,7 +4330,20 @@ html:is(.site-en, .site-ko) .home-hero-agents-title {
     }
 
     .newsupdate-section--compact .newsupdate-layout {
+        grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
         gap: 24px;
+    }
+
+    .newsupdate-section--compact .newsupdate-list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 20px;
+        border-top: var(--news-rule-width) solid var(--news-rule-color);
+    }
+
+    .newsupdate-section--compact .newsupdate-item,
+    .newsupdate-section--compact .newsupdate-item:first-child {
+        border-top: none;
     }
 
     .newsupdate-section--compact .newsupdate-left-pane {
