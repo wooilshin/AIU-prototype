@@ -56,19 +56,6 @@ const SHOWCASES: Showcase[] = [
           ko: '2026 한국 만화진흥원 다양성만화 제작 선정작',
         },
       },
-      {
-        text: {
-          en: '#1 in Brunch Comics & Webtoons for 10 consecutive weeks',
-          ko: '브런치 만화웹툰 분야 10주 연속 1위',
-        },
-        source: { en: '50,000 cumulative views', ko: '누적 조회수 5만명' },
-      },
-      {
-        text: {
-          en: 'Rated 4.57 by international readers on Goodreads',
-          ko: 'Goodreads 해외 독자 평점 4.57 기록',
-        },
-      },
     ],
     quote: {
       en: 'A comic series that uses satire and humor to capture the anxiety, confusion, and hope animals face in a rapidly changing world.',
@@ -100,19 +87,9 @@ const SHOWCASES: Showcase[] = [
     highlights: [
       {
         text: {
-          en: '“A book series for a new era, filled with humor, animals, and philosophy.”',
-          ko: '“유머, 동물, 철학을 담은 새로운 시대의 도서 시리즈”',
+          en: '#1 in Brunch Comics & Webtoons for 10 consecutive weeks',
+          ko: '브런치 만화웹툰 분야 10주 연속 1위',
         },
-        source: { en: 'The European (UK)', ko: '영국 유로피언지 도서소개' },
-        link: 'https://the-european.eu/story-54107/book-review-a-history-of-the-world-told-by-animals-and-it-changes-everything.html',
-      },
-      {
-        text: {
-          en: '“A comic that shines with original humor, a book children and adults can enjoy together.”',
-          ko: '“독창적인 유머가 빛나는 만화. 어린이, 성인이 모두 같이 볼 수 있는 책”',
-        },
-        source: { en: 'Harvard Magazine', ko: '하바드 잡지, 도서소개' },
-        link: 'https://www.harvardmagazine.com/books-literary-life/harvard-book-recommendations-spring-2026-0',
       },
     ],
     quote: {
@@ -132,7 +109,7 @@ const SHOWCASES: Showcase[] = [
       ko: '잊혀진 동물 문명의 역사',
     },
     body: {
-      en: 'The Book of Forgotten Animals explores history through the eyes of the ancestors of the Animal Intelligence Universe, including extinct species that once shaped the world. Its companion, the Guidebook to the Animal Intelligence Universe, introduces the seven animal civilizations, their characters and cultures, and the roles they play in today’s world.',
+      en: 'The Book of Forgotten Animals explores history through the eyes of the ancestors of the nowaday animal agents, including extinct species that once shaped the world. The Guidebook to the Animal Intelligence Universe, introduces the seven animal civilizations, 50+ animal agents, and the roles they play in the AIU world.',
       ko: '《잊혀진 동물들의 책》은 한때 세상을 바꾼 멸종 동물들을 포함해, 동물지능 유니버스 조상들의 눈으로 역사를 바라본다. 함께 읽는 《동물지능 유니버스 가이드북》은 일곱 개의 동물 문명과 그 캐릭터, 문화, 그리고 오늘날 세상에서 그들이 맡은 역할을 소개한다.',
     },
     covers: [
@@ -155,6 +132,14 @@ const SHOWCASES: Showcase[] = [
         },
         source: { en: 'Kirkus Reviews, Get It badge', ko: '커커스 리뷰, Get It 배지' },
         link: 'https://www.kirkusreviews.com/book-reviews/will-shin/animal-intelligence-2/',
+      },
+      {
+        text: {
+          en: '“Animal Intelligence invites readers into a universe where whales negotiate, cats critique civilisation and extinct species finally tell their side of the story — and the result is a surprisingly elegant argument for seeing the planet anew.”',
+          ko: '“고래가 협상하고, 고양이가 문명을 비평하며, 멸종한 종들이 마침내 자신들의 이야기를 들려주는 세계로 독자를 초대한다. 그 결과는 지구를 새롭게 바라보자는, 놀랍도록 우아한 제안이다.”',
+        },
+        source: { en: 'The European (UK)', ko: '영국 유로피언지 도서소개' },
+        link: 'https://the-european.eu/story-54107/book-review-a-history-of-the-world-told-by-animals-and-it-changes-everything.html',
       },
     ],
     quote: {

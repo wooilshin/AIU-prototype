@@ -9,10 +9,11 @@ import { useLanguage } from '@/contexts/LanguageContext'
 
 const translations = {
   en: {
-    title: 'Animal Intelligence',
+    title: 'Animal Intelligence Universe (AIU)',
     paragraphs: [
-      'Animal Intelligence tells the story of secret animal agents sent to observe humans. Through the lives and adventures of animals in the Animal Intelligence Universe, it explores human loss, hope, and the meaning of knowledge.',
-      'It is a modern fable for the 21st century.',
+      'Animal Intelligence Universe (AIU) is a fictional world where secret animal agents are sent to observe humans and understand their lives.',
+      'Through the adventures of these animals, AIU explores human struggles, loss, hope, and the meaning of knowledge in a rapidly changing world.',
+      'Combining humor, adventure, and philosophy, AIU aims to create a modern fable for the 21st century.',
     ],
     agentsTitle: 'Meet the Animal Agents',
     clickHint: '← Click to find out',
@@ -50,11 +51,6 @@ export default function Home() {
 
   return (
     <div className="home-page">
-      {[2, 3, 4, 5, 6, 7, 8, 9].map((n) => (
-        <div key={n} className={`home-paw-bg home-paw-bg--${n}`} aria-hidden="true">
-          <img src="/images/icon/paw.svg" alt="" />
-        </div>
-      ))}
       <Header />
       <div className="home-main">
         <section className="home-hero">

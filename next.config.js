@@ -4,6 +4,11 @@ const nextConfig = {
   images: {
     domains: [],
   },
+  async redirects() {
+    return [
+      { source: '/contact', destination: '/aiu-project#contact', permanent: false },
+    ]
+  },
   webpack: (config, { isServer }) => {
     // React Three Fiber와 Three.js는 클라이언트 사이드에서만 번들링
     if (isServer) {
