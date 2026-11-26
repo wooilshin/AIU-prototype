@@ -116,7 +116,7 @@ const SHOWCASES: Showcase[] = [
     },
     body: {
       en: 'The Book of Forgotten Animals explores history through the eyes of the ancestors of today’s animal agents, including extinct species that once shaped the world. The Guidebook to the Animal Intelligence Universe introduces the seven animal civilizations, 50+ animal agents, and the roles they play in the AIU world.',
-      ko: '《잊혀진 동물들의 책》은 한때 세상을 바꾼 멸종 동물들을 포함해, 오늘날 동물 요원들의 조상들의 눈으로 역사를 바라본다. 《동물지능 유니버스 가이드북》은 일곱 개의 동물 문명과 50여 명의 동물 요원, 그리고 AIU 세계에서 그들이 맡은 역할을 소개한다.',
+      ko: '"동물지능 역사편: 잊혀진 동물들의 책"은 오늘날 활약하는 동물 요원들의 조상에 해당하는 역사속 고대 동물들의 철학 그리고 그들과 인간들과의 인연을 다룬 책이다. "동물지능 세계관 가이드북"은 동물지능 스토리에 등장하는 일곱 개의 동물 문명과 50여 명의 동물 요원을 망라한 백과사전 도감으로, 동물지능 세계관 전체를 조망할 수 있는 책이다.',
     },
     covers: [
       {
