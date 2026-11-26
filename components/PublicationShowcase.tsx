@@ -100,7 +100,7 @@ const SHOWCASES: Showcase[] = [
     ],
     quote: {
       en: 'A collection of short stories and comics revealing the hidden stories of animal agents such as Nacho, Halo, Python, Swan, and White Giraffe.',
-      ko: '나초, 헤일로, 파이썬, 백조, 흰기린 등 동물 요원들의 숨겨진 사연을 만화와 스토리로 풀어낸 단편 모음집',
+      ko: '나초, 헤일로, 파이썬, 백조, 흰기린 등 동물 요원들의 숨겨진 사연을 만화와 스토리로 풀어낸 단편 모음집.',
     },
     character: { image: '/images/home/nacho.png', alt: 'Nacho' },
   },
