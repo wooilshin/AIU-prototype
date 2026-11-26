@@ -112,7 +112,7 @@ const SHOWCASES: Showcase[] = [
     },
     headline: {
       en: 'The Forgotten History of Animal Civilization',
-      ko: '잊혀진 동물 문명의 역사',
+      ko: '숨겨진 동물 문명 그리고 그들의 역사',
     },
     body: {
       en: 'The Book of Forgotten Animals explores history through the eyes of the ancestors of today’s animal agents, including extinct species that once shaped the world. The Guidebook to the Animal Intelligence Universe introduces the seven animal civilizations, 50+ animal agents, and the roles they play in the AIU world.',
