@@ -15,6 +15,7 @@ type Highlight = {
   text: Localized
   source?: Localized
   link?: string
+  linkEn?: string
 }
 
 type Showcase = {
@@ -63,6 +64,7 @@ const SHOWCASES: Showcase[] = [
           en: 'Selected for Inclusion in the Indie Massachusetts Library Collection',
           ko: '미국 메사츄세츠 주립 공공도서관 큐레이션 선정작',
         },
+        linkEn: 'https://library.biblioboard.com/content/3e084f4d-e7c2-4b40-9847-dabd28130c36',
       },
     ],
     quote: {
@@ -197,9 +199,21 @@ export default function PublicationShowcase() {
                   {item.highlights.map((highlight, index) => {
                     const text = highlight.text[language]
                     if (!text) return null
+                    const textHref = language === 'en' ? highlight.linkEn : undefined
                     return (
                     <li key={index}>
-                      <span className="pub-highlight-text">{text}</span>
+                      {textHref ? (
+                        <a
+                          className="pub-highlight-text"
+                          href={textHref}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {text}
+                        </a>
+                      ) : (
+                        <span className="pub-highlight-text">{text}</span>
+                      )}
                       {highlight.source &&
                         (highlight.link ? (
                           <a

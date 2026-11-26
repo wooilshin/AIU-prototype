@@ -4630,6 +4630,14 @@ html:is(.site-en, .site-ko) .pub-headline {
     color: #5b84b1;
 }
 
+a.pub-highlight-text {
+    text-decoration: none;
+}
+
+a.pub-highlight-text:hover {
+    text-decoration: underline;
+}
+
 .pub-highlight-source {
     display: block;
     margin-top: 4px;
