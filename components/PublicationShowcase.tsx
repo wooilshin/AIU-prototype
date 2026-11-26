@@ -73,7 +73,7 @@ const SHOWCASES: Showcase[] = [
     id: 'my-name-is-series',
     title: {
       en: 'My Name Is... Series',
-      ko: '동물지능 《내 이름은...》 시리즈',
+      ko: '동물지능 "내 이름은..." 시리즈',
     },
     headline: {
       en: 'The Stories of the Animal Agents',
