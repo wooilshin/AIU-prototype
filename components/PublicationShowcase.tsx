@@ -32,11 +32,11 @@ const SHOWCASES: Showcase[] = [
     id: 'watching-them-humans',
     title: {
       en: 'Watching Them Humans in the AI Age',
-      ko: '동물지능 《AI 시대 동물들의 세상관찰기》',
+      ko: '만화 "AI 시대 동물들의 세상관찰기"',
     },
     headline: {
       en: 'The Animal Agents Have Been Deployed!',
-      ko: '동물 요원들이 파견되다!',
+      ko: '"요즘 인간들이 이상하다!"',
     },
     body: {
       en: 'Sent into the human world to observe people, the animal agents discover a suspicious object: the monitor. As the monitor, a metaphor for AI, makes its way into the animal world, strange changes begin to unsettle their once-peaceful lives. Familiar animals from fables and folktales, including the fox and the crane, the tortoise and the hare, and the black swan, come together to send a warning to the humans of our time.',
@@ -54,6 +54,12 @@ const SHOWCASES: Showcase[] = [
         text: {
           en: 'Selected for the 2026 KOMACON Diversity Comics Production Program',
           ko: '2026 한국 만화진흥원 다양성만화 제작 선정작',
+        },
+      },
+      {
+        text: {
+          en: '',
+          ko: '메사츄세츠 주립 공공도서관 큐레이션 선정작',
         },
       },
     ],
@@ -186,9 +192,12 @@ export default function PublicationShowcase() {
 
               <aside className="pub-aside">
                 <ul className="pub-highlights">
-                  {item.highlights.map((highlight, index) => (
+                  {item.highlights.map((highlight, index) => {
+                    const text = highlight.text[language]
+                    if (!text) return null
+                    return (
                     <li key={index}>
-                      <span className="pub-highlight-text">{highlight.text[language]}</span>
+                      <span className="pub-highlight-text">{text}</span>
                       {highlight.source &&
                         (highlight.link ? (
                           <a
@@ -203,7 +212,8 @@ export default function PublicationShowcase() {
                           <span className="pub-highlight-source">{highlight.source[language]}</span>
                         ))}
                     </li>
-                  ))}
+                    )
+                  })}
                 </ul>
                 <img
                   className="pub-character"
