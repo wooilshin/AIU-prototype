@@ -25,7 +25,7 @@ export default function Header() {
       home: '홈',
       books: '출판물',
       aiuProject: '소개',
-      creativeTechLab: '크리에이티브랩',
+      creativeTechLab: '테크랩',
       store: '스토어',
       newsletter: '뉴스레터',
     },
