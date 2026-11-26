@@ -65,7 +65,7 @@ const SHOWCASES: Showcase[] = [
     ],
     quote: {
       en: 'A comic series that uses satire and humor to capture the anxiety, confusion, and hope animals face in a rapidly changing world.',
-      ko: '빠르게 변하는 세상 속에서 동물들이 마주하는 불안과 혼란, 그리고 희망을 풍자와 유머로 풀어낸 만화 시리즈.',
+      ko: '빠르게 변하는 세상 속에서 인간 그리고 동물들이 마주하는 불안과 혼란, 그리고 희망을 풍자와 유머로 풀어낸 만화 시리즈.',
     },
     character: { image: '/images/home/red-fox.png', alt: 'Red Fox' },
   },
