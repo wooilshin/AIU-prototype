@@ -40,7 +40,7 @@ const translations: Record<
     postsBody:
       'We plan to share short Tech Notes and Commentaries on this page. These posts will cover topics such as our experiments with game engines, content production pipelines, and our work with interactive character systems.',
     postsImageAlt:
-      'Illustration of the turtle agent taking notes, wiring a server, and designing a circuit board in VR',
+      'Cutaway of the turtle device showing the microphone, speaker, communication module, battery, NFC tag, and charging port',
     clickHint: '← Click to find out',
     noteTitle: 'A Note on AI and the Original Works',
     noteBody: [
@@ -67,7 +67,7 @@ const translations: Record<
     postsBody:
       '동물지능 세계를 새로운 디지털 콘텐츠로 확장해 가는 과정을 기록합니다. 게임 엔진 실험, 애니메이션 에셋 제작 파이프라인, AI 기반 대화 시스템 등 현재 기획 중인 다양한 아이디어의 기록을 공유합니다.',
     postsImageAlt:
-      '메모하고, 서버에 선을 연결하고, VR로 회로기판을 설계하는 거북이 요원 일러스트',
+      '마이크, 스피커, 통신 모듈, 배터리, NFC 태그, 충전 포트가 표시된 거북이 장치 단면도',
     clickHint: '← 클릭해서 보기',
     noteTitle: 'AI 사용에 대하여',
     noteBody: [
@@ -135,9 +135,9 @@ export default function CreativeTechLabPage() {
 
           <figure className="tech-lab-bridge-figure">
             <img
-              src="/images/tech-lab/tech-note-illustration.jpg"
+              src="/images/tech-lab/turtle-device-cutaway.png"
               alt={t.postsImageAlt}
-              className="tech-lab-bridge-image"
+              className="tech-lab-bridge-image tech-lab-bridge-image--plain"
             />
           </figure>
 
