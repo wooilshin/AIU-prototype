@@ -144,7 +144,7 @@ const SHOWCASES: Showcase[] = [
       {
         text: {
           en: '“Animal Intelligence invites readers into a universe where whales negotiate, cats critique civilisation and extinct species finally tell their side of the story — and the result is a surprisingly elegant argument for seeing the planet anew.”',
-          ko: '“멸종한 동물들이 마침내 자신들의 이야기를 들려주는 새로운 세계로 독자를 초대한다. 이책을 통해 지구와 우리의 역사를 새롭게 바라보게 하는 놀랍도록 우아한 제안을 마주하게 된다.”',
+          ko: '“이책을 통해 지구와 우리의 역사를 새롭게 바라보게 하는 놀랍도록 우아한 제안을 마주하게 된다.”',
         },
         source: { en: 'The European (UK)', ko: '영국 유로피언지 도서소개' },
         link: 'https://the-european.eu/story-54107/book-review-a-history-of-the-world-told-by-animals-and-it-changes-everything.html',
