@@ -4635,6 +4635,11 @@ a.pub-highlight-source:hover {
     align-self: center;
 }
 
+.pub-character--dog {
+    max-width: 133px;
+    max-height: 161px;
+}
+
 .pub-quote {
     position: relative;
     max-width: 720px;
@@ -4687,6 +4692,11 @@ a.pub-highlight-source:hover {
         max-width: 140px;
         max-height: 170px;
     }
+
+    .pub-character--dog {
+        max-width: 98px;
+        max-height: 119px;
+    }
 }
 
 @media (max-width: 700px) {
@@ -4721,6 +4731,11 @@ a.pub-highlight-source:hover {
     .pub-character {
         max-width: 100px;
         max-height: 130px;
+    }
+
+    .pub-character--dog {
+        max-width: 70px;
+        max-height: 91px;
     }
 
     .pub-quote {

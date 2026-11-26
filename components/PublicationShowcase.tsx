@@ -216,7 +216,7 @@ export default function PublicationShowcase() {
                   })}
                 </ul>
                 <img
-                  className="pub-character"
+                  className={`pub-character${item.id === 'my-name-is-series' ? ' pub-character--dog' : ''}`}
                   src={item.character.image}
                   alt={item.character.alt}
                 />
