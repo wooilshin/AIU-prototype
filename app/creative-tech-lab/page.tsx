@@ -53,11 +53,11 @@ const translations: Record<
       'The inaugural digital collectibles of the Animal Intelligence Universe, created as tokens of remembrance.',
   },
   ko: {
-    title: '크리에이티브 랩',
+    title: '테크랩',
     deviceImageAlt:
       '거북이 캐릭터를 기반으로 한 Ai 피규어 개념도',
     techLabBody:
-      '크리에이티브 랩은 AI 시대의 새로운 배움과 콘텐츠의 가능성을 탐구합니다. 미래의 교과서는 어떤 모습일지 고민하며 ‘지식노트’를 만들고, 동물지능 세계를 게임 형태의 인터랙티브 에듀테인먼트로 확장하기 위한 기술을 개발하고 있습니다.',
+      '테크랩은 AI 시대의 새로운 배움과 콘텐츠의 가능성을 탐구합니다. 미래의 교과서는 어떤 모습일지 고민하며 ‘지식노트’를 만들고, 동물지능 세계를 게임 형태의 인터랙티브 에듀테인먼트로 확장하기 위한 기술을 개발하고 있습니다.',
     knowledgeNoteTitle: '지식노트',
     knowledgeNoteBody:
       '미래의 교과서는 어떤 모습이어야 할까요? 스튜던트 비 테크랩이 현재 기획하고 있는 다섯 가지 지식노트의 핵심 주제와 그 철학을 소개합니다.',
