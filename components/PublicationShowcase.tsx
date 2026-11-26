@@ -60,7 +60,7 @@ const SHOWCASES: Showcase[] = [
       },
       {
         text: {
-          en: '',
+          en: 'Selected for Inclusion in the Indie Massachusetts Library Collection',
           ko: '미국 메사츄세츠 주립 공공도서관 큐레이션 선정작',
         },
       },
