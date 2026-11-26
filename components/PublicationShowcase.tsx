@@ -40,7 +40,7 @@ const SHOWCASES: Showcase[] = [
     },
     body: {
       en: 'Sent into the human world to observe people, the animal agents discover a suspicious object: the monitor. As the monitor, a metaphor for AI, makes its way into the animal world, strange changes begin to unsettle their once-peaceful lives. Familiar animals from fables and folktales, including the fox and the crane, the tortoise and the hare, and the black swan, come together to send a warning to the humans of our time.',
-      ko: '인간을 관찰하기 위해 인간 세계로 파견된 동물 요원들은 수상한 물건 하나를 발견한다. 그것은 바로 ‘모니터’. AI를 은유하는 모니터가 동물 세계에 들어오면서, 평화롭던 그들의 세계에도 이상한 변화가 일어나기 시작한다. 우리에게 익숙했던 우화와 이야기 속 동물들, 여우와 학, 토끼와 거북이, 블랙스완 등이 총출동해 지금 시대 인간들에게 경고의 메시지를 보낸다.',
+      ko: '인간을 관찰하기 위해 인간 세계로 파견된 동물 요원들은 수상한 물건 하나를 발견한다. 그것은 바로 ‘모니터’. AI를 은유하는 모니터가 동물 세계에 들어오면서, 평화롭던 그들의 세계에도 변화가 일어나기 시작한다. 우리에게 익숙했던 우화 속 동물들, 여우와 학, 토끼와 거북이, 블랙스완 등이 총출동해 지금 시대의 인간들에게 경고의 메시지를 보낸다.',
     },
     covers: [
       {
