@@ -2869,6 +2869,12 @@ html:is(.site-en, .site-ko) .about-staff .staff-role > p.staff-contact-email {
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
 }
 
+.tech-lab-figure .tech-lab-image--banner {
+    width: 92%;
+    border-radius: 0;
+    box-shadow: none;
+}
+
 /* ?????: ?????? ? ??? ??? float (????? */
 .tech-lab-lead-flow::after {
     content: '';
@@ -3800,6 +3806,10 @@ html:is(.site-en, .site-ko) .about-staff .staff-role > p.staff-contact-email {
 
     .tech-lab-figure .tech-lab-image {
         width: 48%;
+    }
+
+    .tech-lab-figure .tech-lab-image--banner {
+        width: 100%;
     }
 
     .tech-lab-float-figure {

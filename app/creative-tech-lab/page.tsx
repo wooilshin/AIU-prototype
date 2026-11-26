@@ -28,7 +28,7 @@ const translations: Record<
   en: {
     title: 'Creative Tech Lab',
     deviceImageAlt:
-      'Conceptual visualization of the Animal Intelligence turtle device showing internal components',
+      'Illustration of the turtle agent taking notes, wiring a server, and designing a circuit board in VR',
     techLabBody:
       'Creative Tech Lab is currently developing content for Knowledge Note, Student B’s attempt to explore what our textbooks might look like in the future. We also plan to share our journey—and the technologies behind it—as we transform the AIU universe into a large-scale, interactive edutainment world.',
     knowledgeNoteTitle: 'Knowledge Note',
@@ -55,7 +55,7 @@ const translations: Record<
   ko: {
     title: '테크랩',
     deviceImageAlt:
-      '거북이 캐릭터를 기반으로 한 Ai 피규어 개념도',
+      '메모하고, 서버에 선을 연결하고, VR로 회로기판을 설계하는 거북이 요원 일러스트',
     techLabBody:
       '테크랩은 AI 시대의 새로운 배움과 콘텐츠의 가능성을 탐구합니다. 미래의 교과서는 어떤 모습일지 고민하며 ‘지식노트’를 만들고, 동물지능 세계를 게임 형태의 인터랙티브 에듀테인먼트로 확장하기 위한 기술을 개발하고 있습니다.',
     knowledgeNoteTitle: '지식노트',
@@ -110,9 +110,9 @@ export default function CreativeTechLabPage() {
                 />
               </div>
               <img
-                src="/images/tech-lab/turtle-device.png"
+                src="/images/tech-lab/turtle-agents.png"
                 alt={t.deviceImageAlt}
-                className="tech-lab-image"
+                className="tech-lab-image tech-lab-image--banner"
               />
             </figure>
 
