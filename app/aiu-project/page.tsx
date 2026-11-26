@@ -72,6 +72,81 @@ Wooil studied Computer Science at the University of Pennsylvania. He develops AI
 
   const t = translations[language]
 
+  const whatWeMakeSection = (
+    <div className="about-section what-we-make">
+      <h2>{t.whatWeMakeTitle}</h2>
+      <div className="key-areas-grid">
+        <div className="key-area-card">
+          <div className="key-area-icon">
+            <i className="fas fa-comments"></i>
+          </div>
+          <h3>{t.comicsTitle}</h3>
+          <p>{t.comicsDesc}</p>
+        </div>
+        <div className="key-area-card">
+          <div className="key-area-icon">
+            <i className="fas fa-book"></i>
+          </div>
+          <h3>{t.bookStoryTitle}</h3>
+          <p>{t.bookStoryDesc}</p>
+        </div>
+        <div className="key-area-card">
+          <div className="key-area-icon">
+            <i className="fas fa-book-open"></i>
+          </div>
+          <h3>{t.bookKnowledgeTitle}</h3>
+          <p>{t.bookKnowledgeDesc}</p>
+        </div>
+      </div>
+    </div>
+  )
+
+  const staffSection = (
+    <div className="about-section about-staff">
+      <h2>{t.staffTitle}</h2>
+      {language === 'ko' &&
+        t.studentBDesc.split('\n\n').map(
+          (paragraph, index) =>
+            paragraph.trim() && <p key={`staff-intro-${index}`}>{paragraph.trim()}</p>
+        )}
+
+      <div className="staff-role">
+        <h3>{t.ceoTitle}</h3>
+        {t.ceoDesc.split('\n\n').map(
+          (paragraph, index) =>
+            paragraph.trim() && <p key={index}>{paragraph.trim()}</p>
+        )}
+        <p className="staff-contact-email">artdirector [at] student-b.com</p>
+      </div>
+
+      <div className="staff-role">
+        <h3>{t.techLabTitle}</h3>
+        {t.techLabDesc.split('\n\n').map(
+          (paragraph, index) =>
+            paragraph.trim() && <p key={index}>{paragraph.trim()}</p>
+        )}
+        <p className="staff-contact-email">techlab [at] student-b.com</p>
+      </div>
+
+      {language !== 'ko' && (
+      <div className="staff-role">
+        <h3>{t.bizTitle}</h3>
+        <p>{t.bizDesc}</p>
+        <p className="staff-contact-email">
+          ipbusiness [at] student-b.com
+          <br />
+          sns [at] student-b.com
+        </p>
+      </div>
+      )}
+
+      <div className="staff-role">
+        <h3>{t.advisorTitle}</h3>
+        <p>{t.advisorDesc}</p>
+      </div>
+    </div>
+  )
+
   return (
     <div className="aiu-page">
       {[1, 2, 3, 4, 5, 6, 7].map((n) => (
@@ -102,76 +177,17 @@ Wooil studied Computer Science at the University of Pennsylvania. He develops AI
             </div>
             )}
 
-            <div className="about-section what-we-make">
-              <h2>{t.whatWeMakeTitle}</h2>
-              <div className="key-areas-grid">
-                <div className="key-area-card">
-                  <div className="key-area-icon">
-                    <i className="fas fa-comments"></i>
-                  </div>
-                  <h3>{t.comicsTitle}</h3>
-                  <p>{t.comicsDesc}</p>
-                </div>
-                <div className="key-area-card">
-                  <div className="key-area-icon">
-                    <i className="fas fa-book"></i>
-                  </div>
-                  <h3>{t.bookStoryTitle}</h3>
-                  <p>{t.bookStoryDesc}</p>
-                </div>
-                <div className="key-area-card">
-                  <div className="key-area-icon">
-                    <i className="fas fa-book-open"></i>
-                  </div>
-                  <h3>{t.bookKnowledgeTitle}</h3>
-                  <p>{t.bookKnowledgeDesc}</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="about-section about-staff">
-              <h2>{t.staffTitle}</h2>
-              {language === 'ko' &&
-                t.studentBDesc.split('\n\n').map(
-                  (paragraph, index) =>
-                    paragraph.trim() && <p key={`staff-intro-${index}`}>{paragraph.trim()}</p>
-                )}
-
-              <div className="staff-role">
-                <h3>{t.ceoTitle}</h3>
-                {t.ceoDesc.split('\n\n').map(
-                  (paragraph, index) =>
-                    paragraph.trim() && <p key={index}>{paragraph.trim()}</p>
-                )}
-                <p className="staff-contact-email">artdirector [at] student-b.com</p>
-              </div>
-
-              <div className="staff-role">
-                <h3>{t.techLabTitle}</h3>
-                {t.techLabDesc.split('\n\n').map(
-                  (paragraph, index) =>
-                    paragraph.trim() && <p key={index}>{paragraph.trim()}</p>
-                )}
-                <p className="staff-contact-email">techlab [at] student-b.com</p>
-              </div>
-
-              {language !== 'ko' && (
-              <div className="staff-role">
-                <h3>{t.bizTitle}</h3>
-                <p>{t.bizDesc}</p>
-                <p className="staff-contact-email">
-                  ipbusiness [at] student-b.com
-                  <br />
-                  sns [at] student-b.com
-                </p>
-              </div>
-              )}
-
-              <div className="staff-role">
-                <h3>{t.advisorTitle}</h3>
-                <p>{t.advisorDesc}</p>
-              </div>
-            </div>
+            {language === 'ko' ? (
+              <>
+                {staffSection}
+                {whatWeMakeSection}
+              </>
+            ) : (
+              <>
+                {whatWeMakeSection}
+                {staffSection}
+              </>
+            )}
           </div>
         </section>
         <ContactSection />
