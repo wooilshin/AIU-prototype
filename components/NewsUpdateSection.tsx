@@ -176,10 +176,14 @@ export default function NewsUpdateSection({ compact = false }: { compact?: boole
           >
             <div className="aiu-news-header">
               <h2 className="aiu-news-title">
-                <span className="aiu-news-line1">{language === 'ko' ? '동물지능' : 'AIU'}</span>
-                <span className="aiu-news-line2-text">
-                  {language === 'ko' ? '요원 보고서' : 'Agent Reports'}
-                </span>
+                {language === 'ko' ? (
+                  <span className="aiu-news-line1">동물 요원 보고서</span>
+                ) : (
+                  <>
+                    <span className="aiu-news-line1">AIU</span>
+                    <span className="aiu-news-line2-text">Agent Reports</span>
+                  </>
+                )}
               </h2>
               <div className="aiu-news-follow-group">
                 <span className="aiu-news-follow">Follow our news</span>
