@@ -18,7 +18,7 @@ export default function Footer() {
     ko: {
       brandTitle: '스튜던트 비',
       newsletterLabel: '뉴스레터 구독',
-      businessTeam: '사업',
+      businessTeam: '비지니스 문의',
       techLab: '테크랩',
       copyright:
         'Copyright © 2026 Student B. All rights reserved. Student B® 및 관련 로고는 Student B의 등록상표입니다.',
