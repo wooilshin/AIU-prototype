@@ -108,7 +108,7 @@ const SHOWCASES: Showcase[] = [
     id: 'animal-intelligence-universe',
     title: {
       en: 'Animal Intelligence Universe',
-      ko: '동물지능 유니버스',
+      ko: '동물지능 세계관 소개책',
     },
     headline: {
       en: 'The Forgotten History of Animal Civilization',
