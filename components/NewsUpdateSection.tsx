@@ -119,7 +119,7 @@ export default function NewsUpdateSection({ compact = false }: { compact?: boole
               <div className="newsupdate-header">
                 <h2>
                   {language === 'ko' ? (
-                    <span className="newsupdate-header-brand">스튜던트 뉴스</span>
+                    <span className="newsupdate-header-brand">스튜던트 비 뉴스</span>
                   ) : (
                     <>
                       <span className="newsupdate-header-brand">Student B</span>
