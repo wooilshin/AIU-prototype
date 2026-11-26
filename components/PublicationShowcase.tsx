@@ -138,7 +138,7 @@ const SHOWCASES: Showcase[] = [
           en: '“A rich and surprising alternative vision of the past.”',
           ko: '“과거에 대한 풍부하고 놀라운 또 하나의 시선”',
         },
-        source: { en: 'Kirkus Reviews, Get It badge', ko: '커커스 리뷰, Get It 배지' },
+        source: { en: 'Kirkus Reviews, Get It badge', ko: '미국 Kirkus 리뷰 추천 도서' },
         link: 'https://www.kirkusreviews.com/book-reviews/will-shin/animal-intelligence-2/',
       },
       {
