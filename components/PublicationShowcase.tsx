@@ -81,7 +81,7 @@ const SHOWCASES: Showcase[] = [
     },
     body: {
       en: 'My Name Is Nacho and My Name Is Halo are character story books that introduce the animal agents. Within the vast world of the animal agents, rookie agents Nacho and Halo carry out their first missions and, one step at a time, discover the human world and what it means to be human. Each character book can be read as a standalone story, and together they connect into one larger story within the Animal Intelligence Universe.',
-      ko: '내 이름은 나초, 내 이름은 헤일로는 동물 요원들을 소개하는 캐릭터 스토리 시리즈이다. 동물 요원들의 거대한 세계관 속에서, 신입 요원 나초 그리고 헤일로가 첫 번째 임무를 수행하며 인간 세상과 인간다움의 의미를 하나씩 알아가게 된다. 각 캐릭터북은 하나의 독립된 이야기로 읽을 수 있으며, 동물지능 세계관 아래 하나의 더 큰 이야기로 연결된다.',
+      ko: '"내 이름은 나초", "내 이름은 헤일로"는 개별 동물 요원들의 이야기를 소개하는 캐릭터 스토리 시리즈로 동물 요원들이 임무를 수행하며 인간 세상과 인간다움의 의미를 알아가는 과정을 그려낸다. 각 캐릭터 스토리는 하나의 독립된 이야기로 읽을 수 있으며, 동물지능 세계관 아래 하나의 더 큰 이야기로 연결된다.',
     },
     covers: [
       {
