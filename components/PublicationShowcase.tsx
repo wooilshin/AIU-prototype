@@ -77,7 +77,7 @@ const SHOWCASES: Showcase[] = [
     },
     headline: {
       en: 'The Stories of the Animal Agents',
-      ko: '비밀 동물 요원들의 개개인의 사연을 담은 단편',
+      ko: '비밀 동물 요원들의 사연',
     },
     body: {
       en: 'My Name Is Nacho and My Name Is Halo are character story books that introduce the animal agents. Within the vast world of the animal agents, rookie agents Nacho and Halo carry out their first missions and, one step at a time, discover the human world and what it means to be human. Each character book can be read as a standalone story, and together they connect into one larger story within the Animal Intelligence Universe.',
