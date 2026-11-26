@@ -8,6 +8,7 @@ type Cover = {
   image: string
   alt: string
   link: string
+  linkKo?: string
 }
 
 type Highlight = {
@@ -47,6 +48,7 @@ const SHOWCASES: Showcase[] = [
         image: '/images/books/Comic1.svg',
         alt: 'Watching Them Humans in the AI Age',
         link: 'https://www.amazon.com/Watching-Them-Humans-Age-Intelligence-ebook/dp/B0GX555DH9/',
+        linkKo: 'https://product.kyobobook.co.kr/detail/S000221379295',
       },
     ],
     highlights: [
@@ -173,7 +175,7 @@ export default function PublicationShowcase() {
                   <a
                     key={cover.image}
                     className="pub-cover"
-                    href={cover.link}
+                    href={language === 'ko' && cover.linkKo ? cover.linkKo : cover.link}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
