@@ -43,7 +43,7 @@ Wooil studied Computer Science at the University of Pennsylvania. He develops AI
     ko: {
       staffTitle: '스튜던트 비 팀',
       ceoTitle: '창작팀',
-      ceoDesc: `Student B의 창작팀은 정책학과 인공지능을 전공한 글 작가와 디자인과 언어교육학을 전공한 그림 작가, 두 남매로 이루어져 있습니다. 지금 우리 시대에 필요한 것은 인간다움과 미래를 이야기하는 새로운 스토리텔링이라고 믿으며, ‘동물지능(Animal Intelligence)’ 시리즈를 만드는 데 전념하고 있습니다.`,
+      ceoDesc: `스튜던트 비의 창작팀은 정책학과 인공지능을 전공한 글 작가와 디자인과 언어교육학을 전공한 그림 작가, 두 남매가 주도하고 있습니다. 지금 우리 시대에 필요한 것은 미래와 인간다움을 이야기하는 새로운 스토리텔링이라고 믿으며, 동물지능 시리즈를 만드는 데 전념하고 있습니다.`,
       techLabTitle: '크리에이티브 랩',
       techLabDesc: `Student B 크리에이티브 랩은 동물지능 세계를 인터랙티브 콘텐츠로 확장을 준비하고 있습니다. 전자공학 박사 Joseph Sh와 컴퓨터공학 석사 Will이 다양한 콘텐츠와 캐릭터 기반 게임을 기획하고 있습니다.`,
       bizTitle: '비지니스 팀',
