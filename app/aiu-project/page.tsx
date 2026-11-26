@@ -45,7 +45,7 @@ Wooil studied Computer Science at the University of Pennsylvania. He develops AI
       ceoTitle: '창작팀',
       ceoDesc: `스튜던트 비의 창작팀은 정책학과 인공지능을 전공한 글 작가와 디자인과 언어교육학을 전공한 그림 작가, 두 남매가 주도하고 있습니다. 지금 우리 시대에 필요한 것은 미래와 인간다움을 이야기하는 새로운 스토리텔링이라고 믿으며, 동물지능 시리즈를 만드는 데 전념하고 있습니다.`,
       techLabTitle: '테크랩',
-      techLabDesc: `Student B 테크랩은 동물지능 지식노트 제작을 준비하고 있습니다. 전자공학 박사 Joseph Sh와 컴퓨터공학 석사 Will이 동물지능 스토리를 바탕으로 새로운 디지털 콘텐츠를 기획합니다.`,
+      techLabDesc: `스튜던트 비 테크랩은 동물지능 “지식노트”의 제작을 준비하고 있습니다. 전자공학 박사 Joseph과 컴퓨터공학 석사 Will이 동물지능 스토리를 바탕으로 새로운 디지털 콘텐츠를 기획합니다.`,
       bizTitle: '비지니스 팀',
       bizDesc:
         'Jin은 노스웨스턴 MBA를 졸업했으며 IP 기획을 담당하고 있습니다. Guinea는 출판 및 홍보를 담당하고 있습니다.',
