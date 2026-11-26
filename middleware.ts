@@ -1,7 +1,7 @@
 import { NextResponse, type NextRequest } from 'next/server'
 
-// Set KO_MAINTENANCE=off in the hosting environment to reopen www.student-b.co.kr.
-const KO_MAINTENANCE = process.env.KO_MAINTENANCE !== 'off'
+// Set KO_MAINTENANCE=on in the hosting environment to show the construction page on www.student-b.co.kr.
+const KO_MAINTENANCE = process.env.KO_MAINTENANCE === 'on'
 
 export function middleware(req: NextRequest) {
   const host = req.headers.get('host') ?? ''
