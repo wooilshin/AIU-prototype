@@ -150,7 +150,7 @@ const SHOWCASES: Showcase[] = [
     ],
     quote: {
       en: 'A history of the world told by animals, from the civilizations they built to the species we forgot.',
-      ko: '동물들이 세운 문명부터 우리가 잊은 종들까지, 동물들이 들려주는 세계의 역사.',
+      ko: '동물들이 들려주는 세계의 역사 이야기. 동물들이 세운 그들만의 문명 이야기.',
     },
     character: { image: '/images/home/white-giraffe.png', alt: 'White Giraffe' },
   },
