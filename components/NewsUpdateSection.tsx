@@ -118,10 +118,14 @@ export default function NewsUpdateSection({ compact = false }: { compact?: boole
             <div className="newsupdate-left">
               <div className="newsupdate-header">
                 <h2>
-                  <span className="newsupdate-header-brand">Student B</span>
-                  <span className="newsupdate-header-rest">
-                    {language === 'ko' ? '뉴스' : 'News'}
-                  </span>
+                  {language === 'ko' ? (
+                    <span className="newsupdate-header-brand">스튜던트 뉴스</span>
+                  ) : (
+                    <>
+                      <span className="newsupdate-header-brand">Student B</span>
+                      <span className="newsupdate-header-rest">News</span>
+                    </>
+                  )}
                 </h2>
                 {showDesktopArrows && (
                   <div className="newsupdate-nav">
