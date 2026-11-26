@@ -51,7 +51,7 @@ Wooil studied Computer Science at the University of Pennsylvania. He develops AI
         'Jin은 노스웨스턴 MBA를 졸업했으며 IP 기획을 담당하고 있습니다. Guinea는 출판 및 홍보를 담당하고 있습니다.',
       advisorTitle: '자문',
       advisorDesc:
-        '신창준 변리사는 하나특허법인의 고문이자 변리사로, 스튜던트 비 ＩＰ사업 전반에 대한 자문을 맡고 있습니다.',
+        '스튜던트 비 IP사업 전반에 대한 자문은 하나특허법인의 고문이 신창준 변리사가 맡고 있습니다.',
       studentBTitle: '스튜던트 비에 대하여',
       studentBDesc:
         '스튜던트는 ‘동물지능(Animal Intelligence)’이라는 하나의 세계관 아래 만화, 소설, 지식노트, 애니메이션 등 다양한 콘텐츠를 만드는 출판사이자 IP 스튜디오입니다. AI 시대를 살아가는 사람들에게 새로운 재미 그리고 의미를 전할 수 있는 “21세기의 새로운 우화”를 창작하는 것을 목표로 합니다.',
